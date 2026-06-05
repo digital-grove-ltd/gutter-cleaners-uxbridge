@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Slough Gutter Cleaning, Repairs and Replacement | SL1/SL2";
+const metaDescription = "Professional gutter cleaning, repair and replacement in Slough (SL1, SL2). We solve drainage problems from flat-roofed extensions overflowing onto main gutters on 1960s–80s residential estates. Free quotes, same-week service.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Slough", url: "https://www.guttercleanersuxbridge.co.uk/locations/slough/" }
+];
+
+const faqs = [
+  {
+    q: "Why do flat-roofed extensions cause gutter problems in Slough?",
+    a: "Many of the 1960s to 1980s properties on Slough's residential estates — particularly in SL1 and SL2 — have rear flat-roofed extensions added during the 1970s and 1980s. These extensions were typically built with small internal drains or minimal guttering that has since become inadequate or blocked. When the flat roof drain fails or blocks, water pools on the extension roof and eventually overflows onto the main house's rear gutter below, adding a volume of water that the main gutter was never designed to handle. The result is a gutter that overflows even in moderate rain."
+  },
+  {
+    q: "Do you fix the flat roof drainage problem or just the main gutters?",
+    a: "We address both. During our initial inspection we assess the flat-roof extension drainage alongside the main gutter system. We can clear blocked flat-roof outlets and improve the drainage channel directing water away from the main gutter. For more complex flat-roof drainage issues — where the outlet itself needs replacing or the falls need improving — we will quote this as a separate piece of work and explain exactly what is needed before any work is done."
+  },
+  {
+    q: "Which Slough postcodes do you cover?",
+    a: "We cover SL1 (Slough town centre and surrounding estates), SL2 (Farnham Royal, Stoke Poges and Burnham borders) and SL3 (Langley and Colnbrook). If your address falls slightly outside these sectors, contact us — we cover many additional streets within the broader Slough area and will confirm coverage for your specific postcode."
+  },
+  {
+    q: "How often should I clean gutters on a 1970s Slough estate property?",
+    a: "Once a year is the minimum for most standard Slough estate properties — ideally in autumn after the trees have shed. Properties with flat-roofed extensions, or where the rear gutter receives runoff from both the main roof and the extension roof, may benefit from a second clean in spring. We assess your specific drainage setup and recommend the right frequency for your property."
+  },
+  {
+    q: "Can you replace gutters on a 1960s or 1970s Slough property to match the original style?",
+    a: "Yes. The most common gutter profiles on Slough's 1960s and 1970s estate properties are half-round and square-line uPVC systems. We carry standard replacement profiles and can match the existing system where repairs are possible. For full replacement, we offer modern equivalents in white, brown and black to suit the property's exterior. We also advise on whether upgrading to a larger-capacity deepflow profile would help with the higher drainage loads created by flat-roofed extensions."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Slough"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Mark S.",
+    street: "Chalvey Road East, Slough",
+    date: "April 2026",
+    text: "We had a major overflow problem every time it rained heavily. Turned out our flat-roofed kitchen extension drain was completely blocked and sending all its water into the main back gutter. These guys sorted the whole lot in one visit — cleared the flat roof outlet, cleaned the main gutters and tested everything. No more flooding."
+  },
+  {
+    name: "Deborah W.",
+    street: "Yew Tree Road, SL1",
+    date: "February 2026",
+    text: "Called after noticing damp on the inside of the rear bedroom wall. The team found the back gutter was completely blocked and had been overflowing behind the fascia for some time. They cleaned everything, identified a cracked joint and repaired it on the spot. Good, honest service."
+  },
+  {
+    name: "Steve N.",
+    street: "Stoke Road, Slough",
+    date: "November 2025",
+    text: "Annual autumn clean for our 1970s semi. Always thorough, always on time. This year they spotted that one of the downpipes had a partial blockage at the shoe — they cleared it and showed me the photo before and after. Confidence in the service every time."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Slough — SL1 / SL2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning and Repair Services in Slough, SL1/SL2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Solving flat-roof extension drainage problems and gutter blockages across Slough's 1960s–80s residential estates. Free quotes, same-week service.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Slough's 1960s to 1980s residential estates in SL1 and SL2 frequently have flat-roofed extensions whose drainage overflows onto the main house gutters, causing overflow and water damage. We assess and fix the full drainage chain — flat roof outlets and main gutters — with transparent pricing and same-week availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Slough's residential streets — from the estates around Slough town centre in SL1 to the quieter roads of Farnham Royal and Burnham in SL2 — are largely composed of 1960s to 1980s semi-detached and terraced properties. These homes share a common characteristic: many were extended during the 1970s and 1980s with flat-roofed kitchen or utility room additions at the rear, built at a time when drainage standards were lower and flat-roof drainage design less sophisticated.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Those flat-roofed extensions now routinely cause problems. When the extension's small internal drain or external outlet blocks — whether from leaf debris, silt or a collapsed pipe joint — water accumulates on the flat roof surface and eventually overflows its edge, falling directly onto the main house gutter below. A main gutter that was sized for the house roof alone cannot handle this additional volume, and overflows predictably in heavy rainfall.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We understand this drainage chain and address it systematically. We serve SL1 and SL2 throughout, covering streets like Chalvey Road, Yew Tree Road, Stoke Road and the broader Slough town centre and Trading Estate environs.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Slough Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Slough Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The 1960s and 1970s estate properties in Slough received standard half-round and square-line uPVC gutters as part of original construction or early renovation. These systems are now 40 to 60 years old in many cases — approaching or past their practical service life. Joints that were sealed with rubber gaskets at installation have hardened and shrunk; brackets that were screwed into softwood fascias with mild-steel fixings have corroded; and some complete runs have lost their drainage pitch through gradual building movement.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The flat-roofed extension issue is particularly pronounced on the semi-detached properties of estates like Britwell and Baylis, where 1970s extensions were built in a relatively uniform style. When one property on a terrace develops an extension drainage problem, neighbouring properties with similar configurations often have the same latent issue.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Our Slough service includes a systematic drainage assessment — tracing water flow from flat-roof extension to main gutter to downpipe to the ground — to ensure we resolve the actual cause of overflow rather than just clearing symptoms.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in Slough</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across SL1 and SL2 with same-week availability.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/services/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full debris clearance of all gutters and downpipes on your Slough property, including flat-roof extension outlets where present. We trace the full drainage chain before and after cleaning to confirm correct flow.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Leaking joints, cracked sections, broken brackets and flat-roof outlet repairs. We provide a full assessment of the drainage chain on Slough properties with extensions before recommending the right repair approach.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement for ageing SL1 and SL2 gutters. We advise on larger-capacity profiles where flat-roofed extensions create higher drainage loads than the original system was sized for.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and replacement of water-damaged fascia boards. We regularly find accelerated rot on Slough properties where extension overflow has been directing water behind the main fascia for extended periods.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Slough Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Slough Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your SL1 or SL2 address and whether you have a flat-roofed extension. We will assess the full drainage picture and quote accurately.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Slough Gutter FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also cover nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/windsor/" class="text-blue-600 hover:underline text-sm">Windsor</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/west-drayton/" class="text-blue-600 hover:underline text-sm">West Drayton</a>
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

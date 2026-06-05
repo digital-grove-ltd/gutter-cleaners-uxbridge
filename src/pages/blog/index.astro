@@ -1,0 +1,183 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import { getCollection } from "astro:content";
+
+const title = "Gutter Cleaning Tips & Advice | Uxbridge West London Blog";
+const description =
+  "Expert gutter care advice for homeowners in Uxbridge, Harrow, Hayes and West London. Pricing guides, maintenance tips, and local insights from Gutter Cleaners Uxbridge.";
+
+const allPosts = await getCollection("blog");
+const posts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const categories = ["Tips & Advice", "Local Guides", "Pricing"];
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
+const categoryColours: Record<string, string> = {
+  "Tips & Advice": "bg-blue-100 text-blue-800",
+  "Local Guides": "bg-green-100 text-green-800",
+  "Pricing": "bg-orange-100 text-orange-800",
+};
+---
+
+<Layout {title} {description}>
+  <!-- Hero Section -->
+  <section class="relative w-full h-80 overflow-hidden">
+    <img
+      src="/images/blog-hero.jpg"
+      alt="Gutter cleaning tips and advice for homeowners in Uxbridge and West London"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <p class="text-blue-200 font-semibold tracking-widest text-sm uppercase mb-3">
+          Expert Knowledge
+        </p>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Gutter Care Tips & Local Guides
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100">
+          Practical advice for homeowners in Uxbridge, Harrow, Hayes and West London
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Category Filter (visual only) -->
+  <section class="bg-surface border-b border-border">
+    <div class="container-site py-6">
+      <div class="flex flex-wrap gap-3 items-center">
+        <span class="text-text-muted font-medium text-sm">Browse by category:</span>
+        <a
+          href="/blog"
+          class="px-4 py-2 rounded-full text-sm font-semibold bg-brand text-white hover:bg-brand-dark transition-colors"
+        >
+          All Articles
+        </a>
+        {categories.map((cat) => (
+          <span
+            class={`px-4 py-2 rounded-full text-sm font-semibold cursor-default ${categoryColours[cat] || "bg-gray-100 text-gray-700"}`}
+          >
+            {cat}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Post Grid -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="bg-white rounded-2xl border border-border overflow-hidden shadow-card hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col">
+            <!-- Post Image -->
+            <a href={`/blog/${post.id}/`} class="block overflow-hidden aspect-[16/9]">
+              <img
+                src={post.data.heroImage}
+                alt={post.data.title}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </a>
+
+            <!-- Post Content -->
+            <div class="p-6 flex flex-col flex-1">
+              <!-- Category Badge -->
+              <div class="mb-3">
+                <span class={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${categoryColours[post.data.category] || "bg-gray-100 text-gray-700"}`}>
+                  {post.data.category}
+                </span>
+              </div>
+
+              <!-- Title -->
+              <h2 class="text-xl font-bold text-text mb-3 leading-snug">
+                <a
+                  href={`/blog/${post.id}/`}
+                  class="hover:text-brand transition-colors"
+                >
+                  {post.data.title}
+                </a>
+              </h2>
+
+              <!-- Excerpt -->
+              <p class="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+                {post.data.description}
+              </p>
+
+              <!-- Footer -->
+              <div class="flex items-center justify-between pt-4 border-t border-border">
+                <time
+                  datetime={post.data.pubDate.toISOString()}
+                  class="text-xs text-text-light font-medium"
+                >
+                  {formatDate(post.data.pubDate)}
+                </time>
+                <a
+                  href={`/blog/${post.id}/`}
+                  class="text-brand text-sm font-semibold hover:underline flex items-center gap-1"
+                >
+                  Read more
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <p class="text-center text-text-muted py-16">No posts yet — check back soon.</p>
+      )}
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">
+          Need Your Gutters Cleaned in West London?
+        </h2>
+        <p class="text-lg text-text-muted mb-8">
+          Serving Uxbridge, Harrow, Hayes, Hillingdon, Slough, Southall, West Drayton and Windsor.
+          Get a free, no-obligation quote in under 2 minutes.
+        </p>
+        <a href="/contact" class="btn-primary">
+          Get Your Free Quote
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="section bg-surface" id="quote">
+    <div class="container-site">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">Get a Free Gutter Cleaning Quote</h2>
+        <p class="text-lg text-text-muted">
+          No obligation. We respond within 2 hours Mon–Fri, 8am–6pm.
+        </p>
+      </div>
+      <QuoteForm client:load />
+    </div>
+  </section>
+</Layout>

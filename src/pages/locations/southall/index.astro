@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Southall Gutter Cleaning, Repairs and Replacement | UB1/UB2";
+const metaDescription = "Professional gutter cleaning, repair and replacement in Southall (UB1, UB2). Specialist in corroding cast-iron gutters pulling away from fascia boards on Victorian and Edwardian terraces near Southall Broadway. Free quotes, same-week service.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Southall", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/" }
+];
+
+const faqs = [
+  {
+    q: "Why are cast-iron gutters pulling away from fascia boards on Southall terraces?",
+    a: "Victorian and Edwardian terraces in Southall (UB1/UB2) were built with heavy cast-iron guttering fixed to wooden fascia boards with iron bolts. Over 100 to 120 years, the bolts corrode, the fascia board softwood dries and hardens, and the holes around the fixings enlarge through seasonal expansion and contraction. Meanwhile, the cast-iron gutters themselves gain weight as they accumulate rust scale on their inner surfaces and compacted debris in their channels. The combination of a heavier gutter and a weaker fixing eventually causes the gutter to pull away from the fascia, often gradually at first — visible as a small gap at the top — and then suddenly after a period of heavy rain."
+  },
+  {
+    q: "Should I repair cast-iron gutters or replace them with uPVC in Southall?",
+    a: "It depends on the condition of the cast-iron system. Cast iron, when properly maintained, can last indefinitely and is more sympathetic to the Victorian character of Southall's terraces. If the iron is structurally sound but just needs re-bolting and re-sealing at joints, repair is the better and more cost-effective choice. If sections have rusted through, are cracked, or have delaminated internally, then replacement is appropriate. We give an honest assessment of each section and never recommend full replacement when repair is viable."
+  },
+  {
+    q: "Do you work on the Victorian terraces on and around Southall Broadway?",
+    a: "Yes. We regularly work on the Victorian and Edwardian terraces in streets around Southall Broadway, including Herbert Road, Hambrough Road and The Green. The terraces in central Southall (UB1) and the streets in UB2 towards the Ealing borough boundary all have similar housing types and gutter challenges. We are experienced with the access constraints of terraced rows and work efficiently without disrupting neighbours."
+  },
+  {
+    q: "How do you reseal cast-iron gutter joints?",
+    a: "Cast-iron gutter sections are joined by lapped joints sealed with mastic or lead-based caulk. When these seals fail, water leaks from the joint and runs down the exterior wall. We clean the joint thoroughly, removing old sealant and any corrosion scale, apply a new flexible sealant rated for cast iron, and allow it to cure before testing with water. We also check the bolt fixings at each joint and replace any that are corroded or loose. A properly resealed cast-iron joint should last 10 to 15 years with normal maintenance."
+  },
+  {
+    q: "Do you cover UB2 properties near the Ealing borough boundary?",
+    a: "Yes. We cover all UB1 and UB2 addresses including the streets in Southall that border the London Borough of Ealing. Properties on roads like The Green, Western Road and South Road are all within our regular service area. If you are on or near the borough boundary and unsure whether we cover your specific street, just contact us with your postcode and we will confirm immediately."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Southall"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Manjit K.",
+    street: "Herbert Road, Southall",
+    date: "April 2026",
+    text: "We have a Victorian terrace and the cast-iron gutters at the front had been pulling away for a couple of years. These guys re-bolted the whole front run, resealed three joints and cleaned the gutters throughout. Now perfectly secure. Very knowledgeable about Victorian properties and cast iron. Would highly recommend."
+  },
+  {
+    name: "Patricia D.",
+    street: "Hambrough Road, UB1",
+    date: "March 2026",
+    text: "Had an obvious leak at a cast-iron joint above our bay window causing a damp patch inside. Called on Monday, they were here by Wednesday. Resealed the joint, found another two weaker joints and resealed those too. Damp patch has now dried up. Efficient and thorough."
+  },
+  {
+    name: "Ranjit B.",
+    street: "The Green, Southall",
+    date: "January 2026",
+    text: "Annual clean for our Edwardian semi. As always, the team were professional, showed us photos of any issues before and after and gave us honest advice. This year they recommended replacing one short section of cast iron that had rusted through. Fair price, good work."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Southall — UB1 / UB2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning and Repair Services in Southall, UB1/UB2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialists in cast-iron gutter repair and Victorian terrace maintenance near Southall Broadway. Free quotes, same-week service.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Southall's Victorian and Edwardian terraced housing in UB1 and UB2 commonly suffers from original cast-iron gutters corroding and pulling away from ageing fascia boards. We repair and re-secure cast-iron systems throughout Southall Broadway and the surrounding streets, preserving the period character of these properties with honest, transparent pricing.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Southall's terraced streets represent some of the oldest housing stock in our service area. Victorian terraces along and around Southall Broadway and the Edwardian semis in the streets running towards the Ealing borough boundary were built between roughly 1880 and 1914, and many still carry original or early-replacement cast-iron guttering. This is both a historic asset and a practical maintenance challenge.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Cast iron is an excellent gutter material — durable, rigid and effective — but it requires periodic maintenance to remain functional. In Southall, the combination of century-old fixings, softwood fascia boards that have dried and cracked over decades, and cast-iron gutters that have accumulated internal rust scale means that loose, pulling and leaking gutters are a common sight on the older streets of UB1 and UB2.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We are experienced with Victorian and Edwardian property maintenance across Southall. We work on Herbert Road, Hambrough Road, The Green and all the surrounding residential streets with the care and knowledge these period properties deserve.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Southall Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Southall Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The Victorian terraces of central Southall (UB1) were built with ogee-profile cast-iron guttering — the wide, decorative curved section that was standard for the period. These gutters are heavier than modern uPVC equivalents and require robust fixing to stay in position. After 100 years, the combination of corroding iron bolts, softening fascia boards and accumulated gutter weight causes sections to slowly detach.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The Edwardian properties in UB2 — particularly in the streets closer to the Ealing borough boundary — are slightly younger and often have half-round cast-iron profiles. Many of these were retrofitted with uPVC replacements during the 1980s and 1990s, so the picture in UB2 is more mixed: some properties have original cast iron, some have 30-year-old uPVC, and some have had sections replaced at different times, creating mismatched systems that need careful assessment.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Across both areas, the density of terrace housing means that gutter problems in one property can quickly affect neighbours: water running off a failing gutter onto a party wall creates damp issues on both sides. Early maintenance prevents neighbourhood disputes as much as structural damage.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in Southall</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across UB1 and UB2 with same-week availability.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/services/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full cleaning of cast-iron and uPVC gutters on Southall's Victorian and Edwardian terraces. We inspect joint condition, bolt fixings and fascia board security as part of every clean across UB1 and UB2.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Cast-iron joint resealing, re-bolting, bracket replacement and section repair. We preserve period guttering wherever viable and only recommend replacement of individual sections that are genuinely beyond repair.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Replacement of cast-iron sections or full runs that are beyond repair. We advise on period-appropriate profiles to maintain the character of Victorian and Edwardian Southall properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Replacement of rotten fascia boards that can no longer hold cast-iron gutter fixings securely. Essential on many Southall terraces where a century of moisture and movement has softened the original softwood boards.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Southall Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Southall Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your UB1 or UB2 address and whether you have cast-iron gutters. We will provide an accurate fixed price on the same working day.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Southall Gutter FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also cover nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/" class="text-blue-600 hover:underline text-sm">Harrow</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/hillingdon/" class="text-blue-600 hover:underline text-sm">Hillingdon</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

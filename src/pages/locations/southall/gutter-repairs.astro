@@ -1,0 +1,291 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Repairs Southall UB1/UB2 | Same-Week Response";
+const metaDescription = "Fast gutter repairs in Southall UB1/UB2. Leaking joints, sagging gutters, cracked sections. Specialists in Victorian and Edwardian terraced housing.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Southall", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/" },
+  { name: "Gutter Repairs", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/gutter-repairs/" }
+];
+
+const faqs = [
+  {
+    q: "How much do gutter repairs cost in Southall?",
+    a: "Gutter repairs in Southall typically range from £150 to £400 depending on the type and complexity of the repair. A simple joint reseal on cast-iron gutters might cost £80–£120, while re-bolting an entire gutter run or replacing a cracked section could cost £250–£400. We provide a fixed quotation after assessing the damaged section, so you know exactly what you'll pay before work begins. There are no call-out charges or hidden extras."
+  },
+  {
+    q: "Can you repair cast iron gutters in UB1/UB2?",
+    a: "Yes, absolutely. Cast-iron gutter repair is one of our specialties in Southall. We reseal failed joints using flexible sealants rated for cast iron, replace corroded bolts and brackets, straighten sagging sections, and repair small rust-through holes with epoxy fillers or localised patches. Cast iron is incredibly durable when properly maintained, and we believe in repairing rather than replacing whenever possible — it preserves the period character of Victorian and Edwardian terraces in UB1 and UB2 and saves you money compared to full replacement."
+  },
+  {
+    q: "My gutter is leaking at the joint in Southall - can you fix it same day?",
+    a: "We aim to respond to gutter emergencies in Southall within 48 hours and can often arrange same-day or next-day visits for urgent repairs. A leaking joint is not necessarily an emergency — if it is a slow weep causing a damp patch inside, it can usually wait 1 to 2 weeks. However, if water is actively pouring into your property or causing visible damage to interior walls or ceilings, we will prioritise your job. Contact us immediately and describe the urgency so we can allocate the right slot."
+  },
+  {
+    q: "What causes gutters to sag on Victorian and Edwardian terraced housing in Southall?",
+    a: "Sagging on Victorian and Edwardian terraced housing in Southall is most commonly caused by the failure of gutter hangers or brackets due to rust and corrosion. The original iron hangers on cast-iron gutters can weaken over 100+ years, particularly if they have never been replaced. Additionally, the wooden fascia boards that the hangers are bolted into gradually soften and develop enlarged bolt holes as the wood moves and settles. Finally, accumulated rust scale and decomposed debris inside the gutter adds weight, pushing down on weakened hangers and fasteners. A sagging gutter stops draining properly and eventually detaches completely from the fascia board."
+  },
+  {
+    q: "How do I know if my Southall home needs repairs or a full replacement?",
+    a: "We assess each damaged section individually. If the cast iron or uPVC is structurally sound but just has failed sealant, loose bolts, or minor corrosion, repair is the right choice. If the gutter has rust holes that weep water, is cracked across its width, has delaminated internally, or is sagging so severely that it cannot be re-hung properly, replacement of that section is necessary. We inspect thoroughly, explain our findings clearly, and never recommend replacement unless the damage genuinely requires it. Many Victorian and Edwardian terraces in Southall can be kept in service for another 10–15 years with timely repairs."
+  },
+  {
+    q: "Do you repair fascia boards as well as gutters in UB1/UB2?",
+    a: "We primarily specialise in gutter repair, but we can assess fascia board damage and advise whether patching, paint treatment, or full board replacement is appropriate. On Victorian and Edwardian terraces in Southall, water damage to wooden fascia boards is often a consequence of gutter problems — overflow, leaking joints, or overhanging gutters cause the wood to soften and rot. We can often coordinate gutter repair with fascia work, or we can refer you to a trusted local carpenter for replacement boards if needed. The key is to fix the gutter problem first to prevent further damage."
+  },
+  {
+    q: "Are your gutter repairs guaranteed in Southall?",
+    a: "Yes. All our gutter repair work in Southall is guaranteed for 12 months against defects in our workmanship. If a joint we've resealed starts to leak within that period due to our failure, we'll return and put it right at no extra cost. However, we cannot guarantee that cast-iron sections that are badly corroded will never corrode again — that's a material property and depends on maintenance. We do guarantee that if we've identified a problem correctly, assessed its severity honestly, and carried out the repair professionally, you'll get reliable performance from your gutters."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Southall"),
+  faqSchema(faqs),
+  serviceSchema(
+    "Gutter Repairs in Southall",
+    "Professional gutter repair service for Victorian and Edwardian terraced housing in Southall UB1/UB2. Leaking joints, sagging gutters, cast-iron repairs.",
+    "https://www.guttercleanersuxbridge.co.uk/locations/southall/gutter-repairs/"
+  )
+];
+
+const reviews = [
+  {
+    name: "Harpreet S.",
+    street: "Hambrough Road, UB1",
+    date: "May 2026",
+    text: "Cast-iron gutters were leaking at two joints above our bedroom. They came out same week, resealed both joints plus a third one we didn't know about, and cleaned the whole gutter. Water damage has stopped and the fascia is drying out. Professional and fair pricing — no pressure to replace perfectly good gutters."
+  },
+  {
+    name: "Michael O.",
+    street: "The Green, Southall, UB2",
+    date: "April 2026",
+    text: "Gutter on the side of the house had started to sag and pull away from the fascia. Worried it might be a big job, but they explained that the hangers just needed replacing and reinforcing. Few hours' work, gutter now secure and level again. Honest assessment and good value."
+  },
+  {
+    name: "Ramesh K.",
+    street: "South Road, Southall",
+    date: "February 2026",
+    text: "Victorian semi with original cast iron on the party wall side had rusted through at one joint causing damp next door. Neighbours were not happy. These guys repaired the section, cleaned both gutters, and provided both us and our neighbours with condition reports. Dispute resolved, neighbourhood harmony restored!"
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Southall Gutter Repairs — UB1 / UB2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Repairs in Southall, UB1/UB2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Leaking joints, sagging gutters, cracked sections. Fast, honest repairs for Victorian and Edwardian terraced housing.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">We repair leaking joints, sagging gutters, cracked sections and loose brackets in Southall UB1/UB2. Most repairs take 1 to 2 hours and are completed in a single visit. We aim to respond within 48 hours for urgent issues. Fixed-price quotes on the same working day.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Victorian and Edwardian terraced properties in Southall face unique gutter repair challenges. The original cast-iron guttering, now 100 to 140 years old, corrodes at joints and bolt fixings. The wooden fascia boards that secure the gutters have dried, hardened, and developed enlarged bolt holes after more than a century of seasonal movement. The combination of weakening fasteners and deteriorating attachment points means that gutters begin to fail in predictable ways: joints weep, bolts corrode, and gutters sag away from the fascia as their weight increases with accumulated rust scale and debris.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Unlike generic gutter repair companies, we understand the specific failure patterns on Victorian and Edwardian terraces in UB1 and UB2. We don't automatically recommend replacement — we repair where repair is appropriate, preserving the period character of these properties while restoring functionality and preventing water damage to party walls and interior spaces.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We provide same-week gutter repair appointments throughout Southall, with fixed-price quotations and 12-month guarantees on our workmanship.
+      </p>
+    </div>
+  </section>
+
+  <!-- Common Repair Issues -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Common Gutter Repairs on Southall Terraces</h2>
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Leaking Cast-Iron Joints</h3>
+          <p class="text-gray-700">Cast-iron gutter sections join via lapped joints sealed with mastic or lead caulk. After 80 to 100 years, these seals fail, and water begins to weep from the joint, typically onto the exterior wall below. On terraced rows in Southall UB1 and UB2, a failing joint on a party wall causes damp issues for neighbours as well as your own property. We reseal the joint with a flexible, cast-iron-rated sealant and typically re-bolt the joint to ensure the sections remain tight.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Sagging Gutters and Failing Brackets</h3>
+          <p class="text-gray-700">The iron hangers or brackets that support cast-iron gutters corrode and weaken over time. When a hanger fails, that section of gutter sags, preventing proper water flow towards the downpipe. We replace corroded brackets and re-hang sagging sections, ensuring the gutter is properly pitched and supported. On terraced properties, we also check and reinforce the fascia board attachments because the bolt holes often enlarge as the softwood moves and settles.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Rusted-Through Cast Iron and Cracks</h3>
+          <p class="text-gray-700">Small rust-through holes or hairline cracks in cast-iron gutters can be repaired with epoxy fillers or localised patching rather than requiring full section replacement. However, if corrosion is extensive or the crack runs across the width of the gutter profile, replacement of that section is necessary. We assess honestly and only recommend replacement when the damage genuinely warrants it.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Loose Bolts and Corroded Fasteners</h3>
+          <p class="text-gray-700">The iron bolts that hold cast-iron gutter sections to the fascia board corrode and loosen over decades. As they loosen, the gutter's connection to the fascia weakens, and the gutter begins to move and rattle in wind or heavy rain. We replace corroded bolts with stainless steel fasteners, re-tighten the gutter assembly, and check that the fascia board itself is still sound enough to provide a secure fixing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair vs Replace -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Repair or Replace? Our Honest Assessment</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Repair Column -->
+        <div class="bg-green-50 rounded-xl p-8 border-l-4 border-green-600">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">When We Recommend Repair</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex gap-3">
+              <span class="text-green-600 font-bold text-xl shrink-0">✓</span>
+              <span>Joint seal has failed but cast iron is sound</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-600 font-bold text-xl shrink-0">✓</span>
+              <span>Gutter is sagging but bolt holes in fascia are still tight</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-600 font-bold text-xl shrink-0">✓</span>
+              <span>Small rust-through holes or surface corrosion</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-600 font-bold text-xl shrink-0">✓</span>
+              <span>Brackets are corroded but the gutter profile is intact</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-600 font-bold text-xl shrink-0">✓</span>
+              <span>Period gutters that benefit from preservation</span>
+            </li>
+          </ul>
+          <p class="text-gray-700 text-sm mt-6 pt-6 border-t border-green-200 italic">Typical cost: £150–£300 per repair. Extends life by 10–15 years.</p>
+        </div>
+
+        <!-- Replace Column -->
+        <div class="bg-orange-50 rounded-xl p-8 border-l-4 border-orange-600">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">When We Recommend Replacement</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex gap-3">
+              <span class="text-orange-600 font-bold text-xl shrink-0">✗</span>
+              <span>Rust has delaminated the gutter profile internally</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-600 font-bold text-xl shrink-0">✗</span>
+              <span>Multiple rust-through holes or extensive corrosion</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-600 font-bold text-xl shrink-0">✗</span>
+              <span>Gutter is cracked across its width or severely dented</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-600 font-bold text-xl shrink-0">✗</span>
+              <span>Gutter cannot be re-hung because fascia is rotted</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-orange-600 font-bold text-xl shrink-0">✗</span>
+              <span>uPVC gutter is 30+ years old and has multiple failures</span>
+            </li>
+          </ul>
+          <p class="text-gray-700 text-sm mt-6 pt-6 border-t border-orange-200 italic">Typical cost: £300–£600 per section. New gutter lasts 25–50 years.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Cards - Other Southall Services -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Other Services Available in Southall</h2>
+      <p class="text-gray-600 text-center mb-10">Complete gutter solutions from cleaning to replacement.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="/locations/southall/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Vacuum-powered cleaning that reveals repair issues early. Prevents damage to terraced properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/southall/gutter-replacement/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full replacement with period-appropriate profiles for Victorian and Edwardian terraces.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/southall/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and replacement of damaged fascia boards that support gutters.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Repair Reviews from Southall</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} • {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get a Fixed-Price Repair Quote</h2>
+      <p class="text-gray-600 text-center mb-10">Describe the problem — we'll assess it and provide a fixed price within 24 hours. No hidden charges.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Repair FAQ</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Gutter repairs available in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter repairs in Harrow</a>
+        <a href="/locations/hayes/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter repairs in Hayes</a>
+        <a href="/locations/uxbridge/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter repairs in Uxbridge</a>
+        <a href="/locations/southall/" class="text-blue-600 hover:underline text-sm">All Southall services &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

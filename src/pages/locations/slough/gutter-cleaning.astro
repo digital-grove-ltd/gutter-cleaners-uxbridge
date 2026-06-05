@@ -1,0 +1,333 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Cleaning Slough SL1/SL2 | Professional Local Service";
+const metaDescription = "Professional gutter cleaning in Slough SL1/SL2. Vacuum-powered, no mess, same-week appointments. Specialists in 1960s to 1980s residential estates.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Slough", url: "https://www.guttercleanersuxbridge.co.uk/locations/slough/" },
+  { name: "Gutter Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/slough/gutter-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter cleaning cost in Slough?",
+    a: "Gutter cleaning in Slough typically costs between £80 and £150 for a 3-bedroom semi-detached property in SL1 or SL2. The final price depends on the length of guttering, number of storeys, accessibility, and the severity of blockage. We provide a free, no-obligation quote based on a visual inspection of your property. Most Slough customers receive our quote within 24 hours of contact."
+  },
+  {
+    q: "How often should 1960s to 1980s residential estates properties in SL1/SL2 have gutters cleaned?",
+    a: "We recommend annual gutter cleaning for 1960s to 1980s residential estates homes in Slough. Properties built during this era often have original or aging gutters with multiple joints and brackets where debris accumulates. If your property is surrounded by mature trees, autumn is critical — gutters can block with leaves within weeks. Spring cleaning removes the winter buildup and prevents summer drainage issues during heavy rain."
+  },
+  {
+    q: "Do you clean gutters across all of Slough?",
+    a: "Yes. We provide gutter cleaning throughout Slough, including all SL1 and SL2 postcodes. This covers the 1960s to 1980s residential estates across Central Slough, the Trading Estate area, and surrounding neighbourhoods. We offer same-week appointments and typically respond to new enquiries within one working day."
+  },
+  {
+    q: "What causes gutter blockages in Slough?",
+    a: "Slough's 1960s to 1980s residential estates suffer from multiple blockage causes. The most common is decomposed leaves and organic matter accumulating over autumn and winter. However, the biggest structural issue we encounter is flat-roofed extensions with inadequate drainage overflowing onto main gutters. These extensions were added to many 1960s to 1980s estates properties over the decades, and when their internal drainage fails or becomes blocked, water cascades into the main gutter, overwhelming its capacity. This causes blockages, overflows, and water damage. We always identify this problem during cleaning and recommend solutions."
+  },
+  {
+    q: "How long does gutter cleaning take for a typical Slough house?",
+    a: "A typical semi-detached property in SL1 or SL2 takes between 1 and 2 hours to clean, including the downpipes and testing for proper drainage flow. Terraced properties may take 45 minutes to 1 hour. Larger detached homes or properties with extensive guttering can take up to 3 hours. We always work efficiently but never rush the job — proper flushing and testing is essential on Slough properties where drainage issues are common."
+  },
+  {
+    q: "Do you provide a report after cleaning gutters in Slough?",
+    a: "Yes. After every gutter cleaning in Slough, we provide a written condition report with photographs showing before and after. This report documents the debris removed, any damage identified, and the results of our downpipe flow test. If we find problems — such as blocked downpipes, loose brackets, or evidence of flat-roofed extension overflow — we clearly flag these and provide a no-pressure quote for repairs or investigation."
+  },
+  {
+    q: "Can you clean gutters on a 2-storey property in SL1/SL2?",
+    a: "Yes. We safely clean gutters on all heights of properties in Slough, including 2-storey semi-detached and detached homes common in 1960s to 1980s residential estates. Our team uses modern equipment and works at height following all safety protocols. We are fully insured, and all operatives hold relevant working-at-height certification. Two-storey properties in SL1 and SL2 are a regular part of our work."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Slough"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "David M.",
+    street: "Central Slough, SL1",
+    date: "May 2026",
+    text: "Our 1970s semi had gutters absolutely clogged with leaves and moss. The team came out, cleared everything thoroughly, tested the downpipes and identified that water from an old extension was spilling into the main gutter. Really helpful advice and a detailed report with photos. Very professional."
+  },
+  {
+    name: "Rachel T.",
+    street: "SL2 Trading Estate area",
+    date: "March 2026",
+    text: "Quick response, reasonable price and the gutters are now spotless. They explained why the gutters on 1960s properties like ours need regular attention. Would definitely book again."
+  },
+  {
+    name: "Michael K.",
+    street: "East Slough, SL2",
+    date: "April 2026",
+    text: "Friendly team, they arrived on time, did a thorough job and showed me the debris they removed. The written report was clear and detailed. Highly recommend for anyone in SL1 or SL2."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Slough — SL1 / SL2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Gutter Cleaning in Slough, SL1/SL2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Vacuum-powered cleaning for 1960s to 1980s residential estates. We tackle drainage problems caused by flat-roofed extension overflows.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Gutter cleaning in Slough costs £80 to £150 for a 3-bedroom semi-detached property. We clear debris, flush downpipes, and provide a written condition report. Most Slough SL1/SL2 bookings are available within 3 to 5 working days.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Slough's 1960s to 1980s residential estates face a distinctive gutter challenge that many property owners don't anticipate. Properties across SL1 and SL2 were built with a simple main gutter system — adequate for the original roof. However, as the decades passed, many homes received flat-roofed kitchen or bathroom extensions, often built without proper internal drainage or with systems that have since failed. When these extensions overflow, their water cascades directly onto the main gutter below, overwhelming its capacity and creating blockages that form in days rather than weeks.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        This structural problem is why gutter maintenance in Slough requires specialist knowledge. A standard gutter cleaning may clear the immediate blockage, but it won't address the underlying issue — the extension drainage failure. We clean gutters throughout SL1 and SL2, identify these problems during the visit, and advise on solutions before water damage reaches the property interior.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We use modern vacuum-powered equipment to remove debris safely without mess or water damage. Every clean includes downpipe flushing, flow testing, and a detailed condition report. Same-week appointments are available, and all quotes are free and fixed-price with no hidden charges.
+      </p>
+    </div>
+  </section>
+
+  <!-- What Is Included -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">What's Included in Our Gutter Cleaning Service</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">During the Clean</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Full removal of leaves, moss, debris and silt from all gutter runs</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Thorough flushing of all downpipes with flow testing</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Inspection of brackets, joints and connections for damage</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Identification of extension drainage problems or blockages</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Vacuum-powered equipment — zero mess, zero water spillage</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">After the Clean</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Written condition report with before/after photographs</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Clear explanation of any problems found</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>No-pressure quote for any repairs identified</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Advice on gutter maintenance and frequency for your property type</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span>Guarantees on our work and full public liability insurance</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Do It -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">How We Clean Gutters in Slough</h2>
+      <div class="space-y-5">
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Step 1: Safety and Inspection</h3>
+          <p class="text-gray-700">We position equipment safely around your property, then conduct a visual inspection of all gutters, downpipes and extension drainage areas before we begin work.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Step 2: Vacuum-Powered Removal</h3>
+          <p class="text-gray-700">Using SkyVac-style vacuum equipment, we remove all debris from the gutter runs. The vacuum bag captures debris at source, leaving zero mess on your property or driveway.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Step 3: Downpipe Flushing and Testing</h3>
+          <p class="text-gray-700">We flush every downpipe with water to clear any hidden blockages and confirm flow is unobstructed. We look specifically for extension drainage problems common in Slough 1960s to 1980s homes.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Step 4: Problem Identification and Reporting</h3>
+          <p class="text-gray-700">We photograph any damage, blockages or issues found — such as leaking joints, sagging sections, or evidence of extension overflow — and explain findings clearly with a written report.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Guide -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Gutter Cleaning Pricing in Slough</h2>
+      <p class="text-gray-700 mb-6 leading-relaxed">Prices below are typical for 1960s to 1980s residential estates properties in SL1 and SL2. Your exact quote depends on property size, guttering length, and blockage severity. We always provide a fixed-price quote before work begins — no surprises.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 border border-gray-200">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Terraced/Bungalow</h3>
+          <p class="text-3xl font-bold text-blue-600 mb-2">£60–£90</p>
+          <p class="text-sm text-gray-600">Single gutter run, clear debris, downpipe test</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border border-blue-300 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Semi-Detached</h3>
+          <p class="text-3xl font-bold text-blue-600 mb-2">£80–£150</p>
+          <p class="text-sm text-gray-600">Most common property type in Slough estates</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border border-gray-200">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Detached/Large</h3>
+          <p class="text-3xl font-bold text-blue-600 mb-2">£150–£220</p>
+          <p class="text-sm text-gray-600">Complex rooflines, multiple gutter sections</p>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 mt-6">All prices include vacuum removal of debris, downpipe flushing, flow test, inspection, condition report with photographs, and public liability insurance.</p>
+    </div>
+  </section>
+
+  <!-- Seasonal Advice -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Seasonal Gutter Maintenance Advice for Slough Properties</h2>
+      <div class="space-y-5">
+        <div class="bg-blue-50 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Autumn (September–November)</h3>
+          <p class="text-gray-700">This is the critical season for Slough properties. Gutters fill with fallen leaves rapidly, and if your property has a flat-roofed extension, its drainage blockages become more apparent as rainfall increases. We recommend cleaning in early autumn before leaves accumulate, then again in late November after the main fall.</p>
+        </div>
+        <div class="bg-blue-50 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Winter (December–February)</h3>
+          <p class="text-gray-700">Gutters clogged with decomposed leaves and silt become ice dams. On SL1 and SL2 properties, frozen overflows from extension drainage can cause serious water damage inside the property. Winter cleaning is essential if you didn't clean in autumn.</p>
+        </div>
+        <div class="bg-blue-50 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Spring (March–May)</h3>
+          <p class="text-gray-700">Spring cleaning removes winter debris and allows downpipes to test properly before the summer rain season. This is a good time to assess whether extension drainage issues need repair before autumn returns.</p>
+        </div>
+        <div class="bg-blue-50 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Summer (June–August)</h3>
+          <p class="text-gray-700">Summer is less critical but look out for moss growth on gutters exposed to moisture. If gutters blocked during spring, you may need cleaning before heavy summer downpours cause overflow damage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related services in Slough -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Other Gutter Services in Slough</h2>
+      <p class="text-gray-600 text-center mb-10">Beyond cleaning, we offer complete gutter solutions for SL1 and SL2 properties.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="/locations/slough/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Leaking joints, sagging sections, loose brackets. Quick response for Slough emergencies.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/slough/gutter-replacement/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full replacement for aging gutters on 1960s to 1980s estates. uPVC, cast iron or aluminium.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/slough/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and repair of fascia boards damaged by years of gutter overflow in SL1/SL2.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Slough Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Slough Property</h2>
+      <p class="text-gray-600 text-center mb-10">Submit your address and service details. We will respond with a fixed price on the same working day.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Cleaning FAQs for Slough</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Same service in other locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Also serving nearby areas with the same expert gutter cleaning:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Harrow</a>
+        <span class="text-gray-400">•</span>
+        <a href="/locations/hayes/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Hayes</a>
+        <span class="text-gray-400">•</span>
+        <a href="/locations/uxbridge/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Uxbridge</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

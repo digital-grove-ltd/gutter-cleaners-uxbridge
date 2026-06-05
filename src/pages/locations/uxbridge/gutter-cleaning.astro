@@ -1,0 +1,336 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import QuoteForm from '@/components/QuoteForm'
+import TrustBar from '@/components/TrustBar.astro'
+import { locationServiceSchema, faqSchema, breadcrumbSchema } from '@/lib/schema'
+
+const title = "Gutter Cleaning Uxbridge UB8 | Professional Local Service"
+const description = "Professional gutter cleaning in Uxbridge UB8. Vacuum-powered, no mess, same-week appointments. Specialists in 1930s semi-detached and Victorian terraces."
+
+const pageSchema = [
+  locationServiceSchema("Uxbridge", "UB8", "Gutter Cleaning", "/locations/uxbridge/gutter-cleaning/"),
+  faqSchema([
+    { q: "How much does gutter cleaning cost in Uxbridge?", a: "Gutter cleaning in Uxbridge typically costs £80–£150 for a standard 3-bedroom semi-detached property, depending on the size of your guttering system and the extent of blockage. Larger Victorian terraces may cost more. We provide a free quote after assessing your Uxbridge UB8 property." },
+    { q: "How often should 1930s semi-detached and Victorian terraces properties in UB8 have gutters cleaned?", a: "We recommend at least twice yearly for most Uxbridge properties—typically in spring and autumn. If your property is surrounded by mature trees, more frequent cleaning (every 3–4 months) may be necessary. We can create a maintenance schedule tailored to your Uxbridge property." },
+    { q: "Do you clean gutters across all of Uxbridge?", a: "Yes, we cover all areas of Uxbridge and UB8, from the town centre to residential areas near the Grand Union Canal. Whether your property is in the heart of Uxbridge or in the quieter surrounding roads, we can arrange a convenient cleaning appointment within 3–5 working days." },
+    { q: "What causes gutter blockages in Uxbridge?", a: "The primary cause of gutter blockages in Uxbridge is mature trees dropping leaves, twigs, and seeds into gutters. Autumn leaf fall is particularly heavy, especially for properties surrounded by oak, ash, and other large trees common to UB8." },
+    { q: "How long does gutter cleaning take for a typical Uxbridge house?", a: "For a standard 2-storey semi-detached property in Uxbridge, gutter cleaning typically takes 45–60 minutes. A 3-storey Victorian terraces property in UB8 may take 60–90 minutes depending on the amount of debris and the number of downpipes." },
+    { q: "Do you provide a report after cleaning gutters in Uxbridge?", a: "Yes, every gutter cleaning service in Uxbridge includes a written condition report with photographs showing your clean gutters and any issues identified." },
+    { q: "Can you clean gutters on a 2-storey property in UB8?", a: "Absolutely. Our vacuum-powered cleaning system is designed to safely clean gutters on all height properties, including 2-storey 1930s semi-detached homes and 3-storey Victorian terraces throughout Uxbridge." },
+  ]),
+  breadcrumbSchema([
+    { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk" },
+    { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations" },
+    { name: "Uxbridge", url: "https://www.guttercleanersuxbridge.co.uk/locations/uxbridge" },
+    { name: "Gutter Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/uxbridge/gutter-cleaning" },
+  ]),
+]
+---
+
+<Layout title={title} description={description} schema={pageSchema}>
+  <div class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <div class="relative h-96 overflow-hidden">
+      <img src="/images/gutter-cleaning-hero.jpg" alt="Gutter cleaning in Uxbridge" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-center text-white">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning Uxbridge</h1>
+          <p class="text-xl md:text-2xl">Professional vacuum-powered cleaning, no mess, no fuss</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-gray-100 px-4 py-3">
+      <div class="max-w-6xl mx-auto">
+        <ol class="flex items-center gap-2 text-sm">
+          <li><a href="/" class="text-blue-600 hover:underline">Home</a></li>
+          <li class="text-gray-500">/</li>
+          <li><a href="/locations" class="text-blue-600 hover:underline">Locations</a></li>
+          <li class="text-gray-500">/</li>
+          <li><a href="/locations/uxbridge" class="text-blue-600 hover:underline">Uxbridge</a></li>
+          <li class="text-gray-500">/</li>
+          <li class="text-gray-700">Gutter Cleaning</li>
+        </ol>
+      </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <!-- Quick Answer Box -->
+      <div class="quick-answer bg-blue-50 border-l-4 border-blue-500 p-6 mb-12 rounded">
+        <h2 class="text-xl font-semibold text-gray-800 mb-3">Quick Answer</h2>
+        <p class="text-gray-700 leading-relaxed">Gutter cleaning in Uxbridge costs £80 to £150 for a 3-bedroom semi-detached property. We clear debris, flush downpipes, and provide a written condition report. Most Uxbridge UB8 bookings are available within 3 to 5 working days.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Gutter Cleaning Services in Uxbridge UB8</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Uxbridge's tree-lined streets and mature landscaping create beautiful surroundings, but they also mean gutters fill quickly with leaves, twigs, and debris. Our professional gutter cleaning service in Uxbridge UB8 keeps the guttering systems on your 1930s semi-detached and Victorian terraces in perfect working order, preventing costly water damage and blocked downpipes.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We use advanced vacuum-powered cleaning equipment that removes debris safely and cleanly without making a mess of your garden or driveway. Unlike traditional methods that involve scooping leaves onto neighbouring properties or requiring ladders to be moved repeatedly, our system captures everything in sealed containers, leaving no trace behind.
+            </p>
+          </section>
+
+          <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">What's Included in Our Uxbridge Gutter Cleaning Service</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span class="text-gray-700"><strong>Complete debris removal:</strong> We vacuum all leaves, twigs, moss, and dirt from gutters and downpipes</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span class="text-gray-700"><strong>Downpipe flushing:</strong> Water is run through all downpipes to confirm they flow freely</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span class="text-gray-700"><strong>Written condition report:</strong> Photographic evidence of gutter condition and any issues found</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span class="text-gray-700"><strong>No-mess guarantee:</strong> Vacuum-powered system ensures debris goes into containers, not your garden</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span class="text-gray-700"><strong>Minor repairs identified:</strong> We'll point out loose brackets, small leaks, or damage requiring attention</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">How We Clean Your Gutters in Uxbridge</h3>
+            <div class="space-y-4">
+              <div class="bg-gray-50 p-4 rounded border-l-4 border-blue-500">
+                <h4 class="font-semibold text-gray-800 mb-2">Step 1: Initial Inspection</h4>
+                <p class="text-gray-700">We assess the extent of debris and identify any visible damage to gutters, fascia, or soffits on your Uxbridge property.</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded border-l-4 border-blue-500">
+                <h4 class="font-semibold text-gray-800 mb-2">Step 2: Vacuum Cleaning</h4>
+                <p class="text-gray-700">Using specialist vacuum equipment mounted on our vehicle, we systematically clean each gutter section, removing all debris into sealed containers that remain sealed throughout the job.</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded border-l-4 border-blue-500">
+                <h4 class="font-semibold text-gray-800 mb-2">Step 3: Downpipe Flushing</h4>
+                <p class="text-gray-700">Water is introduced at the top of each downpipe to flush away any remaining silt and confirm water flows freely to drains or ground level.</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded border-l-4 border-blue-500">
+                <h4 class="font-semibold text-gray-800 mb-2">Step 4: Final Report</h4>
+                <p class="text-gray-700">You receive a written condition report with photographs showing your clean gutters and any issues identified that may need future attention.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Pricing Guide for Uxbridge UB8</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="bg-blue-100">
+                    <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Property Type</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Typical Price</th>
+                    <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Cleaning Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2">2-storey semi-detached (1930s)</td>
+                    <td class="border border-gray-300 px-4 py-2">£80–£110</td>
+                    <td class="border border-gray-300 px-4 py-2">45–60 mins</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-4 py-2">3-storey Victorian terraced</td>
+                    <td class="border border-gray-300 px-4 py-2">£110–£150</td>
+                    <td class="border border-gray-300 px-4 py-2">60–90 mins</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 px-4 py-2">Bungalow (single storey)</td>
+                    <td class="border border-gray-300 px-4 py-2">£60–£80</td>
+                    <td class="border border-gray-300 px-4 py-2">30–45 mins</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">*Prices shown are for standard cleaning where gutters are moderately blocked. Heavy blockages or extensive damage may incur additional charges. All prices include a written report.</p>
+          </section>
+
+          <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Seasonal Gutter Cleaning in Uxbridge</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Uxbridge's location near parks and leafy residential areas means autumn leaf fall is particularly heavy. We recommend:
+            </p>
+            <ul class="space-y-2 text-gray-700 mb-6">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600">•</span>
+                <span><strong>Spring (March–May):</strong> Cleaning after winter to remove leaf and debris buildup</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600">•</span>
+                <span><strong>Autumn (September–November):</strong> Pre-winter cleaning to prevent blockages during heavy rain</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600">•</span>
+                <span><strong>Additional cleaning:</strong> Midway between spring and autumn if your Uxbridge property is surrounded by mature trees</span>
+              </li>
+            </ul>
+            <p class="text-gray-700 leading-relaxed">
+              Properties on or near the Grand Union Canal may experience additional debris from water-edge vegetation, making more frequent cleaning beneficial.
+            </p>
+          </section>
+
+          <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Why Uxbridge Properties Need Regular Gutter Cleaning</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Uxbridge's tree-lined streets and mature landscaping create a pleasant living environment, but mature trees dropping leaves into gutters is one of the most common problems we address. Unlike areas with less vegetation, Uxbridge UB8 properties—especially 1930s semi-detached and Victorian terraces with deep roof lines—collect debris quickly.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Blocked gutters lead to water overflow, which damages fascia boards, soffits, and external walls. In 1930s semi-detached properties, poor drainage can also cause damp problems in roof cavities. Victorian terraces, with their ornate guttering, are particularly prone to blockage in the decorative sections where debris accumulates easily.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Regular cleaning prevents these expensive problems and maintains your property's value. We recommend professional cleaning at least twice yearly for properties in leafy areas like Uxbridge.
+            </p>
+          </section>
+
+          <!-- Related Services in Uxbridge -->
+          <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Related Services in Uxbridge UB8</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <a href="/locations/uxbridge/gutter-repairs" class="block p-4 border-2 border-blue-200 rounded hover:border-blue-500 hover:bg-blue-50 transition">
+                <h4 class="font-semibold text-gray-800 mb-2">Gutter Repairs</h4>
+                <p class="text-gray-600 text-sm">Leaking joints, sagging gutters, cracked sections</p>
+              </a>
+              <a href="/locations/uxbridge/gutter-replacement" class="block p-4 border-2 border-blue-200 rounded hover:border-blue-500 hover:bg-blue-50 transition">
+                <h4 class="font-semibold text-gray-800 mb-2">Gutter Replacement</h4>
+                <p class="text-gray-600 text-sm">uPVC, cast iron, and aluminium systems</p>
+              </a>
+              <a href="/locations/uxbridge/fascia-soffit-cleaning" class="block p-4 border-2 border-blue-200 rounded hover:border-blue-500 hover:bg-blue-50 transition">
+                <h4 class="font-semibold text-gray-800 mb-2">Fascia & Soffit Cleaning</h4>
+                <p class="text-gray-600 text-sm">Remove algae, dirt and black streaking</p>
+              </a>
+            </div>
+          </section>
+
+          <!-- FAQ Section with Schema -->
+          <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+              <details class="border border-gray-300 rounded overflow-hidden">
+                <summary class="cursor-pointer bg-gray-50 px-6 py-4 font-semibold text-gray-800 hover:bg-gray-100">
+                  Q1: How much does gutter cleaning cost in Uxbridge?
+                </summary>
+                <div class="px-6 py-4 bg-white border-t border-gray-300">
+                  <p class="text-gray-700">Gutter cleaning in Uxbridge typically costs £80–£150 for a standard 3-bedroom semi-detached property, depending on the size of your guttering system and the extent of blockage. Larger Victorian terraces may cost more. We provide a free quote after assessing your Uxbridge UB8 property.</p>
+                </div>
+              </details>
+
+              <details class="border border-gray-300 rounded overflow-hidden">
+                <summary class="cursor-pointer bg-gray-50 px-6 py-4 font-semibold text-gray-800 hover:bg-gray-100">
+                  Q2: How often should 1930s semi-detached and Victorian terraces properties in UB8 have gutters cleaned?
+                </summary>
+                <div class="px-6 py-4 bg-white border-t border-gray-300">
+                  <p class="text-gray-700">We recommend at least twice yearly for most Uxbridge properties—typically in spring and autumn. If your 1930s semi-detached or Victorian terraces home is surrounded by mature trees, more frequent cleaning (every 3–4 months) may be necessary. We can create a maintenance schedule tailored to your Uxbridge property.</p>
+                </div>
+              </details>
+
+              <details class="border border-gray-300 rounded overflow-hidden">
+                <summary class="cursor-pointer bg-gray-50 px-6 py-4 font-semibold text-gray-800 hover:bg-gray-100">
+                  Q3: Do you clean gutters across all of Uxbridge?
+                </summary>
+                <div class="px-6 py-4 bg-white border-t border-gray-300">
+                  <p class="text-gray-700">Yes, we cover all areas of Uxbridge and UB8, from the town centre to residential areas near the Grand Union Canal. Whether your property is in the heart of Uxbridge or in the quieter surrounding roads, we can arrange a convenient cleaning appointment within 3–5 working days.</p>
+                </div>
+              </details>
+
+              <details class="border border-gray-300 rounded overflow-hidden">
+                <summary class="cursor-pointer bg-gray-50 px-6 py-4 font-semibold text-gray-800 hover:bg-gray-100">
+                  Q4: What causes gutter blockages in Uxbridge?
+                </summary>
+                <div class="px-6 py-4 bg-white border-t border-gray-300">
+                  <p class="text-gray-700">The primary cause of gutter blockages in Uxbridge is mature trees dropping leaves, twigs, and seeds into gutters. Autumn leaf fall is particularly heavy, especially for properties surrounded by oak, ash, and other large trees common to UB8. Moss, lichen, and roof debris also contribute to blockages, which is why regular cleaning is essential for 1930s semi-detached and Victorian terraces.</p>
+                </div>
+              </details>
+
+              <details class="border border-gray-300 rounded overflow-hidden">
+                <summary class="cursor-pointer bg-gray-50 px-6 py-4 font-semibold text-gray-800 hover:bg-gray-100">
+                  Q5: How long does gutter cleaning take for a typical Uxbridge house?
+                </summary>
+                <div class="px-6 py-4 bg-white border-t border-gray-300">
+                  <p class="text-gray-700">For a standard 2-storey semi-detached property in Uxbridge, gutter cleaning typically takes 45–60 minutes. A 3-storey Victorian terraces property in UB8 may take 60–90 minutes depending on the amount of debris and the number of downpipes. We always give you a time estimate before starting work.</p>
+                </div>
+              </details>
+
+              <details class="border border-gray-300 rounded overflow-hidden">
+                <summary class="cursor-pointer bg-gray-50 px-6 py-4 font-semibold text-gray-800 hover:bg-gray-100">
+                  Q6: Do you provide a report after cleaning gutters in Uxbridge?
+                </summary>
+                <div class="px-6 py-4 bg-white border-t border-gray-300">
+                  <p class="text-gray-700">Yes, every gutter cleaning service in Uxbridge includes a written condition report with photographs showing your clean gutters and any issues identified. This report helps you understand the condition of your guttering system and plan for any repairs or maintenance needed on your UB8 property.</p>
+                </div>
+              </details>
+
+              <details class="border border-gray-300 rounded overflow-hidden">
+                <summary class="cursor-pointer bg-gray-50 px-6 py-4 font-semibold text-gray-800 hover:bg-gray-100">
+                  Q7: Can you clean gutters on a 2-storey property in UB8?
+                </summary>
+                <div class="px-6 py-4 bg-white border-t border-gray-300">
+                  <p class="text-gray-700">Absolutely. Our vacuum-powered cleaning system is designed to safely clean gutters on all height properties, including 2-storey 1930s semi-detached homes and 3-storey Victorian terraces throughout Uxbridge. We have the equipment and expertise to access gutters safely and efficiently on any Uxbridge UB8 property.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <!-- Related Services in Other Areas -->
+          <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Gutter Cleaning in Nearby Areas</h3>
+            <p class="text-gray-700 mb-4">We also provide the same professional gutter cleaning service to nearby towns:</p>
+            <div class="space-y-2">
+              <p><a href="/locations/harrow/gutter-cleaning" class="text-blue-600 hover:underline">Gutter Cleaning in Harrow</a> – Serving all areas of HA postcodes</p>
+              <p><a href="/locations/hayes/gutter-cleaning" class="text-blue-600 hover:underline">Gutter Cleaning in Hayes</a> – Serving all areas of UB postcodes</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="bg-blue-50 rounded-lg p-6 sticky top-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Get a Free Quote</h3>
+            <QuoteForm client:load />
+          </div>
+
+          <div class="mt-6 bg-white border-2 border-gray-200 rounded-lg p-6">
+            <h4 class="font-semibold text-gray-800 mb-4">Why Choose Us?</h4>
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600 text-lg">✓</span>
+                <span>Vacuum-powered, no mess</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600 text-lg">✓</span>
+                <span>Written condition report</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600 text-lg">✓</span>
+                <span>3–5 day appointments</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600 text-lg">✓</span>
+                <span>Fully insured</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600 text-lg">✓</span>
+                <span>Local Uxbridge service</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Bar -->
+    <TrustBar />
+  </div>
+
+</Layout>

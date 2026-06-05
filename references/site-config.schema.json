@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "site-config",
+  "description": "Non-secret site configuration for a local-business Hakuto site",
+  "type": "object",
+  "required": ["business", "domain", "brand", "serviceArea", "siteType", "designLanguage"],
+  "properties": {
+    "business": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "address": {
+          "type": "object",
+          "properties": {
+            "street": { "type": ["string", "null"] },
+            "town": { "type": "string" },
+            "county": { "type": "string" },
+            "postcode": { "type": ["string", "null"] },
+            "country": { "type": "string" }
+          }
+        },
+        "phone": { "type": ["string", "null"] },
+        "email": { "type": ["string", "null"] },
+        "contactMethod": { "enum": ["email", "phone", "form-only", "email-and-phone"] },
+        "hours": {
+          "type": "object",
+          "properties": {
+            "display": { "type": "string" },
+            "schema": { "type": "string", "description": "Schema.org openingHours format" }
+          }
+        },
+        "services": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "domain": {
+      "type": "object",
+      "required": ["primary", "productionUrl"],
+      "properties": {
+        "primary": { "type": "string" },
+        "www": { "type": "boolean" },
+        "productionUrl": { "type": "string", "format": "uri" },
+        "targetCountry": { "type": "string", "description": "ISO 3166-1 alpha-2" }
+      }
+    },
+    "brand": {
+      "type": "object",
+      "properties": {
+        "colourDirection": { "type": "string" },
+        "colourNote": { "type": "string" },
+        "primaryColour": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "fontFeel": { "enum": ["modern-clean", "utility", "traditional"] },
+        "voice": { "enum": ["friendly", "no-nonsense", "professional-reassuring"] }
+      }
+    },
+    "serviceArea": {
+      "type": "object",
+      "required": ["centredOn", "radiusMiles"],
+      "properties": {
+        "centredOn": { "type": "string" },
+        "radiusMiles": { "type": "number" },
+        "exclusions": { "type": "array", "items": { "type": "string" } },
+        "notableTowns": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "siteType": { "enum": ["saas", "general"] },
+    "designLanguage": {
+      "enum": ["minimalist", "technology", "dark", "corporate", "brutalist", "colorful", "elegant"]
+    },
+    "analytics": {
+      "type": "object",
+      "properties": {
+        "ga4MeasurementId": { "type": ["string", "null"] },
+        "plausible": { "type": "boolean" }
+      }
+    },
+    "deployment": {
+      "type": "object",
+      "properties": {
+        "platform": { "enum": ["cloudflare-workers", "vercel", "netlify"] },
+        "autoDeploy": { "type": "boolean" },
+        "gscAutoVerify": { "type": "boolean" }
+      }
+    }
+  }
+}

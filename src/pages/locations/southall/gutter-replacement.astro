@@ -1,0 +1,337 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Replacement Southall UB1/UB2 | uPVC and Cast Iron";
+const metaDescription = "Full gutter replacement in Southall UB1/UB2. uPVC, cast iron and aluminium. Specialists in Victorian and Edwardian terraced housing properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Southall", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/" },
+  { name: "Gutter Replacement", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/gutter-replacement/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter replacement cost in Southall?",
+    a: "Full gutter replacement in Southall typically costs £400 to £900 for a typical semi-detached or terraced property, depending on the gutter run length, number of downpipes, material choice, and any fascia board work required. uPVC guttering tends to be the most economical (£300–£500 per run), while cast-iron replacement is more expensive but sympathetic to period properties (£600–£1200 per run). We provide itemised fixed-price quotations after measuring and assessing your property. Any additional costs — such as fascia replacement or new brackets — are included in the quote with no surprises."
+  },
+  {
+    q: "How long does a full gutter replacement take in UB1/UB2?",
+    a: "Most gutter replacement jobs in Southall take 1 to 3 days depending on the extent of work. A single-run replacement on a 2-storey Victorian or Edwardian terrace typically takes 6 to 8 hours and can be completed in one day. If we discover rotted fascia boards that also need replacing, the job may extend into a second day. We'll give you an estimated timeline during the survey and keep you updated throughout the work. We typically complete replacement during working hours (Monday to Friday) with minimal disruption to your property or neighbours."
+  },
+  {
+    q: "Should I choose uPVC or cast iron gutters for my Victorian and Edwardian terraced housing home in Southall?",
+    a: "The choice depends on your priorities. Cast iron matches the original character of Victorian and Edwardian terraces in Southall and, when properly maintained, can last indefinitely — many original cast-iron systems are 100+ years old and still functioning. Cast iron is heavier, more rigid, and more visually sympathetic to period properties. However, it requires regular maintenance and eventual repainting. uPVC is low-maintenance, lighter, and more economical to install, but it's less historically authentic and can become brittle in cold weather after 20–30 years. For terraces in UB1 and UB2 where period character matters, we often recommend cast iron. For more modern properties or budget-conscious owners, uPVC is a practical choice."
+  },
+  {
+    q: "How long do new gutters last in Southall?",
+    a: "New uPVC guttering typically lasts 25–30 years with normal maintenance and occasional cleaning. New cast-iron guttering, if properly installed and maintained with regular cleaning and repainting every 5–10 years, can last 50+ years or even indefinitely. Aluminium guttering offers a middle ground with 30–40 year lifespans. The lifespan in Southall's terrace environment depends heavily on maintenance — regular cleaning prevents blockages that accelerate deterioration, and periodic repainting on cast iron prevents rust development. We recommend annual cleaning and biennial inspections on all guttering to maximize lifespan."
+  },
+  {
+    q: "Do you replace fascia and soffits at the same time as gutters in Southall?",
+    a: "We can coordinate fascia and soffit work with gutter replacement if needed. Many Victorian and Edwardian terraces in Southall have wooden fascia boards that have absorbed moisture from failing gutters over decades, resulting in soft, rotted wood that cannot support new gutter hangers securely. During the gutter replacement survey, we assess fascia condition and recommend replacement if necessary. We work with trusted local carpenters to coordinate the work, or we can arrange fascia replacement as part of the overall project. New fascia boards are typically installed before new gutters are hung."
+  },
+  {
+    q: "Can you match the original gutter style on a Victorian and Edwardian terraced housing property in UB1/UB2?",
+    a: "Yes. Victorian properties in Southall typically have ogee-profile cast-iron gutters, while Edwardian properties more often feature half-round cast-iron profiles. We stock replacement cast-iron guttering in both profiles and can install new systems that match the original style and proportions. This is particularly important on conservation streets in Southall where local planning guidance may require period-appropriate materials. We work with conservation officers where necessary and pride ourselves on maintaining the architectural integrity of these older properties."
+  },
+  {
+    q: "Do you take away old gutters after replacement in Southall?",
+    a: "Yes. We remove all old guttering, downpipes, and brackets as part of the replacement work and dispose of them responsibly. We separate recyclable materials (cast iron is valuable and is usually taken to a scrap metal dealer; aluminium and some uPVC is recycled). The removal and disposal is included in our quotation — there are no extra charges for taking away old guttering, and we leave your property clean and tidy once the job is complete."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Southall"),
+  faqSchema(faqs),
+  serviceSchema(
+    "Gutter Replacement in Southall",
+    "Complete gutter replacement service for Victorian and Edwardian terraced housing in Southall UB1/UB2. uPVC, cast iron and aluminium systems.",
+    "https://www.guttercleanersuxbridge.co.uk/locations/southall/gutter-replacement/"
+  )
+];
+
+const reviews = [
+  {
+    name: "Priya D.",
+    street: "Herbert Road, Southall",
+    date: "May 2026",
+    text: "Victorian semi with original cast-iron gutters that were failing all over. These guys recommended matching cast-iron replacement to keep the period look. They worked around our tenants, coordinated fascia work with a carpenter, and the result looks absolutely right for the house. More expensive than uPVC but worth every penny for character and durability."
+  },
+  {
+    name: "William T.",
+    street: "Hambrough Road, UB1",
+    date: "April 2026",
+    text: "Full gutter replacement, two downpipes, new fascia boards and soffits. Quoted £2800, delivered exactly at that price. Work took two days, team was professional and careful. Property looks fresh and modern but still sympathetic to the terrace style. Guaranteed for 12 months and already working beautifully."
+  },
+  {
+    name: "Deepak N.",
+    street: "The Green, Southall, UB2",
+    date: "March 2026",
+    text: "Two sides of guttering replaced with uPVC after cast-iron repair costs were becoming expensive. Much more cost-effective, and they explained clearly that uPVC was the right choice given the property's age and condition. Installation was clean and quick. Very happy with the work."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Southall Gutter Replacement — UB1 / UB2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Replacement in Southall, UB1/UB2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">uPVC, cast iron and aluminium. Matched to the period character of Victorian and Edwardian terraces.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Full gutter replacement in Southall UB1/UB2 costs £400 to £900 for a typical semi-detached property depending on run length and material. We install uPVC, cast iron and aluminium systems suited to Victorian and Edwardian terraced housing. Fixed-price quotes with installation and old gutter removal included.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        When gutter repairs are no longer viable, full replacement becomes necessary. For Victorian and Edwardian terraced housing in Southall, the choice of replacement material is more significant than on newer properties — it affects both the appearance of your property and its long-term maintenance requirements. A Victorian terrace that originally had cast-iron guttering looks fundamentally different — and ages differently — if replaced with modern plastic.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        We help Southall property owners navigate this choice with honesty and expertise. We supply cast-iron replacement guttering in the original profiles (ogee for Victorian properties, half-round for Edwardian semis), and we can install it correctly pitched, securely bracketed, and finished to match the architectural character of properties in UB1 and UB2. Where cast-iron replacement is not practical or where owners prefer low-maintenance systems, we install high-quality uPVC that blends respectfully with period properties.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Gutter replacement in Southall is a significant investment, and we ensure the work is done correctly: proper pitch for drainage, adequate support for the gutter weight, correctly sized downpipes, and clean removal of old systems. The result is a gutter system that will function reliably for decades.
+      </p>
+    </div>
+  </section>
+
+  <!-- Material Comparison -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Gutter Materials for Southall Properties</h2>
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Cast Iron</h3>
+          <p class="text-gray-700 mb-3"><strong>Best for:</strong> Victorian and Edwardian terraces in UB1 where period character is a priority.</p>
+          <p class="text-gray-700 mb-3">Cast iron offers unmatched durability and visual authenticity. Original cast-iron systems on Southall properties installed 100+ years ago are often still functioning — testament to the material's longevity when maintained. New cast-iron guttering, properly installed and painted, can last 50+ years. We stock ogee and half-round profiles to match the original styles of Victorian and Edwardian Southall properties.</p>
+          <div class="flex gap-6 text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
+            <div><strong>Lifespan:</strong> 50+ years</div>
+            <div><strong>Cost:</strong> Higher</div>
+            <div><strong>Maintenance:</strong> Regular repainting</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 border-l-4 border-green-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">uPVC (PVCu)</h3>
+          <p class="text-gray-700 mb-3"><strong>Best for:</strong> Budget-conscious owners or properties where low maintenance is the priority.</p>
+          <p class="text-gray-700 mb-3">uPVC offers excellent value and requires only occasional cleaning. It is lightweight, easy to install, and maintenance-free — no painting required. On Edwardian and 1930s properties, uPVC can blend acceptably if you choose profiles that echo the original styles. It is vulnerable to brittleness in very cold weather after 20–25 years, and older uPVC systems occasionally develop joint leaks as the plastic stiffens. However, a modern uPVC system installed correctly will provide reliable service for 25–30 years.</p>
+          <div class="flex gap-6 text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
+            <div><strong>Lifespan:</strong> 25-30 years</div>
+            <div><strong>Cost:</strong> Economical</div>
+            <div><strong>Maintenance:</strong> Minimal (cleaning only)</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 border-l-4 border-purple-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Aluminium</h3>
+          <p class="text-gray-700 mb-3"><strong>Best for:</strong> A premium alternative combining durability with low maintenance.</p>
+          <p class="text-gray-700 mb-3">Aluminium guttering is lightweight, durable, and does not rust. It can be powder-coated in various colours and profiles to suit period properties. Aluminium is more expensive than uPVC but less costly than new cast iron, and it offers better longevity than uPVC (typically 30–40 years). It is less commonly used on Southall terraces than cast iron or uPVC, but it is an excellent option if you want low maintenance combined with longer service life.</p>
+          <div class="flex gap-6 text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
+            <div><strong>Lifespan:</strong> 30-40 years</div>
+            <div><strong>Cost:</strong> Mid-range</div>
+            <div><strong>Maintenance:</strong> Minimal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">What's Included in Gutter Replacement</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Left Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">The Work</h3>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700">Complete removal of old guttering, downpipes and brackets</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700">Installation of new gutters to correct pitch and profile</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700">New downpipes sized appropriately for your roof area</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700">New brackets and hangers rated for gutter weight</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700">Disposal and recycling of old materials</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700">Water-flow testing before completion</span>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">Optional Additions</h3>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Fascia board replacement</strong> if existing wood is rotted</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Soffit replacement</strong> for complete eaves refresh</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Gutter guards</strong> to reduce future blockages</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Cast-iron priming and first coat</strong> before delivery</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Annual maintenance contract</strong> post-installation</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Extended guarantee</strong> beyond the standard 12 months</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-blue-50 rounded-xl p-8 border-l-4 border-blue-600">
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Pricing Breakdown for Southall</h3>
+        <p class="text-gray-700 text-lg mb-4">
+          Full gutter replacement typically costs <strong class="text-gray-900">£400–£900</strong> for a standard semi-detached property:
+        </p>
+        <ul class="space-y-2 text-gray-700 mb-6">
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span><strong>uPVC systems:</strong> £300–£500 (economical, low maintenance)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span><strong>Aluminium systems:</strong> £400–£600 (mid-range, durable)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span><strong>Cast-iron systems:</strong> £600–£1200 (premium, period-appropriate)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span><strong>Fascia board replacement:</strong> Add £150–£300 per run if needed</span>
+          </li>
+        </ul>
+        <p class="text-gray-700 text-lg">
+          All quotations include removal of old guttering, new installation, and water-testing. No hidden costs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Cards - Other Southall Services -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Other Services Available in Southall</h2>
+      <p class="text-gray-600 text-center mb-10">From cleaning to repairs, we handle all aspects of gutter maintenance.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="/locations/southall/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Vacuum-powered cleaning before replacement reveals condition of gutters and helps decide between repair and replacement.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/southall/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Reseal joints, re-bolt gutters, and repair cast iron before committing to full replacement.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/southall/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Fascia board replacement works well alongside gutter replacement on Southall terraces.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Replacement Reviews from Southall</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} • {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get a Fixed-Price Replacement Quote</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us about your property and material preference. We'll survey and provide a detailed quotation within 24 hours.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Replacement FAQ</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Gutter replacement available in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter replacement in Harrow</a>
+        <a href="/locations/hayes/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter replacement in Hayes</a>
+        <a href="/locations/uxbridge/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter replacement in Uxbridge</a>
+        <a href="/locations/southall/" class="text-blue-600 hover:underline text-sm">All Southall services &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

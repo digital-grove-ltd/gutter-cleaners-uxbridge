@@ -1,0 +1,373 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Replacement Windsor SL4 | uPVC and Cast Iron";
+const metaDescription = "Full gutter replacement in Windsor SL4. uPVC, cast iron and aluminium. Specialists in Victorian and Georgian period properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Windsor", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/" },
+  { name: "Gutter Replacement", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/gutter-replacement/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter replacement cost in Windsor?",
+    a: "Full gutter replacement in Windsor SL4 typically costs £400 to £900 for a standard semi-detached property depending on the run length and material chosen. uPVC systems are the most economical option at £400–£600, while cast-iron replacement (for Victorian and Georgian period properties that want to retain original appearance) costs £700–£1200+. Aluminium is mid-range at £500–£800. Request a free site survey and itemised quotation for your specific property."
+  },
+  {
+    q: "How long does a full gutter replacement take in SL4?",
+    a: "Most gutter replacements in Windsor take 2 to 3 working days depending on the property size and complexity of the existing system. A straightforward semi-detached property typically takes one day. Larger Victorian or Georgian period properties with multiple runs, gables or awkward angles may take 2 to 3 days. We work methodically to avoid water damage and ensure proper pitch and flow before leaving."
+  },
+  {
+    q: "Should I choose uPVC or cast iron gutters for my Victorian and Georgian period properties home in Windsor?",
+    a: "For Victorian and Georgian period properties in Windsor SL4, cast-iron replacement systems best preserve the period character — many conservation areas and listed properties expect original-style gutters. However, cast-iron requires more maintenance (painting every 10 years). Modern uPVC is lower-maintenance, lighter-weight and cheaper, but visually less authentic on period homes. We source half-round cast-iron profiles for Victorian properties or profile-matching uPVC if you prefer. The choice depends on your conservation requirements and budget."
+  },
+  {
+    q: "How long do new gutters last in Windsor?",
+    a: "Well-installed uPVC gutters last 25–30 years with minimal maintenance — just annual clearing. Cast-iron gutters last 40–50+ years if painted regularly (every 10 years). Aluminium systems last 30–40 years. The lifespan in Windsor depends on exposure to weather, leaf fall from nearby trees and whether you maintain regular cleaning to prevent moss and algae buildup. Proper pitch and bracket support also extend gutter life significantly."
+  },
+  {
+    q: "Do you replace fascia and soffits at the same time as gutters in Windsor?",
+    a: "We recommend assessing your fascia and soffit condition before gutter replacement. If the fascia is rotted, it will need repair or replacement to properly support new gutters. Many Windsor SL4 properties (especially Victorian and Georgian period properties) have wood rot behind gutters that only becomes apparent during replacement work. We quote fascia work separately but often combine the jobs to minimise disruption and scaffolding setup."
+  },
+  {
+    q: "Can you match the original gutter style on a Victorian and Georgian period properties property in SL4?",
+    a: "Yes, for Victorian properties we source traditional half-round cast-iron gutters in matching 4-inch profiles — the original size for period homes. We also match existing decorative brackets and downpipe styles where possible. For Georgian period properties, we can source period-appropriate profiles. If the original system is beyond matching, we recommend half-round uPVC that visually mimics traditional proportions while being maintenance-free — a common compromise on Windsor period properties."
+  },
+  {
+    q: "Do you take away old gutters after replacement in Windsor?",
+    a: "Yes. We remove and dispose of all old gutter material as part of our replacement service. Cast-iron and aluminium gutters can often be recycled, and we manage safe disposal. We also clear all old brackets and fixings, leaving your fascia clean and ready for new installation. Disposal is included in our quoted price — no additional fees."
+  }
+];
+
+const serviceSchema: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Gutter Replacement",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Gutter Cleaners Uxbridge",
+    url: "https://guttercleanersuxbridge.co.uk",
+    telephone: "01895 000000",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "",
+      addressLocality: "Windsor",
+      postalCode: "SL4",
+      addressCountry: "GB",
+    },
+  },
+  areaServed: { "@type": "City", name: "Windsor" },
+  description: "Full gutter replacement in Windsor SL4. uPVC, cast iron and aluminium systems suited to Victorian and Georgian period properties.",
+  image: "https://guttercleanersuxbridge.co.uk/images/gutter-replacement-hero.jpg",
+};
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  serviceSchema,
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Helen R.",
+    street: "Datchet Road, Windsor",
+    date: "May 2026",
+    text: "Victorian terraced house with original gutters past repair. They sourced matching cast-iron replacements, installed them beautifully and the property looks as it should. Professional throughout and meticulous about protecting the paintwork during work. Excellent knowledge of period properties."
+  },
+  {
+    name: "Christopher M.",
+    street: "Frances Road, SL4",
+    date: "March 2026",
+    text: "Decided to upgrade from old leaking cast-iron to modern uPVC. They handled removal professionally, installed new gutters with proper pitch, and the whole house looks fresh. Found some fascia rot while doing it and handled that too. Great team and fair pricing."
+  },
+  {
+    name: "Alison T.",
+    street: "Alma Road, Windsor",
+    date: "February 2026",
+    text: "Semi-detached property needed full gutter replacement. They explained the uPVC vs cast-iron options, did the work in one day, kept disruption minimal and the gutters have been perfect ever since. Really professional service from quote to completion."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Windsor — SL4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Complete Gutter Replacement in Windsor, SL4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">uPVC, cast iron and aluminium systems. Period-appropriate for Victorian and Georgian properties. Single-day installation.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Full gutter replacement in Windsor SL4 costs £400 to £900 for a typical semi-detached property depending on run length and material. We install uPVC, cast iron and aluminium systems suited to Victorian and Georgian period properties.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        When gutters reach the end of their service life, full replacement is the best long-term solution. Whether you have original Victorian cast-iron guttering or 1980s uPVC that's degraded beyond repair, replacement offers a chance to upgrade to a more reliable system suited to your property's specific needs.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        For Victorian and Georgian period properties in Windsor SL4, we source replacement systems that respect the period character. We can install traditional cast-iron in original profiles, or recommend low-maintenance uPVC that mimics traditional proportions. Our team completes most replacements in a single day, minimizing disruption and ensuring your property is immediately protected from weather.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We also assess fascia boards during the replacement process and can address any wood rot discovered, ensuring the new gutter system is supported by sound structure.
+      </p>
+    </div>
+  </section>
+
+  <!-- When to Replace -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">When Should You Replace Your Windsor Gutters?</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">Most gutters last 25–40 years depending on material and maintenance. Signs it's time for replacement include:</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <h3 class="font-bold text-gray-900 mb-3">Physical Damage</h3>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>Multiple cracks or holes (more than small repairs can fix)</li>
+            <li>Sagging along the entire length — not isolated spots</li>
+            <li>Rust perforation through cast-iron (internal corrosion)</li>
+            <li>Seams separating or joints failing repeatedly</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <h3 class="font-bold text-gray-900 mb-3">Functional Problems</h3>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>Water overflowing or backing up even after cleaning</li>
+            <li>Water seeping into eaves or through interior walls</li>
+            <li>Damp patches appearing on interior ceilings</li>
+            <li>Fascia wood rotting due to constant water exposure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Material Guide -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Gutter Material Guide for Windsor Properties</h2>
+      <div class="space-y-5">
+        <div class="border border-gray-200 rounded-lg p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+              <span class="text-2xl">🔧</span>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-gray-900 mb-2">Cast Iron — Best for Period Properties</h3>
+              <p class="text-gray-700 text-sm mb-3">Authentic for Victorian and Georgian period properties in Windsor SL4. Heavy-duty, long-lasting (40–50+ years) and visually traditional. Requires painting every 10 years and regular maintenance. Ideal if your property is in a conservation area or if period authenticity is a priority.</p>
+              <p class="text-blue-700 text-sm font-semibold">Cost: £700–£1200+ for typical property</p>
+            </div>
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+              <span class="text-2xl">💧</span>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-gray-900 mb-2">uPVC — Most Popular Choice</h3>
+              <p class="text-gray-700 text-sm mb-3">Lightweight, low-maintenance and economical. Lasts 25–30 years with no painting needed. Newer designs available in period-appropriate half-round profiles that suit Victorian and Georgian period properties well. Available in white, grey and brown finishes. Handles Windsor's damp climate without corrosion.</p>
+              <p class="text-blue-700 text-sm font-semibold">Cost: £400–£600 for typical property</p>
+            </div>
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+              <span class="text-2xl">⚙️</span>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-gray-900 mb-2">Aluminium — Premium Mid-Range</h3>
+              <p class="text-gray-700 text-sm mb-3">Lightweight but durable. Non-corrosive, low-maintenance and modern. Lasts 30–40 years. Available in various profiles and colours. Less traditional than cast-iron but more substantial than standard uPVC. Good compromise if you want durability without period aesthetic constraints.</p>
+              <p class="text-blue-700 text-sm font-semibold">Cost: £500–£800 for typical property</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Process -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Windsor Gutter Replacement Process</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Site Survey and Quotation</h3>
+            <p class="text-gray-700 text-sm">We measure the full run, inspect fascia and soffit condition, assess any complications (gables, valleys, downpipe routing) and provide an itemised quotation including materials, labour and disposal. We advise on material options suited to your Victorian or Georgian period property.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Removal of Old Gutters</h3>
+            <p class="text-gray-700 text-sm">We carefully remove the old gutter system, disconnect and remove downpipes, and dispose of all materials responsibly (recycling where possible). We inspect the fascia board for rot damage and address any issues found.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Installation of New Gutters</h3>
+            <p class="text-gray-700 text-sm">We install the new gutter system with proper brackets, setting the correct fall (pitch) to ensure water flows freely to downpipes. All joints are sealed with appropriate mastic. We reattach or install new downpipes and test the full system.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Testing and Sign-Off</h3>
+            <p class="text-gray-700 text-sm">We flush the new system with water to verify proper flow, check all joints for leaks and inspect the installation for quality. We tidy up and provide care guidance for your new gutters, including maintenance recommendations for cast-iron or cleaning frequency for uPVC.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost breakdown -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Gutter Replacement Pricing for Windsor SL4</h2>
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-blue-50">
+            <tr>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">Property Type</th>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">uPVC</th>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">Cast Iron</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-5 py-3 text-gray-700">2-bed semi (single-storey front)</td>
+              <td class="px-5 py-3 text-gray-700">£400–£550</td>
+              <td class="px-5 py-3 text-gray-700">£700–£950</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">3-bed semi (two-storey)</td>
+              <td class="px-5 py-3 text-gray-700">£550–£700</td>
+              <td class="px-5 py-3 text-gray-700">£900–£1200</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Victorian terraced property</td>
+              <td class="px-5 py-3 text-gray-700">£600–£800</td>
+              <td class="px-5 py-3 text-gray-700">£950–£1400</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Larger Georgian period property</td>
+              <td class="px-5 py-3 text-gray-700">£800–£1000</td>
+              <td class="px-5 py-3 text-gray-700">£1400–£1800+</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td class="px-5 py-3 text-gray-700 font-semibold">Add fascia repair/replacement</td>
+              <td class="px-5 py-3 text-gray-700 font-semibold">+£200–£600</td>
+              <td class="px-5 py-3 text-gray-700 font-semibold">+£200–£600</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-600 text-sm mt-4">Prices include materials, labour, brackets, sealing, disposal and VAT. We provide a fixed quotation after a site visit — prices above are typical ranges.</p>
+    </div>
+  </section>
+
+  <!-- Internal service links -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Other Services in Windsor</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <a href="/locations/windsor/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Professional debris removal and downpipe flushing. Specialists in Victorian properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+        <a href="/locations/windsor/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Leaking joints, sagging gutters and cracked sections repaired same day.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+        <a href="/locations/windsor/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and professional replacement of fascia boards and soffits.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Windsor Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Replacement Quote for Your Windsor Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your address, property type and preferred material. We'll provide an itemised quotation with no obligation.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Windsor Gutter Replacement FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-location links -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also provide gutter replacement in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Harrow</a>
+        <a href="/locations/hayes/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Hayes</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

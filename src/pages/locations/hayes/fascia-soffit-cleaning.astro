@@ -1,0 +1,349 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Fascia and Soffit Cleaning Hayes UB3/UB4 | Local Experts";
+const metaDescription = "Professional fascia and soffit cleaning in Hayes UB3/UB4. Remove algae, dirt and staining. Specialists in post-war 1950s to 70s semi-detached.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hayes", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/" },
+  { name: "Fascia & Soffit Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/fascia-soffit-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does fascia and soffit cleaning cost in Hayes?",
+    a: "Fascia and soffit cleaning in Hayes UB3/UB4 costs £120 to £200 for a standard semi-detached property. Pricing depends on run length, the extent of algae or staining, board material and access difficulty. Properties with heavy lichen growth or years of accumulated dirt may cost more. We provide a fixed quote after a visual assessment."
+  },
+  {
+    q: "How often should fascia boards be cleaned on post-war 1950s to 70s semi-detached in UB3/UB4?",
+    a: "Hayes properties benefit from cleaning every 2 to 4 years to prevent algae and lichen buildup. Properties in shaded areas or with overhanging trees may need cleaning every 2 years. Regular cleaning maintains the appearance of your post-war 1950s to 70s semi-detached and prevents dirt becoming compacted and difficult to remove. We recommend an annual inspection during the spring."
+  },
+  {
+    q: "What causes black streaks on fascia boards in Hayes?",
+    a: "Black streaks are caused by algae and lichen growth, which thrive in damp, shaded conditions. Hayes has abundant local trees, and many properties are in north-facing or shaded positions where moisture lingers after rain. Water running behind the fascia from leaking gutters also creates ideal conditions for algae. Overflowing gutters from the cracked uPVC common on post-war 1950s to 70s semi-detached are a major cause."
+  },
+  {
+    q: "Can you clean coloured fascia boards in Hayes without damaging them?",
+    a: "Yes. We clean coloured fascia boards — whether original wood, uPVC or modern materials — using gentle water pressure that removes dirt and algae without stripping paint or causing surface damage. We assess the condition and age of the boards first and adjust our approach accordingly. Older painted wood requires more care than modern uPVC."
+  },
+  {
+    q: "Do I need to clean or replace my soffits in UB3/UB4?",
+    a: "Most soffits can be cleaned and maintained if they are not rotting. We assess soffit condition during cleaning and identify any damage requiring repair. Soffits damaged by water ingress from leaking gutters may need replacement — we provide repair-or-replace recommendations at the time of cleaning."
+  },
+  {
+    q: "Do you clean UPVC fascia and soffits as well as wood in Hayes?",
+    a: "Yes. We clean both uPVC and wooden fascia and soffit boards. uPVC is easier to clean and dries faster. Wooden boards require gentler pressure and may benefit from protective treatment after cleaning. Many Hayes semi-detached homes have a mix of materials — we tailor our approach to each material type."
+  },
+  {
+    q: "How long does fascia and soffit cleaning take for a Hayes semi-detached house?",
+    a: "A typical fascia and soffit clean for a Hayes semi-detached takes 2 to 3 hours depending on run length, the extent of staining and access difficulty. We work safely from ladders and often combine this work with gutter cleaning to make efficient use of time. The property is ready to use immediately after we finish."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hayes"),
+  faqSchema(faqs),
+  serviceSchema(
+    "Fascia and Soffit Cleaning in Hayes UB3/UB4",
+    "Professional fascia and soffit cleaning service for Hayes properties. Remove algae, lichen and dirt staining from boards.",
+    "https://www.guttercleanersuxbridge.co.uk/locations/hayes/fascia-soffit-cleaning/"
+  )
+];
+
+const reviews = [
+  {
+    name: "Helen K.",
+    street: "Langley Road, Hayes UB3",
+    date: "May 2026",
+    text: "Our fascia boards were covered in black streaks and our neighbours could tell. The cleaning team removed all the algae and lichen beautifully without damaging the boards. They also found a small crack in the soffit which would have gotten worse. Great value for the work."
+  },
+  {
+    name: "Frank R.",
+    street: "Pump Lane, Hayes UB4",
+    date: "April 2026",
+    text: "Combined the fascia clean with a gutter clean. They tackled the algae that was coming from our overflowing gutters and cleaned the boards brilliantly. We're told to have them back in 3 years for another clean. Excellent service, very professional."
+  },
+  {
+    name: "Carol S.",
+    street: "Uxbridge Road, Hayes",
+    date: "March 2026",
+    text: "Our 1960s semi was looking shabby with all the green algae on the fascia. One afternoon and it looked like new again. The difference is remarkable. They explained the cleaning would slow the regrowth. Very happy with the result."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Hayes — UB3 / UB4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Fascia and Soffit Cleaning in Hayes, UB3/UB4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Professional cleaning to remove algae, lichen and black streaks. Restore the appearance of your post-war 1950s to 70s semi-detached home.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Fascia and soffit cleaning in Hayes UB3/UB4 costs £120 to £200 for a standard semi-detached property. We remove algae, lichen, dirt and black streaking, restoring boards to near-original condition.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Post-war 1950s to 70s semi-detached properties throughout Hayes have a distinctive silhouette — clean lines, pitched roofs with simple overhanging eaves and fascia boards that frame the roofline. Over decades, these fascia and soffit boards accumulate black algae streaks, green lichen and dirt that can make even a well-maintained home look neglected.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The problem is especially pronounced in Hayes due to the abundance of mature trees and the shaded aspects of many properties. Moisture hangs around after rain, creating perfect conditions for algae spores to establish on north-facing or overhanging-tree-shaded boards. Leaking gutters — common on Hayes homes with aging uPVC systems — also drip water down the fascia, accelerating algae growth and leaving permanent stains if not addressed.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We clean fascia and soffit boards across all Hayes UB3/UB4 properties, removing decades of buildup and restoring boards to near-original condition. Cleaning not only improves appearance but also prevents the damage that comes from long-term moisture exposure and algae growth.
+      </p>
+    </div>
+  </section>
+
+  <!-- What Gets Cleaned -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What We Clean</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-bold text-gray-900 mb-3">Fascia Boards</h3>
+          <p class="text-gray-700 text-sm mb-4">The vertical board running along the edge of your roof, directly above the gutters. This is where most visible algae and black streaking accumulates.</p>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>• Remove algae and lichen</li>
+            <li>• Strip dirt and black streaks</li>
+            <li>• Restore colour and finish</li>
+            <li>• Identify damage needing repair</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-900 mb-3">Soffit Boards</h3>
+          <p class="text-gray-700 text-sm mb-4">The horizontal board under the fascia, forming the underside of the eaves. Often neglected but crucial for preventing moisture damage to the roof structure.</p>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>• Remove dust and bird droppings</li>
+            <li>• Clean mould and algae growth</li>
+            <li>• Restore venilation (if vented)</li>
+            <li>• Check for water damage or rot</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Causes of Staining -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why Hayes Fascia Boards Get Dirty</h2>
+      <div class="space-y-4 text-gray-700 text-sm">
+        <div class="border border-gray-200 rounded-lg p-4">
+          <p class="font-semibold text-gray-900 mb-2">Algae and Lichen Growth</p>
+          <p>Common on north-facing or shaded fascia boards. Spores establish in damp conditions and form green or black films that are visible from ground level. Hayes' tree coverage and often-overcast weather create ideal conditions.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4">
+          <p class="font-semibold text-gray-900 mb-2">Water Staining from Leaking Gutters</p>
+          <p>Original uPVC gutters from 1970s builds are now cracking and sagging, causing water to overflow and run down the fascia. This leaves permanent mineral stains and accelerates algae growth by keeping the board perpetually damp.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4">
+          <p class="font-semibold text-gray-900 mb-2">Accumulated Dirt and Debris</p>
+          <p>Years of dust, tree pollen and urban grime settle on horizontal soffit surfaces and the top of fascia boards. Wind-blown dirt mixes with moisture to form stubborn crusts.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4">
+          <p class="font-semibold text-gray-900 mb-2">Bird Droppings and Insect Activity</p>
+          <p>Birds and insects nest or roost on eaves and soffits, leaving staining and damage. This is especially common on semi-detached properties with overhanging eaves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cleaning Process -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">How We Clean Fascia and Soffits</h2>
+      <div class="space-y-4 text-gray-700">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+          <div>
+            <p class="font-semibold text-gray-900">Assessment</p>
+            <p class="text-sm">We inspect boards for damage, rot or structural issues. We assess the material (wood, uPVC, composite) and adjust our cleaning approach accordingly.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+          <div>
+            <p class="font-semibold text-gray-900">Gentle Cleaning</p>
+            <p class="text-sm">We use controlled water pressure and mild cleaning solution to remove algae, lichen and dirt. Pressure is adjusted to avoid stripping paint or damaging board surfaces.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+          <div>
+            <p class="font-semibold text-gray-900">Thorough Rinsing</p>
+            <p class="text-sm">We rinse all boards thoroughly to remove cleaning residue and ensure complete dirt removal. Boards dry naturally and quickly.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+          <div>
+            <p class="font-semibold text-gray-900">Report & Advice</p>
+            <p class="text-sm">We provide a summary of work done and note any damage found. We advise on maintenance frequency and recommend gutter repair if overflow is evident.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance Advice -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Maintaining Clean Fascia Boards</h2>
+      <p class="text-gray-700 text-sm mb-6">After cleaning, Hayes properties benefit from simple maintenance to slow regrowth of algae:</p>
+      <div class="space-y-4 text-gray-700 text-sm">
+        <div class="bg-white rounded-lg p-4 border border-blue-200">
+          <p class="font-semibold text-gray-900 mb-2">Regular Gutter Cleaning</p>
+          <p>The single most important maintenance step. Clean gutters every 1–2 years prevent overflow, which is the main cause of water staining and damp conditions on fascia boards.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-blue-200">
+          <p class="font-semibold text-gray-900 mb-2">Trim Overhanging Tree Branches</p>
+          <p>Reduce shade and moisture drip by trimming branches that hang over your roof. This slows algae regrowth significantly.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-blue-200">
+          <p class="font-semibold text-gray-900 mb-2">Inspect Annually</p>
+          <p>Spring and autumn are good times to look for signs of algae returning or water damage. Early cleaning prevents heavy buildup.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-blue-200">
+          <p class="font-semibold text-gray-900 mb-2">Repair Leaking Gutters</p>
+          <p>If you notice water running down your fascia during rain, the gutter has a leak. Urgent repair prevents permanent staining and water damage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean vs Replace -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Should You Clean or Replace?</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="border border-green-300 bg-green-50 rounded-lg p-5">
+          <p class="font-bold text-green-900 mb-3">Cleaning is Sufficient:</p>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>• Boards are structurally sound</li>
+            <li>• Algae or dirt surface staining only</li>
+            <li>• No rot, splits or water damage</li>
+            <li>• Boards less than 20 years old</li>
+            <li>• Paint is intact (wood boards)</li>
+          </ul>
+        </div>
+        <div class="border border-orange-300 bg-orange-50 rounded-lg p-5">
+          <p class="font-bold text-orange-900 mb-3">Replacement May Be Needed:</p>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>• Soft, spongy or rotten areas</li>
+            <li>• Visible water damage or mould</li>
+            <li>• Cracked or split boards</li>
+            <li>• Boards more than 30 years old</li>
+            <li>• Lifting or warped appearance</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-gray-700 text-sm mt-6 italic">We assess condition during cleaning and provide honest repair-or-replace advice. Many Hayes homes just need a good clean; others have damage worth addressing proactively.</p>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Services That Complement Fascia Cleaning</h2>
+      <p class="text-gray-600 text-center mb-8">Often recommended together for Hayes properties:</p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <a href="/locations/hayes/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Essential to prevent water overflow that stains fascia. Combines with soffit cleaning efficiently.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/hayes/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Fix leaking gutters that cause water stains and damp on fascia boards.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/hayes/gutter-replacement/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Replace failed gutter systems that are causing permanent fascia staining.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Hayes Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get a Fascia Cleaning Quote</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us about your property and the staining you see. We will provide a fixed price quote by return.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Fascia and Soffit Cleaning FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also clean fascia boards in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia Cleaning in Harrow</a>
+        <a href="/locations/uxbridge/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia Cleaning in Uxbridge</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">All Hayes services</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

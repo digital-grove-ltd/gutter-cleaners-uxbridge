@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Uxbridge Gutter Cleaning, Repairs and Replacement | UB8";
+const metaDescription = "Professional gutter cleaning, repair and replacement in Uxbridge (UB8). We specialise in 1930s semis and Victorian terraces near the Grand Union Canal. Free quotes, same-week service.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Uxbridge", url: "https://www.guttercleanersuxbridge.co.uk/locations/uxbridge/" }
+];
+
+const faqs = [
+  {
+    q: "Why do gutters block so often on Uxbridge properties?",
+    a: "Uxbridge's tree-lined roads — including Hillingdon Road, Park Road and Long Lane — shed heavy leaf fall in autumn. The mature lime, oak and horse-chestnut trees common in UB8 residential streets fill gutters within weeks. Combined with the damp West London climate that encourages moss growth, most Uxbridge homes need at least two cleans per year."
+  },
+  {
+    q: "Do you clean gutters on 1930s semi-detached houses in Uxbridge?",
+    a: "Yes. The majority of properties we work on in UB8 are 1930s semis and Victorian terraces. We understand the specific roofline geometry of these homes, including the bay window returns, chimney flashings and lean-to extensions that can complicate gutter access. We are fully insured and work safely from properly secured ladders."
+  },
+  {
+    q: "How much does gutter cleaning cost in Uxbridge?",
+    a: "A standard three-bedroom semi-detached house in Uxbridge typically costs between £75 and £120 for a full clean, including downpipe clearance and a post-clean inspection. We provide a fixed price before we start — no hidden extras. Request a free quote online or by phone for an accurate price for your specific property."
+  },
+  {
+    q: "Can you repair as well as clean gutters in Uxbridge (UB8)?",
+    a: "Absolutely. If we find a cracked joint, a sagging section, a broken bracket or a leaking outlet during your clean, we can repair it the same day in most cases. For more extensive work — replacing a full run or addressing fascia board rot — we arrange a separate visit and quote. We never carry out work without your approval first."
+  },
+  {
+    q: "How quickly can you come to my UB8 property?",
+    a: "As a Uxbridge-based company, UB8 is our fastest response area. We typically offer same-week appointments and can often fit in next-day bookings for straightforward cleaning jobs. For emergency repairs such as a gutter pulling away from the fascia or water coming through a wall, contact us during business hours and we will prioritise your call."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Uxbridge"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Linda M.",
+    street: "Chippendale Waye, Uxbridge",
+    date: "May 2026",
+    text: "Our 1930s semi had not had the gutters cleaned in years. The team came out quickly, cleared a massive build-up of leaves from the sycamore next door, and found a cracked joint at the back which they sealed on the spot. Brilliant service and very reasonable price."
+  },
+  {
+    name: "Peter A.",
+    street: "Cowley Road, UB8",
+    date: "March 2026",
+    text: "I called on a Tuesday and they were here by Thursday. Very professional — they showed me photos of the downpipe blockage before and after clearing it. Found a loose bracket too and fixed it for no extra charge. Will be booking them every autumn."
+  },
+  {
+    name: "Diane F.",
+    street: "Park Road, Uxbridge",
+    date: "January 2026",
+    text: "After the storms in December our gutters were overflowing badly. These guys came the next working day, cleared everything, and explained exactly what had caused the overflow. Honest, tidy and professional. Highly recommended for anyone in UB8."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Uxbridge — UB8</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning and Repair Services in Uxbridge, UB8</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Expert gutter services for 1930s semis and Victorian terraces in Uxbridge. Free quotes. Same-week appointments.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">We clean, repair and replace gutters on Uxbridge's 1930s semis and Victorian terraces throughout UB8. Mature trees on roads like Hillingdon Road and Park Road are the main cause of blockages — we clear them fully, including downpipes, and test the whole system before we leave.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Uxbridge is our home town. We clean gutters on properties throughout UB8 every week and know the specific challenges these streets present. The abundance of mature trees near the Grand Union Canal and throughout the residential areas off Uxbridge town centre means gutters on 1930s semis and Victorian terraces fill rapidly — particularly in autumn when lime and oak leaf fall peaks.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Left uncleared, those leaves compact into a soggy mat that holds moisture against the gutter wall, accelerating rust on cast-iron systems and degrading the sealant in uPVC joints. Water then backs up and overflows behind the fascia, leading to damp in the eaves and eventually interior wall damage. A twice-yearly clean costs a fraction of what that damp will cost to put right.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Our Uxbridge service covers every UB8 postcode sector: UB8 1, UB8 2 and UB8 3. From Cowley Road to Harefield, from the town centre streets to the quieter roads backing onto the canal, we are your local gutter specialists.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Uxbridge Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Uxbridge Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The dominant housing types in UB8 are 1930s semi-detached properties and Victorian terraces, both of which present specific gutter challenges. The 1930s semis were built during a period when cast-iron guttering was the standard, and many still have original or early-replacement systems that are now approaching the end of their service life. Cracked joints, corroded hangers and sagging runs are common findings during our inspections on roads like Chippendale Waye, Beverley Gardens and Long Lane.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Victorian terraces, particularly those in the older streets around the town centre, often have narrower, shallower gutters that were designed for lighter rainfall. These block more quickly and overflow more readily than modern profiles. The close-set terrace rows also mean that moss from one property's roof travels easily to the next — regular cleaning is the only way to keep on top of it.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Proximity to the Grand Union Canal creates an additional damp microclimate around the canal-side streets of Uxbridge, which accelerates moss and algae growth on rooflines throughout the year.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in Uxbridge</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across UB8 with same-week availability.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/services/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full debris removal from gutters and downpipes, outlet flushing and post-clean inspection with photos. The essential annual service for any Uxbridge home near mature trees.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Leaking joints, cracked sections, broken brackets and sagging runs repaired on the same visit where possible. We carry spare fittings for the most common uPVC profiles in UB8.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement for gutters beyond repair. We replace like-for-like or upgrade to a modern half-round uPVC system to match the character of period Uxbridge properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning, repair and replacement of the fascia boards and soffits that support your gutter system. Critical on older Uxbridge properties where wood rot can undermine even a brand-new gutter run.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Uxbridge Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Uxbridge Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your address and what you need. We will respond with a fixed price — no call-out fee, no obligation.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Uxbridge Gutter FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also cover nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/hillingdon/" class="text-blue-600 hover:underline text-sm">Hillingdon</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/west-drayton/" class="text-blue-600 hover:underline text-sm">West Drayton</a>
+        <a href="/locations/southall/" class="text-blue-600 hover:underline text-sm">Southall</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

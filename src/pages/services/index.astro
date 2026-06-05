@@ -1,0 +1,219 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+
+const title = "Gutter Cleaning & Repair Services | Uxbridge West London";
+const metaDescription = "Full range of gutter services in Uxbridge and West London: cleaning, repairs, replacement and fascia & soffit. Free quotes.";
+const canonical = "https://guttercleanersuxbridge.co.uk/services";
+
+const services = [
+  {
+    slug: "gutter-cleaning",
+    title: "Gutter Cleaning",
+    shortDesc: "Professional debris removal and flush testing for clean, flowing gutters year-round.",
+    description: "Our thorough gutter cleaning service removes leaves, moss, sediment, and debris to restore proper water flow. We inspect for damage and test all outlet pipes to ensure your gutters are working efficiently.",
+    benefits: [
+      "Prevents water overflow and damage to fascia/soffits",
+      "Reduces risk of damp and mould inside your home",
+      "Extends the lifespan of your gutters",
+      "Early detection of repairs needed"
+    ]
+  },
+  {
+    slug: "gutter-repair",
+    title: "Gutter Repair",
+    shortDesc: "Expert fixes for leaks, sagging, and damage to keep your gutters functioning properly.",
+    description: "Whether it's a small leak, sagging section, or damaged bracket, our skilled team diagnoses and repairs the issue quickly. We use quality materials and proven techniques to restore full functionality.",
+    benefits: [
+      "Fixes leaks before they cause interior water damage",
+      "Realigns sagging sections for proper water flow",
+      "Replaces cracked or corroded sections",
+      "Extends gutter lifespan with expert care"
+    ]
+  },
+  {
+    slug: "gutter-replacement",
+    title: "Gutter Replacement",
+    shortDesc: "Complete gutter system replacement with modern materials and expert installation.",
+    description: "When repair isn't enough, we remove old gutters and install a new system tailored to your home. We offer durable materials, proper sizing, and professional installation to handle heavy rainfall.",
+    benefits: [
+      "Modern materials rated for heavy rainfall",
+      "Correct sizing and pitch for optimal drainage",
+      "Seamless installation with professional finish",
+      "Protection against future leaks and damage"
+    ]
+  },
+  {
+    slug: "fascia-soffit",
+    title: "Fascia & Soffit",
+    shortDesc: "Protective covering boards that shield your home from weather while enhancing curb appeal.",
+    description: "Fascia and soffit protect the ends of roof rafters and underside of your eaves. We install durable, low-maintenance materials that keep out pests and weather while improving your home's appearance.",
+    benefits: [
+      "Protects roof structure from weather and moisture",
+      "Prevents pest entry into your loft space",
+      "Improves home appearance and curb appeal",
+      "Available in colour-matched options"
+    ]
+  }
+];
+
+const faqItems = [
+  {
+    question: "How often should I have my gutters cleaned?",
+    answer: "Most homes benefit from gutter cleaning twice yearly — autumn after leaves fall, and spring to clear winter debris. If you have nearby trees, you may need quarterly cleaning. Our team can recommend a schedule based on your property's specific needs."
+  },
+  {
+    question: "What's included in a professional gutter cleaning?",
+    answer: "Our gutter cleaning includes debris removal, downpipe flushing, outlet testing, and a full inspection for damage. We'll photograph any issues found and discuss repairs needed. We also clear gutters safely from properly secured ladders with full insurance cover."
+  },
+  {
+    question: "Can you repair gutters or do they always need replacing?",
+    answer: "Most gutter issues can be repaired — leaks sealed, brackets replaced, and sections realigned. We only recommend full replacement when gutters are severely corroded, repeatedly failing, or undersized for your roof. We'll advise honestly on the best solution for your home."
+  },
+  {
+    question: "What happens if I ignore a leaking gutter?",
+    answer: "Unchecked gutter leaks cause serious problems: water damage to fascia/soffits, dampness and mould in walls, foundation erosion, and costly interior repairs. Early repair prevents these expensive issues. We recommend addressing leaks within weeks, not months."
+  },
+  {
+    question: "How much does a complete gutter system cost?",
+    answer: "Gutter replacement costs vary by property size, material choice, and accessibility. We provide free, no-obligation quotes after assessing your home. Most West London properties see clear ROI through prevented water damage alone. Get a quote to see specific pricing for your property."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription}>
+  <!-- Hero Section -->
+  <section class="relative h-96 overflow-hidden">
+    <img
+      src="/images/services-hero.jpg"
+      alt="Professional gutter cleaning and repair services across Uxbridge and West London"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 max-w-3xl">Our Gutter Services Across West London</h1>
+      <p class="text-xl text-white/90 max-w-2xl">Professional cleaning, repairs, replacement, and fascia & soffit work for residential properties across Uxbridge, Harrow, Hayes, Hillingdon, Slough, Southall, West Drayton, and Windsor.</p>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        Your gutters are the unsung heroes of your home, protecting your roof, walls, and foundations from water damage. Blocked, damaged, or poorly maintained gutters lead to costly repairs — damp, mould, foundation erosion, and structural decay. That's why regular gutter care isn't a luxury; it's essential maintenance.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        At Gutter Cleaners Uxbridge, we handle every aspect of gutter care: from routine cleaning and targeted repairs to complete system replacement. Whether your gutters need a refresh or a full overhaul, our experienced team delivers professional results that protect your property and preserve its value.
+      </p>
+    </div>
+  </section>
+
+  <!-- Service Cards -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        {services.map((service) => (
+          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="bg-blue-600 h-3"></div>
+            <div class="p-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">{service.title}</h2>
+              <p class="text-gray-600 text-sm mb-4 font-medium">{service.shortDesc}</p>
+              <p class="text-gray-700 mb-6 leading-relaxed">{service.description}</p>
+
+              <div class="mb-8">
+                <h3 class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">Key Benefits</h3>
+                <ul class="space-y-3">
+                  {service.benefits.map((benefit) => (
+                    <li class="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={`/services/${service.slug}`}
+                class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 group"
+              >
+                Learn More
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">How It Works</h2>
+      <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">Our simple, transparent process ensures you get expert gutter care without hassle or surprise charges.</p>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Book</h3>
+          <p class="text-gray-700">Contact us via phone or our online form. We'll schedule your visit at a time that suits you, typically within 2–3 days.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Visit</h3>
+          <p class="text-gray-700">Our team arrives on time with all equipment. We inspect your gutters, discuss any issues found, and confirm the work.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Work</h3>
+          <p class="text-gray-700">We complete the job professionally and thoroughly — whether cleaning, repairing, replacing, or installing fascia & soffit.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Report</h3>
+          <p class="text-gray-700">We provide photos and a detailed report showing what was done. We'll recommend future care to keep your gutters in top condition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="py-16 md:py-24 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Get Your Free Quote</h2>
+      <p class="text-lg text-gray-600 text-center mb-10">No obligation. No hidden costs. Just honest advice and professional service.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Frequently Asked Questions</h2>
+      <p class="text-lg text-gray-600 text-center mb-12">Find answers to common questions about our gutter services.</p>
+
+      <div class="space-y-8">
+        {faqItems.map((item, index) => (
+          <div class="border-b border-gray-200 pb-8 last:border-b-0">
+            <h3 class="text-lg font-bold text-gray-900 mb-4">{item.question}</h3>
+            <p class="text-gray-700 leading-relaxed">{item.answer}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 bg-blue-50 border-l-4 border-blue-600 p-6">
+        <p class="text-gray-700">
+          <span class="font-bold">Still have questions?</span> Get in touch via our <a href="/" class="text-blue-600 hover:text-blue-700 font-medium">contact form</a> or call us during business hours (Mon–Fri 8am–6pm). We're happy to discuss your specific gutter needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <TrustBar />
+</Layout>

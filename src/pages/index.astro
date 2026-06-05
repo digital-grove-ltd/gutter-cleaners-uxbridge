@@ -1,0 +1,474 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import ReviewCard from "@/components/ReviewCard.astro";
+import { sitewideLocalBusiness, faqSchema as buildFaqSchema } from "@/lib/schema";
+
+const localBusinessSchema = sitewideLocalBusiness();
+
+const homeFaqs = [
+  {
+    q: "How much does gutter cleaning cost?",
+    a: "Gutter cleaning in the Uxbridge area typically costs between £80 and £200 for a standard semi-detached or detached home, depending on the property size, height, and the amount of debris present. We provide a written, no-obligation quote before starting any work — so there are no surprises.",
+  },
+  {
+    q: "How often should gutters be cleaned?",
+    a: "For most UK homes, gutters should be cleaned at least once a year — ideally in late autumn after the leaves have fallen, or in early spring after winter weather. If your property is surrounded by trees, twice a year is recommended. Regular cleaning prevents blockages, overflows, and the damp problems that follow.",
+  },
+  {
+    q: "Can blocked gutters cause damp?",
+    a: "Yes. Blocked gutters are one of the most common — and overlooked — causes of damp in UK homes. When gutters overflow, water runs down the external walls and soaks into brickwork and mortar. Over time this causes penetrating damp inside, which can lead to mould, damaged plaster, and structural problems. Clearing your gutters is a simple, affordable way to protect your home.",
+  },
+  {
+    q: "What areas do you cover?",
+    a: "We cover Uxbridge and the surrounding 20-mile radius including Harrow, Hayes, Hillingdon, Slough, Southall, West Drayton, Windsor, Ealing, Ruislip, and nearby areas. If you're not sure whether we cover your postcode, just get in touch via our quote form.",
+  },
+  {
+    q: "Do I need to be home during the gutter clean?",
+    a: "Not necessarily. As long as we have access to the gutters — usually just access to the exterior of the property — we can complete the work while you're out. We'll confirm any access requirements when booking and send before-and-after photos so you can see exactly what was done.",
+  },
+];
+
+const pageFaqSchema = buildFaqSchema(homeFaqs);
+
+const services = [
+  {
+    title: "Gutter Cleaning",
+    description:
+      "Thorough removal of leaves, moss, silt, and debris from gutters and downpipes using professional vacuum equipment — no mess left behind.",
+    href: "/gutter-cleaning/",
+    icon: "🍃",
+  },
+  {
+    title: "Gutter Repair",
+    description:
+      "Leaking joints, cracked sections, sagging gutters — we diagnose and fix the problem properly, with a written quote before any work begins.",
+    href: "/gutter-repairs/",
+    icon: "🔧",
+  },
+  {
+    title: "Gutter Replacement",
+    description:
+      "When cleaning or repairs aren't enough, we supply and fit new uPVC guttering to keep your home protected for years to come.",
+    href: "/gutter-replacement/",
+    icon: "🏠",
+  },
+  {
+    title: "Fascia & Soffit",
+    description:
+      "Clean, repair, or replace fascia boards and soffits to maintain your roofline, prevent rot, and keep your home looking its best.",
+    href: "/fascia-soffit-cleaning/",
+    icon: "✨",
+  },
+];
+
+const areas = [
+  { name: "Uxbridge", slug: "uxbridge" },
+  { name: "Harrow", slug: "harrow" },
+  { name: "Hayes", slug: "hayes" },
+  { name: "Hillingdon", slug: "hillingdon" },
+  { name: "Slough", slug: "slough" },
+  { name: "Southall", slug: "southall" },
+  { name: "West Drayton", slug: "west-drayton" },
+  { name: "Windsor", slug: "windsor" },
+  { name: "Ealing", slug: "ealing" },
+  { name: "Ruislip", slug: "ruislip" },
+];
+
+const faqs = [
+  {
+    question: "How much does gutter cleaning cost?",
+    answer:
+      "Gutter cleaning in the Uxbridge area typically costs between £80 and £200 for a standard semi-detached or detached home, depending on property size, height, and debris levels. We provide a written, no-obligation quote before starting any work — so there are no hidden charges.",
+  },
+  {
+    question: "How often should gutters be cleaned?",
+    answer:
+      "For most UK homes, once a year is the minimum — ideally in late autumn after the leaves have fallen, or in early spring after winter. If your property is surrounded by trees or you've noticed overflowing, twice a year is the safer option. Regular cleaning prevents the blockages that lead to damp and structural damage.",
+  },
+  {
+    question: "Can blocked gutters cause damp inside my home?",
+    answer:
+      "Yes — this is one of the most common causes of penetrating damp in UK properties. When gutters overflow, water runs down external walls and soaks into brickwork. Over time this leads to internal damp, mould growth, and damaged plaster. Clearing your gutters is a straightforward, affordable way to protect your home.",
+  },
+  {
+    question: "What areas do you cover?",
+    answer:
+      "We cover Uxbridge and the surrounding 20 miles including Harrow, Hayes, Hillingdon, Slough, Southall, West Drayton, Windsor, Ealing, and Ruislip. If you're unsure whether we reach your postcode, submit a quote request and we'll confirm within the hour.",
+  },
+  {
+    question: "Do I need to be home during the gutter clean?",
+    answer:
+      "Not necessarily. We need exterior access to the property, but you don't need to be present. We confirm access requirements at booking and always send before-and-after photos to show exactly what we cleared — giving you full peace of mind even if you're at work.",
+  },
+];
+
+const reviews = [
+  {
+    quote:
+      "Booked online on a Monday, they were here Thursday. Cleared a serious blockage that had been causing damp in our front room for months. Spotlessly professional — photos sent straight after. Couldn't recommend more highly.",
+    reviewer: "Sarah M.",
+    location: "Uxbridge",
+    date: "2025-10-14",
+    rating: 5,
+  },
+  {
+    quote:
+      "Used Gutter Cleaners Uxbridge for our Victorian terrace in Harrow. They spotted a cracked section I'd been ignoring and gave me an honest repair quote on the spot. Work was done the same week. The gutters haven't overflowed once since.",
+    reviewer: "David K.",
+    location: "Harrow",
+    date: "2025-11-03",
+    rating: 5,
+  },
+  {
+    quote:
+      "Excellent service from start to finish. Clear pricing, arrived on time, left everything tidy. They also cleaned the soffits while they were there without being asked — that kind of attention to detail is why I'll be calling them every year.",
+    reviewer: "Priya J.",
+    location: "Hayes",
+    date: "2026-02-22",
+    rating: 5,
+  },
+];
+---
+
+<Layout
+  title="Professional Gutter Cleaning & Repair in Uxbridge"
+  description="Trusted gutter cleaning, repair, replacement and fascia & soffit services across Uxbridge, Harrow, Hayes, Hillingdon, Slough and West London. Free no-obligation quotes."
+  schema={[localBusinessSchema, pageFaqSchema]}
+>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="relative min-h-[600px] flex flex-col" aria-label="Hero">
+    <!-- Background image -->
+    <div class="absolute inset-0 overflow-hidden">
+      <img
+        src="/images/homepage-hero.jpg"
+        alt="Professional gutter cleaning service on a West London home"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 flex-1 container-site py-16 lg:py-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: Headline + sub -->
+        <div>
+          <span class="inline-flex items-center gap-2 bg-white/15 text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm border border-white/20">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse" aria-hidden="true"></span>
+            Accepting new bookings — Mon–Fri 8am–6pm
+          </span>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6">
+            Professional Gutter Cleaning &amp; Repair in Uxbridge and West London
+          </h1>
+
+          <p class="text-lg text-blue-100 leading-relaxed mb-8 max-w-xl">
+            Trusted by homeowners across Hillingdon, Harrow, Hayes, Slough &amp; beyond.
+            Free no-obligation quotes.
+          </p>
+
+          <ul class="flex flex-col sm:flex-row flex-wrap gap-3 text-sm text-white">
+            {["Fully insured", "Written quote upfront", "Same-week appointments", "Before & after photos"].map((item) => (
+              <li class="flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.2)"/>
+                  <path d="M8 12l3 3 5-5" stroke="#86efac" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Right: QuoteForm -->
+        <div>
+          <QuoteForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TrustBar -->
+  <TrustBar />
+
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section class="section bg-surface-alt" id="services" aria-labelledby="services-heading">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 id="services-heading" class="text-3xl sm:text-4xl font-display font-bold text-text mb-4">
+          Our Gutter Services
+        </h2>
+        <p class="text-text-muted text-lg">
+          From a routine annual clean to a full roofline replacement — we handle every part of your guttering system, with no job too small.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {services.map((service) => (
+          <ServiceCard
+            title={service.title}
+            description={service.description}
+            href={service.href}
+            icon={service.icon}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHY CHOOSE US
+  ============================================================ -->
+  <section class="section bg-surface" id="why-us" aria-labelledby="why-heading">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 id="why-heading" class="text-3xl sm:text-4xl font-display font-bold text-text mb-4">
+          Why Choose Gutter Cleaners Uxbridge?
+        </h2>
+        <p class="text-text-muted text-lg">
+          We're a local business — not a national franchise. That means you speak to the people doing the work, not a call centre.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-8">
+        <!-- Local & Experienced -->
+        <div class="text-center px-4">
+          <div class="w-16 h-16 rounded-2xl bg-brand-muted flex items-center justify-center mx-auto mb-5">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-text mb-3">Local &amp; Experienced</h3>
+          <p class="text-text-muted leading-relaxed">
+            Based in Uxbridge, we know the properties in every street from Hayes to Harrow. Local knowledge means faster jobs, better results, and no wasted visits.
+          </p>
+        </div>
+
+        <!-- Fully Insured -->
+        <div class="text-center px-4">
+          <div class="w-16 h-16 rounded-2xl bg-brand-muted flex items-center justify-center mx-auto mb-5">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-text mb-3">Fully Insured</h3>
+          <p class="text-text-muted leading-relaxed">
+            All work is fully insured and a written quote is provided before we start. You'll always know exactly what you're paying — no surprises on the invoice.
+          </p>
+        </div>
+
+        <!-- 5-Star Rated -->
+        <div class="text-center px-4">
+          <div class="w-16 h-16 rounded-2xl bg-brand-muted flex items-center justify-center mx-auto mb-5">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1.5" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-text mb-3">5-Star Rated</h3>
+          <p class="text-text-muted leading-relaxed">
+            Hundreds of happy customers across Greater London. We send before-and-after photos after every job, so you can see the difference for yourself.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       AREAS COVERED
+  ============================================================ -->
+  <section class="section bg-surface-alt" id="areas" aria-labelledby="areas-heading">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 id="areas-heading" class="text-3xl sm:text-4xl font-display font-bold text-text mb-4">
+          Areas We Cover
+        </h2>
+        <p class="text-text-muted text-lg">
+          We serve Uxbridge and a 20-mile radius across West London, Middlesex, and into Berkshire. Don't see your town?
+          <a href="/contact/" class="text-brand underline underline-offset-2 hover:text-brand-dark">Get in touch</a>
+          — we likely cover it.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-3">
+        {areas.map((area) => (
+          <a
+            href={`/gutter-cleaning-${area.slug}/`}
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-border text-text font-medium text-sm hover:bg-brand hover:text-white hover:border-brand transition-all duration-200 shadow-sm hover:shadow-card"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            {area.name}
+          </a>
+        ))}
+      </div>
+
+      <p class="text-center text-text-light text-sm mt-6">
+        Also covering Greenford, Staines, Wembley and surrounding postcodes.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       REVIEWS
+  ============================================================ -->
+  <section class="section bg-surface" id="reviews" aria-labelledby="reviews-heading">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 id="reviews-heading" class="text-3xl sm:text-4xl font-display font-bold text-text mb-4">
+          What Our Customers Say
+        </h2>
+        <p class="text-text-muted text-lg">
+          Real reviews from homeowners across West London who trust us with their gutters every year.
+        </p>
+        <div class="flex items-center justify-center gap-2 mt-4">
+          <div class="flex items-center gap-0.5" aria-label="5 out of 5 stars">
+            {Array.from({ length: 5 }).map(() => (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            ))}
+          </div>
+          <span class="text-text font-semibold">5.0</span>
+          <span class="text-text-muted text-sm">— 5-star rated on Google</span>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {reviews.map((review) => (
+          <ReviewCard
+            quote={review.quote}
+            reviewer={review.reviewer}
+            location={review.location}
+            date={review.date}
+            rating={review.rating}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section class="section bg-surface-alt" id="faq" aria-labelledby="faq-heading">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 id="faq-heading" class="text-3xl sm:text-4xl font-display font-bold text-text mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-text-muted text-lg">
+          Everything you need to know about gutter cleaning and maintenance in Uxbridge and West London.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {faqs.map((faq) => (
+          <details class="group bg-white rounded-2xl border border-border shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none hover:bg-surface-alt transition-colors">
+              <h3 class="font-display font-semibold text-text text-base pr-2">
+                {faq.question}
+              </h3>
+              <svg
+                class="w-5 h-5 text-brand shrink-0 transition-transform duration-300 group-open:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </summary>
+            <div class="px-6 pb-5">
+              <p class="text-text-muted leading-relaxed text-sm">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <p class="text-center text-text-muted text-sm mt-8">
+        Have another question?
+        <a href="/contact/" class="text-brand font-medium underline underline-offset-2 hover:text-brand-dark ml-1">
+          Contact us
+        </a>
+        and we'll get back to you promptly.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FINAL CTA
+  ============================================================ -->
+  <section class="section" id="cta" aria-labelledby="cta-heading" style="background: linear-gradient(135deg, #1D4ED8, #1E3A8A);">
+    <div class="container-site">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: copy -->
+        <div class="text-white">
+          <h2 id="cta-heading" class="text-3xl sm:text-4xl font-display font-bold mb-4">
+            Ready for clean, clear gutters?
+          </h2>
+          <p class="text-blue-100 text-lg leading-relaxed mb-8">
+            Don't let blocked gutters cause damp, roof damage, or expensive repairs. Get a free, no-obligation quote today — we respond within 2 hours on weekdays.
+          </p>
+
+          <ul class="space-y-3">
+            {[
+              "Free written quote — no obligation",
+              "Fully insured, professional team",
+              "Serving Uxbridge & West London Mon–Fri 8am–6pm",
+              "Before and after photos with every job",
+            ].map((point) => (
+              <li class="flex items-center gap-3 text-blue-100">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.15)"/>
+                  <path d="M8 12l3 3 5-5" stroke="#86efac" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {point}
+              </li>
+            ))}
+          </ul>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="/gutter-cleaning/" class="inline-flex items-center gap-1.5 text-sm text-blue-200 hover:text-white underline underline-offset-2 transition-colors">
+              Gutter Cleaning →
+            </a>
+            <a href="/gutter-repairs/" class="inline-flex items-center gap-1.5 text-sm text-blue-200 hover:text-white underline underline-offset-2 transition-colors">
+              Gutter Repair →
+            </a>
+            <a href="/gutter-replacement/" class="inline-flex items-center gap-1.5 text-sm text-blue-200 hover:text-white underline underline-offset-2 transition-colors">
+              Gutter Replacement →
+            </a>
+            <a href="/fascia-soffit-cleaning/" class="inline-flex items-center gap-1.5 text-sm text-blue-200 hover:text-white underline underline-offset-2 transition-colors">
+              Fascia &amp; Soffit →
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: QuoteForm -->
+        <div>
+          <QuoteForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

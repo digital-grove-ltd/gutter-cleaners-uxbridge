@@ -1,0 +1,356 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Cleaning Windsor SL4 | Professional Local Service";
+const metaDescription = "Professional gutter cleaning in Windsor SL4. Vacuum-powered, no mess, same-week appointments. Specialists in Victorian and Georgian period properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Windsor", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/" },
+  { name: "Gutter Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/gutter-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter cleaning cost in Windsor?",
+    a: "A standard three-bedroom semi-detached property in Windsor SL4 typically costs between £80 and £150 for a full clean, including downpipe clearance and a post-clean inspection. Properties with more complex rooflines — such as Victorian properties with multiple gables or larger Georgian period properties with extended runs — may be at the higher end of that range. Request a free quote online or by phone for an accurate price specific to your Windsor home."
+  },
+  {
+    q: "How often should Victorian and Georgian period properties in SL4 have gutters cleaned?",
+    a: "We recommend at least twice yearly for Victorian and Georgian period properties in Windsor — once in late autumn after leaf fall and again in spring. Many Victorian homes have narrower gutters than modern profiles, which means they block faster. If you have large trees overhanging your roof (common in Windsor's established neighbourhoods near Windsor Great Park), you may need three cleans per year to prevent overflow damage to original period features."
+  },
+  {
+    q: "Do you clean gutters across all of Windsor?",
+    a: "Yes. We cover the entire SL4 postcode area of Windsor, from the town centre near Windsor Castle to the quieter residential streets around Windsor Great Park. Whether your property is a Victorian terrace, a Georgian period property or a modern estate home, we have experience with all housing types across Windsor and can access any height of property safely."
+  },
+  {
+    q: "What causes gutter blockages in Windsor?",
+    a: "Windsor's proximity to Windsor Great Park and the abundance of mature trees throughout SL4 means heavy leaf fall is the primary cause of blockages, particularly from September through November. The original Victorian cast-iron and lead guttering requiring specialist repair found on many period homes in Windsor also tends to have narrower profiles and tighter bends than modern uPVC systems, meaning leaves compact more quickly. The damp microclimate of Windsor also encourages moss growth year-round, which accelerates blockages even outside autumn leaf fall."
+  },
+  {
+    q: "How long does gutter cleaning take for a typical Windsor house?",
+    a: "A standard two-storey semi-detached or Victorian terraced property in Windsor SL4 typically takes 2 to 3 hours from arrival to departure. This includes clearing gutters, flushing downpipes, clearing any blocked outlets and testing the full system for proper flow. We will give you a more precise time estimate once we have assessed your property, as larger Victorian or Georgian period properties with extensive rooflines may take longer."
+  },
+  {
+    q: "Do you provide a report after cleaning gutters in Windsor?",
+    a: "Yes. After every gutter clean in Windsor SL4, we provide a written condition report and before-and-after photographs. This documents what was removed, highlights any repairs needed (such as cracked joints on original Victorian cast-iron guttering or loose brackets), and gives you a record for insurance or future reference. If we find issues, we will quote separately for repairs — we never carry out additional work without your approval first."
+  },
+  {
+    q: "Can you clean gutters on a two-storey property in SL4?",
+    a: "Absolutely. We are fully insured and use professional-grade ladders and access equipment to safely reach gutters on two-storey properties throughout Windsor SL4. Victorian period properties and some Georgian homes do have complex rooflines with multiple levels and gables, but we have extensive experience navigating these safely. For properties taller than two storeys or with particularly steep roofs, we will advise you of any additional safety requirements and the associated cost when you request your quote."
+  }
+];
+
+const serviceSchema: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Gutter Cleaning",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Gutter Cleaners Uxbridge",
+    url: "https://guttercleanersuxbridge.co.uk",
+    telephone: "01895 000000",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "",
+      addressLocality: "Windsor",
+      postalCode: "SL4",
+      addressCountry: "GB",
+    },
+  },
+  areaServed: { "@type": "City", name: "Windsor" },
+  description: "Professional gutter cleaning in Windsor SL4 using modern vacuum-powered equipment. Specialists in Victorian and Georgian period properties.",
+  image: "https://guttercleanersuxbridge.co.uk/images/gutter-cleaning-hero.jpg",
+};
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  serviceSchema,
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Margaret T.",
+    street: "Sheet Street, Windsor",
+    date: "May 2026",
+    text: "Our Victorian terraced house had leaves packed solid in the gutters. The team came within a week, cleared everything, and showed me photos of what they'd removed. They also spotted a small crack in one of the cast-iron sections and explained the repair options. Excellent service and fair pricing."
+  },
+  {
+    name: "James K.",
+    street: "Crown Road, SL4",
+    date: "April 2026",
+    text: "Live near Windsor Great Park and the autumn leaf fall is relentless. Called them in November and they've been brilliant — responsive, professional and very careful around the original features of the house. Will be booking them again this year for the spring clean."
+  },
+  {
+    name: "Patricia W.",
+    street: "Thames Street, Windsor",
+    date: "March 2026",
+    text: "Georgian period property with gutters that had become a moss farm. These specialists really know how to handle older properties — they cleared it all, explained what they'd found, and gave honest advice about future maintenance. Highly recommended for anyone in Windsor."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Windsor — SL4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Gutter Cleaning in Windsor, SL4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Expert cleaning for Victorian and Georgian period properties. Vacuum-powered, no mess, same-week appointments.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Gutter cleaning in Windsor costs £80 to £150 for a 3-bedroom semi-detached property. We clear debris, flush downpipes, and provide a written condition report. Most Windsor SL4 bookings are available within 3 to 5 working days.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Windsor's Georgian period properties and Victorian terraces require specialist gutter maintenance. The original Victorian cast-iron and lead guttering requiring specialist repair found on many SL4 homes is narrower and less forgiving than modern profiles, making regular cleaning essential to prevent water backup and damage to period features like original sash windows and decorative cornicing.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Proximity to Windsor Great Park and the abundance of mature trees throughout the SL4 postcode means leaf fall is relentless in autumn. Left uncleared, that leaf matter compacts into a soggy mat that holds moisture against cast-iron sections, accelerating corrosion. Water then backs up and overflows behind the fascia, causing damp in the eaves and eventual structural damage to historic properties.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We have 15+ years of experience cleaning gutters on Victorian and Georgian period properties across Windsor. Our team understands the specific geometry and materials of these homes and clears them safely without damaging original decorative features.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Windsor Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Gutter Cleaning in Windsor's Period Properties</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The dominant housing types across Windsor SL4 are Victorian terraces and Georgian period properties, many of which retain original or early-replacement cast-iron guttering. This material is attractive and long-lasting, but requires consistent maintenance. Victorian gutters are typically narrower than modern profiles — often just 4 inches wide — which means leaves and moss compact faster and create blockages more readily.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The damp microclimate around Windsor, particularly near the Thames and the extensive grounds of Windsor Great Park, accelerates moss and algae growth year-round. Combined with autumn leaf fall from mature trees lining SL4 streets, this creates the perfect conditions for blockages. Without twice-yearly cleaning, Victorian gutters will overflow in heavy rain, risking water penetration into period wall structures and damage to historic internal features.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Our cleaning process is specifically designed for period properties. We use vacuum-powered equipment to extract debris without forcing it into downpipes, minimizing the risk of damage to original lead bends and cast-iron elbows. After clearing, we flush the full system with low-pressure water to test flow and identify any repair issues.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">What's Included in Our Windsor Gutter Clean</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Gutter Clearing</h3>
+          <p class="text-gray-700 text-sm">Complete removal of leaves, moss, silt and debris from all gutter runs using vacuum-powered equipment.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Downpipe Flushing</h3>
+          <p class="text-gray-700 text-sm">High-pressure flushing of all downpipes to clear blockages and test flow to ground level or drainage system.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Outlet Testing</h3>
+          <p class="text-gray-700 text-sm">Flushing of gutter outlets and verification that water drains freely without backing up at joints or bends.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Written Report</h3>
+          <p class="text-gray-700 text-sm">Before-and-after photographs plus a detailed report of any repairs needed, with separate quotation if required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Windsor Gutter Cleaning Process</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Inspection</h3>
+            <p class="text-gray-700 text-sm">We inspect all accessible gutter sections from a securely positioned ladder and note any damage, moss growth or blockage points.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Debris Removal</h3>
+            <p class="text-gray-700 text-sm">Using vacuum-powered equipment, we extract all loose leaves, silt and moss. This method prevents debris escaping into downpipes and causing secondary blockages.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Flush and Test</h3>
+            <p class="text-gray-700 text-sm">We flush gutters and downpipes with low-pressure water, checking that water flows freely and no backup occurs at joints or bends.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Report</h3>
+            <p class="text-gray-700 text-sm">We provide photographs and a written condition report detailing any repairs found. If repairs are needed, we quote separately and never proceed without your approval.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing guide -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Pricing Guide for Windsor SL4</h2>
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-blue-50">
+            <tr>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">Property Type</th>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">Typical Cost</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-5 py-3 text-gray-700">2-bedroom semi-detached or terraced</td>
+              <td class="px-5 py-3 text-gray-700">£80 – £110</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">3-bedroom semi-detached or terraced</td>
+              <td class="px-5 py-3 text-gray-700">£110 – £150</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Larger Victorian or Georgian period property</td>
+              <td class="px-5 py-3 text-gray-700">£150 – £200+</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Downpipe unblock (if required separately)</td>
+              <td class="px-5 py-3 text-gray-700">£40 – £75</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-600 text-sm mt-4">All prices include full clearing, flushing and written report. We provide a fixed quotation before any work commences — no hidden extras.</p>
+    </div>
+  </section>
+
+  <!-- Seasonal Advice -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Seasonal Gutter Advice for Windsor</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-bold text-gray-900 mb-2">Autumn (Sept–Nov)</h3>
+          <p class="text-gray-700 text-sm mb-3">Windsor's proximity to Windsor Great Park means leaf fall is heavy and sustained throughout autumn. Schedule your clean in late September or early October, before the main leaf fall peaks. Many properties in SL4 need a second clean in November to catch late-falling leaves from deciduous trees.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-900 mb-2">Spring (March–May)</h3>
+          <p class="text-gray-700 text-sm mb-3">A spring clean in April is essential to remove winter-accumulated silt, moss growth and any debris from storms. This prepares your gutters for summer rainfall and identifies any winter damage to cast-iron sections that may have cracked in frost.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-900 mb-2">Summer (June–Aug)</h3>
+          <p class="text-gray-700 text-sm mb-3">Moss growth accelerates during warm, damp weather. If you notice green staining or moss on gutters in July, a targeted clean can prevent blockages. Victorian cast-iron gutters are particularly susceptible to moss in summer due to their narrower profiles.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-900 mb-2">Winter (Dec–Feb)</h3>
+          <p class="text-gray-700 text-sm mb-3">After storms or heavy frost, inspect gutters visually from ground level for blockages or damage. If you spot water overflowing or icicles forming, contact us for an emergency clean. Frozen debris is harder to clear and risks damage if forced.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal service links -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Other Services in Windsor</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <a href="/locations/windsor/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Leaking joints, cracked sections and loose brackets repaired on the same visit.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+        <a href="/locations/windsor/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement with uPVC or cast iron to suit Victorian properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+        <a href="/locations/windsor/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Professional cleaning, repair and replacement of fascia boards and soffits.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Windsor Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Windsor Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your address and what you need. We will respond with a fixed price — no call-out fee, no obligation.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Windsor Gutter Cleaning FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-location links -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also provide gutter cleaning in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Harrow</a>
+        <a href="/locations/hayes/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Hayes</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

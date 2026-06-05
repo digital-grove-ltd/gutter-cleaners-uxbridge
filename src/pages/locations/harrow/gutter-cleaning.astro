@@ -1,0 +1,419 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import { locationServiceSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
+
+const title = "Gutter Cleaning Harrow HA1/HA2 | Professional Local Service";
+const description =
+  "Professional gutter cleaning in Harrow HA1/HA2. Vacuum-powered, no mess, same-week appointments. Specialists in Edwardian and 1930s suburban housing.";
+
+const schema = [
+  locationServiceSchema("Harrow", "HA1/HA2", "Gutter Cleaning", "/locations/harrow/gutter-cleaning/"),
+  faqSchema([
+    { q: "How much does gutter cleaning cost in Harrow?", a: "Gutter cleaning in Harrow HA1/HA2 typically costs £80 to £150 for a 3-bedroom semi-detached property. The final price depends on the length of guttering, degree of blockage, and property height. We provide a free, no-obligation quote within 24 hours." },
+    { q: "How often should Edwardian and 1930s suburban housing properties in HA1/HA2 have gutters cleaned?", a: "We recommend gutter cleaning at least twice yearly in Harrow—spring and autumn. Edwardian and 1930s suburban housing with overhanging trees or north-facing roofs prone to moss growth may need quarterly cleaning. Annual maintenance contracts are available for regular service." },
+    { q: "Do you clean gutters across all of Harrow?", a: "Yes, we cover all of Harrow including HA1 and HA2 postcodes. We serve residential properties throughout Harrow-on-the-Hill, the town centre, and surrounding suburbs. Contact us with your postcode to confirm coverage." },
+    { q: "What causes gutter blockages in Harrow?", a: "In Harrow, the most common cause of gutter blockages is moss growth on north-facing roofs. Edwardian and 1930s suburban housing are particularly prone to this because of their age and typical roof orientation. Leaves, sediment, and debris from trees also contribute to blockages." },
+    { q: "How long does gutter cleaning take for a typical Harrow house?", a: "Most gutter cleaning jobs in Harrow take 1 to 2 hours for a standard semi-detached property. Larger properties, severe blockages, or complex roof access may take longer. We'll provide an estimated time during your initial consultation." },
+    { q: "Do you provide a report after cleaning gutters in Harrow?", a: "Yes. After completing gutter cleaning in Harrow, we provide before and after photos, a written condition report, and recommendations for any repairs needed. You'll have a complete record of the work done." },
+    { q: "Can you clean gutters on a 2-storey property in HA1/HA2?", a: "Absolutely. We clean gutters on all types of Harrow properties, including 2-storey Edwardian and 1930s suburban homes. Our equipment and techniques are safe for multi-storey properties. We're fully insured and trained for working at height." },
+  ]),
+  breadcrumbSchema([
+    { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk" },
+    { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations" },
+    { name: "Harrow", url: "https://www.guttercleanersuxbridge.co.uk/locations/harrow" },
+    { name: "Gutter Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/harrow/gutter-cleaning" },
+  ]),
+];
+---
+
+<Layout {title} {description} {schema}>
+  <!-- Hero Section -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img
+      src="/images/gutter-cleaning-hero.jpg"
+      alt="Gutter cleaning in Harrow HA1/HA2"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Gutter Cleaning in Harrow HA1/HA2
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100 mb-8">
+          Professional vacuum-powered cleaning. No mess, no water damage. Same-week appointments.
+        </p>
+        <a href="#quote" class="btn-primary">
+          Get Your Free Quote
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Quick Answer Section -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="quick-answer bg-white border-l-4 border-brand rounded-lg p-6 max-w-3xl mx-auto">
+        <h2 class="text-xl font-bold text-text mb-3">Quick Answer</h2>
+        <p class="text-text-muted">
+          Gutter cleaning in Harrow costs £80 to £150 for a 3-bedroom semi-detached property. We clear debris, flush downpipes, and provide a written condition report. Most Harrow HA1/HA2 bookings are available within 3 to 5 working days.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">
+            Specialist Gutter Cleaning in Harrow
+          </h2>
+          <p class="text-lg text-text-muted mb-6">
+            Harrow's Edwardian and 1930s suburban housing are beautiful but prone to gutter problems. North-facing roofs accumulate moss that clogs gutters and causes water damage. We've been cleaning gutters in Harrow HA1/HA2 for over 15 years using modern vacuum-powered equipment that removes debris safely without any mess or water splash.
+          </p>
+          <p class="text-lg text-text-muted mb-8">
+            Whether you're dealing with moss buildup, leaf blockages, or sediment in your gutters, we'll restore proper water drainage and prevent costly damage to your roof, walls, and foundation. Same-week appointments available.
+          </p>
+          <div class="space-y-3">
+            <div class="check-item">Vacuum-powered equipment—zero mess</div>
+            <div class="check-item">Moss removal from north-facing roofs</div>
+            <div class="check-item">Written condition report provided</div>
+            <div class="check-item">Fully insured for peace of mind</div>
+            <div class="check-item">5-star rated on Google and Trustpilot</div>
+          </div>
+        </div>
+        <div class="bg-blue-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-text mb-6">Why Harrow Residents Choose Us</h3>
+          <ul class="space-y-4 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Moss Specialists:</strong> Expert at removing moss growth from north-facing roofs common in Harrow properties
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Heritage Property Knowledge:</strong> Experienced with Edwardian and 1930s suburban housing gutters
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">SkyVac Technology:</strong> Modern equipment ensures zero mess, zero water damage to your Harrow home
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Local Experts:</strong> Serving Harrow HA1/HA2 since 2008 with hundreds of satisfied customers
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Do It -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">Our Gutter Cleaning Process</h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto">
+          A proven 4-step process for spotless gutters that flow freely in Harrow HA1/HA2
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Inspection</h3>
+          <p class="text-text-muted">
+            We assess your gutters for moss growth, blockages, and damage. North-facing roofs in Harrow often have significant moss accumulation.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Vacuum Cleaning</h3>
+          <p class="text-text-muted">
+            Using SkyVac equipment, we remove all debris including moss from your Harrow gutters without mess or water splash.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Flush & Test</h3>
+          <p class="text-text-muted">
+            We flush the system with water to confirm proper drainage and clear any remaining moss or obstructions.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            4
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Final Report</h3>
+          <p class="text-text-muted">
+            We provide photos and a detailed written report of work completed, plus recommendations for repairs if needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">What's Included in Harrow Gutter Cleaning</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Left Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-text mb-6">Standard Gutter Cleaning Service</h3>
+          <div class="check-item">Complete debris and moss removal</div>
+          <div class="check-item">Downpipe cleaning and flushing</div>
+          <div class="check-item">Water flow testing and confirmation</div>
+          <div class="check-item">Professional vacuum-powered equipment</div>
+          <div class="check-item">Fully insured and certified technicians</div>
+          <div class="check-item">Before & after photos and written report</div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-text mb-6">Optional Add-Ons for Harrow</h3>
+          <div class="check-item">Gutter guard installation (prevent moss)</div>
+          <div class="check-item">Moss and algae treatment</div>
+          <div class="check-item">Fascia & soffit inspection</div>
+          <div class="check-item">Minor repairs (loose brackets, seals)</div>
+          <div class="check-item">Annual maintenance contracts</div>
+          <div class="check-item">Emergency same-day call-outs</div>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-blue-50 rounded-xl p-8 border-l-4 border-brand">
+        <h3 class="text-2xl font-bold text-text mb-3">Pricing Guide for Harrow</h3>
+        <p class="text-text-muted text-lg mb-4">
+          Gutter cleaning in HA1/HA2 typically costs <strong class="text-text">£80–£150</strong> depending on:
+        </p>
+        <ul class="space-y-2 text-text-muted">
+          <li class="flex gap-2">
+            <span class="text-brand font-bold">•</span>
+            <span>Property type (bungalow, 2-storey Edwardian, 1930s semi, etc.)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-brand font-bold">•</span>
+            <span>Total length of guttering (linear metres)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-brand font-bold">•</span>
+            <span>Degree of moss and debris blockage</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-brand font-bold">•</span>
+            <span>Roof pitch and access requirements</span>
+          </li>
+        </ul>
+        <p class="text-text-muted text-lg mt-4">
+          <strong class="text-text">Get an exact quote</strong> by submitting the form below. No hidden fees, no surprises.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Advice for Harrow -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Seasonal Gutter Maintenance in Harrow</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-3">Spring (March–May)</h3>
+          <p class="text-text-muted mb-3">
+            After winter, Harrow gutters need clearing of debris and moss growth that accumulated on north-facing roofs. Spring is the ideal time to prevent summer water damage.
+          </p>
+          <p class="font-semibold text-brand">Book your spring clean now</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-3">Autumn (September–November)</h3>
+          <p class="text-text-muted mb-3">
+            Fallen leaves block gutters throughout Harrow. Autumn cleaning prevents winter water damage and ice buildup in HA1/HA2 properties.
+          </p>
+          <p class="font-semibold text-brand">Schedule your autumn appointment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-surface">
+    <div class="container-site max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-12 text-center">
+        Gutter Cleaning FAQs for Harrow HA1/HA2
+      </h2>
+
+      <div class="space-y-6">
+        <!-- FAQ 1 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How much does gutter cleaning cost in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Gutter cleaning in Harrow HA1/HA2 costs £80 to £150 for a typical 3-bedroom semi-detached property. The price varies based on property size, guttering length, and blockage severity. We provide a free no-obligation quote within 24 hours.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How often should Edwardian and 1930s suburban housing properties in HA1/HA2 have gutters cleaned?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            We recommend twice-yearly cleaning for Edwardian and 1930s suburban housing in Harrow—spring and autumn. If your property has overhanging trees or north-facing roofs prone to moss growth, quarterly cleaning may be needed. Our annual maintenance contracts offer regular scheduled service.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Do you clean gutters across all of Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes, we cover all postcodes in Harrow including HA1 and HA2. We serve properties throughout the area, from Harrow-on-the-Hill to the town centre and surrounding suburbs. Contact us with your postcode and we'll confirm coverage immediately.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            What causes gutter blockages in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            The most common cause of gutter blockages in Harrow is moss growth on north-facing roofs causing gutter blockages. This is especially prevalent on Edwardian and 1930s suburban housing. Tree debris, leaves, and sediment also contribute significantly. Our specialists know how to tackle moss buildup specific to Harrow properties.
+          </p>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How long does gutter cleaning take for a typical Harrow house?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Most gutter cleaning jobs in Harrow take 1 to 2 hours for a standard semi-detached property. Larger homes, severe moss buildup, or complex roof access may take longer. We'll provide an estimated completion time when we arrange your appointment.
+          </p>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Do you provide a report after cleaning gutters in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. After completing gutter cleaning in Harrow, we provide before and after photos, a written condition report documenting all work, and recommendations for any repairs needed. You'll have a complete record for insurance and maintenance purposes.
+          </p>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Can you clean gutters on a 2-storey property in HA1/HA2?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Absolutely. We clean gutters on all types of Harrow properties, including 2-storey Edwardian and 1930s suburban homes. Our team is trained for safe working at height and fully insured. We have the equipment and expertise to handle properties of any height in HA1/HA2.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="section bg-surface" id="quote">
+    <div class="container-site">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">Get Your Free Gutter Cleaning Quote in Harrow</h2>
+        <p class="text-lg text-text-muted">
+          No-obligation estimate. We'll contact you within 2 hours during business hours.
+        </p>
+      </div>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- Related Services CTA -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">Other Services in Harrow</h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto mb-8">
+          We also offer gutter repair, gutter replacement, and fascia & soffit cleaning for Harrow properties. Get a comprehensive quote for all your gutter and fascia needs.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/locations/harrow/gutter-repairs" class="btn-primary">
+            Gutter Repairs
+          </a>
+          <a href="/locations/harrow/gutter-replacement" class="btn-secondary">
+            Gutter Replacement
+          </a>
+          <a href="/locations/harrow/fascia-soffit-cleaning" class="btn-secondary">
+            Fascia & Soffit Cleaning
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Comparison -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Compare Services in Other Areas</h2>
+      <div class="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+        <a href="/locations/hayes/gutter-cleaning" class="btn-secondary">
+          Gutter Cleaning in Hayes
+        </a>
+        <a href="/locations/uxbridge/gutter-cleaning" class="btn-secondary">
+          Gutter Cleaning in Uxbridge
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

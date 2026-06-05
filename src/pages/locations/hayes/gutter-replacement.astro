@@ -1,0 +1,326 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Replacement Hayes UB3/UB4 | uPVC and Cast Iron";
+const metaDescription = "Full gutter replacement in Hayes UB3/UB4. uPVC, cast iron and aluminium. Specialists in post-war 1950s to 70s semi-detached properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hayes", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/" },
+  { name: "Gutter Replacement", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/gutter-replacement/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter replacement cost in Hayes?",
+    a: "Full gutter replacement in Hayes UB3/UB4 costs £400 to £900 for a typical semi-detached property depending on run length and material choice. uPVC systems are most economical at £400–£600; cast iron replacement runs £600–£900 due to material and labour intensity. We provide a fixed price after measuring your roof run. This includes removal of old gutters, installation of new system and testing."
+  },
+  {
+    q: "How long does a full gutter replacement take in UB3/UB4?",
+    a: "Most gutter replacements on Hayes semi-detached homes are completed in one working day — typically 6 to 8 hours. We remove old guttering, fit new runs with joints and brackets, test water flow, and clear debris. The exact timeframe depends on run length and complexity of roof design. We can often complete the work before you need to worry about rain."
+  },
+  {
+    q: "Should I choose uPVC or cast iron gutters for my post-war 1950s to 70s semi-detached home in Hayes?",
+    a: "uPVC is the modern standard for 1950s–70s properties and offers good durability at lower cost. Cast iron suits properties with period character and is preferred if you want a more traditional appearance. uPVC is lighter, easier to install and less labour-intensive. Cast iron is heavier, more rigid and lasts longer if maintained. For Hayes semi-detached homes, most customers choose uPVC for its practicality and cost, though cast iron can be selected if you prefer the traditional look."
+  },
+  {
+    q: "How long do new gutters last in Hayes?",
+    a: "uPVC gutters typically last 20–30 years when properly maintained and protected from extreme thermal stress. Cast iron gutters last 40–60 years or more if not corroded. In Hayes, UV exposure and freeze-thaw cycles can accelerate uPVC degradation, but quality systems should remain functional for 25+ years. Regular cleaning every 1–2 years extends lifespan significantly."
+  },
+  {
+    q: "Do you replace fascia and soffits at the same time as gutters in Hayes?",
+    a: "We can include fascia and soffit replacement or repair when replacing gutters. Many Hayes properties have water-damaged fascia boards from years of gutter overflow, so combining the work is efficient. We assess the condition during our survey and provide combined quotes. Separate replacement is also possible if only gutters need work."
+  },
+  {
+    q: "Can you match the original gutter style on a post-war 1950s to 70s semi-detached property in UB3/UB4?",
+    a: "Yes. We stock a range of gutter profiles that suit 1950s–70s semi-detached architecture. If original gutters were cast iron with decorative detail, we can source and fit matching profiles. Most Hayes properties have simpler uPVC profiles which we replace with modern equivalents. We will discuss style options during your survey."
+  },
+  {
+    q: "Do you take away old gutters after replacement in Hayes?",
+    a: "Yes. We remove all old gutter sections, joints, brackets and downpipes as part of the replacement service. Debris is transported away and disposed of responsibly. Your property is left clean and ready for the new system. We will not leave old materials on-site unless you specifically request otherwise."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hayes"),
+  faqSchema(faqs),
+  serviceSchema(
+    "Gutter Replacement in Hayes UB3/UB4",
+    "Full gutter replacement for Hayes properties. uPVC and cast iron systems. Same-day installation, 10-year guarantee.",
+    "https://www.guttercleanersuxbridge.co.uk/locations/hayes/gutter-replacement/"
+  )
+];
+
+const reviews = [
+  {
+    name: "Margaret W.",
+    street: "Bourne Avenue, Hayes UB4",
+    date: "May 2026",
+    text: "Our 1970s semi had gutters that were cracked in three places and sagging at the back. Rather than keep paying for repairs, we decided on replacement. The team fitted new uPVC gutters in one day, matched the profile perfectly and removed all the old materials. We got a 10-year guarantee. Much better investment than more band-aid repairs."
+  },
+  {
+    name: "Stephen L.",
+    street: "Oaks Road, Hayes UB3",
+    date: "March 2026",
+    text: "We wanted cast iron gutters to match the character of our older semi. They sourced matching profiles, fitted them properly and explained how maintenance would keep them good for decades. The workmanship was excellent and they left the property spotless. Highly professional team."
+  },
+  {
+    name: "Patricia D.",
+    street: "Station Road, Hayes",
+    date: "February 2026",
+    text: "Full replacement with new fascia boards too — our old boards were rotting from the gutter leaks. The team managed everything in two days, were tidy and professional. The gutters drain perfectly now and we're told they will last many years. Excellent value."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Hayes — UB3 / UB4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Replacement for Hayes Homes</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Complete gutter replacement in uPVC, cast iron or aluminium. Same-day installation, 10-year guarantee. Suited to post-war 1950s to 70s semi-detached.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Full gutter replacement in Hayes UB3/UB4 costs £400 to £900 for a typical semi-detached property depending on run length and material. We install uPVC, cast iron and aluminium systems suited to post-war 1950s to 70s semi-detached.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Many Hayes properties are reaching the point where repair is no longer cost-effective. The post-war 1950s to 70s semi-detached homes that characterize the town were fitted with original uPVC guttering that has now cycled through decades of thermal stress, UV exposure and weathering. Cracks, joint failures, sagging and persistent leaks are signs that replacement is the only practical solution.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        We replace gutters on Hayes properties throughout UB3 and UB4 with durable systems in uPVC, cast iron or aluminium. We assess your roof design, match the gutter profile to your property's character and fit the new system in a single day in most cases. All replacement work carries a 10-year guarantee, so you are protected against defects or premature failure.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Whether you need simple uPVC replacement or a more traditional cast iron system to match your Hayes home's architecture, we can advise on the best option for your budget and maintenance expectations.
+      </p>
+    </div>
+  </section>
+
+  <!-- Material Guide -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Gutter Materials for Hayes Properties</h2>
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg p-5 border border-blue-200">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-gray-900">uPVC Gutters</h3>
+            <span class="text-sm font-semibold text-green-700 bg-green-100 px-2 py-1 rounded">Most Popular</span>
+          </div>
+          <p class="text-gray-700 text-sm mb-3">Best for most Hayes semi-detached homes. Lightweight, easy to install, low maintenance. Cost: £400–£600 per system. Lifespan: 20–30 years. Modern profiles suit 1950s–70s properties. Not affected by corrosion but can become brittle in extreme cold.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-blue-200">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-gray-900">Cast Iron Gutters</h3>
+            <span class="text-sm font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded">Traditional</span>
+          </div>
+          <p class="text-gray-700 text-sm mb-3">Ideal if you want a period-authentic appearance on older Hayes properties. Durable and rigid; matches period fascia details. Cost: £600–£900 per system. Lifespan: 40–60+ years if maintained. Heavier, requires more labour to install. Must be repainted every 5–7 years to prevent corrosion.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-blue-200">
+          <h3 class="font-bold text-gray-900 mb-2">Aluminium Gutters</h3>
+          <p class="text-gray-700 text-sm mb-3">Lightweight and corrosion-resistant. Good middle ground between uPVC and cast iron. Cost: £500–£750 per system. Lifespan: 30–40 years. Rarely chosen for residential properties in Hayes but useful in high-pollution areas or where weight is a concern.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Replace -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Signs Your Hayes Gutters Need Replacement</h2>
+      <div class="grid sm:grid-cols-2 gap-4 text-gray-700 text-sm">
+        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+          <p class="font-semibold text-red-900 mb-2">Act Now — Replace:</p>
+          <ul class="space-y-1 text-red-800">
+            <li>• Multiple cracked sections</li>
+            <li>• Persistent joint leaks</li>
+            <li>• Sagging across most runs</li>
+            <li>• Damp in eaves or upper walls</li>
+            <li>• Gutters over 30 years old</li>
+            <li>• Failed repairs repeating</li>
+          </ul>
+        </div>
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+          <p class="font-semibold text-yellow-900 mb-2">Consider Soon:</p>
+          <ul class="space-y-1 text-yellow-800">
+            <li>• Gutters 25+ years old</li>
+            <li>• Visible brittleness in uPVC</li>
+            <li>• 2+ repairs in last 18 months</li>
+            <li>• Loose or corroded brackets</li>
+            <li>• Fascia boards showing rot</li>
+            <li>• Water running behind fascia</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Process -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Replacement Process</h2>
+      <div class="space-y-4 text-gray-700">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+          <div>
+            <p class="font-semibold text-gray-900">Survey & Measurement</p>
+            <p class="text-sm">We visit your Hayes property, measure roof runs, assess fascia condition and discuss material options. We note any structural issues that may affect the new system.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+          <div>
+            <p class="font-semibold text-gray-900">Fixed Quotation</p>
+            <p class="text-sm">We provide a detailed written quote including materials, labour and removal of old gutters. Prices are fixed — no surprises. We discuss optional fascia/soffit work if needed.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+          <div>
+            <p class="font-semibold text-gray-900">Removal & Prep</p>
+            <p class="text-sm">We safely remove old gutters, brackets and downpipes. We inspect fascia boards for damage and prepare the roof edge for new installation.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+          <div>
+            <p class="font-semibold text-gray-900">Installation</p>
+            <p class="text-sm">We fit new gutters, joints and brackets to the correct pitch for drainage. We test water flow and ensure all connections are sealed and secure.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">5</div>
+          <div>
+            <p class="font-semibold text-gray-900">Testing & Cleanup</p>
+            <p class="text-sm">We perform final water tests, clear all debris and leave your property clean. We provide a 10-year guarantee and maintenance advice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost Breakdown -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Typical Replacement Costs for Hayes Semi-Detached</h2>
+      <div class="space-y-3 text-gray-700 text-sm">
+        <div class="border border-gray-200 rounded-lg p-4">
+          <p class="font-semibold text-gray-900">uPVC System (3-Bedroom Semi)</p>
+          <p class="text-gray-600">Materials (gutters, joints, brackets, downpipes): £200–£300 • Labour: £180–£250 • Total: £400–£600</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4">
+          <p class="font-semibold text-gray-900">Cast Iron System (3-Bedroom Semi)</p>
+          <p class="text-gray-600">Materials (cast iron, joints, brackets, downpipes): £350–£450 • Labour: £250–£400 • Total: £600–£900</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-4">
+          <p class="font-semibold text-gray-900">Optional Add-ons</p>
+          <p class="text-gray-600">Fascia board replacement: £150–£300 • Soffit cleaning/repair: £80–£150 • Downpipe realignment: £50–£100</p>
+        </div>
+      </div>
+      <p class="text-gray-600 text-sm mt-6 italic">Prices based on typical Hayes properties. Final cost depends on exact run length, material choice and any structural repairs needed.</p>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Other Services in Hayes</h2>
+      <p class="text-gray-600 text-center mb-8">Often paired with replacement on Hayes properties:</p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <a href="/locations/hayes/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Clear debris and blockages before deciding on replacement vs. repair.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/hayes/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Consider repairs first if only sections are damaged.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/hayes/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Replace water-damaged fascia boards alongside new gutters.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Hayes Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get a Replacement Quote</h2>
+      <p class="text-gray-600 text-center mb-10">Describe your gutters and the work needed. We will provide a detailed fixed-price quote by return.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Replacement FAQs for Hayes</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also replace gutters in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Harrow</a>
+        <a href="/locations/uxbridge/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Uxbridge</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">All Hayes services</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

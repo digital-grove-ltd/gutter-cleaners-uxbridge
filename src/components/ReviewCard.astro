@@ -1,0 +1,54 @@
+---
+interface Props {
+  quote: string;
+  reviewer: string;
+  location: string;
+  date: string;
+  rating?: number;
+}
+
+const { quote, reviewer, location, date, rating = 5 } = Astro.props;
+---
+
+<article
+  class="bg-white rounded-2xl p-6 border border-border shadow-card hover:shadow-hero hover:-translate-y-0.5 transition-all duration-300 flex flex-col gap-4"
+  itemscope
+  itemtype="https://schema.org/Review"
+>
+  <!-- Stars -->
+  <div class="flex items-center gap-1" aria-label={`${rating} out of 5 stars`}>
+    {Array.from({ length: 5 }).map((_, i) => (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill={i < rating ? "#F59E0B" : "none"}
+        stroke={i < rating ? "#F59E0B" : "#CBD5E1"}
+        stroke-width="1.5"
+        aria-hidden="true"
+      >
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    ))}
+    <span class="sr-only">{rating} out of 5 stars</span>
+  </div>
+
+  <!-- Quote -->
+  <blockquote itemprop="reviewBody" class="text-text text-sm leading-relaxed flex-1">
+    <span class="text-brand-light text-2xl leading-none mr-1" aria-hidden="true">"</span>{quote}<span class="text-brand-light text-2xl leading-none ml-1" aria-hidden="true">"</span>
+  </blockquote>
+
+  <!-- Reviewer info -->
+  <footer class="flex items-center justify-between gap-3 pt-3 border-t border-border">
+    <div class="flex items-center gap-2.5">
+      <div class="w-9 h-9 rounded-full bg-brand-muted flex items-center justify-center text-brand font-bold text-sm" aria-hidden="true">
+        {reviewer.charAt(0).toUpperCase()}
+      </div>
+      <div>
+        <cite itemprop="author" class="not-italic font-semibold text-text text-sm block leading-tight">{reviewer}</cite>
+        <span class="text-text-muted text-xs">{location}</span>
+      </div>
+    </div>
+    <time itemprop="datePublished" datetime={date} class="text-text-light text-xs">{date}</time>
+  </footer>
+</article>

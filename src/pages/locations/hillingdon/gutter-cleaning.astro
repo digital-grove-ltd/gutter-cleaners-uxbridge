@@ -1,0 +1,367 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Cleaning Hillingdon UB10 | Professional Local Service";
+const metaDescription = "Professional gutter cleaning in Hillingdon UB10. Vacuum-powered, no mess, same-week appointments. Specialists in mixed 1930s to 1960s housing.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hillingdon", url: "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/" },
+  { name: "Gutter Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/gutter-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter cleaning cost in Hillingdon?",
+    a: "Gutter cleaning in Hillingdon typically costs between £80 and £150 for a standard 3-bedroom semi-detached property, depending on the length of guttering, level of blockage, and property height. We provide a fixed price quote after assessing your Hillingdon UB10 home. Larger properties or those with heavy moss growth may cost more, but we'll confirm this upfront."
+  },
+  {
+    q: "How often should mixed 1930s to 1960s housing properties in UB10 have gutters cleaned?",
+    a: "Properties built in the 1930s-1960s era across Hillingdon should have gutters cleaned at least twice yearly—once in autumn after leaf-fall, and again in spring. However, if your Hillingdon property has large overhanging trees from adjacent gardens, quarterly cleaning is recommended. Many UB10 homes with mature trees benefit from seasonal checks every 8-10 weeks."
+  },
+  {
+    q: "Do you clean gutters across all of Hillingdon?",
+    a: "Yes, we cover all postcodes within Hillingdon UB10, including Ickenham, Hillingdon village, and surrounding areas. Our vacuum-powered equipment is ideal for the mixed 1930s to 1960s housing stock throughout the region. If you're unsure about your specific street, contact us with your postcode and we'll confirm immediate availability."
+  },
+  {
+    q: "What causes gutter blockages in Hillingdon?",
+    a: "Hillingdon's prevalence of large gardens with mature trees is the primary cause of gutter blockages. Tree leaves, seeds, and small branches fall directly into gutters during autumn and spring, compacting into solid blockages. The 1930s-1960s properties common in UB10 often have deeper eaves that collect more debris. Additionally, moss thrives in gutters that remain damp from blocked drainage, accelerating the blockage cycle."
+  },
+  {
+    q: "How long does gutter cleaning take for a typical Hillingdon house?",
+    a: "A standard 3-bedroom semi-detached property in Hillingdon UB10 typically takes 1 to 2 hours to clean thoroughly. Larger detached homes or 2-storey properties with complex rooflines may take 2 to 3 hours. We'll provide an estimated time during your free quote call. Most Hillingdon appointments are booked for a morning or afternoon slot, allowing us to complete the work in one visit."
+  },
+  {
+    q: "Do you provide a report after cleaning gutters in Hillingdon?",
+    a: "Absolutely. After completing your gutter clean in Hillingdon, we provide a written condition report with before-and-after photographs. This report documents any damage, loose brackets, or areas requiring repair on your 1930s-1960s property. We'll highlight issues such as cracked sections, missing seals, or sagging gutters that may need follow-up repairs on your UB10 home."
+  },
+  {
+    q: "Can you clean gutters on a 2-storey property in UB10?",
+    a: "Yes. We safely clean gutters on 2-storey properties throughout Hillingdon UB10 using professional equipment and trained technicians. Our vacuum-powered system minimises fall risk and water damage. We assess each Hillingdon property individually to determine the safest access method, and our team is fully insured for working at height on mixed 1930s to 1960s housing."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hillingdon UB10"),
+  faqSchema(faqs),
+  serviceSchema("Gutter Cleaning in Hillingdon UB10", "Professional vacuum-powered gutter cleaning across Hillingdon. Specialists in mixed 1930s to 1960s housing.", "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/gutter-cleaning/")
+];
+
+const reviews = [
+  {
+    name: "Michael R.",
+    street: "Ickenham, UB10",
+    date: "April 2026",
+    text: "Our gutters were completely choked with leaves from the trees at the end of our garden. The team came quickly, cleared everything, and showed us photos of the problem. They explained why it happens so much here in Hillingdon. Great service."
+  },
+  {
+    name: "Patricia C.",
+    street: "Hillingdon village, UB10",
+    date: "March 2026",
+    text: "Living in a 1930s semi with lots of big gardens around us means gutters block every season. These cleaners know exactly what we're dealing with. Professional, prompt, and they spotted some loose brackets we didn't notice."
+  },
+  {
+    name: "James K.",
+    street: "Uxbridge Road, Hillingdon, UB10",
+    date: "February 2026",
+    text: "Very impressed with the vacuum system—there was no mess at all, which I was worried about. The whole job took about 90 minutes for our 2-storey property. Would definitely use again."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img src="/images/gutter-cleaning-hero.jpg" alt="Professional gutter cleaning in Hillingdon UB10" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <div class="flex items-center justify-center gap-2 text-blue-200 text-sm font-semibold uppercase tracking-wide mb-3">
+          <MapPin className="w-4 h-4" />
+          <span>Hillingdon — UB10</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning in Hillingdon UB10</h1>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialists in clearing blocked gutters on mixed 1930s to 1960s housing. Vacuum-powered, no mess, same-week appointments.</p>
+
+        <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+          <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+          <p class="text-white text-base leading-relaxed">Gutter cleaning in Hillingdon costs £80 to £150 for a 3-bedroom semi-detached property. We clear debris, flush downpipes, and provide a written condition report. Most Hillingdon UB10 bookings are available within 3 to 5 working days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Hillingdon's mixed 1930s to 1960s housing stock sits in one of the region's most tree-rich neighbourhoods. Large mature gardens bordering Hillingdon village and extending toward Ickenham create ideal conditions for gutter blockages. Leaves, seeds, and fine debris from these trees accumulate rapidly in gutters designed nearly 70 years ago, blocking drainage and causing water to back up under the roof.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The semi-detached and detached homes characteristic of UB10 postcodes feature deeper eaves and longer gutter runs than modern properties, collecting more seasonal debris. Once blockages form, standing water in the gutter accelerates moss growth, which creates a self-sustaining cycle of maintenance problems that worsens each year without professional cleaning.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We provide regular gutter cleaning specifically suited to Hillingdon's suburban character, with expertise in the maintenance patterns that keep 1930s-1960s properties protected from water damage and structural decay.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">What's Included in Our Gutter Cleaning Service</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Standard Cleaning</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Complete debris removal (leaves, moss, sediment)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Downpipe clearing and flushing</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Outlet testing and water flow confirmation</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Vacuum-powered equipment (zero mess)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Photographic before-and-after report</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Optional Add-Ons</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Roof moss treatment (slows regrowth)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Gutter guard installation</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Minor bracket tightening and sealing</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Annual maintenance contracts</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Emergency same-day call-outs</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vacuum Method -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Our Gutter Cleaning Method</h2>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mb-4">1</div>
+          <h3 class="font-bold text-gray-900 mb-3">Visual Inspection</h3>
+          <p class="text-gray-700 text-sm">We assess your Hillingdon gutters, identify blockages, and check for damage common to 1930s-1960s housing.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mb-4">2</div>
+          <h3 class="font-bold text-gray-900 mb-3">Vacuum Removal</h3>
+          <p class="text-gray-700 text-sm">Using SkyVac equipment, we safely remove all debris without touching your fascia, soffits, or paintwork.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mb-4">3</div>
+          <h3 class="font-bold text-gray-900 mb-3">Water Flush & Test</h3>
+          <p class="text-gray-700 text-sm">We flush the system with water to confirm drainage is working and clear any remaining obstructions.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mb-4">4</div>
+          <h3 class="font-bold text-gray-900 mb-3">Report & Photos</h3>
+          <p class="text-gray-700 text-sm">Receive a written condition report with photos of your cleaned gutters and any issues found.</p>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-blue-100 border-l-4 border-blue-600 rounded-lg p-6">
+        <h3 class="font-bold text-gray-900 mb-2">Why Vacuum Cleaning?</h3>
+        <p class="text-gray-700">Unlike traditional scoop-and-bucket or high-pressure methods, our vacuum system captures debris immediately with zero splash or mess to your Hillingdon property. This method is especially gentle on older gutters found on mixed 1930s-1960s housing, preventing damage to original cast-iron or ageing uPVC systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Guide -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Hillingdon Gutter Cleaning Pricing Guide</h2>
+
+      <div class="bg-white rounded-xl p-8 border border-gray-200 mb-6">
+        <p class="text-lg text-gray-700 mb-4">Gutter cleaning costs in Hillingdon depend on several factors:</p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex gap-3">
+            <span class="text-blue-600 font-bold">•</span>
+            <span class="text-gray-700"><strong>Property type:</strong> Bungalow, semi-detached, or detached (typical for UB10)</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-600 font-bold">•</span>
+            <span class="text-gray-700"><strong>Linear metres of guttering:</strong> Larger properties have longer gutter runs</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-600 font-bold">•</span>
+            <span class="text-gray-700"><strong>Blockage severity:</strong> Light leaf debris vs. heavy moss or sediment accumulation</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-600 font-bold">•</span>
+            <span class="text-gray-700"><strong>Access difficulty:</strong> Single-storey vs. 2-storey properties in Hillingdon</span>
+          </li>
+        </ul>
+
+        <div class="bg-blue-50 rounded-lg p-5 border border-blue-200">
+          <p class="font-bold text-gray-900 mb-2">Typical Hillingdon Pricing:</p>
+          <p class="text-gray-700"><strong>3-bed semi-detached:</strong> £80–£150</p>
+          <p class="text-gray-700"><strong>4-bed detached:</strong> £120–£200</p>
+          <p class="text-gray-700"><strong>Bungalow:</strong> £60–£100</p>
+          <p class="text-gray-700 mt-3 text-sm italic">Prices exclude optional add-ons. Get a fixed quote by submitting the form below—no hidden fees.</p>
+        </div>
+      </div>
+
+      <p class="text-center text-gray-600 text-sm">Fixed prices confirmed after free visual survey. We respond with a quote on the same working day.</p>
+    </div>
+  </section>
+
+  <!-- Seasonal Advice -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Seasonal Gutter Advice for Hillingdon</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-amber-50 rounded-xl p-6 border border-amber-200">
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">Autumn (September–November)</h3>
+          <p class="text-gray-700 mb-3">This is peak blockage season in Hillingdon. Trees surrounding UB10 properties drop leaves continuously, clogging gutters within weeks. We recommend a thorough cleaning before winter to prevent ice dams and water damage. Many Hillingdon customers book regular autumn cleans.</p>
+          <p class="text-sm text-gray-600 italic">Peak waiting times: book 2 weeks ahead</p>
+        </div>
+
+        <div class="bg-green-50 rounded-xl p-6 border border-green-200">
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">Spring (March–May)</h3>
+          <p class="text-gray-700 mb-3">Spring brings seed pod drop and fresh moss growth on north-facing gutters. A spring clean removes winter debris and moss. This is ideal timing for moss treatment on 1930s-1960s properties in Hillingdon before the wet season accelerates blockages further.</p>
+          <p class="text-sm text-gray-600 italic">Good availability: book 5–10 days ahead</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Other Services in Hillingdon</h2>
+      <p class="text-gray-600 text-center mb-10">Beyond cleaning, we also offer repairs, replacement, and fascia work for UB10 properties.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/locations/hillingdon/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Resealing joints, replacing brackets, and fixing leaks on mixed 1930s to 1960s housing in Hillingdon UB10.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+
+        <a href="/locations/hillingdon/gutter-replacement/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full gutter replacement in uPVC, cast iron, or aluminium for Hillingdon properties beyond repair.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+
+        <a href="/locations/hillingdon/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Clean and restore fascia boards damaged by years of gutter overflow on UB10 homes.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Hillingdon Customer Reviews</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">★</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} • {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Hillingdon Home</h2>
+      <p class="text-gray-600 text-center mb-10">Submit your address and service details. We'll respond with a fixed price on the same working day.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Gutter Cleaning FAQs for Hillingdon</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <details class="group border border-gray-200 rounded-xl p-6">
+            <summary class="font-bold text-gray-900 cursor-pointer flex justify-between items-center">
+              {item.q}
+              <span class="text-blue-600 group-open:rotate-180 transition-transform">+</span>
+            </summary>
+            <p class="text-gray-700 leading-relaxed text-sm mt-4">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Gutter cleaning also available in:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/harrow/" class="text-blue-600 hover:underline text-sm">Harrow</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations →</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Hayes Gutter Cleaning, Repairs and Replacement | UB3/UB4";
+const metaDescription = "Professional gutter cleaning, repair and replacement in Hayes (UB3, UB4). Specialist in ageing 1970s uPVC gutters that are cracking and sagging on post-war homes near Heathrow Airport. Free quotes, same-week service.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hayes", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/" }
+];
+
+const faqs = [
+  {
+    q: "Why are 1970s uPVC gutters on Hayes homes failing now?",
+    a: "The bulk of post-war housing in Hayes (UB3/UB4) was built between the 1950s and 1970s, and many properties received uPVC gutters during the 1970s and early 1980s — the era when uPVC first replaced cast iron at scale. Those gutters are now 40 to 50 years old. uPVC becomes brittle with prolonged UV exposure and thermal cycling, meaning joints crack, sections sag as brackets corrode, and the entire run loses its drainage pitch. We see this on streets throughout Hayes every week."
+  },
+  {
+    q: "Can you repair cracked uPVC gutters in Hayes or do they need replacing?",
+    a: "It depends on the extent of the damage. A single cracked joint or split section can often be repaired with a new union piece or splice. However, if the uPVC has gone brittle throughout — turning pale and chalky and cracking under light pressure — then section-by-section repair becomes uneconomical and full replacement is the better option. We will assess your Hayes property honestly and tell you which approach makes financial sense."
+  },
+  {
+    q: "Do you cover both UB3 and UB4 postcodes?",
+    a: "Yes. We cover both UB3 (Hayes, Harlington and Sipson) and UB4 (Hayes End and Yeading). Whether your property is close to Hayes town centre, near the Heathrow perimeter or in the residential streets of Yeading, we can schedule a visit within the week. Many of our regular Hayes customers are on roads like Minet Avenue, Pump Lane and Clayton Road."
+  },
+  {
+    q: "Will aircraft vibration cause problems with my Hayes gutters?",
+    a: "Hayes is close enough to Heathrow that low-level vibration from aircraft on approach can gradually loosen gutter brackets over time. The bigger driver of failure in Hayes is still the age of the systems, but we check bracket security as part of every clean and tighten or replace any that have loosened, giving you peace of mind that your gutters are properly secured."
+  },
+  {
+    q: "How long does a full gutter replacement take on a Hayes semi-detached house?",
+    a: "A straightforward replacement of gutters and downpipes on a standard Hayes semi-detached house typically takes a full working day for a two-person team. We measure the existing run and order the correct profiles in advance so the installation day runs efficiently. We remove all old materials, fit the new system correctly pitched for drainage and leave the site clean and tidy. All materials and labour carry a written warranty."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hayes"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Graham T.",
+    street: "Minet Avenue, Hayes",
+    date: "May 2026",
+    text: "Our gutters were original 1970s uPVC — completely shot. The team replaced the full front and back runs in a day. Neat job, no mess left behind, and the price matched the quote exactly. Drainage is now far better than before. Really pleased."
+  },
+  {
+    name: "Carol J.",
+    street: "Pump Lane, UB3",
+    date: "March 2026",
+    text: "We had three cracked joints at the back of the house causing water to run down the wall. They came out within three days of my call, repaired all three joints and did a full clean of the rest of the system. Very efficient and honest about what needed doing versus what could wait."
+  },
+  {
+    name: "Raj P.",
+    street: "Clayton Road, Hayes",
+    date: "January 2026",
+    text: "Excellent service. They identified that our fascia board behind the front gutter had started to rot — something we had no idea about. Gave us a clear written quote for replacement before doing any work. Everything completed professionally. Good local company."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Hayes — UB3 / UB4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning and Repair Services in Hayes, UB3/UB4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialists in ageing uPVC gutters on post-war Hayes homes near Heathrow Airport. Free quotes, same-week appointments.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Hayes's post-war 1950s to 70s semi-detached homes in UB3 and UB4 often have original 1970s uPVC gutters that are now cracking, sagging and losing their seals. We repair or replace these ageing systems throughout Hayes town centre and the surrounding streets, with same-week availability and no call-out fee.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Hayes is a town built largely in the post-war decades — the majority of residential properties in UB3 and UB4 date from the 1950s through to the 1970s. This housing stock received uPVC guttering during the 1970s construction and renovation boom, making many of these systems now 40 to 50 years old. At that age, uPVC becomes brittle, joint seals harden and crack, and the steel screw fixings that hold brackets to fascia boards corrode and lose their grip.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The result is a gutter that may look intact from the ground but is silently failing: leaking at joints during heavy rain, pulling slightly away from the fascia at each bracket, and beginning to sag in the mid-section where the drainage pitch has dropped. Water running behind an ageing gutter causes fascia board rot within months. Left longer, it soaks into the eaves and eventually into the interior of the property.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We work throughout Hayes — on Minet Avenue, Pump Lane, Clayton Road, Judge Heath Lane and dozens of other residential streets in UB3 and UB4. Whether you need a clean, a repair or a full replacement, we give you honest advice and a fixed price before any work starts.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Hayes Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Hayes Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The post-war semis of Hayes were built quickly and uniformly across large estates — Yeading, Hayes End and the streets around Hayes town centre — which means that when gutter systems start failing, they tend to fail across a whole street or estate within a few years of each other. If your neighbours' gutters are showing their age, yours are likely in a similar condition.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The uPVC profiles fitted to these properties in the 1970s were typically half-round or square-line systems in standard 112mm width. Replacement parts remain available for isolated repairs. However, where brittleness is widespread throughout the run, we recommend replacement with modern deep-flow uPVC systems that handle the heavier rainfall events seen in recent years more effectively than the original 1970s profiles.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        The proximity of Hayes to Heathrow Airport is also worth noting: aircraft flying the northern approach path pass low over parts of UB3 and UB4, and the repeated low-frequency vibration over decades gradually works the screw fixings loose in fascia boards. Our bracket inspection on every clean visit catches this before it becomes a problem.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in Hayes</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across UB3 and UB4 with same-week availability.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/services/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full debris removal from all gutters and downpipes, outlet testing and a bracket condition check. Essential annual maintenance for ageing UB3/UB4 systems that may also have accumulated decades of sediment.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Joint resealing, section splicing, bracket replacement and sagging section realignment. We carry common 1970s-era uPVC fittings to handle same-day repairs on Hayes properties wherever possible.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement for gutters beyond economical repair. We fit modern deep-flow uPVC systems, correctly pitched for drainage, and advise on the best profile for your Hayes home's requirements.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Replacement of fascia boards damaged by water tracking behind leaking gutters. Very common on 1970s Hayes homes where original softwood boards have been absorbing moisture behind failing gutter joints for years.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Hayes Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Hayes Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your UB3 or UB4 address and what you have noticed. We will respond with a fixed price on the same working day.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Hayes Gutter FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also cover nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/west-drayton/" class="text-blue-600 hover:underline text-sm">West Drayton</a>
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/southall/" class="text-blue-600 hover:underline text-sm">Southall</a>
+        <a href="/locations/slough/" class="text-blue-600 hover:underline text-sm">Slough</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

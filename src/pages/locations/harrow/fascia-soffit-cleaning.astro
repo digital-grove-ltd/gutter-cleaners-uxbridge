@@ -1,0 +1,606 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import type { Thing, WithContext } from "schema-dts";
+
+const title = "Fascia and Soffit Cleaning Harrow HA1/HA2 | Local Experts";
+const description =
+  "Professional fascia and soffit cleaning in Harrow HA1/HA2. Remove algae, dirt and staining. Specialists in Edwardian and 1930s suburban housing.";
+
+const schema: WithContext<Thing>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://guttercleanersuxbridge.co.uk",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Locations",
+        item: "https://guttercleanersuxbridge.co.uk/locations",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Harrow",
+        item: "https://guttercleanersuxbridge.co.uk/locations/harrow",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Fascia and Soffit Cleaning",
+        item: "https://guttercleanersuxbridge.co.uk/locations/harrow/fascia-soffit-cleaning",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Fascia and Soffit Cleaning in Harrow",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Gutter Cleaners Uxbridge",
+      url: "https://guttercleanersuxbridge.co.uk",
+      telephone: "01895 000000",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "",
+        addressLocality: "Uxbridge",
+        postalCode: "UB8",
+        addressCountry: "GB",
+      },
+    },
+    areaServed: [
+      { "@type": "City", name: "Harrow" },
+      { "@type": "PostalCode", postalCode: "HA1" },
+      { "@type": "PostalCode", postalCode: "HA2" },
+    ],
+    description:
+      "Professional fascia and soffit cleaning in Harrow HA1/HA2. Remove algae, lichen, dirt and black streaking. Specialists in Edwardian and 1930s suburban housing.",
+    image: "https://guttercleanersuxbridge.co.uk/images/gutter-cleaning-hero.jpg",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How much does fascia and soffit cleaning cost in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Fascia and soffit cleaning in Harrow HA1/HA2 costs £120 to £200 for a standard semi-detached property. The price depends on the length of fascia board, degree of staining, and property height. We provide a free quote without obligation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How often should fascia boards be cleaned on Edwardian and 1930s suburban housing in HA1/HA2?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We recommend cleaning fascia boards every 2–3 years on Harrow properties. If your property is near trees or faces north, annual cleaning may be needed to prevent algae and lichen buildup. Regular cleaning preserves boards and prevents premature rot on Edwardian and 1930s suburban homes.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What causes black streaks on fascia boards in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Black streaks on Harrow fascia boards are caused by algae, lichen, and mould growth. North-facing or shaded properties are most affected. Damp conditions and gutters blocked with moss or debris encourage growth. Professional cleaning removes streaks and restores boards to near-original appearance.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you clean coloured fascia boards in Harrow without damaging them?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We clean brown, grey, cream, and black uPVC fascias safely in Harrow. We use appropriate techniques and pressure settings to remove algae without damaging paintwork or finishes on Edwardian and 1930s suburban homes in HA1/HA2.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do I need to clean or replace my soffits in HA1/HA2?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We assess your soffits during cleaning. If boards are structurally sound but dirty, cleaning restores them. If soffits are rotted, damaged, or have holes, replacement is needed. Most Harrow properties benefit from cleaning; replacement is less common but we can arrange both.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you clean UPVC fascia and soffits as well as wood in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We clean both uPVC and wood fascias and soffits on Harrow properties. uPVC is most common on 1930s suburban homes and is easier to clean. Wood fascias on Edwardian homes require more care. We handle both materials professionally in HA1/HA2.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does fascia and soffit cleaning take for a Harrow semi-detached house?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most fascia and soffit cleaning jobs on Harrow semi-detached properties take 1–2 hours. The time depends on board length, staining degree, and whether gutters need clearing first. We'll provide an estimated completion time when confirming your appointment in HA1/HA2.",
+        },
+      },
+    ],
+  },
+];
+---
+
+<Layout {title} {description} {schema}>
+  <!-- Hero Section -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img
+      src="/images/gutter-cleaning-hero.jpg"
+      alt="Fascia and soffit cleaning in Harrow HA1/HA2"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Fascia and Soffit Cleaning in Harrow HA1/HA2
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100 mb-8">
+          Remove algae, lichen, dirt and black streaking. Restore your property's appearance.
+        </p>
+        <a href="#quote" class="btn-primary">
+          Get Your Free Quote
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Quick Answer Section -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="quick-answer bg-white border-l-4 border-brand rounded-lg p-6 max-w-3xl mx-auto">
+        <h2 class="text-xl font-bold text-text mb-3">Quick Answer</h2>
+        <p class="text-text-muted">
+          Fascia and soffit cleaning in Harrow HA1/HA2 costs £120 to £200 for a standard semi-detached property. We remove algae, lichen, dirt and black streaking, restoring boards to near-original condition.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">
+            Expert Fascia and Soffit Cleaning in Harrow
+          </h2>
+          <p class="text-lg text-text-muted mb-6">
+            Fascia and soffit boards on Harrow's Edwardian and 1930s suburban housing accumulate algae, lichen, and black streaking over time. North-facing properties and those near trees are affected most. Professional cleaning removes stains, restores original appearance, and protects boards from further damage. Regular cleaning extends board life and improves your HA1/HA2 property's curb appeal.
+          </p>
+          <p class="text-lg text-text-muted mb-8">
+            We use appropriate cleaning methods for both uPVC and wood boards, taking care to avoid damage. Combined with gutter cleaning, fascia and soffit cleaning keeps your entire roofline in excellent condition.
+          </p>
+          <div class="space-y-3">
+            <div class="check-item">Algae and lichen removal</div>
+            <div class="check-item">Black streaking eliminated</div>
+            <div class="check-item">Safe for uPVC and wood boards</div>
+            <div class="check-item">Protects boards from rot and damage</div>
+            <div class="check-item">Improves curb appeal instantly</div>
+          </div>
+        </div>
+        <div class="bg-blue-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-text mb-6">Why Clean Your Fascia in Harrow</h3>
+          <ul class="space-y-4 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Prevents Rot:</strong> Algae and lichen retain moisture that rots wood fascias. Regular cleaning extends board lifespan
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Improves Curb Appeal:</strong> Clean fascias make your Harrow home look well-maintained and attractive
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Identifies Damage:</strong> During cleaning we spot cracked, loose, or rotting sections needing repair
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Cost Effective:</strong> Regular cleaning costs far less than replacing damaged fascias on HA1/HA2 homes
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Clean -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">What We Clean on Your Harrow Property</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-4">Fascia Boards</h3>
+          <p class="text-text-muted mb-4">
+            The horizontal board that attaches to the rafter ends on Harrow homes. Most visible and prone to algae and staining. We clean thoroughly to remove black streaks and restore appearance.
+          </p>
+          <ul class="space-y-2 text-text-muted text-sm">
+            <li>• Remove black streaking from algae</li>
+            <li>• Clean lichen and moss growth</li>
+            <li>• Restore original colour and finish</li>
+            <li>• uPVC and wood boards handled</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-4">Soffit Boards</h3>
+          <p class="text-text-muted mb-4">
+            The underside board beneath the fascia on your Edwardian and 1930s suburban home. Soffits provide ventilation and collect dirt and debris. We clean and inspect for damage.
+          </p>
+          <ul class="space-y-2 text-text-muted text-sm">
+            <li>• Remove algae and dirt buildup</li>
+            <li>• Check for holes or damage</li>
+            <li>• Ensure proper ventilation flow</li>
+            <li>• uPVC and wood soffits handled</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-4">Gutters (Combined Service)</h3>
+          <p class="text-text-muted mb-4">
+            We often clean gutters while fascia and soffit boards are being worked on. This ensures proper drainage and identifies gutter problems early.
+          </p>
+          <ul class="space-y-2 text-text-muted text-sm">
+            <li>• Debris and moss removal</li>
+            <li>• Downpipe flushing</li>
+            <li>• Gutter joint inspection</li>
+            <li>• Water flow testing</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-4">Full Roofline Service</h3>
+          <p class="text-text-muted mb-4">
+            The complete roofline restoration service. We clean gutters, fascias, and soffits in a single visit for convenience and value on your Harrow home.
+          </p>
+          <ul class="space-y-2 text-text-muted text-sm">
+            <li>• Gutters cleaned and tested</li>
+            <li>• Fascia fully cleaned</li>
+            <li>• Soffits cleaned and inspected</li>
+            <li>• Single convenient appointment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Issues -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Fascia Problems We See on Harrow Homes</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-400">
+          <h3 class="text-xl font-bold text-text mb-3">Black Streaking & Staining</h3>
+          <p class="text-text-muted">
+            Caused by algae and lichen growth, especially on north-facing or shaded fascias. Common on Edwardian homes in Harrow. Cleaning removes stains and prevents spread.
+          </p>
+        </div>
+
+        <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-400">
+          <h3 class="text-xl font-bold text-text mb-3">Algae and Lichen Growth</h3>
+          <p class="text-text-muted">
+            Thrives in damp conditions. Retains moisture against board, causing rot. Green or white patches visible on fascia. Professional cleaning removes growth completely.
+          </p>
+        </div>
+
+        <div class="bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-400">
+          <h3 class="text-xl font-bold text-text mb-3">Wood Rot (Wood Fascias)</h3>
+          <p class="text-text-muted">
+            Wood fascias on older Harrow properties rot when algae retains moisture. Soft or crumbling wood indicates rot. We clean regularly to prevent and identify rot early for repair or replacement.
+          </p>
+        </div>
+
+        <div class="bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-400">
+          <h3 class="text-xl font-bold text-text mb-3">Cracked or Loose Boards</h3>
+          <p class="text-text-muted">
+            During cleaning, we identify cracked, warped, or loose fascias and soffits. We'll recommend repair or replacement. Early detection prevents water damage to your 1930s suburban home.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-400">
+          <h3 class="text-xl font-bold text-text mb-3">Sagging or Misaligned Fascia</h3>
+          <p class="text-text-muted">
+            Fascia may sag if brackets are loose or gutter system is failing. We assess alignment and integrity during cleaning and recommend fixes for your Harrow property.
+          </p>
+        </div>
+
+        <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-400">
+          <h3 class="text-xl font-bold text-text mb-3">Blocked Soffit Vents</h3>
+          <p class="text-text-muted">
+            Dirt and debris block soffit ventilation, reducing roof airflow. This can trap heat and moisture, damaging insulation. Cleaning restores ventilation on HA1/HA2 properties.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cleaning vs Replacement -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Fascia Cleaning vs Replacement</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl p-8 border border-brand">
+          <h3 class="text-2xl font-bold text-text mb-6">Cleaning (Recommended if structurally sound)</h3>
+          <ul class="space-y-3 text-text-muted mb-6">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">✓</span>
+              <span>Removes algae, lichen, black streaks</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">✓</span>
+              <span>Cost: £120–£200 for most Harrow homes</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">✓</span>
+              <span>Restores appearance to near-original</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">✓</span>
+              <span>Prevents moisture damage and rot</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">✓</span>
+              <span>Quick service (1–2 hours)</span>
+            </li>
+          </ul>
+          <p class="font-semibold text-text">Best when boards are structurally sound</p>
+        </div>
+
+        <div class="bg-red-50 rounded-xl p-8 border border-red-200">
+          <h3 class="text-2xl font-bold text-text mb-6">Replacement (When damage is severe)</h3>
+          <ul class="space-y-3 text-text-muted mb-6">
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>Cost: £400–£800+ for typical property</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>Takes 1–2 days for installation</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>More disruptive than cleaning</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">✓</span>
+              <span>Long-lasting solution (20–40 years)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">✓</span>
+              <span>Needed if boards are rotted, cracked, or warped</span>
+            </li>
+          </ul>
+          <p class="font-semibold text-text">Required if structural damage detected</p>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-400 text-center">
+        <p class="text-text-muted">
+          <strong class="text-text">Unsure whether your Harrow fascia needs cleaning or replacement?</strong> We'll assess during our free survey and advise on the best solution.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance Tips -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Fascia Maintenance Tips for Harrow Homes</h2>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <h3 class="text-xl font-bold text-text mb-3">1. Regular Cleaning (Every 2–3 Years)</h3>
+          <p class="text-text-muted">
+            Schedule professional cleaning every 2–3 years on Harrow properties. If you live near trees or have a north-facing property, annual cleaning prevents buildup. Regular cleaning is the best prevention against rot and damage on Edwardian and 1930s homes.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <h3 class="text-xl font-bold text-text mb-3">2. Gutter Cleaning is Connected</h3>
+          <p class="text-text-muted">
+            Clogged gutters with moss and debris contribute to fascia problems. Keep gutters clean to reduce water splash and moisture damage. Combined gutter and fascia cleaning is more efficient in HA1/HA2.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <h3 class="text-xl font-bold text-text mb-3">3. Annual Inspection</h3>
+          <p class="text-text-muted">
+            Inspect fascias once yearly for soft spots, cracks, or loose sections. Early detection of rot means you can repair before the problem spreads. During our cleaning service, we always inspect and report damage found.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <h3 class="text-xl font-bold text-text mb-3">4. Keep Gutters Clear</h3>
+          <p class="text-text-muted">
+            Blocked gutters cause water to back up and soak fascia boards. Clear gutters twice yearly (spring and autumn) to protect fascias. This is especially important on north-facing properties prone to moss in Harrow.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <h3 class="text-xl font-bold text-text mb-3">5. Trim Overhanging Branches</h3>
+          <p class="text-text-muted">
+            Trees dripping sap and keeping fascia damp promote algae growth. Trim branches hanging over gutters and fascias. This improves sunlight exposure and helps prevent moisture retention on your Harrow home.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-surface">
+    <div class="container-site max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-12 text-center">
+        Fascia and Soffit Cleaning FAQs for Harrow HA1/HA2
+      </h2>
+
+      <div class="space-y-6">
+        <!-- FAQ 1 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How much does fascia and soffit cleaning cost in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Fascia and soffit cleaning in Harrow HA1/HA2 costs £120 to £200 for a standard semi-detached property. The final price depends on the length of fascia board, degree of staining (light vs heavy algae), and property height. We provide a free quote without obligation.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How often should fascia boards be cleaned on Edwardian and 1930s suburban housing in HA1/HA2?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            We recommend cleaning fascia boards every 2–3 years on Harrow properties. If your property is near trees, faces north, or is in a damp area, annual cleaning may be needed to prevent algae and lichen buildup. Regular cleaning on Edwardian and 1930s suburban homes protects wood from rot and extends board life.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            What causes black streaks on fascia boards in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Black streaks on Harrow fascia boards are caused by algae, lichen, and mould growth. North-facing or shaded properties are most affected. Damp conditions and gutters blocked with moss or debris encourage growth. Professional cleaning removes streaks completely and restores boards to near-original appearance in HA1/HA2.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Can you clean coloured fascia boards in Harrow without damaging them?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. We safely clean brown, grey, cream, and black uPVC fascias on Harrow properties. We use appropriate cleaning techniques and pressure settings to remove algae and staining without damaging paintwork or uPVC finishes on Edwardian and 1930s suburban homes in HA1/HA2.
+          </p>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Do I need to clean or replace my soffits in HA1/HA2?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            We assess your soffits during the cleaning process. If boards are structurally sound but dirty, cleaning restores them effectively. If soffits are rotted, damaged, or have holes, replacement is needed. Most Harrow properties benefit from cleaning; replacement is less common but we can arrange it if necessary.
+          </p>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Do you clean UPVC fascia and soffits as well as wood in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. We clean both uPVC and wood fascias and soffits on Harrow properties. uPVC is most common on 1930s suburban homes and is easier to clean. Wood fascias on Edwardian homes require more care and attention. We handle both materials professionally and safely in HA1/HA2.
+          </p>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How long does fascia and soffit cleaning take for a Harrow semi-detached house?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Most fascia and soffit cleaning jobs on Harrow semi-detached properties take 1–2 hours. The time depends on the total length of fascia board, degree of staining, and whether gutters need clearing first. We'll provide an estimated completion time when confirming your appointment in HA1/HA2.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="section bg-surface" id="quote">
+    <div class="container-site">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">Get Your Free Fascia Cleaning Quote in Harrow</h2>
+        <p class="text-lg text-text-muted">
+          No-obligation estimate. We'll contact you within 2 hours during business hours.
+        </p>
+      </div>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- Related Services CTA -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">Other Services in Harrow</h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto mb-8">
+          We also offer gutter cleaning, gutter repairs, and gutter replacement for Harrow properties. Get a comprehensive quote for all your gutter and fascia needs.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/locations/harrow/gutter-cleaning" class="btn-primary">
+            Gutter Cleaning
+          </a>
+          <a href="/locations/harrow/gutter-repairs" class="btn-secondary">
+            Gutter Repairs
+          </a>
+          <a href="/locations/harrow/gutter-replacement" class="btn-secondary">
+            Gutter Replacement
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Comparison -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Compare Services in Other Areas</h2>
+      <div class="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+        <a href="/locations/hayes/fascia-soffit-cleaning" class="btn-secondary">
+          Fascia & Soffit Cleaning in Hayes
+        </a>
+        <a href="/locations/uxbridge/fascia-soffit-cleaning" class="btn-secondary">
+          Fascia & Soffit Cleaning in Uxbridge
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

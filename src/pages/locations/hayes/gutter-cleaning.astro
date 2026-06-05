@@ -1,0 +1,306 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Cleaning Hayes UB3/UB4 | Professional Local Service";
+const metaDescription = "Professional gutter cleaning in Hayes UB3/UB4. Vacuum-powered, no mess, same-week appointments. Specialists in post-war 1950s to 70s semi-detached.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hayes", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/" },
+  { name: "Gutter Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/gutter-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter cleaning cost in Hayes?",
+    a: "Gutter cleaning in Hayes costs between £80 and £150 for a 3-bedroom semi-detached property. The final price depends on run length, number of downpipes, debris volume and ease of access. Properties with multiple levels or long roof runs may cost more. We provide a fixed quote after a brief visual survey — no hidden fees or callout charges."
+  },
+  {
+    q: "How often should post-war 1950s to 70s semi-detached properties in UB3/UB4 have gutters cleaned?",
+    a: "We recommend cleaning gutters at least once annually for post-war 1950s to 70s semi-detached homes in Hayes UB3/UB4. Many properties benefit from a spring clean after winter and autumn debris fall. Properties with overhanging trees or in shaded positions may need twice-yearly cleaning to prevent the original uPVC gutters from cracking and sagging under the weight of accumulated debris."
+  },
+  {
+    q: "Do you clean gutters across all of Hayes?",
+    a: "Yes. We cover all of Hayes including the UB3 and UB4 postcodes, from the town centre area near Heathrow Airport westward through the post-war residential estates. Whether you are in a 1950s to 70s semi-detached or any other property type, we serve your street. Contact us with your address to confirm your postcode."
+  },
+  {
+    q: "What causes gutter blockages in Hayes?",
+    a: "In Hayes, the post-war 1950s to 70s semi-detached homes were fitted with original uPVC gutters that are now deteriorating. These gutters are prone to debris accumulation, and the uPVC material is now cracking and sagging after decades of weather exposure, freeze-thaw cycles and sun damage. Cracks in the gutter sections allow water to escape and create conditions for decomposed leaf matter and silt to compact and block downpipes. Local trees, autumn leaf fall and the shaded aspects of many Hayes properties accelerate blockage."
+  },
+  {
+    q: "How long does gutter cleaning take for a typical Hayes house?",
+    a: "A standard gutter clean for a 3-bedroom Hayes semi-detached takes 1.5 to 2.5 hours depending on the extent of blockage and the run length. We clear all gutters, downpipes and hoppers, flush water through to confirm drainage, and leave no mess behind. We use vacuum-powered extraction so debris is scooped into a sealed tank rather than showering your driveway or garden."
+  },
+  {
+    q: "Do you provide a report after cleaning gutters in Hayes?",
+    a: "Yes. After cleaning your gutters in Hayes, we provide a written condition report with before-and-after photographs. The report notes the debris type and volume, any visible defects in the gutter or fascia, and recommendations for repairs or future cleaning frequency. This gives you a clear record of the work and helps you plan future maintenance."
+  },
+  {
+    q: "Can you clean gutters on a 2-storey property in UB3/UB4?",
+    a: "Yes. We safely clean 2-storey and even 3-storey properties throughout UB3 and UB4. We use purpose-built access equipment and follow all safety protocols. The vacuum system allows us to work from the ground or from a stable ladder position. We assess the property during the free quote phase to confirm the safest and most efficient approach for your specific Hayes home."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hayes"),
+  faqSchema(faqs),
+  serviceSchema(
+    "Gutter Cleaning in Hayes UB3/UB4",
+    "Professional gutter cleaning service for Hayes properties. Vacuum-powered debris removal, downpipe flushing and written condition report.",
+    "https://www.guttercleanersuxbridge.co.uk/locations/hayes/gutter-cleaning/"
+  )
+];
+
+const reviews = [
+  {
+    name: "James M.",
+    street: "Harlington Road, Hayes UB3",
+    date: "May 2026",
+    text: "Our 1960s semi was absolutely clogged with silt and decomposed leaves. The team vacuumed everything out cleanly, flushed the downpipes and gave us a detailed photo report. They explained that our uPVC gutters are starting to crack — something we hadn't noticed. Very thorough and transparent."
+  },
+  {
+    name: "Veena P.",
+    street: "Bourne Avenue, Hayes UB4",
+    date: "April 2026",
+    text: "Quick to respond, professional throughout. They cleaned the gutters while we were out, left the property spotless and emailed a full report before they left. No surprises, no pressure. We will book them again for spring next year."
+  },
+  {
+    name: "Richard B.",
+    street: "Staines Road, Hayes",
+    date: "March 2026",
+    text: "Our post-war semi is surrounded by trees and the gutters were blocked solid. These guys came the same week and removed years of compressed debris. They also noticed our downpipe was misaligned at the bend and suggested a small repair. Excellent local knowledge."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Hayes — UB3 / UB4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Gutter Cleaning in Hayes, UB3/UB4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialist vacuum-powered cleaning for post-war 1950s to 70s semi-detached homes. Same-week appointments, no mess, written reports.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Gutter cleaning in Hayes costs £80 to £150 for a 3-bedroom semi-detached property. We clear debris, flush downpipes, and provide a written condition report. Most Hayes UB3/UB4 bookings are available within 3 to 5 working days.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Hayes is a town of distinctive post-war housing stock, with thousands of semi-detached properties built between the 1950s and 1970s. These homes were constructed during a period of rapid suburban expansion, many filled by workers commuting to the manufacturing and service sector jobs that historically defined Hayes near Heathrow Airport. Most of these properties retain their original, or near-original, uPVC gutter systems — now 50 to 70 years old and showing their age.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Original uPVC gutters from 1970s builds are now cracking and sagging under decades of weather exposure, UV damage and thermal stress. When left uncleaned, decomposed leaves and silt compact inside these damaged gutters, blocking downpipes completely and causing water to overflow at the eaves. This creates damp on interior walls, rots the fascia board and accelerates gutter failure.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We clean gutters across all of Hayes — UB3 and UB4 — using a proven vacuum-powered system that removes debris quickly and cleanly. After cleaning, we flush water through the downpipes to confirm full drainage and provide a written report so you understand the condition of your gutters and can plan future maintenance.
+      </p>
+    </div>
+  </section>
+
+  <!-- What is Included -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What Gutter Cleaning Includes</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-bold text-gray-900 mb-2">Cleaning Process</h3>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>• Full debris removal from all gutter sections</li>
+            <li>• Downpipe clearing and flushing</li>
+            <li>• Hopper and outlet cleaning</li>
+            <li>• Final water flow test and confirmation</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-900 mb-2">After Your Clean</h3>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>• Photographic before-and-after report</li>
+            <li>• Written condition assessment</li>
+            <li>• Repair recommendations if needed</li>
+            <li>• Zero mess — vacuum extraction throughout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Pricing Guide for Hayes Homes</h2>
+      <div class="space-y-4 text-gray-700 text-sm">
+        <div class="border border-gray-200 rounded-xl p-5">
+          <p class="font-semibold text-gray-900 mb-1">1–2 Bedroom Semi-Detached</p>
+          <p>£80 – £110 • 1–1.5 hours • Standard access</p>
+        </div>
+        <div class="border border-gray-200 rounded-xl p-5">
+          <p class="font-semibold text-gray-900 mb-1">3 Bedroom Semi-Detached (Typical)</p>
+          <p>£110 – £150 • 1.5–2.5 hours • Standard to moderate access</p>
+        </div>
+        <div class="border border-gray-200 rounded-xl p-5">
+          <p class="font-semibold text-gray-900 mb-1">Large or Heavily Blocked</p>
+          <p>£150+ • 2–3 hours • Complex access or exceptional debris volume</p>
+        </div>
+      </div>
+      <p class="text-gray-600 text-sm mt-6">Prices are fixed after a visual survey. We do not charge for callouts or assessments. Additional work (repairs, roof moss treatment) quoted separately.</p>
+    </div>
+  </section>
+
+  <!-- How We Do It -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">How We Clean Gutters in Hayes</h2>
+      <div class="space-y-4 text-gray-700">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+          <div>
+            <p class="font-semibold text-gray-900">Pre-Inspection</p>
+            <p class="text-sm">We assess your gutters, identify blockage points, check for cracks or damage in the original uPVC, and confirm the safest access method.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+          <div>
+            <p class="font-semibold text-gray-900">Vacuum Extraction</p>
+            <p class="text-sm">We use a powered vacuum system to extract leaf matter, silt and decomposed debris from gutters and downpipes. No mess on your driveway or garden.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+          <div>
+            <p class="font-semibold text-gray-900">Flushing & Testing</p>
+            <p class="text-sm">We flush clean water through all downpipes to confirm full drainage and identify any hidden blockages or alignment issues.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+          <div>
+            <p class="font-semibold text-gray-900">Report & Recommendations</p>
+            <p class="text-sm">We provide before-and-after photos and a written assessment noting the condition of your gutters and any repairs we recommend.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Advice -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Seasonal Gutter Care for Hayes Homes</h2>
+      <p class="text-gray-700 text-sm mb-5">Hayes properties are particularly vulnerable to debris buildup due to the age of the original uPVC gutter systems and local tree coverage. We recommend:</p>
+      <div class="grid sm:grid-cols-2 gap-4 text-gray-700 text-sm">
+        <div class="bg-white rounded-lg p-4 border border-blue-200">
+          <p class="font-semibold text-gray-900 mb-2">Spring (March–May)</p>
+          <p>Clean after winter debris fall and check for freeze-thaw damage to cracked sections. Hayes UB3/UB4 homes often show frost cracks in old uPVC by late winter.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-blue-200">
+          <p class="font-semibold text-gray-900 mb-2">Autumn (September–October)</p>
+          <p>Clean before the main leaf fall season starts. A pre-autumn clean prevents compaction of leaves and silt in downpipes and stretches the interval to spring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Other Services in Hayes</h2>
+      <p class="text-gray-600 text-center mb-8">Post-war 1950s to 70s semi-detached properties often need additional services:</p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <a href="/locations/hayes/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Fix leaking joints, sagging sections, cracked uPVC and loose brackets — common issues in 1970s gutters.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/hayes/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full replacement for gutters beyond repair. We fit durable uPVC or cast iron systems suited to Hayes properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/hayes/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Clean algae and staining from fascia boards damaged by years of gutter overflow.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Hayes Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Hayes Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us about your property and the work you need. We will respond with a fixed price on the same working day.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Cleaning FAQs for Hayes</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also clean gutters in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Harrow</a>
+        <a href="/locations/uxbridge/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Uxbridge</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">All Hayes services</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

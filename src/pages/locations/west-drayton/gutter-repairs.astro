@@ -1,0 +1,238 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Repairs West Drayton UB7 | Same-Week Response";
+const metaDescription = "Fast gutter repairs in West Drayton UB7. Leaking joints, sagging gutters, cracked sections. Specialists in 1950s to 1970s suburban housing.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "West Drayton", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/" },
+  { name: "Gutter Repairs", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/gutter-repairs/" }
+];
+
+const faqs = [
+  {
+    q: "How much do gutter repairs cost in West Drayton?",
+    a: "Gutter repair costs in West Drayton UB7 range from £150 to £400 depending on the nature and extent of damage. Resealing a leaking joint costs less than straightening a sagging section or replacing multiple loose brackets. We provide a free, fixed-price written quote after inspection — no hidden charges or call-out fees."
+  },
+  {
+    q: "Can you repair cast iron gutters in UB7?",
+    a: "Yes. Many 1950s to 1970s suburban housing properties in West Drayton have original or replaced cast iron guttering systems. We can reseal leaking joints, repair cracked sections with epoxy patches, replace corroded outlet fittings, and straighten misaligned sections. Cast iron gutters are heavier and more complex than uPVC, but are often worth repairing rather than replacing if structural integrity remains sound."
+  },
+  {
+    q: "My gutter is leaking at the joint in West Drayton - can you fix it same day?",
+    a: "Most leaking gutter joint repairs in West Drayton can be completed the same day or within 48 hours of contact. We carry common uPVC and cast iron fitting replacements in our vehicles. However, for cast iron joints requiring lead soldering or complex leak sources, we may need to schedule a specialist appointment. Contact us immediately with photos of the leak and we will confirm availability."
+  },
+  {
+    q: "What causes gutters to sag on 1950s to 1970s suburban housing in West Drayton?",
+    a: "Sagging gutters on West Drayton properties result primarily from loose or corroded brackets. The constant vibration from nearby Heathrow flight paths gradually loosens the brackets that support gutters, allowing the gutter profile to drop away from the fascia. The weight of standing water in sagging sections increases the stress on remaining brackets, causing a cascade failure. Aged metal expands and contracts with temperature changes, accelerating bracket degradation in 50+ year old systems."
+  },
+  {
+    q: "How do I know if my West Drayton home needs repairs or a full replacement?",
+    a: "Signs that repair is sufficient include isolated leaks at joints, a single loose bracket, minor dents, or temporary sag in one section. Signs that replacement is needed include widespread corrosion or pinholes, multiple cracked or missing sections, generalized sagging across 50% or more of the run, or brackets that cannot be tightened because the anchor points are corroded. We provide a detailed written assessment during the free quote process, recommending either repair or replacement based on the cost-to-value analysis."
+  },
+  {
+    q: "Do you repair fascia boards as well as gutters in UB7?",
+    a: "Yes. We repair and replace wooden and uPVC fascia boards that have been damaged by gutter overflow, water ingress, or rot. Fascia damage is common on West Drayton's 1950s to 1970s suburban housing, particularly where gutters have sagged for extended periods. We can often undertake fascia repair alongside gutter bracket replacement during the same visit."
+  },
+  {
+    q: "Are your gutter repairs guaranteed in West Drayton?",
+    a: "All repairs we carry out in West Drayton come with a 12-month workmanship guarantee. This covers the repair itself — joints resealed, brackets secured, and leaks stopped. We also carry full public liability insurance. If the same issue recurs due to workmanship failure, we will return and correct it at no charge. Note: if damage is caused by further aircraft vibration or age-related deterioration, repair may not be permanent — replacement may be the better long-term option."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("West Drayton"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Susan J.",
+    street: "Mill Lane, West Drayton",
+    date: "May 2026",
+    text: "Gutter was leaking badly where it met the downpipe. The engineer found loose brackets — explained it was vibration damage from aircraft — and repaired it same day. Very professional and the repair has held up perfectly. Will use them again."
+  },
+  {
+    name: "David C.",
+    street: "Village Centre, UB7",
+    date: "April 2026",
+    text: "Our 1960s semi had sagging gutters on one side. They replaced three loose brackets and straightened the gutter run. The whole job took about 90 minutes and they cleaned up after themselves. Excellent value for the work done."
+  },
+  {
+    name: "Patricia W.",
+    street: "Near Grand Union Canal, West Drayton",
+    date: "March 2026",
+    text: "Joint was cracked and weeping water into the fascia. They resealed it, inspected the whole run for other weak points, and provided a detailed report. Knowledgeable about the specific challenges of older West Drayton properties."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>West Drayton — UB7</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Repairs in West Drayton UB7</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialist repairs for leaking joints, loose brackets and sagging sections. Same-week response for urgent issues.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">We repair leaking joints, sagging gutters, cracked sections and loose brackets in West Drayton UB7. Most repairs take 1 to 2 hours and are completed in a single visit. We aim to respond within 48 hours for urgent issues.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        West Drayton's 1950s to 1970s suburban housing presents distinct gutter repair challenges not commonly seen in other areas. Properties in the village sit directly beneath Heathrow flight paths, where constant aircraft vibration has systematically loosened the gutter brackets that support aging metal and uPVC guttering systems over the past 50+ years.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The result is a consistent pattern of repair issues across UB7: corroded or loose brackets causing gutters to sag away from the fascia, leaking joints where the constant movement has opened seals, and water damage to fascia boards where overflow has tracked behind. These are not random failures — they are predictable consequences of the vibration environment unique to West Drayton.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We specialize in gutter repairs for West Drayton's specific challenges. We understand when a repair will hold, and when the underlying bracket deterioration means replacement is the only lasting solution. Our engineers carry fittings for both cast iron and uPVC profiles, and can often complete repairs the same day or within 48 hours of contact.
+      </p>
+    </div>
+  </section>
+
+  <!-- Common Repairs in West Drayton -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Common Gutter Repairs We Handle in West Drayton</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        On 1950s to 1970s suburban housing properties in UB7, we regularly encounter and repair:
+      </p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Loose Brackets</h3>
+          <p class="text-gray-700 text-sm">Vibration from aircraft causes mounting bolts to work loose over time. We tighten, reseat, or replace brackets as needed, and inspect for ongoing deterioration.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Sagging Sections</h3>
+          <p class="text-gray-700 text-sm">When gutters drop away from the fascia and create low spots, we straighten the run and reinforce with additional brackets spaced to prevent re-sagging.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Leaking Joints</h3>
+          <p class="text-gray-700 text-sm">Movement in sagging gutters opens joint seals, allowing water to weep out. We reseal with modern flexible sealants or replace joint fittings entirely.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Corrosion & Pinholes</h3>
+          <p class="text-gray-700 text-sm">Aged metal gutters and joints develop pinhole leaks where corrosion has eaten through. Small areas can be patched; widespread corrosion usually requires replacement.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Cracked uPVC Sections</h3>
+          <p class="text-gray-700 text-sm">Brittle 30+ year-old uPVC can crack from impact or freeze-thaw cycles. We replace individual sections or advise on full replacement depending on extent.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Damaged Outlet Fittings</h3>
+          <p class="text-gray-700 text-sm">Corroded downpipe connections and blocked outlets are common on West Drayton homes. We clean, repair, or replace as needed to restore proper drainage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">All Gutter Services in West Drayton</h2>
+      <p class="text-gray-600 text-center mb-10">Complete solutions for your UB7 property's gutter needs.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/locations/west-drayton/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Regular maintenance cleaning to prevent blockages and identify early-stage damage on West Drayton properties. Vacuum-powered, zero mess.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/gutter-repairs/" class="group bg-gray-50 border border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Fast repairs for loose brackets, leaking joints and sagging sections. Same-week response. 12-month guarantee on all work.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">When repair is not cost-effective, we replace with new systems rated for West Drayton's vibration environment. Complete installation included.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Repair and replacement of fascia boards damaged by gutter overflow. Often undertaken alongside gutter repairs on West Drayton properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from West Drayton Repair Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get Your Gutter Repair Quote</h2>
+      <p class="text-gray-600 text-center mb-10">Describe your repair issue. We will provide a fixed price quote and schedule within 48 hours for urgent repairs.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">West Drayton Gutter Repair FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Gutter repairs in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Harrow</a>
+        <a href="/locations/hayes/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Hayes</a>
+        <a href="/locations/uxbridge/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Uxbridge</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

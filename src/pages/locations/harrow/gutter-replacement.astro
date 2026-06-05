@@ -1,0 +1,559 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import type { Thing, WithContext } from "schema-dts";
+
+const title = "Gutter Replacement Harrow HA1/HA2 | uPVC and Cast Iron";
+const description =
+  "Full gutter replacement in Harrow HA1/HA2. uPVC, cast iron and aluminium. Specialists in Edwardian and 1930s suburban housing properties.";
+
+const schema: WithContext<Thing>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://guttercleanersuxbridge.co.uk",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Locations",
+        item: "https://guttercleanersuxbridge.co.uk/locations",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Harrow",
+        item: "https://guttercleanersuxbridge.co.uk/locations/harrow",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Gutter Replacement",
+        item: "https://guttercleanersuxbridge.co.uk/locations/harrow/gutter-replacement",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Gutter Replacement in Harrow",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Gutter Cleaners Uxbridge",
+      url: "https://guttercleanersuxbridge.co.uk",
+      telephone: "01895 000000",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "",
+        addressLocality: "Uxbridge",
+        postalCode: "UB8",
+        addressCountry: "GB",
+      },
+    },
+    areaServed: [
+      { "@type": "City", name: "Harrow" },
+      { "@type": "PostalCode", postalCode: "HA1" },
+      { "@type": "PostalCode", postalCode: "HA2" },
+    ],
+    description:
+      "Full gutter replacement in Harrow HA1/HA2. uPVC, cast iron and aluminium systems. Specialists in Edwardian and 1930s suburban housing properties.",
+    image: "https://guttercleanersuxbridge.co.uk/images/gutter-cleaning-hero.jpg",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How much does gutter replacement cost in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Full gutter replacement in Harrow HA1/HA2 costs £400 to £900 for a typical semi-detached property depending on run length and material. uPVC is the most affordable option. Cast iron costs more but suits heritage properties. We provide a free survey and detailed quote.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does a full gutter replacement take in HA1/HA2?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most full gutter replacements on Harrow properties take 1–2 days depending on property size and complexity. We work efficiently to minimize disruption. We'll confirm the timeline during your survey. Work is completed to a high standard on Edwardian and 1930s suburban housing.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Should I choose uPVC or cast iron gutters for my Edwardian and 1930s suburban housing home in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Cast iron suits heritage Edwardian properties in Harrow and matches original gutters. uPVC is more affordable and requires less maintenance. Modern aluminium offers both heritage looks and durability. We advise on the best choice for your HA1/HA2 property's character and budget.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long do new gutters last in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "uPVC gutters last 20–30 years with minimal maintenance. Cast iron gutters last 40+ years if properly maintained. Aluminium gutters last 30–40 years. Regular cleaning and inspection in Harrow will maximize the lifespan of your new gutters in HA1/HA2.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you replace fascia and soffits at the same time as gutters in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We often replace fascia and soffits when installing new gutters on Harrow properties. If your fascia is damaged or rotting, it's more cost-effective to replace everything at once in HA1/HA2. We can assess all three components during your survey.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you match the original gutter style on a Edwardian and 1930s suburban housing property in HA1/HA2?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We stock cast iron gutters in traditional profiles that match Edwardian and 1930s suburban housing in Harrow. We can replace gutters while preserving your property's heritage character. Our team has experience with conservation work in HA1/HA2.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you take away old gutters after replacement in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We remove and dispose of your old gutters professionally as part of the replacement service in Harrow. If you want to keep old cast iron gutters for salvage or decoration, we can arrange that. We leave your HA1/HA2 property clean and tidy.",
+        },
+      },
+    ],
+  },
+];
+---
+
+<Layout {title} {description} {schema}>
+  <!-- Hero Section -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img
+      src="/images/gutter-cleaning-hero.jpg"
+      alt="Gutter replacement in Harrow HA1/HA2"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Gutter Replacement in Harrow HA1/HA2
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100 mb-8">
+          uPVC, cast iron and aluminium gutters. Heritage-matched options. Free survey and quote.
+        </p>
+        <a href="#quote" class="btn-primary">
+          Get Your Free Survey
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Quick Answer Section -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="quick-answer bg-white border-l-4 border-brand rounded-lg p-6 max-w-3xl mx-auto">
+        <h2 class="text-xl font-bold text-text mb-3">Quick Answer</h2>
+        <p class="text-text-muted">
+          Full gutter replacement in Harrow HA1/HA2 costs £400 to £900 for a typical semi-detached property depending on run length and material. We install uPVC, cast iron and aluminium systems suited to Edwardian and 1930s suburban housing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">
+            Complete Gutter Replacement for Harrow
+          </h2>
+          <p class="text-lg text-text-muted mb-6">
+            When gutters are beyond repair, replacement is the best solution. Harrow's Edwardian and 1930s suburban housing often need new gutters due to age, rust, or repeated failure. We remove old gutters and install modern systems that suit your property's character and budget. We offer uPVC, cast iron, and aluminium options tailored to HA1/HA2 properties.
+          </p>
+          <p class="text-lg text-text-muted mb-8">
+            Our team handles the complete job—removing old gutters, installing new systems, and replacing fascia and soffits if needed. We minimize disruption and leave your home looking pristine. All work is guaranteed.
+          </p>
+          <div class="space-y-3">
+            <div class="check-item">Full gutter system removal and installation</div>
+            <div class="check-item">Heritage-matched profiles for Edwardian homes</div>
+            <div class="check-item">Modern, low-maintenance options available</div>
+            <div class="check-item">Fascia and soffit replacement available</div>
+            <div class="check-item">10-year guarantee on all materials and labour</div>
+          </div>
+        </div>
+        <div class="bg-blue-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-text mb-6">Why Choose Us for Replacement in Harrow</h3>
+          <ul class="space-y-4 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Heritage Expertise:</strong> Expert at matching original gutter profiles on Edwardian and 1930s suburban homes
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Material Options:</strong> Stock cast iron, uPVC, and aluminium suited to different property types
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Professional Installation:</strong> Complete system install in 1–2 days with minimal disruption
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">10-Year Guarantee:</strong> All work guaranteed for materials and labour on your HA1/HA2 property
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Material Guide -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Gutter Materials for Harrow Properties</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- uPVC -->
+        <div class="bg-white rounded-xl p-6 border border-border hover:border-brand transition-colors">
+          <h3 class="text-xl font-bold text-text mb-3">uPVC Gutters</h3>
+          <p class="text-text-muted mb-4">
+            Modern, affordable, low-maintenance. Available in brown, grey, black. Perfect for 1930s suburban properties needing a fresh look.
+          </p>
+          <ul class="space-y-2 text-sm text-text-muted mb-4">
+            <li>• Lifespan: 20–30 years</li>
+            <li>• Maintenance: Minimal (annual clean)</li>
+            <li>• Cost: £400–£600 typical home</li>
+            <li>• Best for: Modern, low-maintenance homes</li>
+          </ul>
+          <p class="font-semibold text-brand">Most Popular Choice</p>
+        </div>
+
+        <!-- Cast Iron -->
+        <div class="bg-white rounded-xl p-6 border-2 border-brand">
+          <h3 class="text-xl font-bold text-text mb-3">Cast Iron Gutters</h3>
+          <p class="text-text-muted mb-4">
+            Traditional, heritage-matched. Ideal for Edwardian homes. Requires periodic maintenance. Heritage properties often require cast iron to preserve character.
+          </p>
+          <ul class="space-y-2 text-sm text-text-muted mb-4">
+            <li>• Lifespan: 40–60 years (if maintained)</li>
+            <li>• Maintenance: Annual inspection, repainting</li>
+            <li>• Cost: £600–£900 typical home</li>
+            <li>• Best for: Period properties, conservation areas</li>
+          </ul>
+          <p class="font-semibold text-brand">Heritage Choice</p>
+        </div>
+
+        <!-- Aluminium -->
+        <div class="bg-white rounded-xl p-6 border border-border hover:border-brand transition-colors">
+          <h3 class="text-xl font-bold text-text mb-3">Aluminium Gutters</h3>
+          <p class="text-text-muted mb-4">
+            Premium option. Lightweight, durable, modern aesthetics. Available in heritage profiles. Excellent for period homes wanting low maintenance.
+          </p>
+          <ul class="space-y-2 text-sm text-text-muted mb-4">
+            <li>• Lifespan: 30–40 years</li>
+            <li>• Maintenance: Minimal (annual clean)</li>
+            <li>• Cost: £500–£800 typical home</li>
+            <li>• Best for: Premium finishes, heritage aesthetics</li>
+          </ul>
+          <p class="font-semibold text-brand">Premium Option</p>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-400">
+        <p class="text-text-muted">
+          <strong class="text-text">Not sure which material suits your Harrow home?</strong> Our free survey includes material recommendations tailored to your Edwardian or 1930s suburban property in HA1/HA2.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Replace -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">When Should You Replace Your Gutters in Harrow?</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-red-50 rounded-xl p-8 border border-red-200">
+          <h3 class="text-2xl font-bold text-text mb-6">Signs You Need Replacement</h3>
+          <ul class="space-y-3 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>Multiple leaks in different sections</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>Extensive rust or corrosion (cast iron)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>Sagging or pulling away from fascia</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>Over 20 years old (cast iron or uPVC)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>Cracks and holes that keep recurring</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-500 font-bold">✗</span>
+              <span>Frequent water damage to roof or walls</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-green-50 rounded-xl p-8 border border-green-200">
+          <h3 class="text-2xl font-bold text-text mb-6">Benefits of Replacement</h3>
+          <ul class="space-y-3 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-green-500 font-bold">✓</span>
+              <span>Stop water damage to roof, walls, foundation</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-500 font-bold">✓</span>
+              <span>Modern low-maintenance gutters</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-500 font-bold">✓</span>
+              <span>Improved property aesthetics</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-500 font-bold">✓</span>
+              <span>30–60 year lifespan (depending on material)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-500 font-bold">✓</span>
+              <span>Peace of mind with 10-year guarantee</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-green-500 font-bold">✓</span>
+              <span>Increased property value in Harrow</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Our Gutter Replacement Process</h2>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Free Survey</h3>
+          <p class="text-text-muted">
+            We assess your gutters, measure runs, and recommend materials suited to your Edwardian or 1930s home in HA1/HA2.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Detailed Quote</h3>
+          <p class="text-text-muted">
+            Written quote showing material, labour, and timeline. We discuss options and answer all questions before you commit.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Professional Install</h3>
+          <p class="text-text-muted">
+            Old gutters removed. New system installed professionally over 1–2 days. Minimal disruption to your Harrow property.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            4
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">10-Year Guarantee</h3>
+          <p class="text-text-muted">
+            All work guaranteed for 10 years on materials and labour. You have complete peace of mind in HA1/HA2.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-surface">
+    <div class="container-site max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-12 text-center">
+        Gutter Replacement FAQs for Harrow HA1/HA2
+      </h2>
+
+      <div class="space-y-6">
+        <!-- FAQ 1 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How much does gutter replacement cost in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Full gutter replacement in Harrow HA1/HA2 costs £400 to £900 for a typical semi-detached property. The final price depends on the length of guttering, material choice, and whether fascia replacement is needed. uPVC is the most affordable; cast iron costs more but suits heritage Edwardian properties. We provide a free survey and detailed written quote.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How long does a full gutter replacement take in HA1/HA2?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Most full gutter replacements on Harrow properties take 1–2 days depending on property size and complexity. We work efficiently and professionally to minimize disruption. For larger properties or those requiring fascia replacement, the job may take longer. We'll confirm the exact timeline during your free survey.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Should I choose uPVC or cast iron gutters for my Edwardian and 1930s suburban housing home in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Cast iron is ideal for Edwardian homes in Harrow as it matches original gutters and preserves heritage character. It costs more but lasts 40+ years. uPVC is more affordable and requires minimal maintenance, suiting 1930s suburban properties. Aluminium offers a premium option combining heritage looks with low maintenance. We'll advise on the best choice for your HA1/HA2 property.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How long do new gutters last in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            uPVC gutters last 20–30 years with minimal maintenance. Cast iron gutters last 40–60 years if properly maintained. Aluminium gutters last 30–40 years. Regular cleaning and inspection will maximize lifespan on your Harrow property in HA1/HA2. We recommend annual gutter cleaning to keep your system flowing freely.
+          </p>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Do you replace fascia and soffits at the same time as gutters in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. We often replace fascia and soffits when installing new gutters on Harrow properties. If your fascia is damaged, rotted, or stained, replacement is more cost-effective when the gutters are off. We can assess all three components during your free survey and provide a comprehensive package quote for HA1/HA2.
+          </p>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Can you match the original gutter style on a Edwardian and 1930s suburban housing property in HA1/HA2?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. We stock cast iron gutters in traditional profiles that match Edwardian homes in Harrow. We can replace gutters while preserving your property's heritage character and meeting conservation area requirements. Our team has experience with conservation work on period properties in HA1/HA2.
+          </p>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Do you take away old gutters after replacement in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. We remove and dispose of your old gutters professionally as part of the replacement service in Harrow. If you want to keep old cast iron gutters for salvage, decoration, or recyling, we can arrange that separately. We'll leave your HA1/HA2 property clean and tidy once work is complete.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="section bg-surface" id="quote">
+    <div class="container-site">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">Get Your Free Gutter Replacement Survey in Harrow</h2>
+        <p class="text-lg text-text-muted">
+          No-obligation inspection and quote. We'll contact you within 2 hours during business hours.
+        </p>
+      </div>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- Related Services CTA -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">Other Services in Harrow</h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto mb-8">
+          We also offer gutter cleaning, gutter repairs, and fascia & soffit cleaning for Harrow properties. Get a comprehensive quote for all your gutter and fascia needs.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/locations/harrow/gutter-cleaning" class="btn-primary">
+            Gutter Cleaning
+          </a>
+          <a href="/locations/harrow/gutter-repairs" class="btn-secondary">
+            Gutter Repairs
+          </a>
+          <a href="/locations/harrow/fascia-soffit-cleaning" class="btn-secondary">
+            Fascia & Soffit Cleaning
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Comparison -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Compare Services in Other Areas</h2>
+      <div class="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+        <a href="/locations/hayes/gutter-replacement" class="btn-secondary">
+          Gutter Replacement in Hayes
+        </a>
+        <a href="/locations/uxbridge/gutter-replacement" class="btn-secondary">
+          Gutter Replacement in Uxbridge
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

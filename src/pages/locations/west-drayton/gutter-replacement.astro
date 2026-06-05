@@ -1,0 +1,246 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Replacement West Drayton UB7 | uPVC and Cast Iron";
+const metaDescription = "Full gutter replacement in West Drayton UB7. uPVC, cast iron and aluminium. Specialists in 1950s to 1970s suburban housing properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "West Drayton", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/" },
+  { name: "Gutter Replacement", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/gutter-replacement/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter replacement cost in West Drayton?",
+    a: "Full gutter replacement in West Drayton UB7 typically costs £400 to £900 for a standard semi-detached property, depending on total run length and material choice. A 60-metre run of uPVC is usually less expensive than cast iron. We provide itemized written quotes showing cost per metre, bracket spacing, outlet fittings, and labour. No hidden fees or surprise charges."
+  },
+  {
+    q: "How long does a full gutter replacement take in UB7?",
+    a: "Most gutter replacement projects on West Drayton's 1950s to 1970s suburban housing take 1 to 3 days depending on property size and complexity. A standard semi-detached with simple roof geometry typically takes one full day. Properties with multiple roof angles, dormers, or complicated brackets may extend to two days. We work efficiently and will confirm the timeline during the free quote process."
+  },
+  {
+    q: "Should I choose uPVC or cast iron gutters for my 1950s to 1970s suburban housing home in West Drayton?",
+    a: "uPVC is cost-effective, lightweight, requires minimal maintenance, and suits most 1950s to 1970s suburban housing properties in West Drayton. Cast iron is heavier, more durable, and may better match the character of some older homes, but costs more and requires periodic painting. Aluminum is a middle option. We recommend uPVC for typical West Drayton semis unless you have period-heritage concerns. New brackets on any system should be rated to withstand aircraft vibration stress."
+  },
+  {
+    q: "How long do new gutters last in West Drayton?",
+    a: "uPVC gutters typically last 25 to 40 years depending on maintenance and environmental factors. Cast iron, if well-painted and maintained, can last 50+ years. In West Drayton's vibration environment, bracket durability becomes as important as gutter material lifespan. We install heavy-duty brackets rated for vibration stress, which significantly extends system life. Annual cleaning and inspections will maximize the lifespan of your new gutters."
+  },
+  {
+    q: "Do you replace fascia and soffits at the same time as gutters in West Drayton?",
+    a: "Yes. If your fascia boards are rotted, damaged, or require painting as part of the job, we can replace them alongside the gutter installation. Many West Drayton properties have fascia damage from years of gutter overflow, so combined replacement often makes sense. We provide separate quotations for gutters, fascia, and soffits so you can see the cost breakdown clearly."
+  },
+  {
+    q: "Can you match the original gutter style on a 1950s to 1970s suburban housing property in UB7?",
+    a: "Most 1950s to 1970s suburban housing in West Drayton used standard half-round or box-profile gutters that we can easily match in uPVC or cast iron. If you wish to preserve an original cast iron system's appearance, we can install matching cast iron. However, uPVC matching is more common and practical for most West Drayton properties. We will discuss options and show samples during the consultation."
+  },
+  {
+    q: "Do you take away old gutters after replacement in West Drayton?",
+    a: "Yes. We remove all old gutters, brackets, and fittings during the replacement job and dispose of them responsibly. Cast iron gutters can often be recycled. Your property is left clean and tidy, with new gutters installed and tested before we depart. We do not leave debris or old materials on site."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("West Drayton"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Margaret T.",
+    street: "High Street, West Drayton",
+    date: "April 2026",
+    text: "Our 1960s semi had gutters that were beyond repair — constantly leaking and sagging. They replaced the whole system with new uPVC and heavy-duty brackets. Excellent finish and they explained how the new brackets account for vibration. Very pleased with the result."
+  },
+  {
+    name: "John B.",
+    street: "Village Road, UB7",
+    date: "March 2026",
+    text: "Got quotes from three companies. These guys were competitive, explained the options clearly, and completed the work efficiently. Cast iron replacement for our 1950s property. Looks great and we have a 10-year guarantee on workmanship."
+  },
+  {
+    name: "Helen S.",
+    street: "Near Grand Union Canal, West Drayton",
+    date: "February 2026",
+    text: "They replaced gutters and fascia boards at the same time, which was sensible given the water damage. Quality workmanship, tidy team, and they left the site spotless. Good attention to detail on bracket spacing to prevent sagging."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>West Drayton — UB7</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Replacement in West Drayton UB7</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Complete system replacement for 1950s to 1970s suburban housing. uPVC, cast iron and aluminium. Installed with brackets rated for vibration stress.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Full gutter replacement in West Drayton UB7 costs £400 to £900 for a typical semi-detached property depending on run length and material. We install uPVC, cast iron and aluminium systems suited to 1950s to 1970s suburban housing.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        West Drayton's 1950s to 1970s suburban housing stock typically reaches the point of gutter replacement between 50 and 75 years old — the point at which aging metal systems develop widespread corrosion, uPVC becomes brittle, and brackets fail under the constant stress of aircraft vibration from nearby Heathrow.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        When repair is no longer cost-effective — when multiple sections are corroded, multiple brackets are loose, and the gutter sags persistently — replacement becomes the only lasting solution. A properly installed new gutter system can serve for 25 to 40 years, protecting your property from water damage and structural decay.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We specialize in gutter replacement for West Drayton properties. We understand the unique demands of the vibration environment and install bracket systems rated to withstand it. We can match the original gutter profile or recommend optimal modern alternatives, and we handle entire jobs from removal of old gutters to final testing and cleanup.
+      </p>
+    </div>
+  </section>
+
+  <!-- Material Guide -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Gutter Materials for West Drayton Properties</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <!-- uPVC -->
+        <div class="bg-white rounded-lg p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3 text-lg">uPVC</h3>
+          <p class="text-gray-700 text-sm mb-4">Most popular for 1950s–1970s suburban housing in West Drayton. Lightweight, low-maintenance, cost-effective.</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p><strong>Cost:</strong> Most economical</p>
+            <p><strong>Maintenance:</strong> Annual clean, minimal painting</p>
+            <p><strong>Lifespan:</strong> 25–40 years</p>
+            <p><strong>Best for:</strong> Typical West Drayton semis</p>
+          </div>
+        </div>
+
+        <!-- Cast Iron -->
+        <div class="bg-white rounded-lg p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3 text-lg">Cast Iron</h3>
+          <p class="text-gray-700 text-sm mb-4">Durable, period-appropriate for older properties. Requires regular maintenance. Ideal for heritage homes.</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p><strong>Cost:</strong> 30–50% more than uPVC</p>
+            <p><strong>Maintenance:</strong> Periodic repainting essential</p>
+            <p><strong>Lifespan:</strong> 50+ years if maintained</p>
+            <p><strong>Best for:</strong> Period character homes</p>
+          </div>
+        </div>
+
+        <!-- Aluminium -->
+        <div class="bg-white rounded-lg p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3 text-lg">Aluminium</h3>
+          <p class="text-gray-700 text-sm mb-4">Lightweight, corrosion-resistant middle option. Good durability without cast iron's weight.</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p><strong>Cost:</strong> Between uPVC and cast iron</p>
+            <p><strong>Maintenance:</strong> Occasional cleaning and sealing</p>
+            <p><strong>Lifespan:</strong> 30–45 years</p>
+            <p><strong>Best for:</strong> Modern West Drayton properties</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Complete Gutter Solutions for West Drayton</h2>
+      <p class="text-gray-600 text-center mb-10">From cleaning and repairs to full replacement and fascia work.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/locations/west-drayton/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Regular maintenance cleaning for West Drayton's 1950s to 1970s suburban housing. Identify issues before they become costly repairs.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Fast repairs for loose brackets, leaking joints and sagging sections specific to West Drayton's vibration environment.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/gutter-replacement/" class="group bg-gray-50 border border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Complete system replacement when repair is no longer cost-effective. Brackets rated for vibration stress. All materials offered.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Combined fascia replacement with gutter installation where water damage has occurred. Complete eaves protection.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from West Drayton Replacement Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get Your Gutter Replacement Quote</h2>
+      <p class="text-gray-600 text-center mb-10">Describe your property and gutter condition. We will provide a detailed quote with material options and timeline.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">West Drayton Gutter Replacement FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Gutter replacement in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Harrow</a>
+        <a href="/locations/hayes/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Hayes</a>
+        <a href="/locations/uxbridge/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Uxbridge</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

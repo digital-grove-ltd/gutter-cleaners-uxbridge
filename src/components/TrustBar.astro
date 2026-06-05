@@ -1,0 +1,22 @@
+---
+const signals = [
+  "5-Star Google Reviews",
+  "Fully Insured",
+  "Free No-Obligation Quotes",
+  "Serving West London Since 2008",
+  "Same-Week Appointments Available",
+];
+---
+
+<div class="bg-brand text-white py-3 overflow-hidden">
+  <div class="container-site">
+    <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium">
+      {signals.map((signal) => (
+        <li class="flex items-center gap-1.5">
+          <span class="text-blue-200 font-bold" aria-hidden="true">✓</span>
+          <span>{signal}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

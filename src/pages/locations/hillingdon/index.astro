@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Hillingdon Gutter Cleaning, Repairs and Replacement | UB10";
+const metaDescription = "Professional gutter cleaning, repair and replacement in Hillingdon (UB10). We clear seasonal blockages caused by overhanging trees on 1930s–60s properties near Hillingdon village and Ickenham. Free quotes, same-week service.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hillingdon", url: "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/" }
+];
+
+const faqs = [
+  {
+    q: "Why do Hillingdon gutters block so severely in autumn?",
+    a: "Many properties in the Hillingdon (UB10) area — particularly in Hillingdon village and Ickenham — sit on generous plots with large established garden trees. Oak, ash, birch and lime trees with canopies that overhang rooflines drop leaf fall directly into gutters over a concentrated six-week period in October and November. A single large oak can deposit enough leaf volume to completely block a standard 112mm gutter run in two to three weeks."
+  },
+  {
+    q: "Do you cover the Ickenham area within the UB10 postcode?",
+    a: "Yes. We cover all UB10 addresses including Hillingdon village, Ickenham, Uxbridge Moor and the surrounding residential streets. Ickenham in particular has a high concentration of pre-war and post-war detached and semi-detached properties with large plots and mature garden trees — exactly the combination that leads to the most severe seasonal gutter blockages."
+  },
+  {
+    q: "Is it better to clean gutters once or twice a year in Hillingdon?",
+    a: "For most Hillingdon properties with mature garden trees, we recommend two cleans per year: an autumn clean in November or December after leaf fall is complete, and a spring clean in March or April to remove any moss, seeds and winter debris before the growing season. Properties with very dense tree cover — common on the larger plots in Ickenham — may benefit from three visits per year."
+  },
+  {
+    q: "Can overhanging branches damage my gutters directly?",
+    a: "Yes. Branches that hang close to the roofline can make physical contact with gutters during high winds, gradually flexing joints and loosening brackets. During our Hillingdon inspections we frequently find gutter runs where a low branch has been pressing against the outer lip, causing the gutter to cant outward slightly and lose its pitch. We flag this when we see it and can advise on whether the branch needs trimming back."
+  },
+  {
+    q: "What types of housing do you service in Hillingdon UB10?",
+    a: "Hillingdon has a mix of property types across its UB10 area: pre-war semi-detached homes in Hillingdon village from the 1930s and before, post-war detached properties in Ickenham from the 1950s and 1960s, and some more modern builds. We service all of these — from original cast-iron gutters on the older properties to standard and deepflow uPVC systems on the post-war builds."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hillingdon"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Andrew M.",
+    street: "Swakeleys Road, Ickenham",
+    date: "December 2025",
+    text: "We have a large detached property in Ickenham with several big trees in the garden. The gutters fill up every year without fail. These guys come out in late November, do a thorough clean and check the brackets. Always professional, always on time. Would not use anyone else."
+  },
+  {
+    name: "Helen R.",
+    street: "Long Lane, Hillingdon",
+    date: "April 2026",
+    text: "Booked the spring clean after a recommendation from a neighbour. They found that one of the downpipes had a partial blockage that had been there all winter — we had not noticed because it was the one at the side of the house. Cleared it, tested everything and gave us a report with photos. Excellent service."
+  },
+  {
+    name: "Brian K.",
+    street: "The Greenway, UB10",
+    date: "February 2026",
+    text: "The team were knowledgeable about the specific issues with our 1950s detached property. They advised on gutter guard options to reduce how often we need cleans given the volume of leaf fall we get. Honest advice, fair price, good job. Very satisfied."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Hillingdon — UB10</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning and Repair Services in Hillingdon, UB10</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialist seasonal gutter clearing for Hillingdon village and Ickenham properties surrounded by mature garden trees.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Hillingdon's mixed 1930s to 1960s housing in UB10 — particularly in Hillingdon village and Ickenham — suffers severe seasonal gutter blockages from overhanging mature garden trees. We provide thorough autumn and spring cleans, bracket inspections and same-day repairs for properties throughout UB10 with free no-obligation quotes.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Hillingdon occupies a particular position in our service area: the properties here tend to sit on larger plots than those in denser suburban areas, and the older streets of Hillingdon village and Ickenham are lined with mature trees — both in gardens and along the road verges. This combination of generous gardens, established planting and mixed 1930s to 1960s housing creates one of the most pronounced seasonal gutter-blocking patterns we see across all eight locations we cover.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Large trees — oaks along Swakeleys Road, limes along The Greenway, birches in private gardens throughout UB10 — shed enormous volumes of leaf matter in a concentrated period from late October through to early December. Properties where the canopy directly overhangs the roofline can have gutters go from clear to completely full in under three weeks. If that debris is not cleared before the first significant winter rainfall, the result is water overflowing across the full length of every gutter run.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We are well placed to serve Hillingdon, being based in Uxbridge just a short distance away. We can respond quickly to urgent bookings and offer the most competitive pricing in the area.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Hillingdon Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Hillingdon Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The housing stock across UB10 is more varied than in some of our other service areas. Hillingdon village itself contains pre-war properties — some dating back to the 1920s and earlier — with a mixture of original cast-iron guttering and various generations of replacement systems. The Ickenham residential streets, by contrast, are predominantly 1950s and early 1960s detached and semi-detached builds, typically fitted with standard uPVC gutters at some point in the past three decades.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Both property types have their maintenance needs. The older Hillingdon village properties require careful inspection of gutter joint condition and bracket fixings into potentially ageing fascia boards. The Ickenham post-war properties — many of which received replacement uPVC systems in the 1990s — are now reaching the point where those systems are 25 to 30 years old and beginning to show wear at joints and outlets.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Across both eras, the defining challenge in UB10 remains the seasonal organic load from garden trees. We recommend all Hillingdon homeowners with mature garden trees book their autumn clean before the end of November to avoid winter overflow damage.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in Hillingdon</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across UB10 with same-week availability.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/services/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Thorough seasonal debris removal from all gutters and downpipes throughout UB10. We recommend autumn and spring cleans for Hillingdon and Ickenham properties with overhanging mature trees.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Leaking joints, loose brackets, cracked sections and sagging runs repaired on the same visit where possible. We assess bracket fixings on older fascia boards carefully to ensure a secure result.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement for gutters beyond repair. We can advise on larger-capacity profiles for properties in UB10 that experience very high organic load from garden trees each season.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and replacement of fascia boards on older Hillingdon properties. We frequently find softwood fascias in early stages of rot on properties where gutters have been overflowing seasonally for several years.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Hillingdon Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Hillingdon Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your UB10 address and when you last had your gutters cleaned. We will provide a fixed price with same-week availability.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Hillingdon Gutter FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also cover nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/west-drayton/" class="text-blue-600 hover:underline text-sm">West Drayton</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/harrow/" class="text-blue-600 hover:underline text-sm">Harrow</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

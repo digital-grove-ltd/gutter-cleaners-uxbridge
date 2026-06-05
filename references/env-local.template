@@ -1,0 +1,16 @@
+# .env.local template — copy to .env.local and fill in values
+# NEVER commit .env.local to git
+
+# Cloudflare
+CLOUDFLARE_API_TOKEN=
+CLOUDFLARE_ACCOUNT_ID=
+
+# GitHub
+GITHUB_PAT=
+
+# Google (per-site account for GSC + GBP)
+GOOGLE_ACCOUNT_EMAIL=
+GOOGLE_ACCOUNT_PASSWORD=
+
+# Analytics (filled in by lb-analytics-setup)
+GA4_MEASUREMENT_ID=

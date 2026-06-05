@@ -1,0 +1,394 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+
+const title = "Fascia & Soffit Cleaning in Uxbridge | Professional Service";
+const description = "Professional fascia and soffit cleaning, repair & replacement in Uxbridge. Expert gutter specialists serving Harrow, Hayes, Hillingdon & West London. Free quotes.";
+const canonical = "https://guttercleanersuxbridge.co.uk/services/fascia-soffit-cleaning";
+
+const faqItems = [
+  {
+    question: "What are fascia and soffits and why do they need cleaning?",
+    answer: "Fascia is the board that runs along the edge of your roof, while soffits are the underside panels that protect the roof's overhang. Both collect debris, algae, and mould over time, which compromises their structural integrity and appearance. Regular cleaning extends their lifespan, prevents water damage, and improves your home's curb appeal."
+  },
+  {
+    question: "How often should fascia and soffits be cleaned?",
+    answer: "We recommend professional cleaning every 2–3 years for most properties. However, homes surrounded by trees or in areas with high rainfall may benefit from annual cleaning. Regular maintenance prevents costly repairs and keeps your guttering system functioning effectively."
+  },
+  {
+    question: "What are the signs that my fascia and soffits need attention?",
+    answer: "Look for visible algae or moss growth, paint peeling or discoloration, sagging sections, water stains, or gaps between boards and guttering. If you notice water pooling around your foundation or damp patches on your walls, your fascia and soffits may no longer be protecting your property properly."
+  },
+  {
+    question: "Do you repair or replace damaged fascia and soffits?",
+    answer: "Yes, we provide full repair and replacement services alongside cleaning. If cleaning reveals structural damage, rot, or decay, we can replace affected sections with high-quality materials. We'll always assess the damage during your free survey and recommend the best solution."
+  },
+  {
+    question: "Is fascia and soffit cleaning safe? Do you use ladders or rope access?",
+    answer: "Safety is our top priority. We use professional-grade ladders, harnesses, and safety equipment for all work. For multi-storey buildings or difficult-to-access areas, we may use rope access techniques. All our teams are fully trained and insured."
+  },
+  {
+    question: "Can fascia and soffit cleaning prevent water damage inside my home?",
+    answer: "Absolutely. Clogged or damaged fascia and soffits allow water to seep behind your guttering and into your roof structure, causing interior water damage, rot, and damp. Regular professional cleaning and maintenance prevent these costly problems."
+  },
+  {
+    question: "What's included in your fascia and soffit cleaning service?",
+    answer: "Our service includes professional cleaning of all fascia boards and soffit panels, removal of moss, algae, and debris, inspection for damage, and clearing of any blockages. We also offer optional gutter cleaning, repairs, and replacement services as part of a comprehensive home maintenance package."
+  }
+];
+---
+
+<Layout title={title} description={description} schema={{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Gutter Cleaners Uxbridge",
+  "description": "Professional fascia and soffit cleaning services in Uxbridge and surrounding areas",
+  "url": canonical,
+  "telephone": "+441895000000",
+  "areaServed": ["Uxbridge", "Harrow", "Hayes", "Hillingdon", "Slough", "Southall", "West Drayton", "Windsor"],
+  "priceRange": "$$",
+}}>
+
+  <!-- Hero Section -->
+  <section class="relative h-96 sm:h-[500px] lg:h-[600px] overflow-hidden bg-slate-900">
+    <img
+      src="/images/fascia-soffit-hero.jpg"
+      alt="Professional fascia and soffit cleaning on residential home in Uxbridge"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="absolute inset-0 flex items-center">
+      <div class="container-site w-full">
+        <div class="max-w-2xl">
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+            Fascia & Soffit Cleaning and Repair
+          </h1>
+          <p class="text-lg sm:text-xl text-blue-100 mb-8">
+            Expert cleaning, repair & replacement across Uxbridge, Harrow, Hayes, and West London.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#quote" class="btn-primary text-base">
+              Get Your Free Quote
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#faq" class="btn-secondary text-base text-blue-900 border-white hover:bg-white">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- What Are Fascia & Soffits Section -->
+  <section class="section bg-white">
+    <div class="container-site">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+            What Are Fascia & Soffits?
+          </h2>
+          <p class="text-lg text-slate-700 mb-4 leading-relaxed">
+            Fascia and soffits are critical components of your roof's edge. The <strong>fascia</strong> is the vertical board that runs along the perimeter of your roof, covering the ends of your rafters and supporting the guttering system. The <strong>soffits</strong> are the horizontal panels underneath the roof overhang that protect the rafters and allow ventilation.
+          </p>
+          <p class="text-lg text-slate-700 mb-6 leading-relaxed">
+            Together, they form a protective barrier that prevents water from entering your property, protects against pest infestations, and maintains the structural integrity of your home. When neglected, both fascia and soffits accumulate dirt, algae, moss, and mould, leading to deterioration and costly water damage.
+          </p>
+
+          <div class="space-y-4">
+            <div class="check-item">
+              <strong class="text-slate-900">Fascia:</strong> Supports gutters and prevents water damage to your roof edge
+            </div>
+            <div class="check-item">
+              <strong class="text-slate-900">Soffits:</strong> Provide ventilation and protect rafters from moisture and pests
+            </div>
+            <div class="check-item">
+              <strong class="text-slate-900">Guttering:</strong> Works with both to safely direct water away from your home
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-2xl p-8 border border-blue-100">
+          <h3 class="font-display text-2xl font-bold text-slate-900 mb-4">Why Professional Cleaning Matters</h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="check-item">Prevents water damage and costly interior repairs</li>
+            <li class="check-item">Removes moss, algae, and mould that weaken materials</li>
+            <li class="check-item">Detects damage early before it becomes serious</li>
+            <li class="check-item">Extends the lifespan of your fascia and guttering</li>
+            <li class="check-item">Improves your home's appearance and curb appeal</li>
+            <li class="check-item">Prevents pest infestations from entering via gaps</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signs of Damage Section -->
+  <section class="section bg-slate-50">
+    <div class="container-site">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-12 text-center">
+        Signs Your Fascia & Soffits Need Attention
+      </h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 border border-border shadow-card">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"/>
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Visible Algae & Moss Growth</h3>
+          <p class="text-slate-600">
+            Green or black streaks on your fascia and soffits indicate algae and moss colonisation, which can damage materials over time.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-border shadow-card">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+              <path d="M8 7v10M12 7v10M16 7v10"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Peeling Paint & Discoloration</h3>
+          <p class="text-slate-600">
+            Flaking paint or stubborn staining that won't wash away suggests moisture damage and means your fascia may be weakening.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-border shadow-card">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Sagging or Warped Boards</h3>
+          <p class="text-slate-600">
+            Drooping fascia or warped soffits indicate rot, water damage, or structural compromise. This requires urgent attention.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-border shadow-card">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l9 5v6c0 5-4 9-9 9s-9-4-9-9V7l9-5z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Gaps or Separation</h3>
+          <p class="text-slate-600">
+            Spaces between your fascia and guttering, or between soffits and roof, allow water and pests inside your property.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-border shadow-card">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M12 6v6h4"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Water Stains or Damp Marks</h3>
+          <p class="text-slate-600">
+            Interior water stains, damp patches on ceilings, or rust streaks from gutters mean water is penetrating your home.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-border shadow-card">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 18 0A9 9 0 0 0 3 12"/>
+              <path d="M12 7v5l3 2"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Pest Access Points</h3>
+          <p class="text-slate-600">
+            Damaged soffits with holes or gaps provide entry for birds, insects, and rodents into your loft and walls.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included Section -->
+  <section class="section bg-white">
+    <div class="container-site">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-12 text-center">
+        What's Included in Our Service
+      </h2>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mb-8">Fascia & Soffit Cleaning</h3>
+          <ul class="space-y-3 mb-8">
+            <li class="check-item">Professional high-pressure cleaning of all fascia boards and soffit panels</li>
+            <li class="check-item">Removal of moss, algae, lichen, and mould from surfaces</li>
+            <li class="check-item">Gentle techniques that protect your paint and materials</li>
+            <li class="check-item">Full inspection for signs of damage or deterioration</li>
+            <li class="check-item">Clearing of debris and blockages from soffit vents</li>
+            <li class="check-item">Check of gutter joints and seals for leaks</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mb-8">Additional Services Available</h3>
+          <ul class="space-y-3">
+            <li class="check-item"><strong>Fascia & Soffit Repair</strong> — Fix rot, replace damaged sections, re-seal joints</li>
+            <li class="check-item"><strong>Full Replacement</strong> — Install new fascia, soffits, and guttering with modern materials</li>
+            <li class="check-item"><strong>Gutter Cleaning</strong> — Professional clearing of debris and blockages</li>
+            <li class="check-item"><strong>Soffit Ventilation</strong> — Install or repair soffit vents to prevent condensation</li>
+            <li class="check-item"><strong>Gutter Repair</strong> — Patch leaks, reattach loose sections, replace damaged stretches</li>
+            <li class="check-item"><strong>Downpipe Cleaning</strong> — Clear blockages and improve water drainage</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-blue-50 rounded-2xl p-8 border border-blue-200">
+        <h3 class="font-display text-2xl font-bold text-slate-900 mb-4">Free Professional Survey</h3>
+        <p class="text-lg text-slate-700 mb-4">
+          Every job starts with a detailed, no-obligation survey. Our team will inspect your fascia, soffits, guttering, and surrounding areas to identify any issues and recommend the best solution. You'll receive a clear quote before any work begins.
+        </p>
+        <p class="text-slate-600">
+          We're fully insured, experienced, and committed to delivering exceptional results at competitive prices.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="section bg-slate-50">
+    <div class="container-site">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-8 text-center">
+        Serving Uxbridge & West London
+      </h2>
+
+      <p class="text-lg text-slate-700 text-center max-w-2xl mx-auto mb-12">
+        We provide fascia and soffit cleaning, repair, and replacement across Uxbridge and the surrounding areas. Whether your home is in an urban setting or surrounded by trees, we have the expertise and equipment to handle your needs.
+      </p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {["Uxbridge", "Harrow", "Hayes", "Hillingdon", "Slough", "Southall", "West Drayton", "Windsor"].map((area) => (
+          <div class="bg-white rounded-xl p-6 border border-border text-center hover:shadow-card transition-shadow">
+            <h3 class="font-display font-bold text-slate-900 text-lg">{area}</h3>
+            <p class="text-sm text-slate-600 mt-1">Professional service available</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-white" id="faq">
+    <div class="container-site max-w-3xl">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-12 text-center">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="space-y-6">
+        {faqItems.map((item, index) => (
+          <details class="group bg-slate-50 rounded-xl p-6 border border-border cursor-pointer transition-all hover:border-brand hover:shadow-card open:bg-blue-50 open:border-brand">
+            <summary class="flex items-start gap-4 font-display font-bold text-slate-900 text-lg select-none group-open:text-brand transition-colors">
+              <span class="flex-1">{item.question}</span>
+              <svg class="w-5 h-5 flex-shrink-0 mt-1 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <p class="text-slate-700 mt-4 leading-relaxed text-base">
+              {item.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+
+      <div class="mt-12 bg-blue-50 rounded-2xl p-8 border border-blue-200 text-center">
+        <h3 class="font-display text-2xl font-bold text-slate-900 mb-3">Still have questions?</h3>
+        <p class="text-slate-700 mb-6">
+          Our team is happy to discuss your fascia and soffit needs. Call us or use the form below to request a free survey.
+        </p>
+        <a href="tel:+441895000000" class="btn-primary text-base">
+          Call Us Now: 01895 000 000
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="section bg-slate-50" id="quote">
+    <div class="container-site">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4 text-center">
+        Get Your Free Fascia & Soffit Quote Today
+      </h2>
+      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-12">
+        Complete the form below and we'll provide a detailed, no-obligation quote within 2 hours. Let us help protect your home.
+      </p>
+
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- Why Choose Us CTA -->
+  <section class="section bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+    <div class="container-site max-w-2xl">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-8 text-center">
+        Why Choose Gutter Cleaners Uxbridge?
+      </h2>
+
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div>
+          <div class="w-12 h-12 rounded-lg bg-blue-400 flex items-center justify-center mb-4 font-bold text-lg">✓</div>
+          <h3 class="font-display font-bold text-lg mb-2">5-Star Rated</h3>
+          <p class="text-blue-100">
+            Trusted by hundreds of homeowners across Uxbridge and West London with consistently excellent reviews.
+          </p>
+        </div>
+
+        <div>
+          <div class="w-12 h-12 rounded-lg bg-blue-400 flex items-center justify-center mb-4 font-bold text-lg">✓</div>
+          <h3 class="font-display font-bold text-lg mb-2">Fully Insured & Safe</h3>
+          <p class="text-blue-100">
+            All work fully insured. We use professional safety equipment and follow strict health & safety protocols.
+          </p>
+        </div>
+
+        <div>
+          <div class="w-12 h-12 rounded-lg bg-blue-400 flex items-center justify-center mb-4 font-bold text-lg">✓</div>
+          <h3 class="font-display font-bold text-lg mb-2">Free No-Obligation Quotes</h3>
+          <p class="text-blue-100">
+            Every survey is free and includes a detailed report with clear pricing before you commit.
+          </p>
+        </div>
+
+        <div>
+          <div class="w-12 h-12 rounded-lg bg-blue-400 flex items-center justify-center mb-4 font-bold text-lg">✓</div>
+          <h3 class="font-display font-bold text-lg mb-2">Fast Response Times</h3>
+          <p class="text-blue-100">
+            Same-week appointments available. We respond to quote requests within 2 hours during business hours.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-blue-100 mb-6">
+          Mon–Fri 8am–6pm | Contact via form or call for a quick response
+        </p>
+        <a href="tel:+441895000000" class="inline-flex items-center gap-2 bg-white text-blue-900 font-semibold px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-all">
+          Call Now: 01895 000 000
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

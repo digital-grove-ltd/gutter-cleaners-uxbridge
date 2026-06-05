@@ -1,0 +1,235 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Fascia and Soffit Cleaning West Drayton UB7 | Local Experts";
+const metaDescription = "Professional fascia and soffit cleaning in West Drayton UB7. Remove algae, dirt and staining. Specialists in 1950s to 1970s suburban housing.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "West Drayton", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/" },
+  { name: "Fascia and Soffit Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/fascia-soffit-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does fascia and soffit cleaning cost in West Drayton?",
+    a: "Fascia and soffit cleaning in West Drayton UB7 typically costs £120 to £200 for a standard semi-detached property. Pricing depends on surface area, degree of algae or staining, property height, and whether you opt for cleaning only or combined gutter service. We provide a free, no-obligation quote after visual assessment — no surprises or hidden fees."
+  },
+  {
+    q: "How often should fascia boards be cleaned on 1950s to 1970s suburban housing in UB7?",
+    a: "We recommend fascia cleaning every 2 to 3 years for 1950s to 1970s suburban housing in West Drayton, or more frequently if your property overlooks the Grand Union Canal towpath or has overhanging trees. Annual gutter cleaning combined with fascia inspection helps identify early signs of damage — rot, water tracking, or algae growth — when repair is still possible rather than waiting for structural failure."
+  },
+  {
+    q: "What causes black streaks on fascia boards in West Drayton?",
+    a: "Black streaks and staining on fascia boards in West Drayton are typically caused by algae and mould growth, accelerated by moisture retained behind blocked or overflowing gutters. On 1950s to 1970s suburban housing, where gutters sag due to aircraft vibration-loosened brackets, water overflows and tracks down the fascia. The combination of damp conditions and organic debris creates ideal conditions for algae. Regular gutter cleaning and fascia treatment prevent this."
+  },
+  {
+    q: "Can you clean coloured fascia boards in West Drayton without damaging them?",
+    a: "Yes. Modern coloured uPVC fascia boards can be safely cleaned using low-pressure water and appropriate detergents — we avoid high-pressure washing which can damage seals and force water behind boards. For wooden fascia painted in period colours common on West Drayton properties, we use gentler methods and advise on appropriate paint maintenance afterwards. We assess the board condition before cleaning and advise if replacement is more sensible than cleaning."
+  },
+  {
+    q: "Do I need to clean or replace my soffits in UB7?",
+    a: "Soffit damage on 1950s to 1970s suburban housing in West Drayton is usually caused by water tracking from blocked or leaking gutters. If soffits are simply dirty or discoloured but structurally sound, cleaning restores appearance. If soffits show rot, cracks, or missing sections, replacement is needed. We inspect soffits during gutter work and advise whether cleaning or replacement is appropriate for your UB7 property."
+  },
+  {
+    q: "Do you clean UPVC fascia and soffits as well as wood in West Drayton?",
+    a: "Yes. We clean both uPVC and wooden fascia boards and soffits across West Drayton's 1950s to 1970s suburban housing. uPVC is more common on modern replacements and cleans well with appropriate detergents. Wooden fascia requires gentler handling to avoid damaging paint seals. We have experience with all board types found in UB7 and will recommend the safest cleaning approach for your property."
+  },
+  {
+    q: "How long does fascia and soffit cleaning take for a West Drayton semi-detached house?",
+    a: "Fascia and soffit cleaning for a typical semi-detached property in West Drayton takes 1.5 to 2.5 hours, depending on property size, degree of soiling, and whether gutters are being cleaned at the same time. Combined gutter and fascia work is often most efficient — we address both during one visit. We are punctual and tidy; you will barely notice we have been there."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("West Drayton"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Judith M.",
+    street: "Church Lane, West Drayton",
+    date: "May 2026",
+    text: "Our fascia boards were badly stained with black algae — made the house look neglected. They cleaned the whole run, did the gutters at the same time, and the difference is remarkable. Professional work and good value. Explained how to prevent the problem returning."
+  },
+  {
+    name: "Andrew P.",
+    street: "Wood Lane, UB7",
+    date: "April 2026",
+    text: "Wooden fascia was water-damaged behind the gutters — they recommended cleaning wouldn't be enough and suggested replacement. Got a quote for fascia plus new gutters. Sensible advice and excellent execution of both jobs."
+  },
+  {
+    name: "Carol D.",
+    street: "Near Grand Union Canal, West Drayton",
+    date: "March 2026",
+    text: "Coloured fascia was very dirty from years of algae growth. They cleaned it safely without damage, explained the water source (gutter overflow), and recommended future maintenance. Really knowledgeable about West Drayton properties."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>West Drayton — UB7</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Fascia and Soffit Cleaning in West Drayton UB7</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Professional cleaning for 1950s to 1970s suburban housing. Remove algae, dirt and staining. Specialists in water damage prevention.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Fascia and soffit cleaning in West Drayton UB7 costs £120 to £200 for a standard semi-detached property. We remove algae, lichen, dirt and black streaking, restoring boards to near-original condition.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        West Drayton's 1950s to 1970s suburban housing presents a distinct fascia and soffit challenge driven by its unique geographical and structural circumstances. The combination of aging gutter systems with brackets gradually loosened by Heathrow aircraft vibration, combined with moisture-retaining properties created by the semi-rural setting near the Grand Union Canal, creates ideal conditions for algae and mould growth on fascia boards.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        When gutters sag and overflow due to loose brackets or blockages, water cascades down fascia boards rather than draining through downpipes. This water is held against wood or uPVC surfaces by gravity, creating damp conditions where algae and lichen establish and spread across the boards. Over months and years, staining becomes dark and persistent, and the damp penetration can begin rotting wooden fascias from behind.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Cleaning fascia boards on West Drayton properties is not simply cosmetic — it is preventive maintenance. Removing algae and treating the underlying water-damage problem stops structural decay. We clean fascia and soffits across UB7, often combining the work with gutter repair or replacement to address the water-overflow source and prevent rapid re-staining.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fascia Issues on West Drayton Properties -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Common Fascia Problems on 1950s to 1970s Suburban Housing in West Drayton</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Algae Staining</h3>
+          <p class="text-gray-700 text-sm">Black or green staining from algae growth, particularly on shaded north-facing fascias. Accelerated by water from overflowing gutters and proximity to the Grand Union Canal towpath.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Water Tracking Damage</h3>
+          <p class="text-gray-700 text-sm">Dark staining patterns where water has run down boards from blocked gutters. Often indicates ongoing water ingress behind the board requiring gutter repair.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Wood Rot (Timber Fascia)</h3>
+          <p class="text-gray-700 text-sm">Wooden fascias on older West Drayton properties can develop soft spots or spongy areas where years of moisture absorption from overflowing gutters have caused rot. Cleaning alone will not fix structural rot — replacement may be needed.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">uPVC Seal Failure</h3>
+          <p class="text-gray-700 text-sm">Modern uPVC fascia boards can show water ingress at seals if gutters overflow continuously. Discoloration or soft filler materials indicate seal failure, particularly at joints and corners.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Soffit Ventilation Issues</h3>
+          <p class="text-gray-700 text-sm">Soffits with vents can become clogged with debris if gutters overflow, restricting air flow to the eaves and causing moisture buildup in the roof space.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-2">Paint Deterioration</h3>
+          <p class="text-gray-700 text-sm">Continuous moisture from gutter overflow causes paint to peel, bubble, or flake. This accelerates underlying board deterioration and makes cleaning less effective than treating the water source.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">All Gutter Services Available in West Drayton</h2>
+      <p class="text-gray-600 text-center mb-10">Fascia and soffit cleaning is often combined with gutter maintenance for best results.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/locations/west-drayton/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Stop fascia staining at the source by keeping gutters clear. Regular gutter maintenance prevents water overflow and fascia damage on West Drayton properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Fix loose brackets and sagging sections that cause water overflow and fascia damage. Essential for stopping algae re-growth after cleaning.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">When aging gutters are beyond repair, replacement prevents ongoing fascia damage. Combined with new gutters, fascia replacement offers complete eaves protection.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/fascia-soffit-cleaning/" class="group bg-gray-50 border border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Clean, restore, or replace fascia and soffit boards damaged by water or algae. Address the root cause by fixing gutters simultaneously.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from West Drayton Cleaning Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get Your Fascia and Soffit Cleaning Quote</h2>
+      <p class="text-gray-600 text-center mb-10">Describe the staining or damage on your fascia. We will provide a quote and recommend gutter work if needed to prevent recurrence.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">West Drayton Fascia and Soffit FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Fascia and soffit cleaning in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia and Soffit in Harrow</a>
+        <a href="/locations/hayes/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia and Soffit in Hayes</a>
+        <a href="/locations/uxbridge/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia and Soffit in Uxbridge</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

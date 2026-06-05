@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "West Drayton Gutter Cleaning, Repairs and Replacement | UB7";
+const metaDescription = "Professional gutter cleaning, repair and replacement in West Drayton (UB7). We fix gutter bracket failures on 1950s–70s homes near Heathrow Airport where flight vibration loosens fixings over time. Free quotes, same-week service.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "West Drayton", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/" }
+];
+
+const faqs = [
+  {
+    q: "Can Heathrow flight vibration really loosen gutter brackets in West Drayton?",
+    a: "Yes, over time it can. West Drayton sits directly under one of Heathrow Airport's primary approach and departure flight paths, and properties in UB7 experience low-frequency vibration from aircraft passing overhead dozens of times per day. Over years and decades, this cyclic vibration gradually works the screw fixings loose in fascia boards — particularly in properties where the original softwood fascias have dried out. A bracket that appears secure can fail with the added weight of a debris-filled gutter after heavy rain. We check all bracket fixings as a standard part of every West Drayton clean."
+  },
+  {
+    q: "How often should I have my gutters inspected in West Drayton (UB7)?",
+    a: "We recommend an annual clean combined with a bracket security inspection for all UB7 properties near the Heathrow flight path. For properties that have not had a professional inspection in several years, we suggest starting with a thorough inspection to establish a baseline condition. Many West Drayton homeowners find that a single thorough service, followed by annual maintenance, is the most cost-effective approach."
+  },
+  {
+    q: "Do you service properties near the Grand Union Canal towpath in West Drayton?",
+    a: "Yes. The residential streets between West Drayton village and the Grand Union Canal — including Horton Road, Money Lane and Station Road — are all within our regular service area. Properties near the canal can experience slightly higher moisture levels in the local microclimate, which can accelerate moss growth and oxidation on gutter surfaces. We factor this in when advising on cleaning frequency."
+  },
+  {
+    q: "What are the most common gutter problems you find in West Drayton?",
+    a: "The most frequent issues we find on West Drayton properties are: loose or completely failed brackets (typically linked to long-term vibration and fascia deterioration), cracked uPVC joints on 1960s and 1970s systems that have gone brittle with age, and debris blockages from the canal-side vegetation and street trees along residential roads. We address all three as part of a standard service visit."
+  },
+  {
+    q: "Do you cover all of UB7 including Harmondsworth and Sipson?",
+    a: "Yes. We cover the full UB7 postcode area including West Drayton village, Harmondsworth, Sipson, Yiewsley and the surrounding streets. If your address is in the UB7 sector, we service it. For properties in adjacent postcodes near the UB7 boundary, contact us with your postcode and we will confirm."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("West Drayton"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Phil R.",
+    street: "Horton Road, West Drayton",
+    date: "March 2026",
+    text: "Had the gutters cleaned and they found that four of the brackets along the front had come loose — screws just turning in the holes. They re-fixed them with larger fixings into sound timber and sealed around the entry points. Now the front gutter is properly secure for the first time in years. Good value and honest work."
+  },
+  {
+    name: "Susan T.",
+    street: "Station Road, UB7",
+    date: "January 2026",
+    text: "Excellent service. They noticed that one section of my back gutter was sitting too low on the bracket — water was pooling in the middle rather than draining. They adjusted the pitch and cleared the blockage. The improvement was immediately obvious. Very professional."
+  },
+  {
+    name: "David C.",
+    street: "Money Lane, West Drayton",
+    date: "November 2025",
+    text: "Live near the canal and the moss problem on my roof is quite bad. They did a thorough clean of all gutters and downpipes and suggested a moss treatment for the rear roof slope which they applied the same day. Huge improvement and very good at explaining what they were doing and why."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>West Drayton — UB7</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning and Repair Services in West Drayton, UB7</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialist gutter and bracket inspection for 1950s–70s homes near Heathrow Airport. Free quotes, same-week appointments near the Grand Union Canal towpath.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">West Drayton's 1950s to 1970s suburban properties in UB7 sit under Heathrow's flight path, where long-term aircraft vibration gradually loosens gutter brackets over time. We service all gutters and downpipes across West Drayton village and the surrounding UB7 streets, with a bracket security check included in every visit and same-week appointments available.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        West Drayton occupies a distinctive position: a pleasant suburban village with a historic centre near the Grand Union Canal towpath, set within one of the busiest air traffic corridors in the world. The residential streets of UB7 — built largely between the 1950s and 1970s to house workers commuting to nearby Heathrow and the then-thriving local industrial estates — carry a housing stock that is now 50 to 70 years old, with gutter systems of a similar age.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The proximity to Heathrow Airport creates a gutter maintenance consideration that is unique to West Drayton and the immediate surrounding area. Aircraft on the northern and southern approach paths to Heathrow pass directly over much of UB7 at low altitude, generating repeated low-frequency vibration. Over decades, this vibration contributes to the gradual loosening of the screw fixings that hold gutter brackets to fascia boards — a slow process that is invisible from the ground until a bracket fails unexpectedly, often under the weight of a debris-laden gutter after a heavy rain event.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We are closely familiar with UB7 and service properties throughout West Drayton village, Harmondsworth, Sipson and Yiewsley. We include a bracket security check in every clean visit as standard — no additional charge.
+      </p>
+    </div>
+  </section>
+
+  <!-- About West Drayton Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About West Drayton Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The 1950s and 1960s semi-detached properties in West Drayton were built with standard specifications for that era: softwood fascia boards, mild-steel brackets and half-round or square uPVC gutters fitted either during construction or in subsequent decades as cast-iron systems were replaced. Those uPVC systems are now 30 to 50 years old in many properties along Horton Road, Station Road and Money Lane.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The canal-side microclimate in West Drayton — with higher ambient moisture from the Grand Union Canal and the surrounding green corridors — creates better-than-average growing conditions for moss and algae on rooflines and in gutters throughout the year. Properties within a few hundred metres of the canal typically require more frequent cleaning than those further away.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Taken together, the ageing gutter systems, the vibration-related bracket loosening and the canal-side moss growth make West Drayton one of the areas where regular professional inspection pays the clearest dividends in preventing costly repairs.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in West Drayton</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across UB7 with same-week availability.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/services/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full cleaning of gutters and downpipes throughout UB7, with a bracket security check included on every visit. We also address moss growth — a common issue near the Grand Union Canal corridor in West Drayton.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Bracket re-fixing, joint resealing and section repair on West Drayton properties. We use appropriately sized fixings for the fascia board condition and advise on reinforcement where boards have deteriorated.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement for gutters beyond repair. We advise on the best profiles and materials for West Drayton's conditions, including options that are more resistant to the moisture levels near the canal.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Fascia board replacement on West Drayton properties where softwood boards have deteriorated to the point of being unable to hold gutter brackets securely — a prerequisite for any gutter work on severely affected properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from West Drayton Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your West Drayton Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your UB7 address and when your gutters were last serviced. We will provide a fixed price with a bracket inspection included as standard.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">West Drayton Gutter FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also cover nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/hillingdon/" class="text-blue-600 hover:underline text-sm">Hillingdon</a>
+        <a href="/locations/slough/" class="text-blue-600 hover:underline text-sm">Slough</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

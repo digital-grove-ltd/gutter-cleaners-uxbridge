@@ -1,0 +1,544 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import type { Thing, WithContext } from "schema-dts";
+
+const title = "Gutter Repairs Harrow HA1/HA2 | Same-Week Response";
+const description =
+  "Fast gutter repairs in Harrow HA1/HA2. Leaking joints, sagging gutters, cracked sections. Specialists in Edwardian and 1930s suburban housing.";
+
+const schema: WithContext<Thing>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://guttercleanersuxbridge.co.uk",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Locations",
+        item: "https://guttercleanersuxbridge.co.uk/locations",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Harrow",
+        item: "https://guttercleanersuxbridge.co.uk/locations/harrow",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Gutter Repairs",
+        item: "https://guttercleanersuxbridge.co.uk/locations/harrow/gutter-repairs",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Gutter Repairs in Harrow",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Gutter Cleaners Uxbridge",
+      url: "https://guttercleanersuxbridge.co.uk",
+      telephone: "01895 000000",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "",
+        addressLocality: "Uxbridge",
+        postalCode: "UB8",
+        addressCountry: "GB",
+      },
+    },
+    areaServed: [
+      { "@type": "City", name: "Harrow" },
+      { "@type": "PostalCode", postalCode: "HA1" },
+      { "@type": "PostalCode", postalCode: "HA2" },
+    ],
+    description:
+      "Fast gutter repairs in Harrow HA1/HA2 for leaking joints, sagging gutters, and cracked sections. Same-week response. Specialists in Edwardian and 1930s suburban housing.",
+    image: "https://guttercleanersuxbridge.co.uk/images/gutter-cleaning-hero.jpg",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How much do gutter repairs cost in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Gutter repairs in Harrow HA1/HA2 typically cost £120 to £300 depending on the type and severity of damage. Leaking joints, brackets, and minor cracks are usually fixed in 1-2 hours. We provide a free survey and written quote before starting work.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you repair cast iron gutters in HA1/HA2?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we specialise in repairing cast iron gutters common on Edwardian and 1930s suburban housing in Harrow. We can patch cracks, seal joints, and replace damaged sections while preserving the original character of your property in HA1/HA2.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "My gutter is leaking at the joint in Harrow - can you fix it same day?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We offer same-week appointments and can often fix leaking joints same-day in Harrow. Contact us immediately and we'll prioritize your repair. We respond to urgent gutter leaks within 48 hours across HA1/HA2.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What causes gutters to sag on Edwardian and 1930s suburban housing in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Gutters on Edwardian and 1930s suburban housing in Harrow sag due to loose or corroded brackets, accumulated debris weight, and structural settlement. Over time, moss growth adds extra weight. We identify the cause and provide a durable repair solution.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I know if my Harrow home needs repairs or a full replacement?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A free survey from our Harrow team will determine whether repair or replacement is best for your HA1/HA2 property. Minor issues are repaired. If the gutter is severely corroded, cracked along its length, or showing multiple leaks, replacement is more cost-effective.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you repair fascia boards as well as gutters in HA1/HA2?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We repair and replace fascia boards on Harrow properties. Fascia damage often goes hand-in-hand with gutter problems. We can assess both during your inspection and provide a comprehensive repair quote for HA1/HA2.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are your gutter repairs guaranteed in Harrow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "All gutter repairs in Harrow come with a 12-month warranty on materials and workmanship. We stand behind every repair on Edwardian and 1930s suburban housing in HA1/HA2. If the problem returns within 12 months due to our work, we'll fix it free.",
+        },
+      },
+    ],
+  },
+];
+---
+
+<Layout {title} {description} {schema}>
+  <!-- Hero Section -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img
+      src="/images/gutter-cleaning-hero.jpg"
+      alt="Gutter repairs in Harrow HA1/HA2"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Gutter Repairs in Harrow HA1/HA2
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100 mb-8">
+          Leaking joints, sagging gutters, cracked sections. Same-week response. Fully guaranteed.
+        </p>
+        <a href="#quote" class="btn-primary">
+          Get Your Free Survey
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Quick Answer Section -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="quick-answer bg-white border-l-4 border-brand rounded-lg p-6 max-w-3xl mx-auto">
+        <h2 class="text-xl font-bold text-text mb-3">Quick Answer</h2>
+        <p class="text-text-muted">
+          We repair leaking joints, sagging gutters, cracked sections and loose brackets in Harrow HA1/HA2. Most repairs take 1 to 2 hours and are completed in a single visit. We aim to respond within 48 hours for urgent issues.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">
+            Professional Gutter Repairs for Harrow Homes
+          </h2>
+          <p class="text-lg text-text-muted mb-6">
+            Edwardian and 1930s suburban housing in Harrow often develop gutter problems due to age, structural settlement, and rust. Leaking joints, sagging brackets, cracked sections, and corroded gutters are common issues we see across HA1/HA2. Rather than waiting for complete failure, we repair problems quickly to prevent water damage to your roof, walls, and foundation.
+          </p>
+          <p class="text-lg text-text-muted mb-8">
+            We diagnose the cause of gutter failure, advise whether repair or replacement is best value, and complete the work with a 12-month guarantee. Most repairs are finished in a single visit.
+          </p>
+          <div class="space-y-3">
+            <div class="check-item">Leaking joints and seams sealed</div>
+            <div class="check-item">Sagging gutters straightened and secured</div>
+            <div class="check-item">Cracked sections patched or replaced</div>
+            <div class="check-item">Loose brackets tightened or replaced</div>
+            <div class="check-item">12-month guarantee on all work</div>
+          </div>
+        </div>
+        <div class="bg-blue-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-text mb-6">Why Choose Us for Repairs in Harrow</h3>
+          <ul class="space-y-4 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Fast Response:</strong> Same-week appointments. Emergency repairs within 48 hours across HA1/HA2
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Heritage Expertise:</strong> Expert at repairing cast iron gutters on Edwardian and 1930s suburban housing
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Honest Assessment:</strong> We advise repair vs replacement based on cost, not commission
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Guaranteed Work:</strong> 12-month warranty on all repairs. Free re-do if issues return
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair Types -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Types of Gutter Repairs We Handle in Harrow</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Repair 1 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-3">Leaking Joints & Seams</h3>
+          <p class="text-text-muted mb-4">
+            Joints on Harrow gutters fail over time. We seal leaks with durable sealant or resolder joints on cast iron gutters to restore water-tight integrity.
+          </p>
+          <p class="text-sm text-brand font-semibold">Typical cost: £80–£150</p>
+        </div>
+
+        <!-- Repair 2 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-3">Sagging Gutters</h3>
+          <p class="text-text-muted mb-4">
+            Common on older Edwardian and 1930s homes in HA1/HA2. We tighten, replace, or add brackets to restore proper slope and drainage.
+          </p>
+          <p class="text-sm text-brand font-semibold">Typical cost: £120–£200</p>
+        </div>
+
+        <!-- Repair 3 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-3">Cracked & Corroded Sections</h3>
+          <p class="text-text-muted mb-4">
+            Cast iron gutters crack and rust. We patch small cracks or replace the damaged section to prevent leaks affecting your Harrow property.
+          </p>
+          <p class="text-sm text-brand font-semibold">Typical cost: £150–£300</p>
+        </div>
+
+        <!-- Repair 4 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-3">Loose Brackets & Hangers</h3>
+          <p class="text-text-muted mb-4">
+            Corroded or loose brackets cause gutters to pull away from fascia. We tighten or replace brackets to secure gutters properly in HA1/HA2.
+          </p>
+          <p class="text-sm text-brand font-semibold">Typical cost: £50–£120 per bracket</p>
+        </div>
+
+        <!-- Repair 5 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-3">Downpipe Repairs</h3>
+          <p class="text-text-muted mb-4">
+            Cracked, dented, or blocked downpipes prevent water from draining properly. We repair or replace downpipe sections for full system function.
+          </p>
+          <p class="text-sm text-brand font-semibold">Typical cost: £60–£180</p>
+        </div>
+
+        <!-- Repair 6 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <h3 class="text-xl font-bold text-text mb-3">Gutter Cleaning Before Repair</h3>
+          <p class="text-text-muted mb-4">
+            Before assessing damage on your Harrow property, we often clean gutters so we can properly diagnose the problem and plan the repair.
+          </p>
+          <p class="text-sm text-brand font-semibold">Included in survey cost</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair vs Replace -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Repair vs Replacement for Your Harrow Property</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-blue-50 rounded-xl p-8 border border-blue-200">
+          <h3 class="text-2xl font-bold text-text mb-6">When Repair Makes Sense</h3>
+          <ul class="space-y-3 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">•</span>
+              <span>Single problem (one leak, one sagging section)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">•</span>
+              <span>Gutter system otherwise in good condition</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">•</span>
+              <span>Less than 10 years old or recently replaced</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">•</span>
+              <span>Cost saving of 50–70% vs replacement</span>
+            </li>
+          </ul>
+          <p class="text-text font-semibold mt-6">Average cost: £100–£300</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 border border-brand">
+          <h3 class="text-2xl font-bold text-text mb-6">When Replacement is Better</h3>
+          <ul class="space-y-3 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">•</span>
+              <span>Multiple leaks across different sections</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">•</span>
+              <span>Over 20 years old (especially cast iron)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">•</span>
+              <span>Extensive rust or cracking (beyond repair)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold">•</span>
+              <span>Long-term durability and warranty preferred</span>
+            </li>
+          </ul>
+          <p class="text-text font-semibold mt-6">Average cost: £400–£900</p>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-400 text-center">
+        <p class="text-text-muted">
+          <strong class="text-text">Unsure which option is right?</strong> We'll assess your Harrow property free and advise based on what will give best value long-term.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Our Repair Process in Harrow</h2>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Free Survey</h3>
+          <p class="text-text-muted">
+            We inspect your gutters, identify the damage, and diagnose the cause. We assess repair vs replacement options for your HA1/HA2 property.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Written Quote</h3>
+          <p class="text-text-muted">
+            We provide a detailed quote showing the cost of repair, replacement, and timeline. No hidden fees. You decide which option suits your Harrow home.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Fast Repair</h3>
+          <p class="text-text-muted">
+            We complete most repairs in 1–2 hours. Work is guaranteed for 12 months. If issues return, we fix them free in Harrow HA1/HA2.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-surface">
+    <div class="container-site max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-12 text-center">
+        Gutter Repair FAQs for Harrow HA1/HA2
+      </h2>
+
+      <div class="space-y-6">
+        <!-- FAQ 1 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How much do gutter repairs cost in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Gutter repairs in Harrow HA1/HA2 typically cost £120 to £300 depending on the repair type and severity. Sealing a leaking joint costs £80–£150. Replacing a damaged section costs £150–£300. We provide a free survey and written quote before starting work.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Can you repair cast iron gutters in HA1/HA2?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. We specialise in repairing cast iron gutters common on Edwardian and 1930s suburban housing in Harrow. We can patch cracks, resolder joints, treat rust, and replace individual sections. We take care to preserve the original character of your HA1/HA2 property.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            My gutter is leaking at the joint in Harrow - can you fix it same day?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. We offer same-week appointments and can often complete leaking joint repairs same-day in Harrow. For urgent issues, we respond within 48 hours. Contact us immediately if you notice water damage—we'll prioritize your repair in HA1/HA2.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            What causes gutters to sag on Edwardian and 1930s suburban housing in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Gutters on older Harrow properties sag due to loose or corroded brackets, accumulated debris and moss weight, and structural settlement over 80+ years. The weight of water sitting in blocked sections compounds the problem. We tighten or replace brackets to restore proper slope and drainage in HA1/HA2.
+          </p>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How do I know if my Harrow home needs repairs or a full replacement?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            A free survey from our Harrow team will determine whether repair or replacement is best for your HA1/HA2 property. We recommend repair for single problems on otherwise sound gutters. We recommend replacement if the gutter is severely corroded, cracked along multiple sections, or showing multiple leaks in different areas.
+          </p>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Do you repair fascia boards as well as gutters in HA1/HA2?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. Fascia damage often goes hand-in-hand with gutter problems on Harrow properties. We repair and replace fascia boards on Edwardian and 1930s suburban housing. We can assess both systems during your free survey and provide a comprehensive repair quote for HA1/HA2.
+          </p>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Are your gutter repairs guaranteed in Harrow?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            All gutter repairs in Harrow come with a 12-month warranty on materials and workmanship. We stand behind every repair on Edwardian and 1930s suburban housing in HA1/HA2. If the problem returns within 12 months due to our work, we'll fix it free of charge.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="section bg-surface" id="quote">
+    <div class="container-site">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">Get Your Free Gutter Repair Survey in Harrow</h2>
+        <p class="text-lg text-text-muted">
+          No-obligation inspection and quote. We'll contact you within 2 hours during business hours.
+        </p>
+      </div>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- Related Services CTA -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">Other Services in Harrow</h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto mb-8">
+          We also offer gutter cleaning, gutter replacement, and fascia & soffit cleaning for Harrow properties. Get a comprehensive quote for all your gutter and fascia needs.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/locations/harrow/gutter-cleaning" class="btn-primary">
+            Gutter Cleaning
+          </a>
+          <a href="/locations/harrow/gutter-replacement" class="btn-secondary">
+            Gutter Replacement
+          </a>
+          <a href="/locations/harrow/fascia-soffit-cleaning" class="btn-secondary">
+            Fascia & Soffit Cleaning
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Comparison -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">Compare Services in Other Areas</h2>
+      <div class="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+        <a href="/locations/hayes/gutter-repairs" class="btn-secondary">
+          Gutter Repairs in Hayes
+        </a>
+        <a href="/locations/uxbridge/gutter-repairs" class="btn-secondary">
+          Gutter Repairs in Uxbridge
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

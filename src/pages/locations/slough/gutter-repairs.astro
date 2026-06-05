@@ -1,0 +1,390 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Repairs Slough SL1/SL2 | Same-Week Response";
+const metaDescription = "Fast gutter repairs in Slough SL1/SL2. Leaking joints, sagging gutters, cracked sections. Specialists in 1960s to 1980s residential estates.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Slough", url: "https://www.guttercleanersuxbridge.co.uk/locations/slough/" },
+  { name: "Gutter Repairs", url: "https://www.guttercleanersuxbridge.co.uk/locations/slough/gutter-repairs/" }
+];
+
+const faqs = [
+  {
+    q: "How much do gutter repairs cost in Slough?",
+    a: "Gutter repairs in Slough typically range from £100 to £300 depending on the type and severity of damage. A simple resealed joint may cost £80 to £120, while replacing a section of gutter runs £200 to £350. We always provide a fixed-price quote before work begins, based on a site inspection. Emergency same-day repairs in SL1 or SL2 may incur a call-out fee if booked at short notice, but this is clearly explained upfront."
+  },
+  {
+    q: "Can you repair cast iron gutters in SL1/SL2?",
+    a: "Yes. Many 1960s to 1980s residential estates properties in Slough still have original cast-iron gutters or replacements installed decades ago. We repair cast-iron systems by resealing corroded joints, replacing broken sections, and re-fastening loose brackets. Cast iron is heavier than modern materials but fully repairable if the underlying damage is not too advanced. We carry the tools and sealing compounds needed for cast-iron work and can often save an expensive full replacement."
+  },
+  {
+    q: "My gutter is leaking at the joint in Slough - can you fix it same day?",
+    a: "We aim to respond to urgent repair requests in Slough within 48 hours, and same-day service is possible if we have availability. However, same-day fixing depends on our current workload and the severity of the leak. A leaking joint is often repairable in 1 to 2 hours if it's a simple reseal. We recommend contacting us immediately if you have an active leak, especially if water is entering your property, and we will advise on urgency and availability."
+  },
+  {
+    q: "What causes gutters to sag on 1960s to 1980s residential estates in Slough?",
+    a: "Sagging gutters on Slough properties typically result from failed or corroded brackets. Many 1960s to 1980s estates homes were fitted with mild-steel brackets that corrode over decades, losing their structural strength. Additionally, when gutters remain clogged or blocked — common on Slough homes with failing flat-roofed extension drainage — the weight of standing water and accumulated silt causes brackets to bend and gutters to sag. We replace corroded brackets and reseal the gutter to its original pitch during repair."
+  },
+  {
+    q: "How do I know if my Slough home needs repairs or a full replacement?",
+    a: "If your gutter has isolated leaks, loose brackets, or small cracks, repair is usually the right choice. If the gutter is sagging extensively, leaking at multiple joints, or severely corroded along its entire length, replacement is more cost-effective. On 1960s to 1980s estates in SL1 and SL2, we inspect the full system during cleaning and advise you clearly on repair versus replacement, with no pressure to choose the expensive option."
+  },
+  {
+    q: "Do you repair fascia boards as well as gutters in SL1/SL2?",
+    a: "Yes. Fascia boards on older Slough properties are frequently damaged by years of gutter overflow or bracket movement. We repair and replace fascia boards in parallel with gutter repair work. If your fascia has rotted due to water tracking behind the gutter, we address this as part of the repair scope and provide a combined quote covering both gutter and fascia."
+  },
+  {
+    q: "Are your gutter repairs guaranteed in Slough?",
+    a: "Yes. All our gutter repairs in Slough are guaranteed against defects in workmanship for 12 months. We also guarantee the materials we use — for example, new brackets, seals, and patches are covered by the manufacturers' warranties. We provide a written invoice documenting what was repaired, the materials used, and the guarantee terms. If a repair fails due to our work, we return to fix it at no charge."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Slough"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Susan P.",
+    street: "Central Slough, SL1",
+    date: "April 2026",
+    text: "Gutter was leaking at a joint and water was coming through the soffit. These guys came out, identified the corroded bracket causing the problem, replaced it and resealed the joint. All done in one afternoon. Very good value for money and they explained exactly what was wrong."
+  },
+  {
+    name: "Peter L.",
+    street: "SL2 residential estate",
+    date: "May 2026",
+    text: "Called with a dripping gutter and they fitted me in within 48 hours. The repair was quick and the team left the area clean. No mess, professional work. Happy to recommend."
+  },
+  {
+    name: "Amanda R.",
+    street: "East Slough, SL2",
+    date: "February 2026",
+    text: "Our 1970s semi had gutters sagging on one side. They explained the brackets had corroded and replaced them with stainless steel ones. Gutter is now level again and they gave us a one-year guarantee. Excellent service."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Slough — SL1 / SL2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Gutter Repairs in Slough, SL1/SL2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Fast repairs for leaking joints, sagging gutters, cracked sections and corroded brackets common in 1960s to 1980s estates.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">We repair leaking joints, sagging gutters, cracked sections and loose brackets in Slough SL1/SL2. Most repairs take 1 to 2 hours and are completed in a single visit. We aim to respond within 48 hours for urgent issues.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The 1960s to 1980s residential estates across Slough present a consistent repair pattern. Properties built during this era were fitted with gutters and brackets designed to last 30 to 40 years with minimal maintenance. We are now 40 to 60 years down the line, and structural failures are mounting. Corroded brackets, failed joint seals, cracked uPVC sections, and sagging runs are the routine repairs we encounter on SL1 and SL2 properties. Many of these problems are easy to fix; others require strategic planning to prevent expensive full replacement.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        What distinguishes Slough repair work is the complexity introduced by flat-roofed extensions. When an extension's internal drainage fails or blocks, water cascades onto the main gutter, forcing sections to sag and joints to fail under the unexpected load. We identify these root-cause problems during repair work and advise on permanent solutions — whether that's clearing the extension drainage, upgrading the main gutter to handle overflow, or replacing the entire system.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        All repairs in Slough are quoted at fixed prices with 48-hour response on emergency requests. We carry repair kits for cast-iron and modern uPVC systems, and we guarantee our work for 12 months against defects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Common Repair Problems -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Common Gutter Repair Problems in Slough</h2>
+      <div class="space-y-5">
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Leaking Joints</h3>
+          <p class="text-gray-700 text-sm">Joint seals fail due to UV exposure and thermal expansion over time. On 1960s to 1980s estates properties, cast-iron and older uPVC joints fail around year 20–30 of the gutter's life. Water drips from the joint line onto fascia boards below, causing rot. Resealing the joint is usually successful, but if the gutter section has moved or settled, replacement may be needed.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Sagging Gutters</h3>
+          <p class="text-gray-700 text-sm">Sagging happens when brackets corrode and lose strength, or when accumulated weight — debris, moss silt, or overflow from an extension — exceeds the bracket capacity. Slough 1960s estates are prone to this because original mild-steel brackets corrode predictably. Fixing involves replacing corroded brackets with stainless steel or aluminium, and resetting the gutter pitch.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Cracked or Split Sections</h3>
+          <p class="text-gray-700 text-sm">uPVC gutters crack when brackets fail and the gutter twists under load, or after decades of UV exposure that makes plastic brittle. Cast-iron cracks when internal corrosion thins the wall. Small cracks may be sealed; large splits usually require section replacement.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Loose or Broken Brackets</h3>
+          <p class="text-gray-700 text-sm">Brackets loosen from movement or corrode through. On Slough properties, loose brackets are often a symptom — the root cause is that the gutter is carrying water from an extension overflow. Fixing involves replacing the bracket and investigating why water load is exceeding design capacity.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Downpipe Separation or Misalignment</h3>
+          <p class="text-gray-700 text-sm">Downpipes separate from outlet connections when brackets fail or gutter movement stresses the joint. This leaves a gap that allows water to escape behind the fascia. Realignment and re-fastening typically solves the problem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types of Repairs We Do -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Types of Repairs We Offer in SL1/SL2</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Small Repairs (1–2 hours)</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Reseal leaking gutter joints</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Replace loose or broken brackets</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Straighten slightly sagging sections</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Realign downpipe connections</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Clear blockages from downpipes</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Larger Repairs (2–4 hours)</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Replace severely corroded gutter sections</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Replace multiple failed brackets</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Reset gutter pitch if sagging is extensive</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Repair or replace downpipe sections</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>Repair fascia board damage from water tracking</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair vs Replace -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Repair vs Replacement: What Makes Sense for Slough Properties?</h2>
+      <div class="bg-white rounded-lg p-8 border border-gray-200 mb-6">
+        <p class="text-gray-700 leading-relaxed mb-6">
+          On 1960s to 1980s residential estates in Slough, the decision between repair and replacement depends on the extent of damage and remaining gutter lifespan.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-green-700 mb-3">Repair Usually Makes Sense If:</h3>
+            <ul class="space-y-2 text-gray-700 text-sm">
+              <li class="flex gap-2">
+                <span class="text-green-600 font-bold">✓</span>
+                <span>Damage is isolated to 1–2 locations</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-600 font-bold">✓</span>
+                <span>Gutters are less than 20 years old</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-600 font-bold">✓</span>
+                <span>No major corrosion along the full length</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-600 font-bold">✓</span>
+                <span>Cost of repair is under 30% of replacement</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-red-700 mb-3">Replacement Usually Makes Sense If:</h3>
+            <ul class="space-y-2 text-gray-700 text-sm">
+              <li class="flex gap-2">
+                <span class="text-red-600 font-bold">✗</span>
+                <span>Gutters are 40+ years old with multiple failures</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-600 font-bold">✗</span>
+                <span>Extensive corrosion along 50%+ of the run</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-600 font-bold">✗</span>
+                <span>Structural sagging due to bracket corrosion throughout</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-600 font-bold">✗</span>
+                <span>Root issue is undersized gutter (e.g., extension overflow)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-700 text-sm leading-relaxed">
+        We always assess the full gutter system and advise honestly. On Slough properties, if we identify a root-cause problem — such as extension drainage overflow overwhelming the main gutter — we discuss whether repair will solve the issue or merely delay replacement.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Guide -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Repair Pricing in Slough</h2>
+      <p class="text-gray-700 mb-6 leading-relaxed">Prices below are typical for common repairs on 1960s to 1980s estates properties. All quotes are fixed-price with no surprise charges.</p>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-lg font-semibold text-gray-900">Reseal leaking joint</h3>
+            <span class="text-2xl font-bold text-blue-600">£80–£120</span>
+          </div>
+          <p class="text-gray-600 text-sm">Single joint resealing with new mastic and testing</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-lg font-semibold text-gray-900">Replace bracket or straighten sag</h3>
+            <span class="text-2xl font-bold text-blue-600">£100–£180</span>
+          </div>
+          <p class="text-gray-600 text-sm">One or two bracket replacements with resetting</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-lg font-semibold text-gray-900">Replace gutter section (1–2 metres)</h3>
+            <span class="text-2xl font-bold text-blue-600">£200–£350</span>
+          </div>
+          <p class="text-gray-600 text-sm">Remove damaged section, fit new gutter, test joints and brackets</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-lg font-semibold text-gray-900">Replace multiple brackets (3+ brackets)</h3>
+            <span class="text-2xl font-bold text-blue-600">£180–£300</span>
+          </div>
+          <p class="text-gray-600 text-sm">Replace corroded brackets throughout a section, reset pitch</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-lg font-semibold text-gray-900">Repair fascia board damage</h3>
+            <span class="text-2xl font-bold text-blue-600">£120–£250</span>
+          </div>
+          <p class="text-gray-600 text-sm">Small wood repair or replacement section including painting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related services in Slough -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Other Gutter Services in Slough</h2>
+      <p class="text-gray-600 text-center mb-10">Complete solutions for 1960s to 1980s residential estates properties.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="/locations/slough/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full debris removal, moss clearing, downpipe flushing with condition report.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/slough/gutter-replacement/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement in uPVC, cast iron or aluminium for aging gutters.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/slough/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning, repair and replacement for boards damaged by gutter overflow.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Slough Repair Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Repair Quote for Your Slough Property</h2>
+      <p class="text-gray-600 text-center mb-10">Describe your gutter problem. We will respond with a fixed price within 24 hours.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Repair FAQs for Slough</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Same service in other locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Also serving nearby areas with expert gutter repairs:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Harrow</a>
+        <span class="text-gray-400">•</span>
+        <a href="/locations/hayes/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Hayes</a>
+        <span class="text-gray-400">•</span>
+        <a href="/locations/uxbridge/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Uxbridge</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

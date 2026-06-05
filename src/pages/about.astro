@@ -1,0 +1,442 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import type { WithContext, LocalBusiness } from "schema-dts";
+
+const title = "About Gutter Cleaners Uxbridge | Local Experts";
+const description =
+  "Learn about Gutter Cleaners Uxbridge. Local gutter cleaning experts serving West London since 2008. Fully insured, professional team. Free quotes available.";
+
+const organizationSchema: WithContext<LocalBusiness> = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Gutter Cleaners Uxbridge",
+  image: "https://www.guttercleanersuxbridge.co.uk/images/about-hero.jpg",
+  description:
+    "Professional gutter cleaning, repair and replacement services across Uxbridge and West London.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Uxbridge",
+    addressRegion: "Greater London",
+    postalCode: "UB8",
+    addressCountry: "GB",
+  },
+  areaServed: [
+    "Uxbridge",
+    "Harrow",
+    "Hayes",
+    "Hillingdon",
+    "Slough",
+    "Southall",
+    "West Drayton",
+    "Windsor",
+  ],
+  sameAs: [],
+  priceRange: "$$",
+  knowsAbout: [
+    "Gutter Cleaning",
+    "Gutter Repair",
+    "Gutter Replacement",
+    "Fascia & Soffit",
+  ],
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  schema={organizationSchema}
+>
+  <TrustBar />
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img
+      src="/images/about-hero.jpg"
+      alt="Professional gutter cleaning team at work"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-brand/90 via-brand/80 to-transparent flex items-center">
+      <div class="container-site">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+            Local Gutter Cleaning Experts You Can Trust
+          </h1>
+          <p class="text-lg text-blue-100 font-medium">
+            Serving Uxbridge and West London with professional, reliable gutter services since 2008.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Story Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-site max-w-4xl">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            Over 15 Years of Excellence
+          </h2>
+          <p class="text-lg text-slate-600 mb-4">
+            Gutter Cleaners Uxbridge was founded on a simple principle: deliver exceptional gutter services with professionalism, integrity, and attention to detail. What started as a small, locally-focused team has grown into the most trusted gutter specialist in West London.
+          </p>
+          <p class="text-lg text-slate-600 mb-4">
+            We've cleaned, repaired, and replaced gutters on thousands of residential and commercial properties across Uxbridge, Harrow, Hayes, and surrounding areas. Our team isn't just experienced — we're committed to understanding your property's unique needs and delivering solutions that protect your home for years to come.
+          </p>
+          <p class="text-lg text-slate-600">
+            Every member of our team is vetted, trained, and fully insured. We stand behind our work with comprehensive guarantees because your satisfaction is our reputation.
+          </p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-brand text-white flex items-center justify-center font-bold text-xl">
+                15+
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 text-lg">Years Experience</h3>
+                <p class="text-slate-600 text-sm">Serving the local community since 2008</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-brand text-white flex items-center justify-center font-bold text-xl">
+                4000+
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 text-lg">Properties Served</h3>
+                <p class="text-slate-600 text-sm">Residential and commercial clients</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-brand text-white flex items-center justify-center font-bold text-xl">
+                5★
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 text-lg">Consistently Rated</h3>
+                <p class="text-slate-600 text-sm">Google reviews and customer testimonials</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Local Matters -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="container-site max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+        Why Local Matters
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Deep Local Knowledge</h3>
+          <p class="text-slate-600">
+            We understand Uxbridge's architecture, climate patterns, and common gutter challenges. This expertise allows us to recommend solutions tailored to your specific area and property type.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Fast Response Times</h3>
+          <p class="text-slate-600">
+            When emergencies happen — blocked gutters causing water damage, urgent repairs needed — we're here. Same-week appointments mean your home is protected quickly.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h-5.5M9 14h5.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Personal Accountability</h3>
+          <p class="text-slate-600">
+            We're not a faceless national chain. Your gutters are our reputation. We treat every job with the same care and professionalism, whether it's a terraced house or a commercial building.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-3">Competitive Local Pricing</h3>
+          <p class="text-slate-600">
+            No inflated corporate margins. We price competitively because we understand the local market and want to build long-term relationships with our Uxbridge community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-site max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+        Our Values
+      </h2>
+      <div class="space-y-8">
+        <div class="border-l-4 border-brand pl-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-2">Professional & Reliable</h3>
+          <p class="text-slate-600 text-lg">
+            Punctuality, clear communication, and transparent pricing. When we say we'll be there at 10am, you can count on it. When we quote a price, that's what you pay — no surprise charges or upsells.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-brand pl-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-2">Fully Insured & Safe</h3>
+          <p class="text-slate-600 text-lg">
+            Your property is protected. We carry comprehensive liability insurance and follow all UK health & safety standards. Our team is trained in safe working at heights and proper waste disposal.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-brand pl-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-2">Quality Over Speed</h3>
+          <p class="text-slate-600 text-lg">
+            We won't rush a job. Whether it's cleaning, repairing, or replacing, every gutter receives meticulous attention. The right way takes a bit longer — but it lasts much longer too.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-brand pl-6">
+          <h3 class="text-2xl font-bold text-slate-900 mb-2">Honest & Transparent</h3>
+          <p class="text-slate-600 text-lg">
+            We'll never sell you a service you don't need. If your gutters just need cleaning, we'll say so — we won't push you toward expensive replacement. Your trust is more valuable than any single job.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-blue-100 border-t border-blue-200">
+    <div class="container-site max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+        Trusted by Homeowners Across Uxbridge
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-blue-200">
+          <div class="text-5xl font-bold text-brand mb-2">5★</div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-2">Google Reviews</h3>
+          <p class="text-slate-600">
+            Consistent 5-star ratings from verified customers across multiple services.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-blue-200">
+          <div class="text-5xl font-bold text-brand mb-2">100%</div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-2">Fully Insured</h3>
+          <p class="text-slate-600">
+            Public liability and employers liability insurance. Verified and current.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-blue-200">
+          <div class="text-5xl font-bold text-brand mb-2">Free</div>
+          <h3 class="text-xl font-semibold text-slate-900 mb-2">No-Obligation Quotes</h3>
+          <p class="text-slate-600">
+            Get a fixed price before any work begins. No hidden charges, guaranteed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Affiliations -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-site max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+        Certifications & Insurance
+      </h2>
+      <div class="bg-slate-50 rounded-2xl p-8 md:p-12 border border-slate-200">
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 text-2xl">🛡️</div>
+            <div>
+              <h3 class="text-lg font-semibold text-slate-900 mb-1">Public Liability Insurance</h3>
+              <p class="text-slate-600">
+                Comprehensive coverage protecting you and your property during all work. Coverage verified and current.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 text-2xl">🛡️</div>
+            <div>
+              <h3 class="text-lg font-semibold text-slate-900 mb-1">Employers Liability Insurance</h3>
+              <p class="text-slate-600">
+                Full protection for our team. Professional standards we take seriously.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 text-2xl">✓</div>
+            <div>
+              <h3 class="text-lg font-semibold text-slate-900 mb-1">Health & Safety Compliant</h3>
+              <p class="text-slate-600">
+                All team members trained in safe working at heights, PPE requirements, and waste disposal standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 text-2xl">✓</div>
+            <div>
+              <h3 class="text-lg font-semibold text-slate-900 mb-1">Rated by Local Customers</h3>
+              <p class="text-slate-600">
+                Independent reviews from verified clients across Uxbridge, Harrow, Hayes, and West London.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="container-site max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+        Meet the Team
+      </h2>
+      <p class="text-center text-slate-600 text-lg mb-12 max-w-2xl mx-auto">
+        Our experienced, fully-trained team is passionate about delivering exceptional results. Every member is vetted, insured, and committed to professional service.
+      </p>
+      <div class="bg-white rounded-2xl p-8 md:p-12 border border-slate-200">
+        <div class="space-y-4">
+          <p class="text-slate-700 leading-relaxed">
+            Our crews are carefully selected for reliability, professionalism, and technical expertise. Whether you're getting a routine cleaning, a complex repair, or a full gutter replacement, you'll receive the same high standard of service. We invest in ongoing training to stay current with best practices, new materials, and industry standards.
+          </p>
+          <p class="text-slate-700 leading-relaxed">
+            What sets us apart isn't just our skills — it's our attitude. We treat your home with the same care we'd treat our own. That means respecting your space, protecting your landscaping, explaining the work clearly, and ensuring you understand what's been done and why.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-site max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-6">
+        <details class="group border border-slate-200 rounded-xl p-6 hover:border-brand transition-colors cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-lg text-slate-900 group-open:text-brand transition-colors">
+            How long has Gutter Cleaners Uxbridge been operating?
+            <span class="inline-block transition-transform group-open:rotate-180">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-slate-600 mt-4">
+            We've been serving Uxbridge and West London since 2008 — over 15 years of experience. Our longevity is a testament to the quality of our work and the trust our customers place in us.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-6 hover:border-brand transition-colors cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-lg text-slate-900 group-open:text-brand transition-colors">
+            Are you fully insured?
+            <span class="inline-block transition-transform group-open:rotate-180">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-slate-600 mt-4">
+            Yes. We carry comprehensive public liability and employers liability insurance. Your property and our team are fully protected during all work. We can provide proof of current insurance upon request.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-6 hover:border-brand transition-colors cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-lg text-slate-900 group-open:text-brand transition-colors">
+            What areas do you serve?
+            <span class="inline-block transition-transform group-open:rotate-180">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-slate-600 mt-4">
+            We cover Uxbridge, Harrow, Hayes, Hillingdon, Slough, Southall, West Drayton, and Windsor. If you're unsure whether your postcode is within our area, please get in touch via our contact form and we'll confirm coverage.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-6 hover:border-brand transition-colors cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-lg text-slate-900 group-open:text-brand transition-colors">
+            How can I trust your customer reviews?
+            <span class="inline-block transition-transform group-open:rotate-180">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-slate-600 mt-4">
+            Our Google reviews are from verified customers who've actually hired us. Anyone can check these independently — they're real feedback from real people. We take every review seriously, positive or constructive.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-6 hover:border-brand transition-colors cursor-pointer">
+          <summary class="flex justify-between items-center font-semibold text-lg text-slate-900 group-open:text-brand transition-colors">
+            What's your service area radius from Uxbridge?
+            <span class="inline-block transition-transform group-open:rotate-180">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-slate-600 mt-4">
+            We operate within a 20-mile radius of Uxbridge, which covers all of West London and the surrounding area. This allows us to maintain fast response times and deep local knowledge of the region's architecture and weather patterns.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote CTA Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
+    <div class="container-site max-w-2xl">
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- Trust Signals Footer -->
+  <TrustBar />
+</Layout>
+
+<style>
+  :global(.container-site) {
+    @apply mx-auto px-4 max-w-7xl;
+  }
+
+  /* Smooth transitions for details elements */
+  details > * {
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

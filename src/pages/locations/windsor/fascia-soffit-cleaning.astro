@@ -1,0 +1,376 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Fascia and Soffit Cleaning Windsor SL4 | Local Experts";
+const metaDescription = "Professional fascia and soffit cleaning in Windsor SL4. Remove algae, dirt and staining. Specialists in Victorian and Georgian period properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Windsor", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/" },
+  { name: "Fascia and Soffit Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/fascia-soffit-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does fascia and soffit cleaning cost in Windsor?",
+    a: "Professional fascia and soffit cleaning in Windsor SL4 typically costs £120 to £200 for a standard semi-detached property, depending on the run length and level of soiling. Larger Victorian terraced properties or homes with extensive soffits may cost £180–£250. We provide a fixed price before starting work. Request a free quotation including photographs if you want to see current condition."
+  },
+  {
+    q: "How often should fascia boards be cleaned on Victorian and Georgian period properties in SL4?",
+    a: "We recommend cleaning fascia and soffit boards on Victorian and Georgian period properties in Windsor at least every 2–3 years to prevent algae, lichen and moss establishing. Properties near Windsor Great Park or heavily tree-lined streets may benefit from annual cleaning due to heavier leaf debris. Regular cleaning prevents staining from becoming permanent and extends the life of the boards by stopping rot-causing moisture retention."
+  },
+  {
+    q: "What causes black streaks on fascia boards in Windsor?",
+    a: "Black streaks and staining on Windsor SL4 fascia boards are caused by a combination of algae growth, lichen, and mould spores — accelerated by the damp microclimate around Windsor and proximity to mature trees in areas like Windsor Great Park. Water running down from the roof carries these spores, which establish on the fascia surface. This is especially common on north-facing boards that receive less sun and stay permanently damp in Windsor's humid climate."
+  },
+  {
+    q: "Can you clean coloured fascia boards in Windsor without damaging them?",
+    a: "Yes. We adjust our cleaning method based on the board material and colour. For grey, brown or coloured uPVC fascia boards in Windsor, we use gentle cleaning techniques and avoid high-pressure water that can discolour or damage the surface. For dark colours particularly, we use lower pressure and appropriate detergents. We assess each property individually and explain our method before proceeding."
+  },
+  {
+    q: "Do I need to clean or replace my soffits in SL4?",
+    a: "If soffits are structurally sound but stained or discoloured, cleaning restores them to near-original condition and is the first choice. However, if soffits are cracked, splintered (on wood), or showing signs of rot or water ingress, they need replacement rather than cleaning. During your clean, we inspect your soffits and advise honestly on whether cleaning will solve the issue or if replacement is needed. Damaged soffits can lead to water penetration into the eaves and worse problems."
+  },
+  {
+    q: "Do you clean UPVC fascia and soffits as well as wood in Windsor?",
+    a: "Yes. We clean both uPVC and wood fascia boards throughout Windsor SL4. Our process is gentler on uPVC to avoid discolouration, while wood requires a different approach to avoid water damage or colour bleaching. We have experience with period wood boards on Victorian and Georgian period properties as well as modern uPVC systems. We adjust pressure and detergent based on material."
+  },
+  {
+    q: "How long does fascia and soffit cleaning take for a Windsor semi-detached house?",
+    a: "A standard two-storey semi-detached or terraced property in Windsor SL4 typically takes 2–3 hours for complete fascia and soffit cleaning. This includes pre-treatment with detergent, careful cleaning of all boards, and rinsing. Larger Victorian period properties with more extensive rooflines may take 3–4 hours. We work efficiently but never rush — careful cleaning prevents damage to period features."
+  }
+];
+
+const serviceSchema: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Fascia and Soffit Cleaning",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Gutter Cleaners Uxbridge",
+    url: "https://guttercleanersuxbridge.co.uk",
+    telephone: "01895 000000",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "",
+      addressLocality: "Windsor",
+      postalCode: "SL4",
+      addressCountry: "GB",
+    },
+  },
+  areaServed: { "@type": "City", name: "Windsor" },
+  description: "Professional fascia and soffit cleaning in Windsor SL4. Remove algae, lichen and dirt staining. Specialists in Victorian and Georgian period properties.",
+  image: "https://guttercleanersuxbridge.co.uk/images/fascia-soffit-cleaning-hero.jpg",
+};
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  serviceSchema,
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Valerie J.",
+    street: "Adelaide Square, Windsor",
+    date: "May 2026",
+    text: "Victorian terrace with black-stained fascia boards that had looked dreadful for years. These specialists cleaned them beautifully and the house looks 10 years younger. They were very careful around the original period features. Really pleased with the transformation."
+  },
+  {
+    name: "Geoffrey B.",
+    street: "King's Road, SL4",
+    date: "April 2026",
+    text: "Semi-detached with green algae growth on the soffits. Professional cleaning made a massive difference. They explained what had caused the staining and suggested annual cleans to prevent it coming back. Fair price and meticulous work."
+  },
+  {
+    name: "Catherine W.",
+    street: "St Leonards Road, Windsor",
+    date: "March 2026",
+    text: "Fascia boards were streaked with lichen — very common up here near Windsor Great Park apparently. They cleaned them without damage and the place looks immaculate. Will be booking annual cleans to keep them that way. Excellent service."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Windsor — SL4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Fascia and Soffit Cleaning in Windsor, SL4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Remove algae, lichen and dirt. Restore fascia boards to near-original condition. Specialists in Victorian and Georgian period properties.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Fascia and soffit cleaning in Windsor SL4 costs £120 to £200 for a standard semi-detached property. We remove algae, lichen, dirt and black streaking, restoring boards to near-original condition.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Fascia boards and soffits frame every roof, yet they are often neglected until staining becomes obvious. In Windsor SL4, the proximity to Windsor Great Park and abundant mature trees creates the perfect conditions for algae, lichen and moss to establish on these boards, particularly on north-facing elevations that stay damp year-round.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Beyond aesthetics, dirty fascia boards and soffits can hide early signs of water ingress or wood rot. Regular professional cleaning removes the soiling, inspects the boards for damage, and prevents problems from becoming expensive to repair. For Victorian and Georgian period properties in Windsor, clean fascia boards also help preserve the character and curb appeal of these distinctive homes.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We clean fascia and soffit boards on properties throughout Windsor SL4 using methods appropriate to the material — whether original painted wood on period properties or modern uPVC systems. We also assess board condition during cleaning and alert you to any repair or replacement needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">What's Included in Our Windsor Fascia Cleaning Service</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-gray-200 rounded-lg p-5 bg-white">
+          <h3 class="font-bold text-gray-900 mb-2">Full Board Coverage</h3>
+          <p class="text-gray-700 text-sm">We clean all accessible fascia boards around your property, including under eaves, around gutter lines and at all roof elevations.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 bg-white">
+          <h3 class="font-bold text-gray-900 mb-2">Soffit Cleaning</h3>
+          <p class="text-gray-700 text-sm">Soffits are cleaned alongside fascia to remove algae, lichen and accumulated dirt, using the same careful, material-appropriate technique.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 bg-white">
+          <h3 class="font-bold text-gray-900 mb-2">Pre-Treatment</h3>
+          <p class="text-gray-700 text-sm">We apply a biodegradable pre-treatment detergent to loosen algae and lichen before cleaning, preventing damage from aggressive scrubbing.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 bg-white">
+          <h3 class="font-bold text-gray-900 mb-2">Condition Assessment</h3>
+          <p class="text-gray-700 text-sm">During cleaning, we inspect boards for rot, cracks, or structural issues and advise if repair or replacement is needed. Included in the price.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 bg-white">
+          <h3 class="font-bold text-gray-900 mb-2">Material Protection</h3>
+          <p class="text-gray-700 text-sm">On uPVC boards, we use lower-pressure cleaning to avoid discolouration. On wood, we use techniques that won't bleach or damage the finish.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5 bg-white">
+          <h3 class="font-bold text-gray-900 mb-2">Before and After Report</h3>
+          <p class="text-gray-700 text-sm">We provide photographs showing the condition before and after cleaning, useful for your records and future maintenance planning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fascia Issues -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Common Fascia and Soffit Issues on Windsor Period Properties</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">Victorian and Georgian period properties in SL4 present specific fascia and soffit challenges due to their age and exposure:</p>
+      <div class="space-y-4">
+        <div class="border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Wood Rot on Original Boards</h3>
+          <p class="text-gray-700 text-sm">Victorian period properties often have original painted timber fascia boards. Years of water exposure (especially where gutters leak) cause rot to develop. We identify soft spots during cleaning, and replacement may be needed to prevent water entering the eaves.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Peeling Paint</h3>
+          <p class="text-gray-700 text-sm">Painted timber fascia boards on period properties often have peeling or flaking paint where water has trapped beneath the finish. Cleaning removes loose paint and allows fresh painting if needed. This is common on Georgian period properties in Windsor that haven't been maintained recently.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Soffit Deterioration</h3>
+          <p class="text-gray-700 text-sm">Soffits on older properties can develop cracks or separation from the fascia if support brackets have failed. We assess condition during cleaning and advise on needed repairs before structural problems develop.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Algae and Lichen Staining</h3>
+          <p class="text-gray-700 text-sm">The damp climate around Windsor and shade from nearby mature trees accelerate algae and lichen growth. Black or green streaking becomes permanent if left untreated. Regular cleaning prevents this establishing. North-facing boards are particularly vulnerable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Fascia Cleaning Process in Windsor</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Assessment</h3>
+            <p class="text-gray-700 text-sm">We examine the condition of fascia and soffit boards, identify areas of heaviest soiling, check for damage, and determine the appropriate cleaning method based on material (wood, uPVC, etc.).</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Pre-Treatment</h3>
+            <p class="text-gray-700 text-sm">We apply a biodegradable detergent solution to the boards, allowing it to penetrate and loosen algae and lichen. This prevents damage from aggressive scrubbing and is especially important on period painted boards.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Gentle Cleaning</h3>
+            <p class="text-gray-700 text-sm">We clean using low-pressure water and careful technique. On wood boards, we avoid high pressure that can damage finish. On uPVC, we use methods that won't discolour the plastic.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Inspection and Report</h3>
+            <p class="text-gray-700 text-sm">We provide a final inspection, identifying any rot, cracks or damage that may need attention. We provide before-and-after photographs and advise on any repairs needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance Tips -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Maintaining Clean Fascia Boards in Windsor</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-bold text-gray-900 mb-3">For Wood Fascia Boards</h3>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li class="flex gap-2"><span class="text-blue-600 font-bold">•</span> Repaint every 5–7 years to protect timber from water infiltration</li>
+            <li class="flex gap-2"><span class="text-blue-600 font-bold">•</span> Clean gutters regularly to prevent water pooling and running down boards</li>
+            <li class="flex gap-2"><span class="text-blue-600 font-bold">•</span> Have boards professionally cleaned every 2–3 years to prevent permanent staining</li>
+            <li class="flex gap-2"><span class="text-blue-600 font-bold">•</span> Monitor for soft spots or peeling paint indicating rot</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-900 mb-3">For uPVC Fascia Boards</h3>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li class="flex gap-2"><span class="text-blue-600 font-bold">•</span> Professional cleaning every 2–3 years prevents algae establishing permanently</li>
+            <li class="flex gap-2"><span class="text-blue-600 font-bold">•</span> Clean gutters to prevent water running dirty down the boards</li>
+            <li class="flex gap-2"><span class="text-blue-600 font-bold">•</span> Check for cracks or separation from the fascia line</li>
+            <li class="flex gap-2"><span class="text-blue-600 font-bold">•</span> Trim overhanging branches if feasible to improve air circulation and drying</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Fascia and Soffit Cleaning Pricing for Windsor SL4</h2>
+      <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+        <table class="w-full">
+          <thead class="bg-blue-50">
+            <tr>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">Property Type</th>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">Typical Cost</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-5 py-3 text-gray-700">2-bedroom semi-detached</td>
+              <td class="px-5 py-3 text-gray-700">£120–£150</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">3-bedroom semi-detached</td>
+              <td class="px-5 py-3 text-gray-700">£150–£200</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Victorian terraced property</td>
+              <td class="px-5 py-3 text-gray-700">£170–£230</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Larger Georgian period property</td>
+              <td class="px-5 py-3 text-gray-700">£200–£280+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-600 text-sm mt-4">All prices include full cleaning, assessment and report. We provide a fixed quotation before starting work — no hidden extras.</p>
+    </div>
+  </section>
+
+  <!-- Internal service links -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Other Services in Windsor</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <a href="/locations/windsor/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full debris removal and downpipe flushing. Specialists in Victorian properties near Windsor Great Park.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+        <a href="/locations/windsor/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Leaking joints and sagging gutters repaired same day on most Windsor properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+        <a href="/locations/windsor/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement with cast iron or uPVC. Period-appropriate for Victorian properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Windsor Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Fascia Cleaning in Windsor</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your address and property type. We will provide a fixed price with no obligation.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Windsor Fascia and Soffit FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-location links -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also provide fascia cleaning in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia Cleaning in Harrow</a>
+        <a href="/locations/hayes/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia Cleaning in Hayes</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

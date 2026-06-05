@@ -1,0 +1,449 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import ReviewCard from "@/components/ReviewCard.astro";
+import type { WithContext, Organization, LocalBusiness, BreadcrumbList } from "schema-dts";
+
+const title = "Gutter Repairs in Uxbridge & West London | Same-Week";
+const description = "Expert gutter repair service in Uxbridge, Harrow, Hayes and West London. Same-week appointments, fully insured, free quotes. Fix leaking joints, sagging gutters & more.";
+
+const schema: WithContext<Organization | LocalBusiness | BreadcrumbList>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Gutter Cleaners Uxbridge",
+    description: "Professional gutter repair service in Uxbridge & West London",
+    image: "https://guttercleanersuxbridge.co.uk/images/gutter-repairs-hero.jpg",
+    url: "https://guttercleanersuxbridge.co.uk/services/gutter-repairs",
+    telephone: "Contact form only",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "Uxbridge",
+      addressCountry: "GB",
+    },
+    areaServed: [
+      "Uxbridge",
+      "Harrow",
+      "Hayes",
+      "Hillingdon",
+      "Slough",
+      "Southall",
+      "West Drayton",
+      "Windsor",
+    ],
+    priceRange: "£",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://guttercleanersuxbridge.co.uk",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://guttercleanersuxbridge.co.uk/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Gutter Repairs",
+        item: "https://guttercleanersuxbridge.co.uk/services/gutter-repairs",
+      },
+    ],
+  },
+];
+
+const reviews = [
+  {
+    quote:
+      "Our gutters were leaking badly and causing damp in the bedroom. The team came out within 2 days, diagnosed the problem (broken joint), and fixed it perfectly. Outstanding service.",
+    reviewer: "Margaret T.",
+    location: "Uxbridge",
+    date: "May 2024",
+  },
+  {
+    quote:
+      "Sagging gutters were impossible to ignore. They came, assessed the damage, and gave us a fair price for repair rather than replacement. Work done professionally—no mess, no fuss.",
+    reviewer: "David P.",
+    location: "Harrow",
+    date: "April 2024",
+  },
+  {
+    quote:
+      "Cracked section in our PVC gutter was letting rain into the fascia. Within 5 minutes of arrival, they'd located the crack and replaced the section. Brilliant turnaround.",
+    reviewer: "Sarah M.",
+    location: "Hayes",
+    date: "March 2024",
+  },
+  {
+    quote:
+      "Bracket had failed and the gutter was pulling away from the house. The engineer was brilliant—he reinforced the brackets and checked the entire system. Wouldn't use anyone else.",
+    reviewer: "James K.",
+    location: "West Drayton",
+    date: "February 2024",
+  },
+];
+
+const faqItems = [
+  {
+    q: "What are the most common gutter repair problems?",
+    a: "The most common issues we fix are leaking joints (where two sections connect), sagging gutters (caused by debris buildup or bracket failure), cracked or split sections (from UV damage or impact), and bracket failure (gutters pulling away from fascia). Leaks are often the first sign—water staining on fascia or damp patches inside indicate a problem that needs urgent attention.",
+  },
+  {
+    q: "How do you know if gutters need repair or replacement?",
+    a: "We recommend repair if damage is isolated (one or two sections, a few brackets). Replacement makes sense if the gutters are over 20 years old, multiple sections are damaged, sagging is widespread, or you're seeing persistent leaks despite repairs. We'll assess your system and recommend the most cost-effective option.",
+  },
+  {
+    q: "Can you fix my gutters the same week?",
+    a: "Yes. Most repairs are completed within 2–5 working days. We keep parts in stock for common gutter types (PVC, aluminium, cast iron). Same-day assessment is standard; same-week repair is available for most jobs. Emergency repairs for active leaks are prioritized.",
+  },
+  {
+    q: "What is your repair guarantee?",
+    a: "All repairs come with a 12-month workmanship guarantee. We use quality parts and proven techniques. If you're experiencing further issues with a repaired section within a year, we'll revisit at no extra cost.",
+  },
+  {
+    q: "Do you repair cast iron gutters?",
+    a: "Yes. Cast iron gutters are common in older properties across Uxbridge and Harrow. We can patch leaks, replace sections, reinforce or reseat them. We also recommend protective coatings to prevent rust and extend lifespan by 5–10 years.",
+  },
+  {
+    q: "Are you insured for gutter repair work?",
+    a: "Yes. We are fully insured for public liability (£6m) and employers' liability. All our engineers are qualified and experienced. Your property and our team are covered for the duration of the job.",
+  },
+  {
+    q: "What's the difference between repair and reseal?",
+    a: "Repair involves replacing damaged sections or brackets. Reseal (or repoint) means clearing old sealant and applying fresh mastic to joints to stop leaks. Often leaking gutters just need a reseal rather than full replacement—we'll advise which is appropriate during inspection.",
+  },
+];
+
+const benefits = [
+  {
+    icon: "⚡",
+    title: "Same-Week Repair",
+    desc: "Most jobs completed within 2–5 working days. Emergency repairs prioritized.",
+  },
+  {
+    icon: "🔧",
+    title: "All Gutter Types",
+    desc: "PVC, aluminium, cast iron, steel. We stock common parts for fast turnaround.",
+  },
+  {
+    icon: "✓",
+    title: "12-Month Guarantee",
+    desc: "Workmanship guarantee on all repairs. If issues recur, we return at no cost.",
+  },
+  {
+    icon: "£",
+    title: "Fair, Transparent Pricing",
+    desc: "Free assessment. No hidden charges. Quote before work begins.",
+  },
+  {
+    icon: "🏠",
+    title: "Covers 8 Areas",
+    desc: "Service Uxbridge, Harrow, Hayes, Slough, Southall, West Drayton, Windsor & more.",
+  },
+  {
+    icon: "📋",
+    title: "Fully Insured",
+    desc: "£6m public liability + employers' liability. All engineers qualified & vetted.",
+  },
+];
+
+const repairTypes = [
+  {
+    title: "Leaking Joints",
+    description:
+      "Joints between gutter sections are vulnerable to weather and settlement. Water leaks through where sections meet, often causing damp inside or exterior water damage. We inspect, clear blockages, and reseal with professional-grade mastic or replace the joint section entirely.",
+  },
+  {
+    title: "Sagging Gutters",
+    description:
+      "Gutters sag when brackets weaken, debris accumulates, or the gutter straps loosen over time. This causes standing water, accelerates corrosion, and eventually leads to leaks. We reinforce or replace brackets, realign the gutter, and ensure proper fall towards downpipes.",
+  },
+  {
+    title: "Cracked or Split Sections",
+    description:
+      "PVC gutters crack from UV exposure and temperature changes; metal gutters split from impact or corrosion. A crack allows water to escape behind the fascia, damaging timber or insulation. We replace the damaged section and seal joints to prevent future leaks.",
+  },
+  {
+    title: "Bracket Failure",
+    description:
+      "Brackets anchor gutters to the fascia. When they rust, crack, or pull loose, the gutter sags and separates from the house. This is both a leak risk and a safety hazard. We replace or reinforce brackets and ensure the gutter is securely reattached with proper spacing.",
+  },
+  {
+    title: "Corrosion & Rust (Cast Iron)",
+    description:
+      "Cast iron gutters, common in Victorian and Edwardian homes, are prone to rust and corrosion. We clean, treat, and patch small areas, or recommend a protective coating to seal the surface and extend lifespan by 5–10 years.",
+  },
+  {
+    title: "Impact & Storm Damage",
+    description:
+      "High winds, falling branches, or hail can dent, bend, or puncture gutters. Even minor damage can trap water and cause leaks. We assess damage severity and repair or replace affected sections to restore full function.",
+  },
+];
+---
+
+<Layout {title} {description} {schema}>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-brand">
+    <div class="absolute inset-0">
+      <img
+        src="/images/gutter-repairs-hero.jpg"
+        alt="Expert gutter repair service in Uxbridge and West London"
+        class="w-full h-full object-cover opacity-30"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand to-brand/80"></div>
+    </div>
+
+    <div class="relative container-site py-16 sm:py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <p class="text-blue-100 font-semibold text-sm sm:text-base tracking-wide uppercase">
+          Professional Gutter Services
+        </p>
+        <h1 class="text-white font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 leading-tight">
+          Expert Gutter Repair Service in Uxbridge & West London
+        </h1>
+        <p class="text-blue-50 text-lg sm:text-xl mt-6 leading-relaxed max-w-2xl">
+          Same-week appointments for leaking joints, sagging gutters, cracked sections & bracket failure. Fully insured, free assessment, 12-month guarantee.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-8">
+          <div class="flex items-center gap-2 text-blue-50 font-medium">
+            <span class="text-blue-200 font-bold" aria-hidden="true">✓</span>
+            Free No-Obligation Assessment
+          </div>
+          <div class="flex items-center gap-2 text-blue-50 font-medium">
+            <span class="text-blue-200 font-bold" aria-hidden="true">✓</span>
+            2–5 Day Turnaround
+          </div>
+          <div class="flex items-center gap-2 text-blue-50 font-medium">
+            <span class="text-blue-200 font-bold" aria-hidden="true">✓</span>
+            12-Month Guarantee
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Quote Form Section -->
+  <section class="container-site py-16 sm:py-20">
+    <div class="max-w-4xl mx-auto">
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="bg-surface-alt py-16 sm:py-20">
+    <div class="container-site">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-text mb-4">Why Choose Our Repair Service?</h2>
+      <p class="text-text-muted text-lg max-w-2xl mb-12">
+        Professional repair work at a fair price. We diagnose accurately, repair thoroughly, and stand behind every job with a guarantee.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {benefits.map((benefit) => (
+          <div class="bg-white rounded-2xl p-6 border border-border shadow-card hover:shadow-hero hover:-translate-y-0.5 transition-all duration-300">
+            <div class="text-4xl mb-3">{benefit.icon}</div>
+            <h3 class="font-display font-bold text-lg text-text mb-2">{benefit.title}</h3>
+            <p class="text-text-muted text-sm leading-relaxed">{benefit.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair Types Section -->
+  <section class="container-site py-16 sm:py-20">
+    <h2 class="font-display text-3xl sm:text-4xl font-bold text-text mb-4">Common Gutter Repair Problems We Fix</h2>
+    <p class="text-text-muted text-lg max-w-2xl mb-12">
+      From leaking joints to bracket failure, we diagnose and repair all types of gutter damage. Most repairs are completed within 2–5 working days.
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {repairTypes.map((type) => (
+        <article class="bg-white rounded-2xl p-6 border border-border shadow-card hover:shadow-hero hover:-translate-y-0.5 transition-all duration-300">
+          <h3 class="font-display font-bold text-xl text-text mb-3">{type.title}</h3>
+          <p class="text-text-muted leading-relaxed">{type.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- When to Repair vs Replace Section -->
+  <section class="bg-surface-alt py-16 sm:py-20">
+    <div class="container-site">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-text mb-6">Repair or Replace? How We Decide</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl">
+        {/* Repair */}
+        <div class="bg-white rounded-2xl p-8 border border-border shadow-card">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🔧</span>
+            <h3 class="font-display font-bold text-xl text-text">Repair Makes Sense If:</h3>
+          </div>
+          <ul class="space-y-3">
+            {[
+              "Damage is isolated (1–2 sections)",
+              "Gutters are less than 15 years old",
+              "Joints or brackets are the issue",
+              "Budget is limited",
+              "Only occasional leaks occur",
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-text-muted">
+                <span class="text-brand font-bold mt-0.5" aria-hidden="true">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <p class="text-sm text-text font-medium">Cost: £150–£800 typical range</p>
+          </div>
+        </div>
+
+        {/* Replace */}
+        <div class="bg-white rounded-2xl p-8 border border-border shadow-card">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🏗️</span>
+            <h3 class="font-display font-bold text-xl text-text">Replace If:</h3>
+          </div>
+          <ul class="space-y-3">
+            {[
+              "Gutters are over 20 years old",
+              "Multiple sections are damaged",
+              "Sagging is widespread & persistent",
+              "Corrosion is advanced (esp. cast iron)",
+              "Repeated repairs required",
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-text-muted">
+                <span class="text-brand font-bold mt-0.5" aria-hidden="true">→</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <p class="text-sm text-text font-medium">Cost: £1,200–£3,500 typical range</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-blue-50 border border-blue-200 rounded-2xl p-6 sm:p-8">
+        <p class="text-text font-semibold mb-2">Unsure? We recommend repair first:</p>
+        <p class="text-text-muted leading-relaxed">
+          We'll inspect your gutters free of charge and advise whether repair or replacement is more sensible. Most jobs start as repairs—and many don't need replacement if addressed early.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="container-site py-16 sm:py-20">
+    <h2 class="font-display text-3xl sm:text-4xl font-bold text-text mb-4">Gutter Repair FAQs</h2>
+    <p class="text-text-muted text-lg max-w-2xl mb-12">
+      Answers to common questions about gutter repair in Uxbridge & West London.
+    </p>
+
+    <div class="space-y-4 max-w-3xl">
+      {faqItems.map((item, idx) => (
+        <details
+          class="group bg-white rounded-xl border border-border shadow-card hover:shadow-hero transition-all duration-300"
+          open={idx === 0}
+        >
+          <summary class="cursor-pointer flex items-center justify-between gap-4 p-6 font-semibold text-text hover:bg-surface-alt transition-colors">
+            <span class="text-lg">{item.q}</span>
+            <svg
+              class="w-5 h-5 text-brand transition-transform group-open:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-text-muted leading-relaxed border-t border-border">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="bg-surface-alt py-16 sm:py-20">
+    <div class="container-site">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-text mb-4">What Our Customers Say</h2>
+      <p class="text-text-muted text-lg max-w-2xl mb-12">
+        Real feedback from homeowners across Uxbridge, Harrow, Hayes, and West London.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {reviews.map((review) => (
+          <ReviewCard
+            quote={review.quote}
+            reviewer={review.reviewer}
+            location={review.location}
+            date={review.date}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Section -->
+  <section class="container-site py-16 sm:py-20">
+    <h2 class="font-display text-3xl sm:text-4xl font-bold text-text mb-4">We Serve These Areas</h2>
+    <p class="text-text-muted text-lg max-w-2xl mb-8">
+      Gutter repair appointments available in:
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      {[
+        "Uxbridge",
+        "Harrow",
+        "Hayes",
+        "Hillingdon",
+        "Slough",
+        "Southall",
+        "West Drayton",
+        "Windsor",
+      ].map((area) => (
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center font-medium text-brand">
+          {area}
+        </div>
+      ))}
+    </div>
+
+    <p class="text-text-muted mt-6 text-sm">
+      Not in these areas? <a href="#contact" class="text-brand font-semibold hover:underline">Contact us</a> to check coverage.
+    </p>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-brand py-16 sm:py-20">
+    <div class="container-site text-center max-w-3xl mx-auto">
+      <h2 class="font-display text-white text-3xl sm:text-4xl font-bold mb-4">
+        Ready to Fix Your Gutters?
+      </h2>
+      <p class="text-blue-50 text-lg mb-8">
+        Get a free, no-obligation assessment within 48 hours. Same-week repair available.
+      </p>
+      <a
+        href="#contact"
+        class="inline-flex items-center justify-center gap-2 bg-white text-brand font-semibold px-8 py-4 rounded-xl hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-lg"
+      >
+        Request Your Free Quote
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

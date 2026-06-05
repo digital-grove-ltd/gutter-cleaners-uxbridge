@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Harrow Gutter Cleaning, Repairs and Replacement | HA1/HA2";
+const metaDescription = "Professional gutter cleaning, repair and replacement in Harrow (HA1, HA2). We tackle moss growth on north-facing Edwardian and 1930s roofs near Harrow-on-the-Hill. Free quotes, same-week service.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Harrow", url: "https://www.guttercleanersuxbridge.co.uk/locations/harrow/" }
+];
+
+const faqs = [
+  {
+    q: "Why is moss such a problem in Harrow gutters?",
+    a: "Harrow has a high proportion of north-facing roof slopes on its Edwardian and 1930s housing. North-facing surfaces receive little direct sun, staying damp for longer after rain. This creates perfect growing conditions for moss and algae, which spreads from the roof surface down into the gutters. Once established, moss acts like a sponge, holding water against the gutter wall and accelerating corrosion."
+  },
+  {
+    q: "Do you serve both HA1 and HA2 postcodes?",
+    a: "Yes. We cover all Harrow postcodes including HA1 (Harrow town centre and Harrow-on-the-Hill), HA2 (South Harrow and Rayners Lane), and also HA3 through HA9 for customers in Pinner, Wealdstone, Stanmore and surrounding areas. If you are unsure about your specific street, just contact us with your postcode."
+  },
+  {
+    q: "How do I know if moss is blocking my Harrow gutters?",
+    a: "The most obvious sign is water overflowing from the gutter sides or ends during rainfall rather than draining through the downpipe. You may also see green or black staining on your exterior walls, or notice damp appearing on interior walls near the roofline. Moss-blocked gutters in Harrow are very common after a wet winter — we recommend booking a spring inspection if you have not had a clean in the last 12 months."
+  },
+  {
+    q: "Can you remove moss from the roof as well as the gutters?",
+    a: "Yes. We offer a combined roof moss treatment and gutter cleaning service where we apply a biocidal wash to the roof tiles before cleaning the gutters. This kills the moss at source, reducing how quickly gutters re-block. It is particularly effective on the north-facing roofs common in Harrow-on-the-Hill and the HA1 streets around Lowlands Road and College Road."
+  },
+  {
+    q: "Are Edwardian properties in Harrow more expensive to service?",
+    a: "Not necessarily. Edwardian properties in streets like Byron Road and Pinner Road may have slightly more complex rooflines with decorative ridge detailing, but our pricing is based on the extent of the work rather than the age of the property. We provide a free, no-obligation quote after a visual assessment of your property — there are no surprises on the day."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Harrow"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Sandra B.",
+    street: "College Road, Harrow-on-the-Hill",
+    date: "April 2026",
+    text: "We have a Victorian house on the north side of the hill and the moss problem on our gutters was terrible. These guys came out, cleared everything, applied a moss treatment and explained exactly why it keeps coming back. First time in years the gutters have drained properly. Excellent service."
+  },
+  {
+    name: "Tom W.",
+    street: "Lowlands Road, HA1",
+    date: "February 2026",
+    text: "Called on Monday, booked for Wednesday. The team found that our back gutter had almost completely silted up with moss and decomposed leaves. Cleared it out, re-seated a loose bracket and did a water flow test. All documented with photos. Really impressed."
+  },
+  {
+    name: "Priya K.",
+    street: "Byron Road, Harrow",
+    date: "December 2025",
+    text: "Very professional from first contact to completion. They identified an issue with water tracking behind our fascia board — something we had no idea about — and gave us a written quote to fix it. No pressure, just honest advice. Highly recommended for Harrow properties."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Harrow — HA1 / HA2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning and Repair Services in Harrow, HA1/HA2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialist gutter services for Edwardian and 1930s properties across Harrow. We tackle the moss problem at source.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Harrow's Edwardian and 1930s homes frequently suffer moss blockages caused by north-facing roof slopes near Harrow-on-the-Hill. We clear moss-blocked gutters throughout HA1 and HA2, treat the roof surface to slow regrowth, and offer same-week appointments with free no-obligation quotes.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Harrow presents one of the most consistent gutter challenges we encounter across our service area. The combination of Edwardian and 1930s housing stock with substantial north-facing roof slopes — particularly on the terraced and semi-detached properties lining streets around Harrow-on-the-Hill and the town centre — creates ideal conditions for moss to establish and spread from roof to gutter.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        North-facing gutters in HA1 and HA2 can accumulate several centimetres of compressed moss and organic debris within a single growing season. This living blockage does not just prevent drainage — it holds water against the gutter wall for weeks at a time, corroding metal hangers and degrading uPVC joint seals. Once the gutter starts to leak, water tracks behind the fascia board and into the eaves, causing rot and eventually damp in the rooms below.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We clean gutters throughout Harrow — HA1, HA2, and the broader HA postcode area — and offer a combined moss treatment and clean service that addresses the problem at source rather than just clearing the symptoms.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Harrow Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Harrow Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The housing around Harrow-on-the-Hill itself and the streets radiating from the town centre includes a significant number of Edwardian properties — built between roughly 1900 and 1914 — with original or period-matched cast-iron guttering on wider, shallower profiles than modern systems. These gutters are heavy, durable and repairable, but they corrode at joints and outlet connections if not maintained regularly.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Further out from the Hill, the HA2 area of South Harrow and Rayners Lane is dominated by 1930s suburban semis built during the Metroland expansion — properties with tile-hung gables, bay windows and the original-era rooflines that are now 80 to 90 years old. Many still carry replaced-but-ageing uPVC gutter systems whose brackets and joint seals are beginning to fail.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Across both eras, the north-facing aspect of many Harrow roofs remains the defining maintenance challenge. Without regular cleaning and periodic moss treatment, these gutters will block reliably every autumn and begin failing structurally within a few years.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in Harrow</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across HA1 and HA2 with same-week availability.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/services/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full moss and debris removal from all gutters and downpipes, outlet testing and photographic report. Optional roof biocide treatment to slow moss regrowth on north-facing Harrow roofs.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Resealing leaking joints, replacing broken brackets, straightening sagging sections. We carry fittings for both cast-iron and common uPVC profiles found in HA1 and HA2 properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Complete replacement of gutters that are beyond repair. We match profiles to the period character of Edwardian and 1930s Harrow properties and fit new systems correctly pitched for drainage.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and replacement of fascia boards damaged by years of gutter overflow. Essential on older Harrow properties where wood fascias have been slowly absorbing moisture behind blocked gutters.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Harrow Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Harrow Property</h2>
+      <p class="text-gray-600 text-center mb-10">Submit your address and service details. We will respond with a fixed price on the same working day.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Harrow Gutter FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also cover nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/southall/" class="text-blue-600 hover:underline text-sm">Southall</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/hillingdon/" class="text-blue-600 hover:underline text-sm">Hillingdon</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,519 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import type { Thing, WithContext } from "schema-dts";
+
+const title = "Gutter Cleaning in Uxbridge & West London | Free Quote";
+const description =
+  "Professional gutter cleaning in Uxbridge, Harrow, Hayes and West London. Vacuum-powered, no mess. Free no-obligation quotes.";
+
+const schema: WithContext<Thing>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Gutter Cleaning",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Gutter Cleaners Uxbridge",
+      url: "https://guttercleanersuxbridge.co.uk",
+      telephone: "01895 000000",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "",
+        addressLocality: "Uxbridge",
+        postalCode: "UB8",
+        addressCountry: "GB",
+      },
+    },
+    areaServed: [
+      { "@type": "City", name: "Uxbridge" },
+      { "@type": "City", name: "Harrow" },
+      { "@type": "City", name: "Hayes" },
+      { "@type": "City", name: "Hillingdon" },
+      { "@type": "City", name: "Slough" },
+      { "@type": "City", name: "Southall" },
+      { "@type": "City", name: "West Drayton" },
+      { "@type": "City", name: "Windsor" },
+    ],
+    description:
+      "Professional gutter cleaning using modern vacuum-powered equipment with no mess or water damage.",
+    image: "https://guttercleanersuxbridge.co.uk/images/gutter-cleaning-hero.jpg",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Gutter Cleaners Uxbridge",
+    url: "https://guttercleanersuxbridge.co.uk",
+    telephone: "01895 000000",
+    priceRange: "£",
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  },
+];
+---
+
+<Layout {title} {description} {schema}>
+  <!-- Hero Section -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img
+      src="/images/gutter-cleaning-hero.jpg"
+      alt="Professional gutter cleaning in Uxbridge, Harrow, Hayes and West London"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Professional Gutter Cleaning in Uxbridge & West London
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100 mb-8">
+          Vacuum-powered cleaning, no mess, no water damage. Free quotes in 24 hours.
+        </p>
+        <a href="#quote" class="btn-primary">
+          Get Your Free Quote
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- What We Do -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">
+            Expert Gutter Cleaning You Can Trust
+          </h2>
+          <p class="text-lg text-text-muted mb-6">
+            Over 15 years of experience keeping gutters clean across Uxbridge, Harrow, Hayes and
+            the wider West London area. We use modern vacuum-powered equipment to remove debris
+            safely without causing water damage or mess to your property.
+          </p>
+          <p class="text-lg text-text-muted mb-8">
+            Whether your gutters are clogged with leaves, moss, or sediment, we'll restore proper
+            water drainage and prevent costly damage to your roof, walls, and foundation.
+          </p>
+          <div class="space-y-3">
+            <div class="check-item">Fully insured for complete peace of mind</div>
+            <div class="check-item">Same-week appointments available</div>
+            <div class="check-item">No damage to fascias, soffits, or paintwork</div>
+            <div class="check-item">Professional, courteous team</div>
+            <div class="check-item">5-star rated on Google and Trustpilot</div>
+          </div>
+        </div>
+        <div class="bg-blue-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-text mb-6">Why Choose Us?</h3>
+          <ul class="space-y-4 text-text-muted">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Modern Equipment:</strong> SkyVac vacuum systems ensure
+                zero mess and zero water damage
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Experienced Team:</strong> Trained to work safely at
+                height on all property types
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Guaranteed Results:</strong> Gutters left spotless and
+                flowing freely
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand font-bold text-xl shrink-0">✓</span>
+              <span>
+                <strong class="text-text">Local Experts:</strong> Serving West London since 2008
+                with hundreds of satisfied customers
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Do It -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">Our Gutter Cleaning Process</h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto">
+          We follow a proven 4-step process to ensure your gutters are spotless and functioning
+          perfectly
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Inspection</h3>
+          <p class="text-text-muted">
+            We assess your gutters, identify blockages, and check for signs of damage or moss
+            growth.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Vacuum Cleaning</h3>
+          <p class="text-text-muted">
+            Using SkyVac equipment, we remove all debris from gutters and downpipes without any
+            mess or water splash.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Flush & Test</h3>
+          <p class="text-text-muted">
+            We flush the system with water to confirm proper drainage and clear any remaining
+            obstructions.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-xl p-6 border border-border">
+          <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            4
+          </div>
+          <h3 class="text-xl font-bold text-text mb-3">Final Report</h3>
+          <p class="text-text-muted">
+            We provide photos and a detailed report of work completed, plus recommendations for
+            repairs if needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section bg-surface">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-8 text-center">What's Included in Our Service</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Left Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-text mb-6">Standard Gutter Cleaning</h3>
+          <div class="check-item">Complete debris removal (leaves, moss, sediment)</div>
+          <div class="check-item">Downpipe cleaning and flushing</div>
+          <div class="check-item">Water flow testing and confirmation</div>
+          <div class="check-item">Professional vacuum-powered equipment (zero mess)</div>
+          <div class="check-item">Fully insured and certified technicians</div>
+          <div class="check-item">Before & after photos provided</div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-text mb-6">Optional Add-Ons</h3>
+          <div class="check-item">Gutter guard installation (keep debris out)</div>
+          <div class="check-item">Moss and algae treatment</div>
+          <div class="check-item">Fascia & soffit inspection</div>
+          <div class="check-item">Minor repairs (loose brackets, seals)</div>
+          <div class="check-item">Annual maintenance contracts</div>
+          <div class="check-item">Emergency same-day call-outs</div>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-blue-50 rounded-xl p-8 border-l-4 border-brand">
+        <h3 class="text-2xl font-bold text-text mb-3">Pricing Guide</h3>
+        <p class="text-text-muted text-lg mb-4">
+          Gutter cleaning typically costs between <strong class="text-text">£89–£249</strong> depending on:
+        </p>
+        <ul class="space-y-2 text-text-muted">
+          <li class="flex gap-2">
+            <span class="text-brand font-bold">•</span>
+            <span>Size of property (bungalow, 2-storey, 3-storey, etc.)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-brand font-bold">•</span>
+            <span>Length of guttering (linear metres)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-brand font-bold">•</span>
+            <span>Degree of blockage (light, moderate, severe)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-brand font-bold">•</span>
+            <span>Access requirements and safety considerations</span>
+          </li>
+        </ul>
+        <p class="text-text-muted text-lg mt-4">
+          <strong class="text-text">Get an exact quote</strong> by submitting the form below. No hidden fees, no surprises.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas Served -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-4 text-center">Areas We Serve in West London</h2>
+      <p class="text-lg text-text-muted text-center max-w-2xl mx-auto mb-10">
+        We cover all postcodes in and around Uxbridge, Harrow, Hayes, Hillingdon, Slough,
+        Southall, West Drayton and Windsor. Outside your area? Get in touch—we may still be able
+        to help.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+        {
+          [
+            "Uxbridge",
+            "Harrow",
+            "Hayes",
+            "Hillingdon",
+            "Slough",
+            "Southall",
+            "West Drayton",
+            "Windsor",
+          ].map((area) => (
+            <div class="bg-white rounded-lg px-4 py-3 text-center border border-border hover:border-brand transition-colors">
+              <p class="font-semibold text-text">{area}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <p class="text-center text-text-muted mt-8">
+        <strong class="text-text">Not listed?</strong> Contact us with your postcode and we'll confirm coverage.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-surface">
+    <div class="container-site max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-12 text-center">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="space-y-6">
+        <!-- FAQ 1 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How often should gutters be cleaned?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            We recommend gutter cleaning at least twice a year—typically autumn (after leaves
+            fall) and spring (to clear winter debris). If you have overhanging trees, you may need
+            quarterly cleaning. Our annual maintenance contracts offer hassle-free scheduled
+            cleaning.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Will the cleaning damage my gutters or fascia?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            No. We use vacuum-powered equipment that gently removes debris without touching the
+            fascia, soffit, or paintwork. Unlike pressure washing or scooping methods, SkyVac
+            eliminates water splash and mess. Your gutters are left spotless and undamaged.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            What if my gutters need repairs?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            During cleaning, we inspect gutters for leaks, sagging, and loose brackets. If we spot
+            issues, we'll recommend repairs and provide a separate quotation. We can handle minor
+            fixes on the same visit, or book a specialist appointment for major work like gutter
+            replacement.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            How long does a gutter cleaning take?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Most gutter cleaning jobs take 1–3 hours depending on property size, complexity, and
+            blockage severity. We'll give you an estimated time during the initial survey. We're
+            punctual and tidy—you'll barely notice we've been there.
+          </p>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Do you offer same-day or emergency appointments?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Yes. We offer same-week appointments and can arrange emergency call-outs for urgent
+            situations (e.g., blocked downpipes causing water damage). Contact us immediately if
+            you have a gutter emergency—we're here to help fast.
+          </p>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            Are you fully insured?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            Absolutely. We carry full public liability insurance (up to £6 million) and employer's
+            liability insurance. You're fully protected if any damage occurs—though our track
+            record shows it won't. You'll receive proof of insurance upon request.
+          </p>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="group border border-border rounded-lg p-6 cursor-pointer hover:border-brand transition-colors">
+          <summary class="flex justify-between items-center font-bold text-lg text-text">
+            What areas do you cover and do you work weekends?
+            <span class="text-2xl text-brand group-open:rotate-180 transition-transform"
+              >+</span
+            >
+          </summary>
+          <p class="text-text-muted mt-4">
+            We cover Uxbridge, Harrow, Hayes, Hillingdon, Slough, Southall, West Drayton, Windsor
+            and surrounding areas. We operate Monday–Friday, 8am–6pm. Occasional weekend bookings
+            may be available—please ask when requesting your quote.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <h2 class="text-3xl md:text-4xl font-bold text-text mb-4 text-center">Trusted by Hundreds of Happy Customers</h2>
+      <p class="text-lg text-text-muted text-center max-w-2xl mx-auto mb-12">
+        5-star ratings on Google and Trustpilot. See what our customers say.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <div class="bg-white rounded-xl p-6 border border-border shadow-card">
+          <div class="flex items-center gap-1 mb-3">
+            {[...Array(5)].map((_, i) => (
+              <span class="text-yellow-400 text-lg">★</span>
+            ))}
+          </div>
+          <p class="text-text-muted mb-4">
+            "Fantastic service! The team arrived on time, worked quickly and efficiently, and left
+            no mess. My gutters are spotless. Highly recommend!"
+          </p>
+          <p class="font-semibold text-text">Sarah M.</p>
+          <p class="text-sm text-text-muted">Uxbridge</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-xl p-6 border border-border shadow-card">
+          <div class="flex items-center gap-1 mb-3">
+            {[...Array(5)].map((_, i) => (
+              <span class="text-yellow-400 text-lg">★</span>
+            ))}
+          </div>
+          <p class="text-text-muted mb-4">
+            "Professional and courteous. They explained everything clearly and even found a small
+            leak we didn't know about. Brilliant value."
+          </p>
+          <p class="font-semibold text-text">David T.</p>
+          <p class="text-sm text-text-muted">Harrow</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-xl p-6 border border-border shadow-card">
+          <div class="flex items-center gap-1 mb-3">
+            {[...Array(5)].map((_, i) => (
+              <span class="text-yellow-400 text-lg">★</span>
+            ))}
+          </div>
+          <p class="text-text-muted mb-4">
+            "The SkyVac system is brilliant—zero mess, zero water damage. Best gutter cleaning
+            I've had. Will definitely use them again next year."
+          </p>
+          <p class="font-semibold text-text">Jennifer L.</p>
+          <p class="text-sm text-text-muted">Hayes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="section bg-surface" id="quote">
+    <div class="container-site">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-4">Get Your Free Gutter Cleaning Quote</h2>
+        <p class="text-lg text-text-muted">
+          No-obligation estimate. We'll contact you within 2 hours during business hours.
+        </p>
+      </div>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- Related Services CTA -->
+  <section class="section bg-blue-50">
+    <div class="container-site">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-text mb-6">Need More Than Just Cleaning?</h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto mb-8">
+          We also offer gutter repair, replacement, and fascia & soffit services. Get a
+          comprehensive quote for all your gutter needs.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/services/gutter-repair" class="btn-primary">
+            Gutter Repair
+          </a>
+          <a href="/services/gutter-replacement" class="btn-secondary">
+            Gutter Replacement
+          </a>
+          <a href="/services/fascia-soffit" class="btn-secondary">
+            Fascia & Soffit
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

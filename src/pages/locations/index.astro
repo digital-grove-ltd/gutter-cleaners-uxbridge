@@ -1,0 +1,262 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Services Across West London and Berkshire | All Locations";
+const metaDescription = "Professional gutter cleaning, repair and replacement across 8 areas in West London and Berkshire. Uxbridge, Harrow, Hayes, Hillingdon, Slough, Southall, West Drayton and Windsor.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" }
+];
+
+const faqs = [
+  {
+    q: "Which areas do Gutter Cleaners Uxbridge cover?",
+    a: "We cover 8 main locations within 20 miles of Uxbridge: Uxbridge (UB8), Harrow (HA1/HA2), Hayes (UB3/UB4), Hillingdon (UB10), Slough (SL1/SL2), Southall (UB1/UB2), West Drayton (UB7), and Windsor (SL4). We also cover many surrounding postcodes — contact us with your postcode if you are unsure."
+  },
+  {
+    q: "How quickly can you book a gutter cleaning appointment in my area?",
+    a: "We offer same-week appointments across all 8 of our service areas. Submit a quote request online or call us during business hours (Mon–Fri 8am–6pm) and we will confirm a date that suits you, often within 24–48 hours."
+  },
+  {
+    q: "Do you charge more for areas further from Uxbridge?",
+    a: "Our pricing is based on the work required, not your distance from Uxbridge. We provide transparent fixed-price quotes before starting any job. For properties at the edge of our coverage area we will always be upfront if a small travel supplement applies."
+  },
+  {
+    q: "Do you serve both residential and commercial properties across all locations?",
+    a: "Yes. We clean, repair and replace gutters on houses, flats, bungalows, and light commercial properties across all 8 locations. For larger commercial buildings please contact us to discuss your specific requirements."
+  },
+  {
+    q: "What gutter services do you offer in each location?",
+    a: "In every area we offer four core services: gutter cleaning (debris removal and outlet testing), gutter repairs (leaks, sagging, broken brackets), full gutter replacement (uPVC and cast-iron systems), and fascia and soffit cleaning and replacement. Every job includes a free inspection and photographic report."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  faqSchema(faqs)
+];
+
+const locations = [
+  {
+    slug: "uxbridge",
+    name: "Uxbridge",
+    postcode: "UB8",
+    tagline: "Our home base. 1930s semis and Victorian terraces near the Grand Union Canal.",
+    problem: "Mature trees lining roads like Hillingdon Road drop leaves into gutters every autumn."
+  },
+  {
+    slug: "harrow",
+    name: "Harrow",
+    postcode: "HA1/HA2",
+    tagline: "Edwardian and 1930s suburban housing near Harrow-on-the-Hill.",
+    problem: "North-facing roof slopes trap moss that builds up and blocks gutters throughout the year."
+  },
+  {
+    slug: "hayes",
+    name: "Hayes",
+    postcode: "UB3/UB4",
+    tagline: "Post-war 1950s–70s semis close to Heathrow Airport and Hayes town centre.",
+    problem: "Original 1970s uPVC gutters are now cracking, sagging, and losing their seal at joints."
+  },
+  {
+    slug: "hillingdon",
+    name: "Hillingdon",
+    postcode: "UB10",
+    tagline: "Mixed 1930s–60s housing across Hillingdon village and Ickenham.",
+    problem: "Large mature garden trees overhang rooflines and fill gutters with debris seasonally."
+  },
+  {
+    slug: "slough",
+    name: "Slough",
+    postcode: "SL1/SL2",
+    tagline: "1960s–80s residential estates near Slough town centre and the Trading Estate.",
+    problem: "Flat-roofed extensions with inadequate drainage overflow onto main gutter runs."
+  },
+  {
+    slug: "southall",
+    name: "Southall",
+    postcode: "UB1/UB2",
+    tagline: "Victorian and Edwardian terraces along Southall Broadway and into the Ealing border.",
+    problem: "Original cast-iron gutters are corroding and pulling away from deteriorating fascia boards."
+  },
+  {
+    slug: "west-drayton",
+    name: "West Drayton",
+    postcode: "UB7",
+    tagline: "1950s–70s suburban streets near the Grand Union Canal towpath.",
+    problem: "Repeated Heathrow flight-path vibrations loosen gutter brackets over time."
+  },
+  {
+    slug: "windsor",
+    name: "Windsor",
+    postcode: "SL4",
+    tagline: "Victorian and Georgian period properties near Windsor Castle and Windsor Great Park.",
+    problem: "Original cast-iron and lead guttering requires specialist knowledge to repair correctly."
+  }
+];
+
+const services = [
+  { name: "Gutter Cleaning", href: "/services/gutter-cleaning/", desc: "Full debris clearance and outlet testing" },
+  { name: "Gutter Repairs", href: "/services/gutter-repairs/", desc: "Leaks, sagging, joints and brackets" },
+  { name: "Gutter Replacement", href: "/services/gutter-replacement/", desc: "New uPVC or cast-iron systems fitted" },
+  { name: "Fascia & Soffit", href: "/services/fascia-soffit-cleaning/", desc: "Cleaning and replacement service" }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="relative bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-blue-300 font-semibold uppercase tracking-wide text-sm mb-3">Service Coverage</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Local Gutter Services Across West London and Berkshire</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Professional gutter cleaning, repair and replacement in 8 locations. Serving UB, HA, SL and TW postcodes.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">We cover 8 main locations within 20 miles of Uxbridge, serving UB, HA, SL and TW postcodes. Same-week appointments. Free no-obligation quotes.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Coverage intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Based in Uxbridge, we provide professional gutter cleaning, repair and replacement services across West London and into Berkshire. Every area we serve receives the same level of care: a full inspection before work begins, photographic evidence of any issues found, transparent fixed pricing, and same-week availability.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-8">
+        Each location in our network has its own housing character and gutter challenges — from Victorian cast-iron systems in Southall to post-war uPVC gutters in Hayes and period leadwork in Windsor. Our engineers understand the difference and bring the right tools and knowledge to every job.
+      </p>
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-5 rounded">
+        <p class="text-gray-800 font-medium">Not sure if we cover your postcode? <a href="/contact/" class="text-blue-600 underline hover:text-blue-700">Contact us</a> — we cover many streets beyond our listed hubs and will confirm same day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location grid -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Our 8 Service Locations</h2>
+      <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">Click any location to see local pricing, common problems for that area, and customer reviews.</p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {locations.map((loc) => (
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="h-1.5 bg-blue-600"></div>
+            <div class="p-7">
+              <div class="flex items-start gap-3 mb-2">
+                <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900">{loc.name} <span class="text-gray-400 font-normal text-base">— {loc.postcode}</span></h3>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm mb-2">{loc.tagline}</p>
+              <p class="text-gray-700 text-sm mb-5 italic">Common issue: {loc.problem}</p>
+
+              <div class="grid grid-cols-2 gap-2 mb-5">
+                {services.map((svc) => (
+                  <a href={`/locations/${loc.slug}${svc.href}`} class="text-xs text-blue-700 hover:text-blue-900 hover:underline leading-tight">
+                    &rarr; {svc.name}
+                  </a>
+                ))}
+              </div>
+
+              <a href={`/locations/${loc.slug}/`} class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm">
+                View {loc.name} page
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services overview -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Services Available in Every Location</h2>
+      <p class="text-gray-600 text-center mb-10 max-w-xl mx-auto">All four services are available across every postcode we cover, with the same trained engineers and same quality guarantee.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {services.map((svc) => (
+          <a href={svc.href} class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+            <h3 class="font-bold text-blue-900 text-lg mb-2 group-hover:text-blue-600">{svc.name}</h3>
+            <p class="text-gray-600 text-sm mb-3">{svc.desc}</p>
+            <span class="text-blue-600 text-sm font-medium">Learn more &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Postcode coverage table -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Postcode Coverage at a Glance</h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="font-bold text-blue-800 mb-3">UB Postcodes</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li>UB1 / UB2 — Southall</li>
+            <li>UB3 / UB4 — Hayes</li>
+            <li>UB7 — West Drayton</li>
+            <li>UB8 — Uxbridge</li>
+            <li>UB10 — Hillingdon</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="font-bold text-blue-800 mb-3">HA and SL Postcodes</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li>HA1 / HA2 — Harrow</li>
+            <li>SL1 / SL2 — Slough</li>
+            <li>SL4 — Windsor</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="font-bold text-blue-800 mb-3">Also Covered</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li>TW postcodes (parts)</li>
+            <li>HA3 to HA9</li>
+            <li>SL0, SL3, SL6</li>
+            <li>UB5, UB6, UB9</li>
+            <li>Contact us to confirm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get a Free Quote for Your Area</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your postcode and what you need — we will respond with a fixed price within 2 hours on working days.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Coverage FAQs</h2>
+      <div class="space-y-6">
+        {faqs.map((item) => (
+          <div class="bg-white border border-gray-200 rounded-xl p-6">
+            <h3 class="text-base font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>

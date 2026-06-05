@@ -1,0 +1,218 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Cleaning West Drayton UB7 | Professional Local Service";
+const metaDescription = "Professional gutter cleaning in West Drayton UB7. Vacuum-powered, no mess, same-week appointments. Specialists in 1950s to 1970s suburban housing.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "West Drayton", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/" },
+  { name: "Gutter Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/west-drayton/gutter-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter cleaning cost in West Drayton?",
+    a: "Gutter cleaning in West Drayton UB7 typically costs £80 to £150 for a 3-bedroom semi-detached property. Final pricing depends on the size of your property, length of guttering, severity of blockage, and any access challenges. We provide a free, no-obligation written quote after a visual assessment — no surprises on the day."
+  },
+  {
+    q: "How often should 1950s to 1970s suburban housing properties in UB7 have gutters cleaned?",
+    a: "We recommend gutter cleaning at least twice per year for 1950s to 1970s suburban housing in West Drayton — once in late autumn to clear leaves and debris, and again in spring to remove winter accumulation. If your property overlooks the Grand Union Canal towpath or has overhanging trees, quarterly cleaning may extend gutter lifespan and prevent overflow damage."
+  },
+  {
+    q: "Do you clean gutters across all of West Drayton?",
+    a: "Yes. We serve the entire West Drayton area including all UB7 postcodes, the village centre, properties near the Grand Union Canal towpath, and surrounding estates. We cover both 1950s to 1970s suburban housing and newer properties. If you are unsure whether we cover your street, please submit your postcode and we will confirm immediately."
+  },
+  {
+    q: "What causes gutter blockages in West Drayton?",
+    a: "West Drayton's 1950s to 1970s suburban housing sits directly under flight paths from nearby Heathrow. Vibration from aircraft causes gutter brackets to loosen gradually over decades, allowing gutters to sag and create low spots where debris accumulates. Additionally, the semi-rural setting means leaves, pollen and organic matter build up quickly. Blocked gutters hold water against the gutter wall, accelerating corrosion in the aging metal systems common on mid-century West Drayton homes."
+  },
+  {
+    q: "How long does gutter cleaning take for a typical West Drayton house?",
+    a: "Most gutter cleaning jobs in West Drayton take 1 to 3 hours, depending on property size and blockage severity. A standard 3-bedroom semi-detached property in UB7 typically takes 1.5 to 2 hours. We will provide an estimated duration during the free quote process. Our team is punctual, tidy and efficient — you will barely notice we have been there."
+  },
+  {
+    q: "Do you provide a report after cleaning gutters in West Drayton?",
+    a: "Yes. After every gutter cleaning in West Drayton UB7, we provide before and after photographs, a written condition report highlighting any damage, recommendations for repairs, and certification that work has been completed to industry standards. This documentation is useful for future property reference or insurance purposes."
+  },
+  {
+    q: "Can you clean gutters on a 2-storey property in UB7?",
+    a: "Absolutely. We safely clean gutters on all property types across West Drayton, including single-storey bungalows, 2-storey semi-detached and detached homes, and taller period properties. Our equipment and trained technicians are fully insured for work at height on all property heights common in 1950s to 1970s suburban housing. We always prioritise safe access and proper equipment."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("West Drayton"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Michael H.",
+    street: "High Street, West Drayton",
+    date: "May 2026",
+    text: "Excellent service from start to finish. Our 1960s semi had gutters full of leaves and debris. They cleared everything, showed us photos of the work, and explained about the vibration from aircraft affecting our brackets. Highly recommended for West Drayton properties."
+  },
+  {
+    name: "Linda P.",
+    street: "Near Grand Union Canal, UB7",
+    date: "April 2026",
+    text: "Professional and courteous team. They came same-week as promised, worked efficiently with zero mess, and provided a detailed report with recommendations. Our gutters are now draining perfectly. Will book them again in autumn."
+  },
+  {
+    name: "Richard T.",
+    street: "Langley Road, West Drayton",
+    date: "March 2026",
+    text: "Found a loose bracket during the clean and explained why it was happening due to nearby aircraft vibration. Really knowledgeable about West Drayton's specific challenges. Fair pricing and transparent communication throughout."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>West Drayton — UB7</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning in West Drayton UB7</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Vacuum-powered cleaning for 1950s to 1970s suburban housing. No mess, no water damage. Same-week appointments available.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Gutter cleaning in West Drayton costs £80 to £150 for a 3-bedroom semi-detached property. We clear debris, flush downpipes, and provide a written condition report. Most West Drayton UB7 bookings are available within 3 to 5 working days.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        West Drayton's 1950s to 1970s suburban housing stock sits directly beneath busy Heathrow flight paths, creating a maintenance challenge unique to the village. The constant vibration from aircraft overhead gradually loosens the gutter brackets that support the aging gutters common on mid-century semi-detached and detached homes around the Grand Union Canal and the village centre.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        This vibration-induced bracket loosening causes gutters to sag over time, creating low spots where leaves, pollen and organic debris accumulate rapidly. Once a gutter begins to clog, water pools against the inner wall, holding moisture against aging metal fittings and accelerating corrosion at joints and seals. Within a few years, a sagging gutter with loose brackets becomes a leaking gutter, and water begins tracking behind fascia boards into the eaves.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We specialize in gutter cleaning across West Drayton UB7, with specific knowledge of the challenges affecting 1950s to 1970s suburban housing in the village. Our vacuum-powered equipment removes debris safely without causing further stress to already-weakened brackets, and we provide detailed photographic reports identifying any bracket movement or damage requiring repair.
+      </p>
+    </div>
+  </section>
+
+  <!-- About West Drayton Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About West Drayton Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        West Drayton's housing boom between 1950 and 1975 created a village of predominantly semi-detached and detached properties with standard uPVC or aged galvanized steel guttering systems originally designed for 50 to 70 year lifespans. Many of these gutters are now 50 to 75 years old, and the aluminum and steel brackets that support them have been subjected to decades of aircraft vibration.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The village's proximity to the Grand Union Canal towpath and the semi-rural setting mean that seasonal leaf fall and algae growth are constant challenges. Unlike urban areas with fewer trees, West Drayton properties experience heavier organic debris accumulation, particularly properties with overhanging branches along the canal.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Vibration from nearby Heathrow flight paths loosens gutter brackets over time, causing the systematic sagging and misalignment that distinguishes West Drayton gutter maintenance from other areas. Regular cleaning and bracket inspection are essential to prevent accelerated failure of these aging systems.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in West Drayton</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across UB7 with same-week availability.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/locations/west-drayton/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full debris removal from gutters and downpipes in West Drayton's 1950s to 1970s suburban housing. Vacuum-powered with zero mess. Outlet testing and photographic report included.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Specialist repairs for loose brackets, leaking joints and sagging sections on UB7 properties. We address vibration-caused bracket issues specific to West Drayton.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Complete gutter replacement for 1950s to 1970s suburban housing in West Drayton. uPVC and cast iron options available. New brackets rated for vibration stress.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/west-drayton/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and replacement of fascia boards damaged by gutter overflow on UB7 properties. Common on West Drayton homes where wood fascias have absorbed moisture from years of sagging gutters.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from West Drayton Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your West Drayton Property</h2>
+      <p class="text-gray-600 text-center mb-10">Submit your address and service details. We will respond with a fixed price on the same working day.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">West Drayton Gutter Cleaning FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Gutter cleaning in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Harrow</a>
+        <a href="/locations/hayes/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Hayes</a>
+        <a href="/locations/uxbridge/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter Cleaning in Uxbridge</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

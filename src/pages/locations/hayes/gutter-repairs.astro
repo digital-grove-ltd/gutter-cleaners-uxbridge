@@ -1,0 +1,293 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Repairs Hayes UB3/UB4 | Same-Week Response";
+const metaDescription = "Fast gutter repairs in Hayes UB3/UB4. Leaking joints, sagging gutters, cracked sections. Specialists in post-war 1950s to 70s semi-detached.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hayes", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/" },
+  { name: "Gutter Repairs", url: "https://www.guttercleanersuxbridge.co.uk/locations/hayes/gutter-repairs/" }
+];
+
+const faqs = [
+  {
+    q: "How much do gutter repairs cost in Hayes?",
+    a: "Gutter repairs in Hayes typically cost £150 to £400 depending on the type and number of repairs needed. Resealing a joint costs £80–£120; replacing a cracked section £150–£250; straightening a sagging run or fitting new brackets £100–£180. We provide a fixed quote after a brief assessment. Emergency weekend repairs carry a surcharge."
+  },
+  {
+    q: "Can you repair cast iron gutters in UB3/UB4?",
+    a: "Yes. While most post-war 1950s to 70s semi-detached homes in UB3/UB4 have uPVC gutters, some older or period properties retain cast iron systems. We repair cast iron gutters by resealing joints, replacing corroded sections with matching profiles and fitting new hangers. Cast iron repair is often more cost-effective than replacement if only sections are damaged."
+  },
+  {
+    q: "My gutter is leaking at the joint in Hayes — can you fix it same day?",
+    a: "We aim to respond to urgent gutter leaks in Hayes within 48 hours. For same-day repairs, contact us before 10 AM on a weekday and we will try to fit you in. Straightforward joint reseals often take just 30 minutes. If a joint is severely corroded, we may recommend section replacement, which takes slightly longer but is more durable than resealing."
+  },
+  {
+    q: "What causes gutters to sag on post-war 1950s to 70s semi-detached in Hayes?",
+    a: "Sagging gutters on Hayes semi-detached homes are caused by failed or corroded support brackets and the weight of standing water, leaves and silt inside the gutter. As original uPVC gutters from 1970s builds age, the plastic becomes brittle and loses rigidity. Rusted or loose cast iron hangers no longer support the weight. Water trapped inside the sagging section accelerates rot and corrosion, creating a cycle that requires urgent repair to prevent fascia damage."
+  },
+  {
+    q: "How do I know if my Hayes home needs repairs or a full replacement?",
+    a: "If your gutters have isolated leaks at joints, cracked sections affecting less than 25% of the run, or loose brackets, repair is usually sufficient and cost-effective. If the gutters are sagging along most of the roof run, cracked in multiple places, or leaking despite previous repairs, replacement is more economical. We provide a repair vs. replacement assessment at no cost during our survey."
+  },
+  {
+    q: "Do you repair fascia boards as well as gutters in UB3/UB4?",
+    a: "Yes. We repair and replace fascia boards damaged by years of gutter overflow or moisture exposure. This is common on older Hayes properties where leaking gutters have allowed water to track behind the board and cause rot. We can replace individual sections or the full fascia run and often combine this work with gutter repair or replacement for efficiency."
+  },
+  {
+    q: "Are your gutter repairs guaranteed in Hayes?",
+    a: "Yes. All repairs on Hayes properties carry a 12-month workmanship guarantee. If a resealed joint leaks again or a fitted bracket fails within 12 months, we will return and put it right at no additional cost. We use quality fittings and sealants appropriate to the gutter material — uPVC, cast iron or aluminium."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hayes"),
+  faqSchema(faqs),
+  serviceSchema(
+    "Gutter Repairs in Hayes UB3/UB4",
+    "Fast gutter repair service for Hayes properties. Leaking joints, sagging sections, cracked gutters. Same-week response, 12-month guarantee.",
+    "https://www.guttercleanersuxbridge.co.uk/locations/hayes/gutter-repairs/"
+  )
+];
+
+const reviews = [
+  {
+    name: "David T.",
+    street: "Sipson Road, Hayes UB3",
+    date: "May 2026",
+    text: "Our downpipe joint was leaking and water was running behind the fascia. They came out, identified the cause (a cracked uPVC connector), fitted a new one and checked the whole run for other issues. Done in under an hour. They also explained why the crack happened — helpful to know."
+  },
+  {
+    name: "Lisa F.",
+    street: "West Drayton Road, Hayes UB4",
+    date: "April 2026",
+    text: "Two gutters were sagging badly and we could see damp on our lounge ceiling. The team reinforced the hangers, reshaped the gutters and provided a detailed plan for any further work. The damp issue has cleared since. Very professional throughout."
+  },
+  {
+    name: "Mohammed A.",
+    street: "Hayes town centre, UB4",
+    date: "March 2026",
+    text: "Our semi-detached home is near Heathrow and vibration damage had loosened several gutter brackets. They tightened everything, fitted new clips where needed and tested water flow. Now handles rainstorms without overflow. Good value, honest advice."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Hayes — UB3 / UB4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Fast Gutter Repairs in Hayes, UB3/UB4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Urgent repair service for leaking joints, sagging gutters and cracked sections. Response within 48 hours, all work guaranteed for 12 months.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">We repair leaking joints, sagging gutters, cracked sections and loose brackets in Hayes UB3/UB4. Most repairs take 1 to 2 hours and are completed in a single visit. We aim to respond within 48 hours for urgent issues.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Gutter repairs on Hayes properties are often urgent. A small leak at a joint can quickly escalate into water running behind the fascia board, soaking the eaves and causing damp inside your home. Post-war 1950s to 70s semi-detached properties are particularly vulnerable because their original uPVC gutters — now decades old — are brittle, prone to cracking and suffering from failed joint seals.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        We respond quickly to repair requests across Hayes UB3 and UB4. Common issues we fix are resealing leaking joints, straightening sagging gutter runs caused by corroded or failed brackets, replacing cracked sections of uPVC guttering and fitting new support brackets to prevent future sagging. All repairs are guaranteed for 12 months, so you have peace of mind.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Many Hayes repairs can be completed in a single 1–2 hour visit. We assess whether repair or full replacement makes economic sense and always give you a clear recommendation before proceeding.
+      </p>
+    </div>
+  </section>
+
+  <!-- Common Repair Issues -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Common Gutter Repairs in Hayes</h2>
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg p-5 border border-blue-200">
+          <h3 class="font-bold text-gray-900 mb-2">Leaking Joints</h3>
+          <p class="text-gray-700 text-sm">Water dripping from gutter joints is usually caused by failed sealant or slight movement of the joint. We clean the joint, remove old sealant and reseal with quality-rated product that remains flexible in Hayes' temperature range.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-blue-200">
+          <h3 class="font-bold text-gray-900 mb-2">Sagging Gutters</h3>
+          <p class="text-gray-700 text-sm">Sagging indicates failed brackets or hangers. The weight of standing water, leaves and silt creates a cycle of sagging that damages fascia and eaves. We re-support or replace brackets and reshape the gutter to correct slope for drainage.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-blue-200">
+          <h3 class="font-bold text-gray-900 mb-2">Cracked or Split uPVC</h3>
+          <p class="text-gray-700 text-sm">Post-war 1950s to 70s semi-detached homes often have brittle uPVC sections. Small cracks can be sealed with specialist sealant; longer cracks require section replacement. We carry stock to match most gutter profiles.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-blue-200">
+          <h3 class="font-bold text-gray-900 mb-2">Loose Brackets and Hangers</h3>
+          <p class="text-gray-700 text-sm">Corrosion or vibration (common near Heathrow in Hayes) loosens gutter fixings. We tighten all fasteners, replace corroded brackets and upgrade to stainless steel fittings where appropriate to prevent future movement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair Process -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Repair Process</h2>
+      <div class="space-y-4 text-gray-700">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+          <div>
+            <p class="font-semibold text-gray-900">Initial Assessment</p>
+            <p class="text-sm">We visit your Hayes property to diagnose the problem. We check for structural damage to fascia or eaves, identify the cause of the leak and assess whether repair or replacement is the best option.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+          <div>
+            <p class="font-semibold text-gray-900">Fixed Quote</p>
+            <p class="text-sm">We provide a written quote for the repair work with no hidden costs. For emergency callouts, we confirm urgency surcharge if applicable.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+          <div>
+            <p class="font-semibold text-gray-900">Repair Work</p>
+            <p class="text-sm">We execute the repairs using quality materials. This may include resealing, section replacement, bracket reinforcement or fascia work — all completed on the day if possible.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+          <div>
+            <p class="font-semibold text-gray-900">Testing & Guarantee</p>
+            <p class="text-sm">We test water flow through repaired gutters and downpipes. All work is guaranteed for 12 months. We leave you with a job summary and warranty information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair vs Replace -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">When to Repair vs. Replace</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="border border-green-300 bg-green-50 rounded-lg p-5">
+          <p class="font-bold text-green-900 mb-3">Repair is Usually Best:</p>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>• Single leaking joint</li>
+            <li>• Isolated cracked section</li>
+            <li>• Loose bracket (1–2 only)</li>
+            <li>• Sagging in one section</li>
+            <li>• Less than 3 years since last major work</li>
+          </ul>
+        </div>
+        <div class="border border-red-300 bg-red-50 rounded-lg p-5">
+          <p class="font-bold text-red-900 mb-3">Replacement is More Economical:</p>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>• Multiple leaks or cracks</li>
+            <li>• Sagging across most of run</li>
+            <li>• Gutters more than 30 years old</li>
+            <li>• Prior repairs failing</li>
+            <li>• Structural damage to fascia or eaves</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Other Services in Hayes</h2>
+      <p class="text-gray-600 text-center mb-8">Often paired with repairs on Hayes properties:</p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <a href="/locations/hayes/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Clear debris, debris and blockages before repairs so we can assess full extent of damage.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/hayes/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">If repairs are not viable, we fit new uPVC or cast iron gutters suited to your Hayes semi-detached.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/hayes/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Repair water damage to fascia boards caused by long-term gutter leaks.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Hayes Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get a Repair Quote for Your Hayes Property</h2>
+      <p class="text-gray-600 text-center mb-10">Describe the problem and we will respond with a fixed-price quote within 24 hours. Urgent repairs may be booked faster.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Repair FAQs for Hayes</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also repair gutters in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Harrow</a>
+        <a href="/locations/uxbridge/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Uxbridge</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">All Hayes services</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

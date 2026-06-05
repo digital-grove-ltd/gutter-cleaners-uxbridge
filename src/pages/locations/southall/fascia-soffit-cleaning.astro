@@ -1,0 +1,321 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Fascia and Soffit Cleaning Southall UB1/UB2 | Local Experts";
+const metaDescription = "Professional fascia and soffit cleaning in Southall UB1/UB2. Remove algae, dirt and staining. Specialists in Victorian and Edwardian terraced housing.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Southall", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/" },
+  { name: "Fascia & Soffit Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/fascia-soffit-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does fascia and soffit cleaning cost in Southall?",
+    a: "Fascia and soffit cleaning in Southall typically costs £120 to £200 for a standard semi-detached or terraced property, depending on the run length, degree of staining, and whether the fascia is wood or uPVC. Complex rooflines on Victorian and Edwardian properties in UB1 may be at the higher end. We provide a fixed-price quotation based on a visual assessment — there are no hidden charges or call-out fees. Cleaning is often bundled with a gutter-cleaning appointment at a combined rate."
+  },
+  {
+    q: "How often should fascia boards be cleaned on Victorian and Edwardian terraced housing in UB1/UB2?",
+    a: "We recommend fascia and soffit cleaning every 2 to 3 years on Victorian and Edwardian terraced properties in Southall, particularly if you have gutter overflows or if your property is shaded by trees. Black streaking and algae growth accumulate faster on damp, shaded north-facing properties — common in terraced rows. Regular cleaning not only maintains appearance but allows early detection of rot, water damage, and paint degradation. If gutters are functioning properly, fascia deterioration slows considerably, which is why regular gutter cleaning and maintenance is so important."
+  },
+  {
+    q: "What causes black streaks on fascia boards in Southall?",
+    a: "Black streaks and staining on fascia boards are caused by algae and mould growth, usually encouraged by moisture from gutter overflow or splash-back. On north-facing properties in Southall — very common in terraced rows around Southall Broadway — the fascia stays damp for longer after rain, creating ideal conditions for algae and lichen to colonise. Additionally, decomposed leaves and sediment from dirty gutters can run down the fascia and stain the paint or wood. The black streaks are primarily cosmetic in the early stages, but if water is running behind the fascia and into the eaves, structural damage can develop. Professional cleaning removes the algae and reveals whether water damage is occurring beneath the surface."
+  },
+  {
+    q: "Can you clean coloured fascia boards in Southall without damaging them?",
+    a: "Yes. We can safely clean coloured fascia boards — whether they are painted wood, uPVC in non-standard colours, or specialist finishes — without damage. We assess the surface and material first, then select the appropriate cleaning method. Painted wood fascia requires gentler treatment than uPVC, and some coloured finishes are sensitive to certain chemicals. We use low-pressure cleaning techniques and conservation-appropriate methods on period properties. We never use abrasive scourers or harsh chemicals that could damage paint or the board surface itself."
+  },
+  {
+    q: "Do I need to clean or replace my soffits in UB1/UB2?",
+    a: "Soffit cleaning is primarily cosmetic — soffits rarely deteriorate if gutters are functioning properly and the eaves stay dry. However, if water has been running behind the fascia due to gutter overflow, the soffits may have absorbed moisture and begun to rot or develop mould growth. We inspect soffits during fascia cleaning and advise whether cleaning alone will restore them or whether replacement is necessary. On many Southall terraces, once the gutter problem is fixed and the eaves dry out, softening or staining on soffits improves without needing replacement."
+  },
+  {
+    q: "Do you clean UPVC fascia and soffits as well as wood in Southall?",
+    a: "Yes. We clean both wood and uPVC fascia and soffits. uPVC requires gentler cleaning than painted wood to avoid damaging the finish. We use low-pressure techniques and appropriate detergents for uPVC without harsh abrasives. uPVC fascia and soffits do not rot or absorb water like wood, but they can accumulate algae staining, particularly on shaded north-facing properties in Southall. After cleaning, uPVC typically looks almost like-new again. We can also assess uPVC for brittleness or cracking that may necessitate replacement rather than cleaning."
+  },
+  {
+    q: "How long does fascia and soffit cleaning take for a Southall semi-detached house?",
+    a: "Most fascia and soffit cleaning jobs on a standard 2-storey semi-detached or terraced property in Southall take 1 to 2 hours. We use soft-brush cleaning methods and low-pressure techniques, which take a bit longer than pressure washing but are safer for the boards and paintwork. We're careful not to splash neighbouring properties and we clean up thoroughly afterwards. If the job is combined with gutter cleaning, the total time is usually 2.5 to 3 hours. We'll provide an estimated time when we survey your property and we're always punctual."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Southall"),
+  faqSchema(faqs),
+  serviceSchema(
+    "Fascia and Soffit Cleaning in Southall",
+    "Professional cleaning of fascia boards and soffits on Victorian and Edwardian terraced housing in Southall UB1/UB2.",
+    "https://www.guttercleanersuxbridge.co.uk/locations/southall/fascia-soffit-cleaning/"
+  )
+];
+
+const reviews = [
+  {
+    name: "Rajesh M.",
+    street: "The Green, Southall, UB2",
+    date: "May 2026",
+    text: "Three years of black algae streaks on the fascia boards were making the Edwardian semi look shabby. After gutter work, they cleaned the fascia and it looked brand new — so much better. No pressure washing that might damage the boards, just careful cleaning. Very impressed with the attention to detail."
+  },
+  {
+    name: "Farida A.",
+    street: "Herbert Road, UB1",
+    date: "April 2026",
+    text: "Victorian terrace fascia was covered in streaks and staining, lots of water damage visible. They cleaned it professionally and recommended gutter repair to stop the water damage recurring. The fascia cleanup alone made a huge difference to how the property looks. Fair pricing, no hassle, very professional."
+  },
+  {
+    name: "Simon H.",
+    street: "Hambrough Road, Southall",
+    date: "February 2026",
+    text: "Had them do gutter cleaning combined with fascia and soffit cleaning. The service was co-ordinated seamlessly, they explained what they were finding as they went, and the result was that the whole eaves and roofline looked fresh and well-maintained. Booked them in for annual fascia cleaning — much better than trying to do it myself."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Southall Fascia & Soffit Cleaning — UB1 / UB2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Fascia and Soffit Cleaning in Southall, UB1/UB2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Remove algae, dirt and black streaking from Victorian and Edwardian terraced housing. Restore your eaves to like-new condition.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Fascia and soffit cleaning in Southall UB1/UB2 costs £120 to £200 for a standard semi-detached property. We remove algae, lichen, dirt and black streaking, restoring boards to near-original condition. Service takes 1 to 2 hours, and we assess structural condition while cleaning.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Victorian and Edwardian terraced housing in Southall develops staining and algae growth on fascia and soffit boards far more quickly than newer properties. The combination of narrow streets, neighbouring properties that block sunshine, and the prevalence of gutter overflow from aging cast-iron systems creates persistently damp conditions at eaves level. Black algae streaks, lichen, and mould colonise the fascia boards, making even well-maintained properties look neglected.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        More importantly, water running down the fascia from gutter overflow gradually seeps behind the boards and into the soffit and eaves space, rotting the wood from behind. By the time black streaks are visible, water damage to the board structure may already be underway. Professional cleaning not just restores appearance but allows inspection of the board surface, detection of rot or paint failure, and early identification of problems that could require replacement.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We clean fascia and soffit boards throughout Southall UB1 and UB2 using conservative, low-pressure techniques suited to period properties. We work carefully around neighbours in terraced rows and coordinate fascia cleaning with gutter work so that the underlying cause of water staining is addressed at the same time.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fascia Specific Issues -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Fascia Board Issues on Southall Terraces</h2>
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Black Algae Streaks</h3>
+          <p class="text-gray-700">The most visible fascia problem on Southall properties is black streaking caused by algae and lichen growth. This is particularly common on north-facing properties in terraced rows around Southall Broadway and in the shaded streets of UB2. The algae is purely cosmetic in early stages but indicates persistent dampness — the condition that leads to water infiltration and structural rot. Professional cleaning removes the algae and often reveals paint degradation beneath.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Water Damage and Rot</h3>
+          <p class="text-gray-700">Victorian wooden fascia boards in Southall are typically softwood — pitch pine or similar — that has been exposed to 100+ years of weather and water contact. Overflow from blocked gutters or leaking joints sends water running down the fascia and behind the board, where it saturates the wood and causes rot. The wood may look sound from the outside but be soft and deteriorated internally. We inspect fascia during cleaning and recommend replacement if rot is present.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Paint Failure and Peeling</h3>
+          <p class="text-gray-700">Paint on wooden fascia boards fails when water seeps in behind it, causing the paint to blister, peel, and lift. On older properties in Southall, this is a sign that water is entering the board structure. Once paint begins to fail, deterioration accelerates. We recommend addressing the underlying water problem (usually gutter-related) before repainting, otherwise the new paint will fail within a year or two.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">uPVC Embrittlement</h3>
+          <p class="text-gray-700">Many Edwardian and 1930s properties in Southall had wooden fascia boards replaced with uPVC during the 1980s and 1990s. After 30+ years, this early uPVC can become brittle, particularly on south-facing and west-facing exposures. Brittle uPVC cracks easily and allows water to enter behind it. We assess uPVC for brittleness and can recommend replacement sections if needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">What's Included in Fascia & Soffit Cleaning</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Left Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">The Cleaning Service</h3>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Professional wash</strong> of fascia boards — algae, lichen, dirt removal</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Soffit cleaning</strong> to remove staining and mould growth</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Low-pressure methods</strong> — safe on period paintwork and wood</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Gutters cleared</strong> of debris that causes overflow and water damage</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Visual inspection</strong> for rot, paint failure, and water damage</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong>Damage assessment</strong> and recommendations for repairs or replacement</span>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">Why Combined Gutter & Fascia Work Matters</h3>
+          <p class="text-gray-700 mb-4">
+            Fascia staining and water damage are almost always symptoms of a gutter problem. Blocked or overflowing gutters send water down the fascia; leaking joints cause seepage; sagging gutters create runoff. Cleaning fascia boards without fixing the underlying gutter issue means the staining and damage will return within a year or two.
+          </p>
+          <p class="text-gray-700 mb-4">
+            We recommend combining fascia and soffit cleaning with a gutter inspection or clean, so that:
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>We address the root cause (gutters) not just the symptom (staining)</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>We stop future water damage before it becomes expensive</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-blue-600 font-bold">•</span>
+              <span>The fascia cleaning remains effective for years, not months</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-blue-50 rounded-xl p-8 border-l-4 border-blue-600">
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Pricing for Southall Properties</h3>
+        <p class="text-gray-700 text-lg mb-4">
+          Fascia and soffit cleaning in Southall typically costs <strong class="text-gray-900">£120–£200</strong> depending on:
+        </p>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Length of fascia run (linear metres)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Degree of staining and algae growth</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Board material (wood vs. uPVC)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Number of storeys and roof complexity</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Combined gutter cleaning (usually discounted as one job)</span>
+          </li>
+        </ul>
+        <p class="text-gray-700 text-lg mt-4">
+          We provide a fixed price before work begins with no hidden fees.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Cards - Other Southall Services -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Other Services to Consider in Southall</h2>
+      <p class="text-gray-600 text-center mb-10">Address both the symptoms (staining) and causes (gutter problems) with our complete service range.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="/locations/southall/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">The primary solution to fascia water damage. Clearing blocked gutters stops overflow and water seepage.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/southall/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Resealing leaking joints and fixing sagging gutters that cause water to run down the fascia.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/southall/gutter-replacement/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">When gutters are beyond repair, replacement with new systems prevents future fascia water damage.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Fascia and Soffit Cleaning Reviews from Southall</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} • {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Get a Fascia Cleaning Quote</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your UB1 or UB2 address and property details. Fixed-price quotation within 24 hours.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Fascia and Soffit Cleaning FAQ</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Fascia and soffit cleaning available in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia cleaning in Harrow</a>
+        <a href="/locations/hayes/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia cleaning in Hayes</a>
+        <a href="/locations/uxbridge/fascia-soffit-cleaning/" class="text-blue-600 hover:underline text-sm">Fascia cleaning in Uxbridge</a>
+        <a href="/locations/southall/" class="text-blue-600 hover:underline text-sm">All Southall services &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

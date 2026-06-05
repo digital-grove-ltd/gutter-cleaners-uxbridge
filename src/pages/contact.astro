@@ -1,0 +1,165 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+
+const title = "Contact Gutter Cleaners Uxbridge | Free Quote";
+const metaDescription = "Get your free gutter cleaning quote in Uxbridge. Contact our professional team for fast, reliable service across Greater London. Response within 2 hours.";
+const canonical = "https://guttercleanersuxbridge.co.uk/contact";
+---
+
+<Layout title={title} description={metaDescription}>
+  <!-- Page Header -->
+  <section class="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">Get Your Free Gutter Cleaning Quote</h1>
+      <p class="text-lg text-blue-100">Fill in the form below and we'll get back to you within 2 hours during business hours</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <!-- Quote Form -->
+        <div class="md:col-span-2">
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <QuoteForm client:load />
+          </div>
+        </div>
+
+        <!-- Business Info Sidebar -->
+        <div class="md:col-span-1">
+          <div class="bg-blue-50 rounded-lg p-6 mb-6">
+            <h3 class="text-xl font-bold text-blue-900 mb-4">Business Hours</h3>
+            <div class="space-y-2 text-gray-700">
+              <p><span class="font-semibold">Monday–Friday:</span> 8am–6pm</p>
+              <p><span class="font-semibold">Saturday–Sunday:</span> Closed</p>
+              <p class="text-sm text-gray-600 mt-4">We aim to respond to all enquiries within 2 hours during business hours.</p>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-blue-900 mb-4">Location</h3>
+            <p class="text-gray-700">Serving Uxbridge and Greater London</p>
+            <p class="text-sm text-gray-600 mt-2">Based in Uxbridge with full coverage across all surrounding areas</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coverage Map Section -->
+      <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Service Areas</h2>
+        <p class="text-gray-700 mb-6">We provide professional gutter cleaning and repair services across Greater London and the surrounding areas:</p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div>
+            <h4 class="font-semibold text-blue-900 mb-2">North West London</h4>
+            <ul class="space-y-1 text-gray-700 text-sm">
+              <li>✓ Uxbridge</li>
+              <li>✓ Harrow</li>
+              <li>✓ Southall</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-blue-900 mb-2">West London</h4>
+            <ul class="space-y-1 text-gray-700 text-sm">
+              <li>✓ Hayes</li>
+              <li>✓ West Drayton</li>
+              <li>✓ Windsor</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-blue-900 mb-2">Surrounding Areas</h4>
+            <ul class="space-y-1 text-gray-700 text-sm">
+              <li>✓ Hillingdon</li>
+              <li>✓ Slough</li>
+              <li>✓ And more</li>
+            </ul>
+          </div>
+          <div class="sm:col-span-2 lg:col-span-1">
+            <p class="text-sm text-gray-600">
+              <strong>Don't see your area?</strong> Contact us anyway — we may be able to help with your gutter cleaning needs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Bar -->
+      <div class="mb-12">
+        <TrustBar />
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+
+        <div class="space-y-6">
+          <!-- Question 1 -->
+          <div class="border-l-4 border-blue-600 pl-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">How quickly will you respond to my enquiry?</h3>
+            <p class="text-gray-700">We aim to respond to all contact form submissions within 2 hours during business hours (Monday–Friday, 8am–6pm). Most enquiries receive a response within the hour. If you submit a form outside of business hours, we'll get back to you first thing the next working day.</p>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="border-l-4 border-blue-600 pl-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Do you offer same-day or next-day appointments?</h3>
+            <p class="text-gray-700">Yes, we often have availability for same-day or next-day gutter cleaning appointments, depending on demand. Once we receive your enquiry, we'll discuss available dates and times to suit your schedule. Emergency gutter repairs may also be accommodated — ask when you contact us.</p>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="border-l-4 border-blue-600 pl-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Is there a call-out charge or obligation to book after a free quote?</h3>
+            <p class="text-gray-700">No. Our free quotes are exactly that — free, with no obligation to proceed. We'll visit your property, assess the work required, provide a fixed price, and leave the decision entirely up to you. There are no hidden charges or pressure to book.</p>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="border-l-4 border-blue-600 pl-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Do you serve areas outside Uxbridge?</h3>
+            <p class="text-gray-700">Yes, we cover a wide service area across Greater London, including Harrow, Hayes, Hillingdon, Slough, Southall, West Drayton, Windsor, and surrounding areas. If you're unsure whether we serve your location, please submit a contact form or call — we'll confirm immediately.</p>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="border-l-4 border-blue-600 pl-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">What information do I need to provide in the contact form?</h3>
+            <p class="text-gray-700">Simply provide your name, phone number, email address, postcode, and a brief description of what you need (gutter cleaning, repair, replacement, etc.). The more detail you can share about your property or any issues, the better — but don't worry if you're not sure. We'll ask any follow-up questions once we contact you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="mt-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 text-white text-center">
+        <h2 class="text-2xl font-bold mb-3">Ready to improve your gutters?</h2>
+        <p class="text-blue-100 mb-6">Get your free, no-obligation quote today. We'll respond within 2 hours.</p>
+        <a href="#quote-form" class="inline-block bg-white text-blue-900 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors">
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Pages Links -->
+  <section class="bg-gray-50 py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Services</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/services/gutter-cleaning" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-blue-900 mb-2">Gutter Cleaning</h3>
+          <p class="text-sm text-gray-600">Professional cleaning for all gutter types</p>
+        </a>
+        <a href="/services/gutter-repair" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-blue-900 mb-2">Gutter Repair</h3>
+          <p class="text-sm text-gray-600">Fix leaks, cracks and damage</p>
+        </a>
+        <a href="/services/gutter-replacement" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-blue-900 mb-2">Gutter Replacement</h3>
+          <p class="text-sm text-gray-600">New gutters installed professionally</p>
+        </a>
+        <a href="/services/fascia-soffit" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="font-bold text-blue-900 mb-2">Fascia & Soffit</h3>
+          <p class="text-sm text-gray-600">Complete roofline solutions</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

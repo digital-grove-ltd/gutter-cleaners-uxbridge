@@ -1,0 +1,529 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import QuoteForm from "@/components/QuoteForm";
+import TrustBar from "@/components/TrustBar.astro";
+import { Button } from "@/components/ui/button";
+import type { Thing, WithContext } from "schema-dts";
+
+const title = "Gutter Replacement Uxbridge & West London | uPVC & Cast Iron";
+const description = "Professional gutter replacement across Uxbridge, Hayes, Harrow & West London. uPVC, cast iron & aluminium options. Free quotes. Serving since 2008.";
+
+const schema: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Gutter Cleaners Uxbridge",
+  "description": "Professional gutter replacement and repair service in Uxbridge and West London",
+  "url": "https://guttercleanersuxbridge.co.uk",
+  "telephone": "Contact via form",
+  "areaServed": [
+    "Uxbridge",
+    "Harrow",
+    "Hayes",
+    "Hillingdon",
+    "Slough",
+    "Southall",
+    "West Drayton",
+    "Windsor"
+  ],
+  "priceRange": "£££",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Uxbridge",
+    "addressRegion": "Greater London"
+  }
+};
+---
+
+<Layout title={title} description={description} schema={schema as any}>
+  <!-- Hero Section -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img
+      src="/images/gutter-replacement-hero.jpg"
+      alt="Professional gutter replacement service in Uxbridge showing new gutters being installed"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="container-site text-center text-white">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          Full Gutter Replacement Service Across West London
+        </h1>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+          Expert gutter replacement in Uxbridge, Hayes, Harrow & surrounding areas. uPVC, cast iron & aluminium gutters installed by certified professionals.
+        </p>
+        <a href="#quote-form" class="inline-flex items-center gap-2 bg-brand text-white font-semibold px-6 py-3 rounded-lg hover:bg-brand-dark transition-all duration-200 shadow-lg">
+          Get Your Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Main Content -->
+  <main class="container-site py-16">
+    <!-- Introduction -->
+    <section class="max-w-3xl mx-auto mb-16">
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        When your gutters are damaged, leaking, or simply past their best, gutter replacement is the most cost-effective long-term solution. At Gutter Cleaners Uxbridge, we specialise in replacing gutters across Uxbridge, Hayes, Harrow, Hillingdon, Slough, Southall, West Drayton, and Windsor.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Whether you need a complete gutter system overhaul or targeted replacement sections, our experienced team ensures your property is protected from water damage with durable, professionally installed gutters.
+      </p>
+    </section>
+
+    <!-- When You Need Gutter Replacement -->
+    <section class="max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-brand">When Do You Need Gutter Replacement?</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3 text-brand">Signs Your Gutters Need Replacing</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-brand font-bold flex-shrink-0">✓</span>
+              <span class="text-gray-700">Visible cracks, holes, or rust damage</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand font-bold flex-shrink-0">✓</span>
+              <span class="text-gray-700">Water leaks or overflow during rain</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand font-bold flex-shrink-0">✓</span>
+              <span class="text-gray-700">Sagging gutters or loose brackets</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand font-bold flex-shrink-0">✓</span>
+              <span class="text-gray-700">Rust stains or water damage on walls</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand font-bold flex-shrink-0">✓</span>
+              <span class="text-gray-700">Gutters over 20-30 years old</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand font-bold flex-shrink-0">✓</span>
+              <span class="text-gray-700">Frequent blockages that repair won't fix</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white border-2 border-blue-200 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3 text-brand">Why Early Replacement Saves Money</h3>
+          <p class="text-gray-700 mb-4">
+            Delaying gutter replacement can lead to:
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="font-bold flex-shrink-0">•</span>
+              <span>Foundation damage and subsidence</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold flex-shrink-0">•</span>
+              <span>Damp in walls and ceilings</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold flex-shrink-0">•</span>
+              <span>Costly structural repairs (£5,000+)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold flex-shrink-0">•</span>
+              <span>Mould and health issues</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="font-bold flex-shrink-0">•</span>
+              <span>Reduced property value</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gutter Materials Guide -->
+    <section class="max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-brand">Gutter Materials: uPVC, Cast Iron & Aluminium</h2>
+      <div class="space-y-8">
+
+        <div class="border-l-4 border-brand pl-6">
+          <h3 class="text-2xl font-semibold mb-4 text-brand">uPVC (Vinyl) Gutters</h3>
+          <div class="bg-gray-50 p-6 rounded-lg mb-4">
+            <p class="text-gray-700 mb-4">
+              The most popular choice for modern homes. uPVC gutters are lightweight, affordable, and require minimal maintenance.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold mb-3 text-gray-900">Advantages</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li>✓ Cost-effective (£25-£45 per metre)</li>
+                  <li>✓ Easy to install and replace</li>
+                  <li>✓ Requires minimal maintenance</li>
+                  <li>✓ Won't rust or corrode</li>
+                  <li>✓ Quieter during heavy rain</li>
+                  <li>✓ 30-40 year lifespan</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-3 text-gray-900">Considerations</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li>• Can become brittle in extreme cold</li>
+                  <li>• Shorter lifespan than cast iron</li>
+                  <li>• May expand/contract with temperature</li>
+                  <li>• Less visually prestigious</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 italic text-sm">
+            <strong>Best for:</strong> Modern homes, new builds, budget-conscious property owners, and low-maintenance preferences.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-brand pl-6">
+          <h3 class="text-2xl font-semibold mb-4 text-brand">Cast Iron Gutters</h3>
+          <div class="bg-gray-50 p-6 rounded-lg mb-4">
+            <p class="text-gray-700 mb-4">
+              Traditional and highly durable. Cast iron gutters are ideal for period properties and offer exceptional longevity.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold mb-3 text-gray-900">Advantages</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li>✓ Extremely durable (50-100+ years)</li>
+                  <li>✓ Aesthetically superior appearance</li>
+                  <li>✓ Handles heavy water flow well</li>
+                  <li>✓ Retains character on period homes</li>
+                  <li>✓ Very stable in all temperatures</li>
+                  <li>✓ Long-term value for money</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-3 text-gray-900">Considerations</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li>• Higher upfront cost (£50-£100+ per metre)</li>
+                  <li>• Requires regular painting/maintenance</li>
+                  <li>• Can rust if not properly maintained</li>
+                  <li>• Heavier (requires stronger supports)</li>
+                  <li>• Specialist installation needed</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 italic text-sm">
+            <strong>Best for:</strong> Period properties, listed buildings, homes with character, and long-term investments.
+          </p>
+        </div>
+
+        <div class="border-l-4 border-brand pl-6">
+          <h3 class="text-2xl font-semibold mb-4 text-brand">Aluminium Gutters</h3>
+          <div class="bg-gray-50 p-6 rounded-lg mb-4">
+            <p class="text-gray-700 mb-4">
+              A premium alternative offering the durability of metal with lower maintenance requirements.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold mb-3 text-gray-900">Advantages</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li>✓ Lightweight yet durable</li>
+                  <li>✓ Won't rust (naturally resistant)</li>
+                  <li>✓ 50+ year lifespan</li>
+                  <li>✓ Can be powder-coated in any colour</li>
+                  <li>✓ Modern, clean appearance</li>
+                  <li>✓ Low maintenance</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-3 text-gray-900">Considerations</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li>• Mid-to-premium pricing (£40-£80 per metre)</li>
+                  <li>• Less traditional aesthetic</li>
+                  <li>• Fewer installers offer this option</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 italic text-sm">
+            <strong>Best for:</strong> Homes wanting durability without the maintenance, contemporary properties, and coastal areas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gutter Replacement Process -->
+    <section class="max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-brand">Our Gutter Replacement Process</h2>
+      <div class="space-y-6">
+        <div class="bg-white border-l-4 border-brand p-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">
+              1
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Free Survey & Quote</h3>
+              <p class="text-gray-700">We inspect your entire gutter system, identify damage, assess the best solution, and provide a competitive, no-obligation quote with material options.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-l-4 border-brand p-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">
+              2
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Material Selection & Scheduling</h3>
+              <p class="text-gray-700">Choose your preferred gutter material (uPVC, cast iron, or aluminium). We'll schedule installation at a time that suits you—often within 1-2 weeks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-l-4 border-brand p-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">
+              3
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Safe Removal & Preparation</h3>
+              <p class="text-gray-700">We carefully remove old gutters and downpipes, clean fascia boards, and prepare the roof edge for new installation. We protect your property throughout.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-l-4 border-brand p-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">
+              4
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Expert Installation</h3>
+              <p class="text-gray-700">Our certified fitters install new gutters with proper alignment, secure brackets, downpipes, and soil connectors. All work complies with building regulations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-l-4 border-brand p-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">
+              5
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Final Inspection & Clean-Up</h3>
+              <p class="text-gray-700">We test all gutters, clean up thoroughly, dispose of old materials responsibly, and walk you through your new system's care and warranty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gutter Replacement Cost Guide -->
+    <section class="max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-brand">Gutter Replacement Cost Guide</h2>
+      <div class="bg-blue-50 p-8 rounded-lg mb-8">
+        <p class="text-gray-700 mb-6">
+          Gutter replacement costs vary depending on your property size, chosen material, and complexity. Here's a realistic cost breakdown:
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="text-brand font-bold text-lg flex-shrink-0">uPVC</div>
+            <div>
+              <p class="font-semibold text-gray-900">£400–£1,500 for typical semi-detached house</p>
+              <p class="text-sm text-gray-700">Material: £25–£45/m | Installation typically included</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="text-brand font-bold text-lg flex-shrink-0">Cast Iron</div>
+            <div>
+              <p class="font-semibold text-gray-900">£1,000–£3,500+ for typical property</p>
+              <p class="text-sm text-gray-700">Material: £50–£100+/m | Higher labour costs due to weight/specialist work</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="text-brand font-bold text-lg flex-shrink-0">Aluminium</div>
+            <div>
+              <p class="font-semibold text-gray-900">£800–£2,500 for typical property</p>
+              <p class="text-sm text-gray-700">Material: £40–£80/m | Modern install, moderate labour costs</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700 mt-6 italic">
+          Prices increase if fascia repair, structural issues, or extensive downpipe work is needed. Always get a detailed quote before committing.
+        </p>
+      </div>
+
+      <div class="bg-white border-2 border-blue-200 p-6 rounded-lg">
+        <h3 class="text-xl font-semibold mb-4 text-brand">What's Included in Our Quotes</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-start gap-3">
+            <span class="text-brand font-bold flex-shrink-0">✓</span>
+            <span>Complete removal of old gutters and downpipes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand font-bold flex-shrink-0">✓</span>
+            <span>Fascia board inspection (repairs quoted separately if needed)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand font-bold flex-shrink-0">✓</span>
+            <span>Installation of new gutters, brackets, and downpipes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand font-bold flex-shrink-0">✓</span>
+            <span>Soil connectors and proper drainage setup</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand font-bold flex-shrink-0">✓</span>
+            <span>Site clean-up and responsible waste disposal</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brand font-bold flex-shrink-0">✓</span>
+            <span>2-year workmanship warranty</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why Choose Gutter Cleaners Uxbridge -->
+    <section class="max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-brand">Why Choose Gutter Cleaners Uxbridge?</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4 text-brand">Local Expertise</h3>
+          <p class="text-gray-700">Serving Uxbridge, Hayes, Harrow, and West London since 2008. We understand the local climate, building types, and resident needs.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4 text-brand">Certified Professionals</h3>
+          <p class="text-gray-700">Our team is fully trained, insured, and certified. All work meets UK building regulations and industry standards.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4 text-brand">Transparent Pricing</h3>
+          <p class="text-gray-700">No hidden costs. You receive a detailed written quote upfront with no surprise charges when work is completed.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4 text-brand">Quality Workmanship</h3>
+          <p class="text-gray-700">We use high-grade materials and proven installation techniques. Every job is checked and signed off by our supervisor.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4 text-brand">Quick Turnaround</h3>
+          <p class="text-gray-700">Most jobs completed within 1-3 days. We schedule around your availability—evenings and weekends available.</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4 text-brand">2-Year Warranty</h3>
+          <p class="text-gray-700">2-year workmanship warranty on all installations, plus manufacturer's warranty on guttering materials.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold mb-6 text-brand">Gutter Replacement Across West London</h2>
+      <p class="text-gray-700 mb-6">
+        We provide professional gutter replacement services throughout West London, including:
+      </p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="bg-white border border-blue-200 p-4 rounded-lg">
+          <p class="font-semibold text-gray-900">Uxbridge</p>
+          <p class="text-sm text-gray-600">Central Uxbridge & surrounds</p>
+        </div>
+        <div class="bg-white border border-blue-200 p-4 rounded-lg">
+          <p class="font-semibold text-gray-900">Hayes</p>
+          <p class="text-sm text-gray-600">All Hayes postcodes</p>
+        </div>
+        <div class="bg-white border border-blue-200 p-4 rounded-lg">
+          <p class="font-semibold text-gray-900">Harrow</p>
+          <p class="text-sm text-gray-600">All Harrow areas</p>
+        </div>
+        <div class="bg-white border border-blue-200 p-4 rounded-lg">
+          <p class="font-semibold text-gray-900">Hillingdon</p>
+          <p class="text-sm text-gray-600">Entire Hillingdon borough</p>
+        </div>
+        <div class="bg-white border border-blue-200 p-4 rounded-lg">
+          <p class="font-semibold text-gray-900">Slough</p>
+          <p class="text-sm text-gray-600">Town & surrounding villages</p>
+        </div>
+        <div class="bg-white border border-blue-200 p-4 rounded-lg">
+          <p class="font-semibold text-gray-900">Southall, West Drayton, Windsor</p>
+          <p class="text-sm text-gray-600">All covered areas</p>
+        </div>
+      </div>
+      <p class="text-gray-700 mt-6">
+        <strong>Not listed above?</strong> Contact us—we often work in areas beyond these postcodes. Call or complete the form for a quick availability check.
+      </p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-brand">Gutter Replacement FAQ</h2>
+      <div class="space-y-6">
+
+        <div class="border-b border-gray-200 pb-6">
+          <h3 class="text-lg font-semibold mb-3 text-gray-900">How long does a gutter replacement take?</h3>
+          <p class="text-gray-700">
+            Most gutter replacements take 1–3 days, depending on the size of your property and the material chosen. A typical semi-detached house usually takes 1–2 days. We'll confirm the timeline during your survey.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-6">
+          <h3 class="text-lg font-semibold mb-3 text-gray-900">Can I replace just part of my gutters?</h3>
+          <p class="text-gray-700">
+            Yes. If only one section is damaged, we can replace just that area. However, if the rest of your gutters are 20+ years old, full replacement often makes more economic sense to avoid future problems and get consistent appearance.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-6">
+          <h3 class="text-lg font-semibold mb-3 text-gray-900">Do you offer financing or payment plans?</h3>
+          <p class="text-gray-700">
+            Payment arrangements vary by job size. Contact us to discuss options for larger projects. We accept all major payment methods and can arrange quotes in advance so you can budget accordingly.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-6">
+          <h3 class="text-lg font-semibold mb-3 text-gray-900">What happens if my gutters fail after installation?</h3>
+          <p class="text-gray-700">
+            We offer a 2-year workmanship warranty on all installation work. If any issues arise due to our workmanship, we'll fix them at no cost. We also work with high-quality materials that come with manufacturer warranties (typically 10+ years).
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-6">
+          <h3 class="text-lg font-semibold mb-3 text-gray-900">Should I replace my fascia boards at the same time?</h3>
+          <p class="text-gray-700">
+            Often yes. If your fascia is damaged, rotten, or worn, replacing it during gutter installation is more cost-effective than doing it separately later. We inspect and advise during the survey—any fascia work is quoted separately so you can decide.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-6">
+          <h3 class="text-lg font-semibold mb-3 text-gray-900">How do I maintain my new gutters?</h3>
+          <p class="text-gray-700">
+            uPVC and aluminium require minimal maintenance—just clear debris twice yearly. Cast iron gutters should be inspected annually and repainted every 5–7 years to prevent rust. We'll provide full care instructions after installation.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-6">
+          <h3 class="text-lg font-semibold mb-3 text-gray-900">What size gutters do I need?</h3>
+          <p class="text-gray-700">
+            We calculate the correct size based on your roof's water runoff, pitch, and rainfall in your area. Standard UK homes use 112mm or 125mm half-round gutters. We'll recommend the best size for your property during the survey.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-brand to-blue-800 text-white rounded-lg p-8 md:p-12 max-w-3xl mx-auto mb-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Protect Your Home?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Don't let damaged gutters cause costly water damage. Get a free, no-obligation quote from Gutter Cleaners Uxbridge today.
+      </p>
+      <a href="#quote-form" class="inline-flex items-center gap-2 bg-white text-brand font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg">
+        Get Your Free Quote Now
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Quote Form Section -->
+  <section id="quote-form" class="bg-gray-50 py-16">
+    <div class="container-site max-w-3xl">
+      <h2 class="text-3xl font-bold mb-2 text-center text-brand">Get a Free Quote</h2>
+      <p class="text-center text-gray-700 mb-8">
+        Fill in your details below and we'll provide a competitive quote within 24 hours. No obligation, no pressure.
+      </p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+</Layout>

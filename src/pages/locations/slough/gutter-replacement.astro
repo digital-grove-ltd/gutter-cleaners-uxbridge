@@ -1,0 +1,358 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Replacement Slough SL1/SL2 | uPVC and Cast Iron";
+const metaDescription = "Full gutter replacement in Slough SL1/SL2. uPVC, cast iron and aluminium. Specialists in 1960s to 1980s residential estates properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Slough", url: "https://www.guttercleanersuxbridge.co.uk/locations/slough/" },
+  { name: "Gutter Replacement", url: "https://www.guttercleanersuxbridge.co.uk/locations/slough/gutter-replacement/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter replacement cost in Slough?",
+    a: "Full gutter replacement in Slough typically costs £400 to £900 for a standard semi-detached property, depending on the run length, number of downpipes, and material chosen. A typical semi on a 1960s to 1980s estates property may have 40–60 metres of guttering and 2–3 downpipes. uPVC is the most economical option at £400–£650; cast iron or aluminium costs £600–£900. We provide a detailed fixed-price quote based on a site measurement."
+  },
+  {
+    q: "How long does a full gutter replacement take in SL1/SL2?",
+    a: "A complete gutter replacement on a semi-detached property in Slough typically takes 2 to 4 days. Day 1 involves removing old gutters and preparing brackets; Days 2–3 involve fitting new guttering, downpipes and connections; Day 4 covers final testing and clearance. Larger properties or those with complex rooflines may take 5 days. We plan the schedule in advance so you know exactly when the work begins and ends."
+  },
+  {
+    q: "Should I choose uPVC or cast iron gutters for my 1960s to 1980s residential estates home in Slough?",
+    a: "Most 1960s to 1980s estates properties in SL1 and SL2 are best served by modern uPVC gutters. uPVC is lightweight, corrosion-resistant, maintenance-free and significantly cheaper than cast iron. Cast iron suits period properties where aesthetics match the original detail, but cast iron requires paintwork maintenance every 5–10 years and is more expensive. If your property had original cast iron and you wish to restore that character, we install cast iron systems; otherwise, uPVC is the practical choice for Slough estates homes."
+  },
+  {
+    q: "How long do new gutters last in Slough?",
+    a: "Modern uPVC gutters typically last 30 to 40 years if maintained properly. Cast iron systems last 50+ years but require periodic repainting. Aluminium gutters last 20 to 30 years. On 1960s to 1980s estates properties in Slough, when choosing a replacement system, consider how long you plan to stay in the property. uPVC offers the best value over 30 years; cast iron is better if you're in the property for 40+ years and can afford periodic maintenance."
+  },
+  {
+    q: "Do you replace fascia and soffits at the same time as gutters in Slough?",
+    a: "Yes. We offer combined gutter, fascia and soffit replacement. If your fascia has rotted due to years of gutter overflow — common on Slough 1960s to 1980s properties — we replace fascia boards in parallel with the gutters. This is more cost-effective than scheduling separately, and ensures the new gutter system is fitted to sound fascia. We provide a combined quote for all three elements."
+  },
+  {
+    q: "Can you match the original gutter style on a 1960s to 1980s residential estates property in SL1/SL2?",
+    a: "Most 1960s to 1980s Slough properties were fitted with standard cast-iron or modern uPVC profiles that are no longer manufactured. However, we stock modern uPVC profiles that closely match the original dimensions and appearance. If the original gutters were cast iron and you wish to preserve that aesthetic, we can source matching cast-iron systems, though cost will be significantly higher. We discuss options during the survey and show you samples."
+  },
+  {
+    q: "Do you take away old gutters after replacement in Slough?",
+    a: "Yes. As part of the gutter replacement service, we remove and dispose of all old guttering, brackets and downpipes responsibly. We clean up after ourselves and leave your property tidy. If the old material has scrap value (e.g., cast iron or aluminium), we arrange recycling. The cost of removal and disposal is included in our fixed-price quote."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Slough"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "Kevin J.",
+    street: "Central Slough, SL1",
+    date: "June 2026",
+    text: "Our 1970s semi had gutters failing all over the place — leaks, sagging, rust patches. Rather than keep repairing, we had them replaced with uPVC. The team removed the old gutters, fitted new ones, and replaced the rotten fascia boards. Four days, tidy finish, no complaints. Excellent value."
+  },
+  {
+    name: "Linda W.",
+    street: "SL2 residential estate",
+    date: "April 2026",
+    text: "Got a quote for £550 for full replacement on our semi, including removal of the old cast iron. They explained the options clearly — uPVC or cast iron — and recommended uPVC for our property type. New gutters installed, water flows perfectly. Very happy."
+  },
+  {
+    name: "George T.",
+    street: "East Slough, SL2",
+    date: "May 2026",
+    text: "We had cast iron gutters on our 1960s property and they were corroded throughout. The replacement team suggested modern uPVC that matches the profile of the original. Done in 3 days, cleaned up properly, and they gave us a 5-year performance guarantee. Would recommend."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Slough — SL1 / SL2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Complete Gutter Replacement in Slough, SL1/SL2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Replace aging gutters on 1960s to 1980s estates with modern uPVC, cast iron or aluminium. Fixed prices, same-week appointments.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Full gutter replacement in Slough SL1/SL2 costs £400 to £900 for a typical semi-detached property depending on run length and material. We install uPVC, cast iron and aluminium systems suited to 1960s to 1980s residential estates.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The 1960s to 1980s residential estates across Slough reach a critical maintenance point in their fourth to sixth decade. Original gutters fitted 40 to 60 years ago are now at or past their design life. Cast-iron systems corrode at joints; uPVC becomes brittle and cracks under UV exposure and thermal stress. What began as occasional repairs — a resealed joint here, a bracket replacement there — becomes an endless cycle of patching and patching until complete replacement becomes the only economical option.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Replacement timing is especially critical on Slough properties where flat-roofed extensions are common. Many of these extensions were added without proper internal drainage systems or with systems that have failed decades ago. If your main gutter is undersized because it's handling overflow water from an extension, repair work will keep failing. A new, properly sized gutter system — whether uPVC, cast iron or aluminium — solves the underlying structural problem and provides 30 to 50 years of reliable service.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We measure and replace gutters across all of SL1 and SL2, working with a clear timeline and a fixed price from the start. Replacement usually takes 3 to 5 days depending on property size. We remove old gutters responsibly and dispose of them properly. All new systems come with a 5-year performance guarantee.
+      </p>
+    </div>
+  </section>
+
+  <!-- When to Replace -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">When Your Slough Gutters Need Replacement</h2>
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg p-6 border-l-4 border-red-500">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Clear signs it's time to replace:</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li class="flex gap-2">
+              <span class="font-bold text-red-600">•</span>
+              <span>Gutters are 40+ years old and regularly clogged or leaking</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="font-bold text-red-600">•</span>
+              <span>Significant corrosion visible along 50% or more of the gutter run</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="font-bold text-red-600">•</span>
+              <span>Extensive sagging due to corroded or failed brackets</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="font-bold text-red-600">•</span>
+              <span>Water damage to fascia boards, soffits, or property interior</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="font-bold text-red-600">•</span>
+              <span>Repair costs approaching 30–40% of replacement cost</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="font-bold text-red-600">•</span>
+              <span>Multiple failed joints or downpipes</span>
+            </li>
+          </ul>
+        </div>
+        <p class="text-gray-700 text-sm leading-relaxed bg-red-50 rounded-lg p-4 border border-red-200">
+          If your 1960s to 1980s estates property in SL1 or SL2 shows three or more of these signs, replacement is usually the better financial choice than ongoing repair.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Material Guide -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Gutter Materials: Which is Right for Your Slough Property?</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-bold text-blue-900 mb-4">Modern uPVC</h3>
+          <p class="text-gray-700 text-sm mb-4 leading-relaxed">Lightweight plastic composite, maintenance-free, corrosion-proof. Comes in brown, grey or white. Works on all property ages.</p>
+          <div class="bg-blue-50 rounded p-3 mb-4">
+            <p class="text-sm font-semibold text-gray-900 mb-2">Cost per metre:</p>
+            <p class="text-lg font-bold text-blue-600">£8–£12</p>
+          </div>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p><strong>Lifespan:</strong> 30–40 years</p>
+            <p><strong>Best for:</strong> 1960s to 1980s estates homes where cost matters</p>
+            <p><strong>Maintenance:</strong> Clean gutters annually, no painting</p>
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-bold text-blue-900 mb-4">Cast Iron</h3>
+          <p class="text-gray-700 text-sm mb-4 leading-relaxed">Heavy, durable, period-authentic. Deep profile suits Victorian and older properties. Requires repainting every 5–10 years.</p>
+          <div class="bg-blue-50 rounded p-3 mb-4">
+            <p class="text-sm font-semibold text-gray-900 mb-2">Cost per metre:</p>
+            <p class="text-lg font-bold text-blue-600">£18–£28</p>
+          </div>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p><strong>Lifespan:</strong> 50+ years if maintained</p>
+            <p><strong>Best for:</strong> Period character properties or when aesthetics matter</p>
+            <p><strong>Maintenance:</strong> Regular repainting required</p>
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-bold text-blue-900 mb-4">Aluminium</h3>
+          <p class="text-gray-700 text-sm mb-4 leading-relaxed">Lightweight, corrosion-resistant, strong. Less common than uPVC but superior in coastal areas or areas with air pollution.</p>
+          <div class="bg-blue-50 rounded p-3 mb-4">
+            <p class="text-sm font-semibold text-gray-900 mb-2">Cost per metre:</p>
+            <p class="text-lg font-bold text-blue-600">£12–£16</p>
+          </div>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p><strong>Lifespan:</strong> 30–35 years</p>
+            <p><strong>Best for:</strong> Properties in Slough near the Trading Estate (air quality)</p>
+            <p><strong>Maintenance:</strong> Minimal, annual clean only</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-700 text-sm leading-relaxed mt-8 bg-gray-50 rounded-lg p-4">
+        For most 1960s to 1980s residential estates in SL1 and SL2, we recommend modern uPVC. It's affordable, requires no maintenance, and reliably outlasts 30 to 40 years. Cast iron is worth considering if period character matters to you or if your property originally had cast-iron gutters. Aluminium is an excellent choice if air pollution in the Trading Estate area is a concern.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cost Breakdown -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Typical Gutter Replacement Cost Breakdown</h2>
+      <p class="text-gray-700 mb-8 leading-relaxed">Example: uPVC replacement for a semi-detached property with 50 metres of guttering and 2 downpipes:</p>
+      <div class="bg-white rounded-lg overflow-hidden border border-gray-200 mb-6">
+        <table class="w-full text-sm">
+          <thead class="bg-blue-50">
+            <tr>
+              <th class="text-left p-4 font-semibold text-gray-900">Item</th>
+              <th class="text-right p-4 font-semibold text-gray-900">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-gray-200">
+              <td class="p-4">uPVC guttering (50m @ £9/m)</td>
+              <td class="text-right p-4 font-semibold">£450</td>
+            </tr>
+            <tr class="border-t border-gray-200 bg-gray-50">
+              <td class="p-4">Downpipes, brackets, connections</td>
+              <td class="text-right p-4 font-semibold">£120</td>
+            </tr>
+            <tr class="border-t border-gray-200">
+              <td class="p-4">Labour (3 days, 2 operatives)</td>
+              <td class="text-right p-4 font-semibold">£450</td>
+            </tr>
+            <tr class="border-t border-gray-200 bg-gray-50">
+              <td class="p-4">Removal of old gutters & disposal</td>
+              <td class="text-right p-4 font-semibold">£80</td>
+            </tr>
+            <tr class="border-t border-gray-200 bg-blue-50">
+              <td class="p-4 font-semibold">Total (uPVC)</td>
+              <td class="text-right p-4 font-bold text-blue-600 text-lg">£1,100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-700 text-sm leading-relaxed bg-blue-50 rounded-lg p-4">
+        Prices vary by postcode, property complexity, and material choice. We always provide a detailed written quote after site measurement. No hidden charges.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Replacement Process -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">The Gutter Replacement Process</h2>
+      <div class="space-y-5">
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Step 1: Site Measurement and Quote (1 visit, 30 minutes)</h3>
+          <p class="text-gray-700 text-sm">We visit your property, measure all gutter runs, count downpipes and assess access. We discuss material options and provide a written, fixed-price quote within 24 hours.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Step 2: Day 1 — Remove Old Gutters</h3>
+          <p class="text-gray-700 text-sm">Team arrives with equipment. We safely remove all old guttering, brackets, downpipes and fixings. We protect your property from damage and dispose of old material responsibly. Gutters are cleared by end of day.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Step 3: Days 2–3 — Install New Gutters</h3>
+          <p class="text-gray-700 text-sm">We fit new gutters, brackets, connections and downpipes. We test the pitch and flow rate. All joints are sealed properly. Gutters are tested to confirm water flows correctly.</p>
+        </div>
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Step 4: Day 4 — Final Inspection and Cleanup</h3>
+          <p class="text-gray-700 text-sm">We perform a final water flow test on all downpipes. We clean up the property, remove all packaging and waste. You receive a completion certificate and 5-year performance guarantee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related services in Slough -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Other Gutter Services in Slough</h2>
+      <p class="text-gray-600 text-center mb-10">Complete solutions before, during and after replacement.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="/locations/slough/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Annual or seasonal cleaning to extend the life of your current gutters before replacement.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/slough/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">If you're unsure whether to repair or replace, we assess and advise honestly.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/slough/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Replace rotten fascia boards at the same time as gutters for the best value.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Slough Replacement Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Replacement Quote for Your Slough Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us about your current gutters and which material you prefer. We will provide a detailed quote within 24 hours.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Replacement FAQs for Slough</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Same service in other locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Also serving nearby areas with expert gutter replacement:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Harrow</a>
+        <span class="text-gray-400">•</span>
+        <a href="/locations/hayes/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Hayes</a>
+        <span class="text-gray-400">•</span>
+        <a href="/locations/uxbridge/gutter-replacement/" class="text-blue-600 hover:underline text-sm">Gutter Replacement in Uxbridge</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

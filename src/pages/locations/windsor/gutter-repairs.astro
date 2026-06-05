@@ -1,0 +1,365 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Repairs Windsor SL4 | Same-Week Response";
+const metaDescription = "Fast gutter repairs in Windsor SL4. Leaking joints, sagging gutters, cracked sections. Specialists in Victorian and Georgian period properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Windsor", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/" },
+  { name: "Gutter Repairs", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/gutter-repairs/" }
+];
+
+const faqs = [
+  {
+    q: "How much do gutter repairs cost in Windsor?",
+    a: "Minor repairs on gutters in Windsor SL4 typically cost £80 to £180 depending on the issue. A simple cracked joint seal might be £80, while a sagging section requiring bracket replacement could be £150–£180. We always provide a fixed quote before proceeding. Larger repairs — such as replacing a full 3-metre run of cast-iron gutter — may cost £250–£400 and require a separate visit. Request a free site survey and quotation."
+  },
+  {
+    q: "Can you repair cast iron gutters in SL4?",
+    a: "Yes. We specialise in repairing original Victorian cast-iron guttering found on many properties in Windsor SL4. Cast-iron repairs include crack sealing, joint resealing, re-securing loose sections and treating surface corrosion. For larger cracks that compromise the structural integrity of the gutter, we can offer replacement options using matching cast-iron systems or upgrade to durable modern materials that retain the period appearance."
+  },
+  {
+    q: "My gutter is leaking at the joint in Windsor — can you fix it same day?",
+    a: "Yes, in most cases we can repair leaking joints in Windsor on the same day you report them. We aim to respond to repair requests within 48 hours and will typically complete joint resealing in 30–60 minutes. If the leak is due to corrosion of the cast-iron itself rather than just the sealant, that may require a replacement section — we'll assess it on site and quote separately if needed."
+  },
+  {
+    q: "What causes gutters to sag on Victorian and Georgian period properties in Windsor?",
+    a: "Sagging gutters on Victorian and Georgian period properties in SL4 are usually caused by failed or missing gutter hangers (brackets) — the metal supports that fix the gutter to the fascia board. Years of weather exposure and the weight of accumulated leaves and water can cause these to corrode or break. Sagging is also common where the original cast-iron gutter was never fully supported or where modern replacement gutters were hung at the wrong pitch. We secure sagging gutters by installing new stainless-steel brackets."
+  },
+  {
+    q: "How do I know if my Windsor home needs repairs or a full replacement?",
+    a: "If your Windsor SL4 property has isolated cracks, leaking joints or loose brackets, repair is usually the best option. However, if more than 30% of the gutter run shows corrosion, multiple cracks, or the gutter is sagging severely along its entire length, full replacement is often better value long-term. We provide a thorough site assessment and will advise you honestly whether repair or replacement makes financial sense for your property."
+  },
+  {
+    q: "Do you repair fascia boards as well as gutters in SL4?",
+    a: "Yes. We repair and replace fascia boards throughout Windsor SL4. Wood rot under gutters is common on older Victorian and Georgian period properties, and the fascia must be sound to properly support a new gutter system. We can assess rot severity on site — if it's minor surface damage, we repair and repaint; if it's structural, we replace the affected board. This is often bundled with gutter repair work."
+  },
+  {
+    q: "Are your gutter repairs guaranteed in Windsor?",
+    a: "Yes. All gutter repairs we carry out in Windsor SL4 are guaranteed for 12 months against defects in materials and workmanship. If a joint we seal leaks within that period due to our fault, we will return and fix it at no charge. We also guarantee all new components (brackets, seals, replacement sections) for their lifespan under normal use."
+  }
+];
+
+const serviceSchema: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Gutter Repairs",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Gutter Cleaners Uxbridge",
+    url: "https://guttercleanersuxbridge.co.uk",
+    telephone: "01895 000000",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "",
+      addressLocality: "Windsor",
+      postalCode: "SL4",
+      addressCountry: "GB",
+    },
+  },
+  areaServed: { "@type": "City", name: "Windsor" },
+  description: "Fast gutter repairs in Windsor SL4. Leaking joints, sagging gutters, cracked sections. Specialists in Victorian and Georgian period properties.",
+  image: "https://guttercleanersuxbridge.co.uk/images/gutter-repairs-hero.jpg",
+};
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  serviceSchema,
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "David P.",
+    street: "Peascod Street, Windsor",
+    date: "April 2026",
+    text: "Victorian terrace with water pouring out of a failed joint during rain. Called on a Friday, they came Saturday morning and sealed it properly. Really responsive service and the joint has been watertight ever since. Very professional and fair pricing."
+  },
+  {
+    name: "Susan M.",
+    street: "King Edward Court, SL4",
+    date: "March 2026",
+    text: "Gutters were sagging visibly on the rear elevation. They installed new brackets, straightened the run, and it's been perfect. They also spotted some dodgy fascia wood and explained the options. Will definitely call them again if I need more work."
+  },
+  {
+    name: "Richard H.",
+    street: "Charles Street, Windsor",
+    date: "February 2026",
+    text: "Cast-iron gutters leaking at three joints. These specialists knew exactly how to handle Victorian cast-iron work — they cleaned the joints thoroughly, resealed with period-appropriate materials and now it's completely dry. Excellent knowledge of older properties."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Windsor — SL4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Fast Gutter Repairs in Windsor, SL4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Specialist repairs for Victorian and Georgian period properties. Same-week response, fixed-price quotations.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">We repair leaking joints, sagging gutters, cracked sections and loose brackets in Windsor SL4. Most repairs take 1 to 2 hours and are completed in a single visit. We aim to respond within 48 hours for urgent issues.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Victorian and Georgian period properties in Windsor SL4 present unique gutter repair challenges. Original cast-iron guttering — found on most Victorian terraces and many Georgian homes — requires skilled diagnosis to distinguish between simple sealant failure at joints and deeper structural issues like internal corrosion. Mishandling repairs on these period homes risks further damage to the original material.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        We repair leaking joints, cracked sections, sagging runs and broken brackets on Victorian cast-iron gutters, as well as modern uPVC systems. Most repairs are completed in a single same-day visit. If we find during a clean or inspection that repairs are needed, we can often tackle minor work immediately — with your approval — and schedule larger repairs separately.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Our team has 15+ years of experience working on period properties across Windsor. We understand which repairs are essential to prevent water damage and which can safely wait for scheduled maintenance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Types of Repairs -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Common Gutter Repairs in Windsor</h2>
+      <div class="space-y-4">
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Leaking Joints and Seals</h3>
+          <p class="text-gray-700 text-sm">Water seeping or dripping from gutter joints is the most common problem. We clean the joint thoroughly, remove old sealant, and reseal using weather-resistant mastic or silicone. On cast-iron gutters in Windsor SL4, we ensure the joint is dry before resealing for a permanent fix.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Cracked and Holed Gutters</h3>
+          <p class="text-gray-700 text-sm">Small cracks in cast-iron sections can be sealed or patched. Larger holes or stress fractures usually require the affected section to be replaced. Victorian period properties in Windsor often have narrower cast-iron gutters that cost more to source as replacements, but we source original profiles where possible to maintain authenticity.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Sagging Gutters</h3>
+          <p class="text-gray-700 text-sm">Gutters that sag or dip are usually caused by failed gutter hangers (brackets). We install new stainless-steel brackets and reset the gutter to the correct fall (pitch) to ensure water flows freely to downpipes. This is a straightforward repair on most properties and typically costs £120–£180.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Loose and Corroded Brackets</h3>
+          <p class="text-gray-700 text-sm">Rusted or corroded gutter hangers can be replaced with modern stainless-steel equivalents. We replace like-for-like or upgrade to heavier-gauge brackets if the gutter is carrying extra weight due to leaf accumulation or poor pitch.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Detached Downpipes</h3>
+          <p class="text-gray-700 text-sm">Downpipes pulling away from fascia boards are common on older properties. We re-secure pipes using new wall clips and brackets, ensuring they are properly aligned and supported along their full run.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <h3 class="font-bold text-gray-900 mb-2">Fascia Board Repair and Replacement</h3>
+          <p class="text-gray-700 text-sm">Wood rot under gutters undermines the support structure. We assess rot severity and either repair with a timber filler or replace the damaged section with new timber or uPVC fascia board to match the existing profile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair vs Replace -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Should You Repair or Replace Your Windsor Gutters?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-bold text-gray-900 mb-3 text-green-700">Consider Repair If:</h3>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li class="flex gap-2"><span class="text-green-600 font-bold">•</span> You have 1–2 leaking joints</li>
+            <li class="flex gap-2"><span class="text-green-600 font-bold">•</span> One section is cracked or holed</li>
+            <li class="flex gap-2"><span class="text-green-600 font-bold">•</span> Gutters sag in isolated spots</li>
+            <li class="flex gap-2"><span class="text-green-600 font-bold">•</span> The rest of the gutter system is sound</li>
+            <li class="flex gap-2"><span class="text-green-600 font-bold">•</span> You want to keep original Victorian cast-iron</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-900 mb-3 text-orange-700">Consider Replacement If:</h3>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li class="flex gap-2"><span class="text-orange-600 font-bold">•</span> More than 30% of the gutter is damaged</li>
+            <li class="flex gap-2"><span class="text-orange-600 font-bold">•</span> Multiple joints are leaking</li>
+            <li class="flex gap-2"><span class="text-orange-600 font-bold">•</span> The gutter sags along its entire length</li>
+            <li class="flex gap-2"><span class="text-orange-600 font-bold">•</span> Internal corrosion is extensive</li>
+            <li class="flex gap-2"><span class="text-orange-600 font-bold">•</span> Fascia board rot requires structural repair</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-gray-700 text-sm mt-6">We'll assess your Windsor property during a site visit and advise honestly on the best option. Repair is always our first choice if it will solve the problem reliably.</p>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Windsor Gutter Repair Process</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Inspection and Diagnosis</h3>
+            <p class="text-gray-700 text-sm">We inspect the damage closely, test for water flow, and determine the root cause. For leaking joints, we check if it's sealant failure or structural corrosion. For sagging, we identify which brackets have failed.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Fixed Quotation</h3>
+            <p class="text-gray-700 text-sm">We provide a fixed, no-obligation quotation for the repair work. We never proceed without your approval. If a repair is more involved than initially thought, we'll update the quote before continuing.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Repair Work</h3>
+            <p class="text-gray-700 text-sm">We complete the repair efficiently, using appropriate materials for Victorian cast-iron or modern uPVC systems. Work is completed carefully to avoid damage to your property.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Testing and Guarantee</h3>
+            <p class="text-gray-700 text-sm">We test the repair by flushing water through the system. We provide a 12-month guarantee against defects. If any issue arises due to our workmanship, we'll return and fix it at no charge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing guide -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Gutter Repair Pricing for Windsor SL4</h2>
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-blue-50">
+            <tr>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">Type of Repair</th>
+              <th class="text-left px-5 py-3 font-bold text-gray-900">Typical Cost</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Joint reseal (1–2 joints)</td>
+              <td class="px-5 py-3 text-gray-700">£80 – £130</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Replace gutter brackets (pair)</td>
+              <td class="px-5 py-3 text-gray-700">£120 – £180</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Repair or replace 1-metre gutter section</td>
+              <td class="px-5 py-3 text-gray-700">£150 – £250</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Straighten sagging run (minor realignment)</td>
+              <td class="px-5 py-3 text-gray-700">£130 – £200</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Re-secure detached downpipe</td>
+              <td class="px-5 py-3 text-gray-700">£90 – £150</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Minor fascia board repair</td>
+              <td class="px-5 py-3 text-gray-700">£100 – £180</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-700">Replace fascia board section</td>
+              <td class="px-5 py-3 text-gray-700">£200 – £350</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-600 text-sm mt-4">All repairs include diagnosis, parts and labour. We provide a fixed quotation before starting work — no hidden charges.</p>
+    </div>
+  </section>
+
+  <!-- Internal service links -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Other Services in Windsor</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <a href="/locations/windsor/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Full debris removal, downpipe flushing and condition report. Specialists in Victorian properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+        <a href="/locations/windsor/gutter-replacement/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full system replacement with uPVC or cast iron. Match period appearance of Georgian homes.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+        <a href="/locations/windsor/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and repair of fascia boards and soffits supporting your gutter system.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View <ArrowRight className="w-3 h-3" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Windsor Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Repair Quote for Your Windsor Property</h2>
+      <p class="text-gray-600 text-center mb-10">Describe the damage and we will provide a fixed-price quotation — no obligation or call-out fee.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Windsor Gutter Repair FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-location links -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also provide gutter repairs in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Harrow</a>
+        <a href="/locations/hayes/gutter-repairs/" class="text-blue-600 hover:underline text-sm">Gutter Repairs in Hayes</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

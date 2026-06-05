@@ -1,0 +1,439 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Fascia and Soffit Cleaning Hillingdon UB10 | Local Experts";
+const metaDescription = "Professional fascia and soffit cleaning in Hillingdon UB10. Remove algae, dirt and staining. Specialists in mixed 1930s to 1960s housing.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hillingdon", url: "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/" },
+  { name: "Fascia & Soffit Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/fascia-soffit-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does fascia and soffit cleaning cost in Hillingdon?",
+    a: "Fascia and soffit cleaning in Hillingdon UB10 typically costs £120 to £200 for a standard 3-bedroom semi-detached property. Price depends on the linear metre run, degree of soiling (algae, lichen, dirt), and whether boards are wood or uPVC. We provide a fixed quote after assessing your 1930s-1960s home. Additional access fees may apply for complex rooflines."
+  },
+  {
+    q: "How often should fascia boards be cleaned on mixed 1930s to 1960s housing in UB10?",
+    a: "We recommend fascia cleaning every 2–3 years on Hillingdon properties, or more frequently if you have heavy tree coverage. North-facing fascias on 1930s properties accumulate algae faster. After each gutter cleaning, we recommend inspecting fascia condition; if dark streaking or algae appear, a dedicated clean extends timber life and keeps your home looking maintained. Consider cleaning alongside seasonal gutter cleaning for value."
+  },
+  {
+    q: "What causes black streaks on fascia boards in Hillingdon?",
+    a: "Black streaks and staining on Hillingdon fascias result from algae, lichen, and mould growth accelerated by moisture. Blocked or overflowing gutters on 1930s-1960s properties constantly splash water onto fascia boards, creating perfect conditions for organic growth. Our tree-rich UB10 area also increases shade and moisture, accelerating staining. Regular gutter cleaning reduces the staining problem significantly."
+  },
+  {
+    q: "Can you clean coloured fascia boards in Hillingdon without damaging them?",
+    a: "Yes. We use soft-wash and gentle pressure-wash techniques tailored to your fascia material. uPVC coloured boards are cleaned with low pressure to avoid surface damage; wood fascias are cleaned with biocidal wash that kills algae without stripping paint. We assess each Hillingdon property individually to choose the safest cleaning method for your 1930s-1960s home."
+  },
+  {
+    q: "Do I need to clean or replace my soffits in UB10?",
+    a: "Soffits are the underside boards beneath gutters. Hillingdon properties with good gutter function rarely need soffit replacement. However, if your gutters have been leaking for years, soffits may show soft rot or water staining. During our fascia and soffit cleaning visit, we'll inspect for rot. Most UB10 soffits only need cleaning; replacement is recommended if wood is visibly deteriorated."
+  },
+  {
+    q: "Do you clean UPVC fascia and soffits as well as wood in Hillingdon?",
+    a: "Yes. We clean both wood and uPVC fascias and soffits. uPVC is popular on 1960s-era Hillingdon properties and cleans beautifully with the right technique—we use soft wash that removes algae and dirt without damaging the surface finish. Wood fascias on 1930s properties benefit from biocidal treatment that protects against future growth while restoring appearance."
+  },
+  {
+    q: "How long does fascia and soffit cleaning take for a Hillingdon semi-detached house?",
+    a: "A standard 3-bedroom semi-detached property in Hillingdon typically takes 2–3 hours to clean thoroughly. Single-storey bungalows may take 1–2 hours; larger detached homes or those with complex rooflines may take 3–4 hours. We'll provide an estimated time during your free quote visit. Most appointments are completed in a single morning or afternoon slot."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hillingdon UB10"),
+  faqSchema(faqs),
+  serviceSchema("Fascia and Soffit Cleaning in Hillingdon UB10", "Professional cleaning to remove algae, lichen, and staining from fascia and soffit boards on mixed 1930s to 1960s housing.", "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/fascia-soffit-cleaning/")
+];
+
+const reviews = [
+  {
+    name: "Margaret D.",
+    street: "Hillingdon village, UB10",
+    date: "May 2026",
+    text: "Our old fascia boards were covered in black streaks—made the house look neglected. They cleaned it all beautifully and explained it was algae from our blocked gutters. The fascia looks like new now."
+  },
+  {
+    name: "Geoffrey S.",
+    street: "Ickenham, Hillingdon, UB10",
+    date: "April 2026",
+    text: "Had them clean the fascias and soffits on our 1960s semi. The team was careful with the uPVC and it came up spotless. Whole property looks fresher. Would recommend."
+  },
+  {
+    name: "Linda W.",
+    street: "West Drive, Hillingdon, UB10",
+    date: "March 2026",
+    text: "1930s home with wood fascias that were badly stained. The cleaning made a huge difference—can see the original paint colour again. Very pleased and they were finished in one afternoon."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img src="/images/fascia-soffit-cleaning-hero.jpg" alt="Professional fascia and soffit cleaning in Hillingdon UB10" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <div class="flex items-center justify-center gap-2 text-blue-200 text-sm font-semibold uppercase tracking-wide mb-3">
+          <MapPin className="w-4 h-4" />
+          <span>Hillingdon — UB10</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Fascia and Soffit Cleaning in Hillingdon UB10</h1>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Restore your home's appearance by removing algae, lichen, and dirt staining from fascia boards. Specialists in mixed 1930s to 1960s housing.</p>
+
+        <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+          <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+          <p class="text-white text-base leading-relaxed">Fascia and soffit cleaning in Hillingdon UB10 costs £120 to £200 for a standard semi-detached property. We remove algae, lichen, dirt and black streaking, restoring boards to near-original condition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Hillingdon's mixed 1930s to 1960s housing carries fascia and soffit boards that have absorbed decades of weather exposure, moisture splash from gutters, and biological staining from algae and lichen. These boards form the decorative and functional trim above your gutters, protecting the roof cavity and eaves. When gutters overflow—common on UB10 properties surrounded by large gardens—water splashes continuously against fascias, creating perfect conditions for algae growth and staining.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Over time, the black streaks and green staining that develop on fascia boards are not just cosmetic. They indicate active biological growth feeding on the wood or uPVC surface, accelerating weathering and eventually leading to soft rot on timber boards. Regular cleaning removes this growth, maintains the structural integrity of the boards, and keeps your Hillingdon home looking well-maintained and cared-for.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We specialise in gentle but effective fascia and soffit cleaning on Hillingdon's period housing, using techniques suited to wood and uPVC alike, restoring your home's curb appeal while protecting boards from long-term damage.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">What's Included in Our Service</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Standard Cleaning</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Removal of algae, lichen, and mould from fascia boards</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Soffit board cleaning and inspection</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Removal of black streaks and water staining</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Gentle soft-wash or pressure technique (material-safe)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Gutters included if cleaning during same visit</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Optional Add-Ons</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Biocidal treatment (slows algae regrowth)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Wood fascia conditioning and sealing</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Minor repair identification and quotation</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Soffit and gutter guards (prevent future blockage)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-blue-600 font-bold">✓</span>
+              <span class="text-gray-700">Photographic before-and-after report</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fascia Issues -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Common Fascia Issues on Hillingdon's 1930s-1960s Housing</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3 text-lg">Black Streaking & Algae Growth</h3>
+          <p class="text-gray-700 mb-3">The most common problem on Hillingdon fascias. Algae thrives on damp surfaces, especially north-facing or shaded areas. Overflow from blocked gutters on 1930s-1960s properties accelerates growth.</p>
+          <p class="text-sm text-blue-600 font-semibold">Solution: Soft-wash cleaning + biocidal treatment</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3 text-lg">Soft Rot (Wood Fascias)</h3>
+          <p class="text-gray-700 mb-3">Years of gutter overflow on 1930s properties causes wood fascias to absorb moisture and develop soft rot. Affected areas feel spongy to the touch and may harbour insect damage.</p>
+          <p class="text-sm text-blue-600 font-semibold">Solution: Inspect, assess, repair or replace</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3 text-lg">Water Staining & Discolouration</h3>
+          <p class="text-gray-700 mb-3">Iron oxide staining from rusted gutters or mineral deposits from hard water create permanent-looking marks on fascia boards. Common on properties with ongoing water issues.</p>
+          <p class="text-sm text-blue-600 font-semibold">Solution: Specialised wash + preventive treatment</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-3 text-lg">Deteriorating Paint on Wood</h3>
+          <p class="text-gray-700 mb-3">Paint on wood fascias on 1930s Hillingdon homes peels and flakes after decades of exposure. Moisture penetration accelerates decay if the underlying wood is not sealed.</p>
+          <p class="text-sm text-blue-600 font-semibold">Solution: Clean + inspect + repainting or replacement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wood vs uPVC -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Cleaning Wood vs. uPVC Fascias in Hillingdon</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-4">Wood Fascias (1930s Properties)</h3>
+          <p class="text-gray-700 mb-4">Many original Hillingdon properties retain timber fascia boards. These are beautiful but require careful cleaning to avoid damaging old paint or stripping protective finishes.</p>
+
+          <div class="space-y-3 mb-4">
+            <p class="text-sm"><strong>Our Approach:</strong></p>
+            <ul class="space-y-2">
+              <li class="flex gap-2">
+                <span class="text-blue-600 font-bold">•</span>
+                <span class="text-gray-700 text-sm">Soft biocidal wash to kill algae without harming paint</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-600 font-bold">•</span>
+                <span class="text-gray-700 text-sm">Low-pressure rinse to avoid paint stripping</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-600 font-bold">•</span>
+                <span class="text-gray-700 text-sm">Optional wood conditioning treatment</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-sm text-gray-600 italic">Result: Your 1930s fascias look restored without damage.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-4">uPVC Fascias (1960s Properties & Replacements)</h3>
+          <p class="text-gray-700 mb-4">Many 1960s Hillingdon homes and replacements use uPVC fascias. These are durable but can become discoloured and brittle if exposed to harsh cleaning or UV damage.</p>
+
+          <div class="space-y-3 mb-4">
+            <p class="text-sm"><strong>Our Approach:</strong></p>
+            <ul class="space-y-2">
+              <li class="flex gap-2">
+                <span class="text-blue-600 font-bold">•</span>
+                <span class="text-gray-700 text-sm">Soft-wash biocidal treatment (algae removal)</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-600 font-bold">•</span>
+                <span class="text-gray-700 text-sm">Low-pressure rinse tailored to uPVC profile</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-600 font-bold">•</span>
+                <span class="text-gray-700 text-sm">Inspection for cracks or brittleness</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-sm text-gray-600 italic">Result: uPVC restored to near-original colour and finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Our Fascia & Soffit Cleaning Process</h2>
+
+      <div class="space-y-6">
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Initial Assessment</h3>
+              <p class="text-gray-700">We inspect your Hillingdon fascia and soffit boards to determine the best cleaning method based on material (wood or uPVC) and the degree of soiling.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Biocidal Treatment</h3>
+              <p class="text-gray-700">We apply a biocidal wash solution that kills algae, lichen, and mould at the cellular level. This solution is safe for both wood and uPVC and works over 24–48 hours.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Gentle Rinsing</h3>
+              <p class="text-gray-700">After the biocide sets, we use soft-wash or low-pressure rinsing to remove dead algae and residue. For wood, pressure is minimal; for uPVC, we adjust pressure to avoid damage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Inspection & Report</h3>
+              <p class="text-gray-700">We inspect boards for rot, cracks, or damage and document our findings. We provide before-and-after photos and advise on any repairs or protective treatments (like wood sealing).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits of Regular Cleaning -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Benefits of Regular Fascia & Soffit Cleaning</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">Curb Appeal</h3>
+          <p class="text-gray-700 mb-3">Black streaks and algae staining make your Hillingdon home look neglected and old. Professional cleaning restores the true colour of your fascia boards, making your property look well-maintained and cared-for. A clean fascia can make a surprising difference to your home's street presence.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">Structural Protection</h3>
+          <p class="text-gray-700 mb-3">On 1930s-1960s properties, wood fascia boards absorb moisture that feeds algae growth and accelerates rot. Regular cleaning removes the biological growth that weakens timber. Caught early, cleaning extends fascia life by 10+ years and prevents costly replacement.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">Prevent Water Damage</h3>
+          <p class="text-gray-700 mb-3">Soft rot on fascias allows water to penetrate into soffits, eaves, and roof structure. Regular cleaning and minor repairs prevent interior damp and costly structural work later. On Hillingdon properties surrounded by trees, this is especially important.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">Slow Regrowth</h3>
+          <p class="text-gray-700 mb-3">Our optional biocidal treatment creates a protective layer that slows algae regrowth. Combined with regular gutter cleaning (which reduces water splash), you'll keep fascias cleaner for longer—typically 2–3 years before the next clean is needed on UB10 properties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Other Services in Hillingdon</h2>
+      <p class="text-gray-600 text-center mb-10">Fascia cleaning often pairs well with gutter services on mixed 1930s-1960s housing in UB10.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/locations/hillingdon/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Vacuum-powered debris and moss removal to prevent blockages and water splash onto your fascia boards.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+
+        <a href="/locations/hillingdon/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Resealing joints and replacing brackets to stop water overflow that damages fascias.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+
+        <a href="/locations/hillingdon/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Full gutter replacement often includes fascia repair for long-term protection of your UB10 home.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Hillingdon Customer Reviews</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">★</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} • {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Free Cleaning Quote for Your Hillingdon Home</h2>
+      <p class="text-gray-600 text-center mb-10">Submit your address and describe the condition of your fascias. We'll provide a fixed quote and arrange a convenient time to clean.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Fascia & Soffit Cleaning FAQs for Hillingdon</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <details class="group border border-gray-200 rounded-xl p-6">
+            <summary class="font-bold text-gray-900 cursor-pointer flex justify-between items-center">
+              {item.q}
+              <span class="text-blue-600 group-open:rotate-180 transition-transform">+</span>
+            </summary>
+            <p class="text-gray-700 leading-relaxed text-sm mt-4">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Fascia and soffit cleaning also available in:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/harrow/" class="text-blue-600 hover:underline text-sm">Harrow</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations →</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

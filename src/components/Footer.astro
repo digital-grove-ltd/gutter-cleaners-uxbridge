@@ -1,0 +1,142 @@
+---
+const currentYear = new Date().getFullYear();
+
+const services = [
+  { label: "Gutter Cleaning", href: "/services/gutter-cleaning" },
+  { label: "Gutter Repairs", href: "/services/gutter-repairs" },
+  { label: "Gutter Replacement", href: "/services/gutter-replacement" },
+  { label: "Fascia & Soffit", href: "/services/fascia-soffit" },
+];
+
+const areas = [
+  { label: "Uxbridge", href: "/locations/uxbridge/" },
+  { label: "Harrow", href: "/locations/harrow/" },
+  { label: "Hayes", href: "/locations/hayes/" },
+  { label: "Hillingdon", href: "/locations/hillingdon/" },
+  { label: "Slough", href: "/locations/slough/" },
+  { label: "Southall", href: "/locations/southall/" },
+  { label: "West Drayton", href: "/locations/west-drayton/" },
+  { label: "Windsor", href: "/locations/windsor/" },
+];
+---
+
+<footer class="bg-gradient-cta text-white" itemscope itemtype="https://schema.org/LocalBusiness">
+  <meta itemprop="name" content="Gutter Cleaners Uxbridge" />
+  <meta itemprop="telephone" content="+441895000000" />
+  <meta itemprop="email" content="info@guttercleanersuxbridge.co.uk" />
+
+  <!-- Main footer content -->
+  <div class="container-site py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- Brand column -->
+      <div class="lg:col-span-1">
+        <a href="/" class="flex items-center gap-2 mb-4" aria-label="Gutter Cleaners Uxbridge">
+          <div class="w-9 h-9 rounded-lg bg-white/15 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <span class="font-display font-800 text-white text-base leading-none block">Gutter Cleaners</span>
+            <span class="font-display font-600 text-blue-200 text-xs leading-none block">Uxbridge</span>
+          </div>
+        </a>
+        <p class="text-blue-200 text-sm leading-relaxed mb-5">
+          West London's trusted gutter specialists. Professional cleaning, repairs, and replacement since 2008.
+        </p>
+        <!-- Social links placeholder -->
+        <div class="flex gap-3">
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Google Reviews" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services column -->
+      <div>
+        <h3 class="font-display font-700 text-white text-sm uppercase tracking-wider mb-4">Services</h3>
+        <ul class="space-y-2.5">
+          {services.map((s) => (
+            <li>
+              <a href={s.href} class="text-blue-200 text-sm hover:text-white transition-colors flex items-center gap-1.5">
+                <span class="text-blue-300">›</span>
+                {s.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Areas column -->
+      <div>
+        <h3 class="font-display font-700 text-white text-sm uppercase tracking-wider mb-4">Locations</h3>
+        <ul class="space-y-2.5">
+          {areas.map((a) => (
+            <li>
+              <a href={a.href} class="text-blue-200 text-sm hover:text-white transition-colors flex items-center gap-1.5">
+                <span class="text-blue-300">›</span>
+                {a.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact column -->
+      <div>
+        <h3 class="font-display font-700 text-white text-sm uppercase tracking-wider mb-4">Contact Us</h3>
+        <address class="not-italic space-y-3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <div class="flex items-start gap-2.5 text-blue-200 text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-blue-300" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>
+              <span itemprop="addressLocality">Uxbridge</span>,{" "}
+              <span itemprop="addressRegion">Greater London</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-2.5 text-blue-200 text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-blue-300" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <a href="tel:+441895000000" itemprop="telephone" class="hover:text-white transition-colors">01895 000 000</a>
+          </div>
+          <div class="flex items-center gap-2.5 text-blue-200 text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-blue-300" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="/contact" class="hover:text-white transition-colors">Send us a message</a>
+          </div>
+          <div class="flex items-start gap-2.5 text-blue-200 text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-blue-300" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span itemprop="openingHours">Mon–Fri: 8am–6pm</span>
+          </div>
+        </address>
+        <div class="mt-5">
+          <a href="/#quote" class="btn-secondary text-sm py-2 px-4 border-white text-white hover:bg-white hover:text-brand">
+            Get a Free Quote →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-white/10">
+    <div class="container-site py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-300">
+      <p>&copy; {currentYear} Gutter Cleaners Uxbridge. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="/privacy-policy" class="hover:text-white transition-colors">Privacy Policy</a>
+        <span>·</span>
+        <a href="/terms" class="hover:text-white transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

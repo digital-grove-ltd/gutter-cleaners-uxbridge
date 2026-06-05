@@ -1,0 +1,210 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Windsor Gutter Cleaning, Repairs and Replacement | SL4";
+const metaDescription = "Professional gutter cleaning, repair and replacement in Windsor (SL4). Specialist in Victorian cast-iron and lead guttering on period properties near Windsor Castle and Windsor Great Park. Free quotes, same-week service.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Windsor", url: "https://www.guttercleanersuxbridge.co.uk/locations/windsor/" }
+];
+
+const faqs = [
+  {
+    q: "Do you have experience with Victorian cast-iron and lead guttering in Windsor?",
+    a: "Yes. Windsor (SL4) has a higher concentration of Victorian and Georgian period properties than almost any other area we serve. Many properties close to Windsor Castle, on or near Park Street, Thames Street and the streets of central Windsor, carry original or early-replacement cast-iron guttering with lead-lined valley sections and original lead downpipe heads. We have specific experience with period metalwork maintenance, including joint resealing using appropriate materials, bolt replacement without damaging decorative profile sections, and advising on when restoration is viable versus when replacement is the better long-term option."
+  },
+  {
+    q: "Can lead guttering be repaired or does it need replacing?",
+    a: "Lead valley gutters and lead-lined sections can often be repaired by a specialist who understands the material. Lead is worked differently from uPVC or cast iron — it requires careful soldering to seal cracks and specific fixings that allow for thermal expansion. Where lead sections have split through metal fatigue or been perforated by corrosion, repair is often the best option for listed buildings and conservation area properties in Windsor. For lead in very poor condition, replacement with code 4 or code 5 lead sheet by a trained operative is the correct approach. We assess each situation individually."
+  },
+  {
+    q: "Do I need planning permission to replace gutters on a listed building in Windsor?",
+    a: "Properties within Windsor's conservation area or those that are listed may require listed building consent before gutter replacement, particularly if the original material is cast iron or lead. We advise all Windsor customers to check with the Royal Borough of Windsor and Maidenhead (RBWM) planning department before any like-for-unlike replacement. We can advise on appropriate period-sympathetic replacement materials that are more likely to receive consent, and we work within these constraints regularly."
+  },
+  {
+    q: "How often do Victorian gutters in Windsor need cleaning?",
+    a: "Victorian gutters in SL4 typically need cleaning at least once a year, ideally in late autumn after leaf fall from the large trees in Windsor Great Park and the residential streets around the town. The older, shallower ogee profiles that are common on Victorian properties in Windsor fill more quickly than modern deepflow gutters, and moss from the mature trees around the park and castle grounds can accumulate rapidly on properties facing north or east."
+  },
+  {
+    q: "Do you cover the full SL4 postcode area including Eton and Clewer?",
+    a: "Yes. We cover all SL4 addresses including central Windsor, Eton, Clewer and the surrounding villages within the SL4 postcode sector. Georgian properties in Eton and Victorian terraces in the Clewer area are both within our regular service area. For properties on the Windsor Great Park estate or in Old Windsor, contact us to confirm coverage."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Windsor"),
+  faqSchema(faqs)
+];
+
+const reviews = [
+  {
+    name: "James F.",
+    street: "Park Street, Windsor",
+    date: "May 2026",
+    text: "We have a Victorian townhouse on Park Street with original cast-iron ogee gutters. Finding someone who actually knows how to work with cast iron properly is not easy. These guys were knowledgeable, careful and honest. They resealed four joints and re-bolted a sagging section. Excellent work on a period property."
+  },
+  {
+    name: "Catherine B.",
+    street: "Thames Street, SL4",
+    date: "April 2026",
+    text: "Called them about a lead valley section that had been leaking for two winters. They came out, assessed it and gave us options — repair first, then replacement if repair did not hold. The repair has been watertight since. Transparent pricing, good communication and appropriate care for a property that needs a specialist touch."
+  },
+  {
+    name: "Robert A.",
+    street: "Alma Road, Windsor",
+    date: "February 2026",
+    text: "Annual clean for our Victorian semi near Windsor Great Park. The team know the area well and understand that these properties need careful handling. This year they found a downpipe joint beginning to fail at a junction — caught it early before it caused any damp. Very reliable service."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Windsor — SL4</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning and Repair Services in Windsor, SL4</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Period property gutter specialists near Windsor Castle and Windsor Great Park. Expert in Victorian cast-iron and lead guttering. Free quotes, same-week service.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Windsor's Victorian and Georgian period properties in SL4 — particularly those near Windsor Castle and along streets like Park Street and Thames Street — often carry original cast-iron and lead guttering that requires specialist knowledge to maintain and repair correctly. We provide expert period gutter services throughout Windsor with transparent pricing and same-week availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Windsor is unlike any other area in our service network. The historic character of the town — shaped by its proximity to Windsor Castle, the Great Park and the River Thames — is reflected directly in its housing stock. Victorian and Georgian properties line the streets of central Windsor, Eton and Clewer, many of which are listed buildings or sit within conservation areas requiring sensitive, period-appropriate maintenance.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Gutters on Windsor's period properties present challenges that simply do not exist on post-war estates elsewhere in our area. Original cast-iron ogee and moulded gutters, lead-lined valley sections, lead downpipe heads with decorative hoppers, and original iron rainwater shoes are all features we encounter regularly on properties in SL4. These are not standard gutter cleaning jobs — they require knowledge of the materials involved, appropriate sealing compounds, correct fixing techniques and an understanding of when restoration is viable versus when replacement is necessary.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We bring the same professional standards to Windsor that we apply across all our locations, with the additional specialist knowledge that period Windsor properties demand.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Windsor Gutters -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">About Windsor Gutters</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The Georgian properties around the castle and along the streets adjacent to Windsor Great Park are among the oldest buildings in our service area — some date from the eighteenth century. Georgian guttering was typically lead or early cast iron, and while much has been replaced over the centuries, some properties in the most historic parts of Windsor retain original or very early metalwork in valleys and parapets.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The Victorian properties that make up the majority of Windsor's residential stock were built with the ogee-profile cast-iron guttering standard for the era. This heavy, durable material is still performing well on many Windsor properties, provided it receives periodic maintenance: resealing at joints, re-bolting at fascia fixings, and internal de-rusting and painting where the surface has corroded. Neglected cast iron in Windsor's damp Thames Valley microclimate can deteriorate quickly once surface rust is established.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Properties within Windsor's conservation area may also have design constraints on visible replacement materials — we advise on these at the time of quotation and work within the requirements of the Royal Borough of Windsor and Maidenhead where applicable.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 service cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Gutter Services in Windsor</h2>
+      <p class="text-gray-600 text-center mb-10">All four services available across SL4 with same-week availability and period property expertise.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="/services/gutter-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Period-sensitive cleaning of cast-iron and lead guttering throughout Windsor SL4. We clean carefully to avoid disturbing sound sealant at joints and include a structural condition assessment with every clean.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-repairs/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Cast-iron joint resealing, lead valley repairs, decorative downpipe head servicing, and period-appropriate bracket replacement. We use materials suited to the specific guttering type on your Windsor property.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/gutter-replacement/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Period-appropriate gutter replacement for Windsor properties. We advise on materials sympathetic to conservation area and listed building requirements, including cast-iron equivalents and heritage uPVC profiles.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/services/fascia-soffit-cleaning/" class="group bg-gray-50 border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia and Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Fascia and soffit replacement on Windsor period properties using appropriate materials. We advise on whether painted timber or capped uPVC boards are more suitable for your property type and any planning constraints that apply.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Reviews from Windsor Customers</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} &bull; {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Quote for Your Windsor Property</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your SL4 address and the gutter material on your property. We will provide an accurate quote that takes the specific requirements of your period home into account.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Windsor Gutter FAQs</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">We also cover nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/slough/" class="text-blue-600 hover:underline text-sm">Slough</a>
+        <a href="/locations/west-drayton/" class="text-blue-600 hover:underline text-sm">West Drayton</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

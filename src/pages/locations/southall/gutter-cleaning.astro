@@ -1,0 +1,308 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Cleaning Southall UB1/UB2 | Professional Local Service";
+const metaDescription = "Professional gutter cleaning in Southall UB1/UB2. Vacuum-powered, no mess, same-week appointments. Specialists in Victorian and Edwardian terraced housing.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Southall", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/" },
+  { name: "Gutter Cleaning", url: "https://www.guttercleanersuxbridge.co.uk/locations/southall/gutter-cleaning/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter cleaning cost in Southall?",
+    a: "Gutter cleaning in Southall typically costs between £80 and £150 for a standard 3-bedroom semi-detached or terraced property, depending on the length of guttering, the degree of blockage, and access requirements. Victorian and Edwardian terraces in UB1 and UB2 with complex rooflines or multiple storeys may be at the higher end. We provide a fixed, no-obligation quote based on a visual assessment of your property. There are no hidden charges or surprises on the day."
+  },
+  {
+    q: "How often should Victorian and Edwardian terraced housing properties in UB1/UB2 have gutters cleaned?",
+    a: "We recommend gutter cleaning at least twice a year for Southall's Victorian and Edwardian terraced properties — typically autumn (after leaves fall) and spring (to clear winter debris). If your terrace has overhanging trees or is sheltered from drying wind (common on the quieter streets in UB2), quarterly cleaning may be needed. Our annual maintenance contracts provide scheduled cleaning at discounted rates, ensuring your gutters drain properly year-round and preventing the corrosion and water damage that leads to costly repairs on terraced housing."
+  },
+  {
+    q: "Do you clean gutters across all of Southall?",
+    a: "Yes. We cover all addresses in Southall UB1 and UB2, including the Victorian terraces around Southall Broadway, the Edwardian semis in Herbert Road and Hambrough Road, and the residential streets running towards the Ealing borough boundary. Whether your property is in central UB1 or the outer reaches of UB2, we can arrange a convenient appointment with same-week or next-week availability in most cases."
+  },
+  {
+    q: "What causes gutter blockages in Southall?",
+    a: "Gutter blockages in Southall's Victorian and Edwardian terraced housing are primarily caused by accumulated leaf debris, moss growth, and decomposed organic matter that collects in gutters during autumn and winter. Because many terraces are shaded by larger period trees or sheltered by their proximity to neighbours, the gutters stay damp longer, encouraging moss colonisation. Additionally, the original cast-iron gutters on older properties in UB1 have developed internal rust scale and corrosion pitting over 100+ years, which traps debris and slows water flow. These factors combine to create blockages that prevent water from draining freely into the downpipe, leading to overflowing gutters and water damage to fascia boards and party walls."
+  },
+  {
+    q: "How long does gutter cleaning take for a typical Southall house?",
+    a: "Most gutter cleaning jobs in Southall take 1.5 to 2.5 hours, depending on property size, gutter length, the degree of blockage, and roof access. A standard 2-storey terraced property in UB1 or UB2 typically requires 2 to 3 hours. We use modern SkyVac vacuum equipment, which is faster and cleaner than traditional methods. We'll provide an estimated time when we survey your property, and we always work punctually so the job is completed within the agreed time window."
+  },
+  {
+    q: "Do you provide a report after cleaning gutters in Southall?",
+    a: "Yes. After every gutter cleaning job in Southall, we provide a written condition report with before-and-after photographs showing the debris removed, downpipe outlet condition, and any repairs we recommend. This report is particularly important for Victorian and Edwardian terraced properties in UB1 and UB2, where early detection of issues like cast-iron corrosion, loose bolts, or damaged fascia boards can prevent expensive water damage to neighbouring properties. We explain any recommended repairs clearly and provide separate fixed quotations so there are no surprises."
+  },
+  {
+    q: "Can you clean gutters on a 2-storey property in UB1/UB2?",
+    a: "Absolutely. We clean gutters on 2-storey, 3-storey, and even taller properties throughout Southall. Victorian and Edwardian terraces in UB1 are typically 2 to 3 storeys, and our trained technicians are fully experienced and insured to work safely at height on all property types. We use ladder systems and modern safety equipment, and we're careful not to disturb neighbours or cause damage to their properties. All work is fully covered by our public liability insurance."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Southall"),
+  faqSchema(faqs),
+  serviceSchema(
+    "Gutter Cleaning in Southall",
+    "Professional vacuum-powered gutter cleaning service in Southall UB1/UB2. Specialists in Victorian and Edwardian terraced housing.",
+    "https://www.guttercleanersuxbridge.co.uk/locations/southall/gutter-cleaning/"
+  )
+];
+
+const reviews = [
+  {
+    name: "Amelia P.",
+    street: "Southall Broadway, UB1",
+    date: "May 2026",
+    text: "Victorian terrace on Southall Broadway had gutters choked with moss and leaves. The team arrived with SkyVac equipment and worked methodically from both sides of the roof. Zero mess, no water damage, and they left the gutters spotless. Report with photos was excellent. Will book them again next year."
+  },
+  {
+    name: "Kashif M.",
+    street: "The Green, Southall, UB2",
+    date: "April 2026",
+    text: "Have used them twice now for our Edwardian semi in UB2. They find issues before they become expensive — last time they spotted a loose bracket and a cracked downpipe section which we got repaired same week. Professional, fair pricing, and genuinely knowledgeable about older properties."
+  },
+  {
+    name: "Sharon T.",
+    street: "Herbert Road, Southall",
+    date: "March 2026",
+    text: "Recommended them by a neighbour. The three Victorian terraces on our street all had the same problem — gutters pulling away and stained fascia from overflow. These guys cleaned all three and explained exactly what was happening to each of us. Very good value for a professional service."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="bg-blue-900 py-20 px-4 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-center gap-2 text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+        <MapPin className="w-4 h-4" />
+        <span>Southall Gutter Cleaning — UB1 / UB2</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Cleaning in Southall, UB1/UB2</h1>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Vacuum-powered cleaning for Victorian and Edwardian terraced housing. No mess, no water damage, same-week appointments.</p>
+
+      <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+        <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+        <p class="text-white text-base leading-relaxed">Gutter cleaning in Southall costs £80 to £150 for a typical 3-bedroom terraced property. We clear debris, flush downpipes, and provide a written condition report with before-and-after photos. Most Southall UB1/UB2 bookings are available within 3 to 5 working days.</p>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Southall's Victorian and Edwardian terraced housing in UB1 and UB2 represents some of the most densely occupied residential streets in our service area. These period properties are characterful and often occupy corner plots or front-facing positions on busy roads like Southall Broadway, meaning their gutters are exposed to years of urban dust, leaf accumulation, and moss growth. Regular cleaning is essential not just to prevent water damage to individual properties, but to avoid the kind of gutter overflow that affects neighbours' party walls and creates disputes in terraced rows.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The original cast-iron guttering on many Southall terraces has developed internal rust scale after 100+ years, which traps debris and slows water flow even when the gutters are structurally sound. A professional clean with modern vacuum equipment removes this accumulated sediment, restores proper drainage, and allows us to inspect the cast-iron sections for corrosion and joint integrity — issues that are common and can worsen quickly if left unaddressed.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We provide gutter cleaning throughout Southall with careful attention to the constraints of terraced housing: minimal disruption to neighbours, safe working practices on the original narrow fascia boards, and honest communication about any repairs that may be needed to prevent future water damage.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why Cleaning Matters in Southall -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Why Gutter Cleaning Matters in Southall</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Victorian and Edwardian terraced properties in Southall face unique gutter challenges. The original cast-iron gutters, now 100 to 140 years old, have developed internal pitting and rust scale that creates silt beds — areas where debris compacts and gathers rather than flowing freely. A single season of leaves, moss, and dust can partially block these aged gutters, causing water to back up and overflow during rainfall.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        When gutters overflow on a terraced property, water runs down the exterior walls — and in rows of terraces, this often means water running across a party wall, carrying sediment and moisture that damages both the inside and outside of neighbouring properties. Early, regular cleaning prevents this costly situation from developing and maintains good relationships between neighbours on busy streets in UB1 and UB2.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Additionally, our cleaning process involves a thorough inspection of fascia board condition, gutter bolt fixings, and downpipe integrity. On Southall's older terraces, this inspection often reveals small issues — a loose bracket, a hairline crack in cast iron, a failing joint seal — that, if repaired promptly, save hundreds of pounds in water damage later.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">What's Included in Gutter Cleaning</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Left Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">Standard Service</h3>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Full debris removal</strong> — leaves, moss, sediment from all gutters</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Downpipe clearing</strong> — vacuum and flush from roof to outlet</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Water flow testing</strong> — confirmation that gutters drain freely</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Visual inspection</strong> — assessment of cast-iron condition, bolts, joints</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Condition report</strong> — before/after photos and written summary</span>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">Why We Use SkyVac</h3>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Completely safe</strong> — vacuum system means zero water splash or mess</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">No damage</strong> — gentler on aged fascia boards and gutters than traditional methods</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Better results</strong> — removes compacted silt from aged cast-iron gutters</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Neighbour-friendly</strong> — no noise, no water running onto adjacent properties</span>
+          </div>
+          <div class="flex gap-3">
+            <span class="text-blue-600 font-bold text-xl shrink-0">✓</span>
+            <span class="text-gray-700"><strong class="text-gray-900">Speed</strong> — faster than manual cleaning, job done within estimated time</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-blue-50 rounded-xl p-8 border-l-4 border-blue-600">
+        <h3 class="text-2xl font-bold text-gray-900 mb-3">Pricing for Southall Properties</h3>
+        <p class="text-gray-700 text-lg mb-4">
+          Standard gutter cleaning in Southall typically costs <strong class="text-gray-900">£80–£150</strong> depending on:
+        </p>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Property size (3-bed terraced, 4-bed semi, etc.)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Gutter run length (linear metres of guttering)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Blockage severity (light debris vs. heavy moss/silt)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Number of storey (2-storey terraces vs. 3-storey blocks)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 font-bold">•</span>
+            <span>Access constraints (narrow alleys, nearby parked cars)</span>
+          </li>
+        </ul>
+        <p class="text-gray-700 text-lg mt-4">
+          Submit the form below for an exact fixed-price quote with no hidden charges.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Cards - Other Southall Services -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Other Gutter Services in Southall</h2>
+      <p class="text-gray-600 text-center mb-10">If cleaning reveals repairs or replacement is needed, we handle all aspects of gutter work.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="/locations/southall/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Resealing cast-iron joints, replacing brackets, fixing leaks on Victorian and Edwardian terraces in UB1/UB2.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/southall/gutter-replacement/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Replacement</h3>
+          <p class="text-gray-600 text-sm mb-3">Complete gutter replacement with uPVC or cast-iron systems matched to period properties.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+        <a href="/locations/southall/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-7 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit</h3>
+          <p class="text-gray-600 text-sm mb-3">Cleaning and replacement of fascia boards damaged by gutter overflow on Southall terraces.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">Learn more <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Cleaning Reviews from Southall</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">&#9733;</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} • {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Free Gutter Cleaning Quote for Southall</h2>
+      <p class="text-gray-600 text-center mb-10">Tell us your UB1 or UB2 address and property details. We'll respond with a fixed price on the same working day.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Gutter Cleaning FAQ</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <div class="border border-gray-200 rounded-xl p-6">
+            <h3 class="font-bold text-gray-900 mb-3">{item.q}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Gutter cleaning available in nearby areas:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/harrow/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter cleaning in Harrow</a>
+        <a href="/locations/hayes/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter cleaning in Hayes</a>
+        <a href="/locations/uxbridge/gutter-cleaning/" class="text-blue-600 hover:underline text-sm">Gutter cleaning in Uxbridge</a>
+        <a href="/locations/southall/" class="text-blue-600 hover:underline text-sm">All Southall services &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

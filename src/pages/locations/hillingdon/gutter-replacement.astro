@@ -1,0 +1,399 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import QuoteForm from '@/components/QuoteForm';
+import TrustBar from '@/components/TrustBar.astro';
+import { breadcrumbSchema, localBusinessWithAreaSchema, faqSchema, serviceSchema } from '@/lib/schema';
+import type { WithContext, Thing } from 'schema-dts';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+const title = "Gutter Replacement Hillingdon UB10 | uPVC and Cast Iron";
+const metaDescription = "Full gutter replacement in Hillingdon UB10. uPVC, cast iron and aluminium. Specialists in mixed 1930s to 1960s housing properties.";
+
+const breadcrumbItems = [
+  { name: "Home", url: "https://www.guttercleanersuxbridge.co.uk/" },
+  { name: "Locations", url: "https://www.guttercleanersuxbridge.co.uk/locations/" },
+  { name: "Hillingdon", url: "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/" },
+  { name: "Gutter Replacement", url: "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/gutter-replacement/" }
+];
+
+const faqs = [
+  {
+    q: "How much does gutter replacement cost in Hillingdon?",
+    a: "Full gutter replacement in Hillingdon UB10 typically costs between £400 and £900 for a standard 3-bedroom semi-detached property, depending on the run length, number of downpipes, and material chosen. uPVC systems (most common) cost £400–£600; cast iron or aluminium systems cost £600–£900. We provide an itemised quote after measuring your 1930s-1960s property."
+  },
+  {
+    q: "How long does a full gutter replacement take in UB10?",
+    a: "A complete replacement on a typical 3-bedroom Hillingdon property takes 5–8 hours, usually completed in one working day. We remove old gutters, prepare the fascia, install new brackets and guttering, fit downpipes, and test the system before leaving. Complex properties or those requiring fascia repair may take longer. We'll confirm the timeline during your quote visit."
+  },
+  {
+    q: "Should I choose uPVC or cast iron gutters for my mixed 1930s to 1960s housing home in Hillingdon?",
+    a: "For 1930s properties, cast iron often suits the period character but requires more maintenance and costs more (£700–£900 installed). For 1960s properties and modern aesthetics, uPVC is durable, cost-effective (£400–£600), and virtually maintenance-free. Aluminium offers a middle ground—lighter than cast iron, more durable than uPVC, and costs £550–£750. We'll recommend the best fit for your UB10 home's age and style."
+  },
+  {
+    q: "How long do new gutters last in Hillingdon?",
+    a: "uPVC gutters typically last 30–40 years in Hillingdon's climate. Cast iron can last 50+ years if properly maintained and treated to prevent rust. Aluminium lasts 40–50 years. The lifespan depends on maintenance, local tree coverage (which we know is extensive in UB10), and whether you choose quality brackets and joint sealants. We use high-spec components to maximise longevity."
+  },
+  {
+    q: "Do you replace fascia and soffits at the same time as gutters in Hillingdon?",
+    a: "We can, and often recommend it. If your 1930s-1960s fascia boards show rot, water staining, or soft spots from years of gutter overflow, replacing them alongside the gutters prevents future problems. The fascia is the primary gutter support, and new gutters on old, weak fascia will fail quickly. We assess fascia condition during the gutter survey and quote for replacement if needed."
+  },
+  {
+    q: "Can you match the original gutter style on a mixed 1930s to 1960s housing property in UB10?",
+    a: "Cast-iron gutters on 1930s properties came in specific profiles (Ogee or Moulded designs). We stock period-matched cast iron fittings and can restore your Hillingdon property to its original character. For 1960s properties, modern uPVC profiles are available that complement period architecture. We'll help you choose a gutter style suited to your UB10 home's era."
+  },
+  {
+    q: "Do you take away old gutters after replacement in Hillingdon?",
+    a: "Yes. We remove and dispose of all old gutters, downpipes, and brackets as part of our replacement service. Old cast iron can be recycled; old uPVC is disposed of responsibly. Your Hillingdon property will be left clean and tidy. Disposal is included in our quoted price—there are no additional charges."
+  }
+];
+
+const schemas: WithContext<Thing>[] = [
+  breadcrumbSchema(breadcrumbItems),
+  localBusinessWithAreaSchema("Hillingdon UB10"),
+  faqSchema(faqs),
+  serviceSchema("Gutter Replacement in Hillingdon UB10", "Complete gutter replacement with uPVC, cast iron, or aluminium systems for mixed 1930s to 1960s housing.", "https://www.guttercleanersuxbridge.co.uk/locations/hillingdon/gutter-replacement/")
+];
+
+const reviews = [
+  {
+    name: "Robert P.",
+    street: "Hillingdon village, UB10",
+    date: "June 2026",
+    text: "Our 1930s semi had ancient cast iron gutters that were beyond repair. They replaced the lot with matching period-style gutters and new fascia boards. The property looks beautiful again and we're told they'll last 50 years. Excellent work."
+  },
+  {
+    name: "Catherine M.",
+    street: "Ickenham, Hillingdon, UB10",
+    date: "May 2026",
+    text: "We had uPVC gutters from the 1970s that were leaking everywhere. New uPVC system installed in a day, very clean installation. They explained why the old ones failed and why the new ones won't."
+  },
+  {
+    name: "Mark W.",
+    street: "West Drive, Hillingdon, UB10",
+    date: "April 2026",
+    text: "Full gutter and fascia replacement on our 1960s property. They matched the existing aesthetics perfectly and the whole team was professional from start to finish. Best value for money."
+  }
+];
+---
+
+<Layout title={title} description={metaDescription} schema={schemas}>
+
+  <!-- Hero -->
+  <section class="relative w-full h-96 overflow-hidden">
+    <img src="/images/gutter-replacement-hero.jpg" alt="Professional gutter replacement in Hillingdon UB10" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center px-4">
+      <div class="text-center text-white max-w-3xl mx-auto">
+        <div class="flex items-center justify-center gap-2 text-blue-200 text-sm font-semibold uppercase tracking-wide mb-3">
+          <MapPin className="w-4 h-4" />
+          <span>Hillingdon — UB10</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Gutter Replacement in Hillingdon UB10</h1>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Complete gutter replacement for mixed 1930s to 1960s housing. uPVC, cast iron, and aluminium systems with expert installation.</p>
+
+        <div class="quick-answer bg-white/10 border border-white/20 rounded-xl p-5 max-w-2xl mx-auto text-left">
+          <p class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-1">Quick Answer</p>
+          <p class="text-white text-base leading-relaxed">Full gutter replacement in Hillingdon UB10 costs £400 to £900 for a typical semi-detached property depending on run length and material. We install uPVC, cast iron and aluminium systems suited to mixed 1930s to 1960s housing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Intro -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        Many Hillingdon UB10 properties reach a point where gutter repair becomes uneconomical. Gutters installed in the 1930s—now nearly 95 years old—have exhausted their structural life. Those installed as replacements in the 1960s or 1970s are 50–60 years old and showing signs of imminent failure. Once corrosion, multiple leaks, extensive sagging, or severe bracket failure takes hold, replacement is often the most cost-effective path forward.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">
+        The choice between uPVC, cast iron, and aluminium depends on your Hillingdon property's character, budget, and maintenance preferences. A 1930s semi-detached home may benefit from cast-iron guttering that restores period authenticity; a 1960s property often suits durable, maintenance-free uPVC. Our experience with mixed 1930s-1960s housing stock across the UB10 postcode area allows us to recommend the best material and profile for your specific home.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        We handle complete gutter replacement from removal of old systems through installation, fascia assessment and repair, and final testing—leaving your Hillingdon property with a new gutter system engineered for decades of protection.
+      </p>
+    </div>
+  </section>
+
+  <!-- Material Guide -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Gutter Material Options for Hillingdon</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">uPVC Gutters</h3>
+          <p class="text-gray-700 text-sm mb-4">Modern plastic composite. Most popular choice for 1960s and later properties in Hillingdon.</p>
+          <div class="space-y-2 mb-4">
+            <p class="text-sm"><strong>Lifespan:</strong> 30–40 years</p>
+            <p class="text-sm"><strong>Cost:</strong> £400–£600 installed</p>
+            <p class="text-sm"><strong>Maintenance:</strong> Annual cleaning, no painting needed</p>
+          </div>
+          <p class="text-xs text-blue-600 font-semibold">Best for: Budget-conscious, low-maintenance properties</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">Cast Iron Gutters</h3>
+          <p class="text-gray-700 text-sm mb-4">Period-authentic for 1930s-era homes. Durable but requires more maintenance.</p>
+          <div class="space-y-2 mb-4">
+            <p class="text-sm"><strong>Lifespan:</strong> 50+ years with care</p>
+            <p class="text-sm"><strong>Cost:</strong> £700–£900 installed</p>
+            <p class="text-sm"><strong>Maintenance:</strong> Regular painting and rust treatment</p>
+          </div>
+          <p class="text-xs text-blue-600 font-semibold">Best for: Period restoration, character homes</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-gray-900 mb-4 text-lg">Aluminium Gutters</h3>
+          <p class="text-gray-700 text-sm mb-4">Lightweight, modern alternative. Offers durability and low maintenance.</p>
+          <div class="space-y-2 mb-4">
+            <p class="text-sm"><strong>Lifespan:</strong> 40–50 years</p>
+            <p class="text-sm"><strong>Cost:</strong> £550–£750 installed</p>
+            <p class="text-sm"><strong>Maintenance:</strong> Minimal—occasional cleaning</p>
+          </div>
+          <p class="text-xs text-blue-600 font-semibold">Best for: Middle ground—durability + modern style</p>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-white rounded-xl p-6 border border-gray-200">
+        <h3 class="font-bold text-gray-900 mb-3">Our Recommendation for Mixed 1930s-1960s Housing</h3>
+        <p class="text-gray-700 mb-3">For 1930s properties in Hillingdon, we recommend matching cast-iron profiles when budget allows, or high-quality uPVC with period-appropriate colour choices. For 1960s semis, uPVC is the pragmatic choice—durable, cost-effective, and maintenance-free. All our installations use quality stainless steel or galvanised brackets suitable for UB10's mature tree environment and seasonal debris challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Replace -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">When Do Gutters Need Replacement?</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-bold text-red-600 mb-4 text-lg">Signs Your Hillingdon Gutters Need Replacement:</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <span class="text-red-600 font-bold">•</span>
+              <span class="text-gray-700">Multiple leaks in different sections (not just joints)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-600 font-bold">•</span>
+              <span class="text-gray-700">Extensive rust on cast-iron systems</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-600 font-bold">•</span>
+              <span class="text-gray-700">Sagging across more than 50% of the gutter run</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-600 font-bold">•</span>
+              <span class="text-gray-700">Cracks or holes in gutter sections</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-600 font-bold">•</span>
+              <span class="text-gray-700">Water damage to fascia boards or soffits</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-red-600 font-bold">•</span>
+              <span class="text-gray-700">Gutters over 60 years old on 1930s properties, 50+ years on 1960s homes</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6">
+          <h3 class="font-bold text-gray-900 mb-4">Cost of Delaying Replacement:</h3>
+          <p class="text-gray-700 mb-4">Ignoring failed gutters on Hillingdon UB10 properties is costly. Water tracking behind fascia boards causes rot in timber, requiring fascia replacement (£500–£1,000). Water seeping into eaves can damage roof structure. Interior damp in attics and top-floor rooms escalates repair costs significantly.</p>
+          <p class="text-gray-700"><strong>Fact:</strong> A £600 gutter replacement now can prevent £3,000+ in fascia and structural repairs later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Our Gutter Replacement Process</h2>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Survey & Material Selection</h3>
+              <p class="text-gray-700">We measure your gutters, assess fascia condition, and help you choose the best material for your 1930s-1960s Hillingdon property. We provide detailed itemised quotes for uPVC, cast iron, or aluminium options.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Old System Removal</h3>
+              <p class="text-gray-700">We carefully remove old gutters, brackets, and downpipes. Old cast iron is recycled; uPVC is disposed of responsibly. The fascia is cleaned and inspected for rot or damage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Fascia Repair (if Needed)</h3>
+              <p class="text-gray-700">If fascia boards show rot or water damage, we replace them with pressure-treated timber or uPVC trim before installing new gutters. Strong fascia is essential for long-term gutter performance on Hillingdon properties.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">New Gutter Installation</h3>
+              <p class="text-gray-700">We install new brackets, guttering, and downpipes to correct pitch for drainage (typically 1:350 gradient). All joints are sealed and tested. We ensure proper alignment and secure fixing on your UB10 home.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shrink-0">5</div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">Testing & Handover</h3>
+              <p class="text-gray-700">We flush the entire system with water to confirm proper drainage. You receive a written completion certificate and care guide for your new gutters. We guarantee the work for 12 months.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost Breakdown -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8">Cost Breakdown for Hillingdon</h2>
+
+      <div class="bg-blue-50 rounded-xl p-8 border border-blue-200 mb-6">
+        <h3 class="font-bold text-gray-900 mb-6 text-lg">Typical 3-Bed Semi-Detached Property</h3>
+
+        <div class="space-y-4">
+          <div class="flex justify-between items-center pb-3 border-b border-blue-200">
+            <span class="text-gray-700">Gutters (uPVC/aluminium, 40m run)</span>
+            <span class="font-bold text-gray-900">£280–£350</span>
+          </div>
+          <div class="flex justify-between items-center pb-3 border-b border-blue-200">
+            <span class="text-gray-700">Brackets, fittings, downpipes</span>
+            <span class="font-bold text-gray-900">£80–£120</span>
+          </div>
+          <div class="flex justify-between items-center pb-3 border-b border-blue-200">
+            <span class="text-gray-700">Labour (installation & testing)</span>
+            <span class="font-bold text-gray-900">£150–£200</span>
+          </div>
+          <div class="flex justify-between items-center pb-3 border-b border-blue-200">
+            <span class="text-gray-700">Old gutter removal & disposal</span>
+            <span class="font-bold text-gray-900">£50–£80</span>
+          </div>
+          <div class="flex justify-between items-center text-lg pt-4">
+            <span class="font-bold text-gray-900">Total (uPVC/aluminium)</span>
+            <span class="font-bold text-blue-600">£560–£750</span>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-600 mt-6 italic">Cast iron systems add £150–£250 to labour and materials. Fascia replacement (if required): £400–£800 additional.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-gray-200">
+        <p class="text-gray-700"><strong>We provide itemised quotes:</strong> Every Hillingdon property is unique. We'll measure your home, assess fascia condition, and provide a detailed quote breaking down gutter material, fittings, labour, and any fascia work required. No hidden fees.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Other Services in Hillingdon</h2>
+      <p class="text-gray-600 text-center mb-10">If replacement isn't needed yet, we also offer cleaning and repairs for UB10 properties.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/locations/hillingdon/gutter-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Vacuum-powered debris and moss removal to prevent blockages on mixed 1930s-1960s housing in Hillingdon.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+
+        <a href="/locations/hillingdon/gutter-repairs/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Gutter Repairs</h3>
+          <p class="text-gray-600 text-sm mb-3">Resealing joints, replacing brackets, and fixing leaks on mixed 1930s-1960s housing in Hillingdon UB10.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+
+        <a href="/locations/hillingdon/fascia-soffit-cleaning/" class="group bg-white border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all hover:shadow-md">
+          <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600">Fascia & Soffit Cleaning</h3>
+          <p class="text-gray-600 text-sm mb-3">Clean and restore fascia boards damaged by years of gutter overflow on UB10 homes.</p>
+          <span class="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">View service <ArrowRight className="w-4 h-4" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-14 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Hillingdon Customer Reviews</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map((r) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex gap-0.5 mb-3">
+              {[1,2,3,4,5].map(() => (
+                <span class="text-yellow-400 text-lg">★</span>
+              ))}
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
+            <p class="font-semibold text-gray-900 text-sm">{r.name}</p>
+            <p class="text-gray-500 text-xs">{r.street} • {r.date}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="py-14 bg-blue-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Free Replacement Quote for Your Hillingdon Home</h2>
+      <p class="text-gray-600 text-center mb-10">Submit your address and let us know about your current gutters. We'll conduct a detailed survey and provide a fixed itemised quote within 24 hours.</p>
+      <QuoteForm client:load />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Gutter Replacement FAQs for Hillingdon</h2>
+      <div class="space-y-5">
+        {faqs.map((item) => (
+          <details class="group border border-gray-200 rounded-xl p-6">
+            <summary class="font-bold text-gray-900 cursor-pointer flex justify-between items-center">
+              {item.q}
+              <span class="text-blue-600 group-open:rotate-180 transition-transform">+</span>
+            </summary>
+            <p class="text-gray-700 leading-relaxed text-sm mt-4">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Locations -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-600 text-sm mb-3">Gutter replacement also available in:</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/locations/uxbridge/" class="text-blue-600 hover:underline text-sm">Uxbridge</a>
+        <a href="/locations/harrow/" class="text-blue-600 hover:underline text-sm">Harrow</a>
+        <a href="/locations/hayes/" class="text-blue-600 hover:underline text-sm">Hayes</a>
+        <a href="/locations/" class="text-blue-600 hover:underline text-sm">All locations →</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,70 @@
+{
+  "business": {
+    "name": "Gutter Cleaners Uxbridge",
+    "tagline": "Professional Gutter Cleaning & Repair in Uxbridge",
+    "address": {
+      "town": "Uxbridge",
+      "county": "Greater London",
+      "country": "UK"
+    },
+    "phone": null,
+    "email": null,
+    "contactMethod": "form-only",
+    "hours": {
+      "display": "Mon–Fri 8am–6pm",
+      "schema": "Mo-Fr 08:00-18:00"
+    },
+    "services": [
+      "Gutter cleaning",
+      "Gutter repairs",
+      "Gutter replacement",
+      "Fascia & soffit cleaning/repair"
+    ]
+  },
+  "domain": {
+    "primary": "guttercleanersuxbridge.co.uk",
+    "www": true,
+    "productionUrl": "https://www.guttercleanersuxbridge.co.uk",
+    "targetCountry": "GB"
+  },
+  "brand": {
+    "colourDirection": "blue-white",
+    "colourNote": "Auto-selected: clean blue & white — trustworthy, professional trade look",
+    "primaryColour": "#1D4ED8",
+    "fontFeel": "modern-clean",
+    "voice": "professional-reassuring"
+  },
+  "serviceArea": {
+    "centredOn": "Uxbridge, Greater London",
+    "radiusMiles": 20,
+    "exclusions": [],
+    "notableTowns": [
+      "Uxbridge",
+      "Hayes",
+      "Hillingdon",
+      "Ruislip",
+      "Yiewsley",
+      "West Drayton",
+      "Slough",
+      "Windsor",
+      "Watford",
+      "Harrow",
+      "Ealing",
+      "Southall",
+      "Northolt",
+      "Greenford",
+      "Staines"
+    ]
+  },
+  "siteType": "general",
+  "designLanguage": "technology",
+  "analytics": {
+    "ga4MeasurementId": null,
+    "plausible": false
+  },
+  "deployment": {
+    "platform": "cloudflare-workers",
+    "autoDeploy": true,
+    "gscAutoVerify": true
+  }
+}
