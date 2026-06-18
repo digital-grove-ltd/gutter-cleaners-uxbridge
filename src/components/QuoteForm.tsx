@@ -56,7 +56,7 @@ export default function QuoteForm() {
         throw new Error("Submission failed");
       }
     } catch {
-      toast.error("Something went wrong. Please call us directly on 01895 000 000.");
+      toast.error("Something went wrong. Please try again or use our contact form.");
     } finally {
       setIsSubmitting(false);
     }

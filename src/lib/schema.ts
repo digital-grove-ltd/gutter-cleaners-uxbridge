@@ -31,7 +31,6 @@ export function sitewideLocalBusiness(): WithContext<LocalBusiness> {
       "@type": "PostalAddress",
       addressLocality: "Uxbridge",
       addressRegion: "Greater London",
-      postalCode: "UB8",
       addressCountry: "GB",
     },
     openingHoursSpecification: [
@@ -195,7 +194,6 @@ export function locationBusinessSchema(
       "@type": "PostalAddress",
       addressLocality: "Uxbridge",
       addressRegion: "Greater London",
-      postalCode: "UB8",
       addressCountry: "GB",
     },
     openingHoursSpecification: [
