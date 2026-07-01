@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro'
+import { env } from 'cloudflare:workers'
 
-export const POST: APIRoute = async ({ request, locals }) => {
+export const POST: APIRoute = async ({ request }) => {
   try {
     const body = await request.json()
     const { name, phone, email, service, propertyType, bedrooms, postcode, preferredDate, message, sourcePage } = body
@@ -11,7 +12,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
       })
     }
 
-    const db = (locals as any).runtime?.env?.DB
+    const db = (env as any).DB
     if (!db) {
       return new Response(JSON.stringify({ success: false, error: 'Database unavailable' }), {
         status: 500, headers: { 'Content-Type': 'application/json' }
