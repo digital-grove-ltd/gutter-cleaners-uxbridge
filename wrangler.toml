@@ -21,7 +21,10 @@ binding = "DB"
 database_name = "gcu-leads"
 database_id = "41cb394c-1cdb-43e8-b59d-6e97450878c9"
 
-# Routes are template placeholders. Uncomment and set your domain when ready.
-# [[routes]]
-# pattern = "example.com"
-# custom_domain = true
+[[routes]]
+pattern = "guttercleanersuxbridge.co.uk"
+custom_domain = true
+
+[[routes]]
+pattern = "www.guttercleanersuxbridge.co.uk"
+custom_domain = true
