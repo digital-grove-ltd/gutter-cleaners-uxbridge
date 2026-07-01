@@ -69,6 +69,15 @@ const isDev = import.meta.env.DEV;
       ? schema.map((s) => <Schema item={s} />)
       : <Schema item={schema} />
     )}
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1X2TX059N6" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1X2TX059N6');
+    </script>
   </head>
 
   <body class="min-h-screen bg-surface text-text flex flex-col">
@@ -88,7 +97,7 @@ const isDev = import.meta.env.DEV;
             const title = document.title || '';
             const metaDesc = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
             const url = window.location.href;
-            window.parent.postMessage({ type: 'hakuto:page-info', title, description: metaDesc, url }, '*');
+            if (import.meta.env.DEV) { window.parent.postMessage({ type: 'hakuto:page-info', title, description: metaDesc, url }, '*'); }
           }
           sendPageInfo();
           const titleObserver = new MutationObserver(() => sendPageInfo());
